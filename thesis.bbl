@@ -16,5 +16,75 @@
   {}
 \endgroup
 
-\datalist[entry]{none/global//global/global}\enddatalist
+\datalist[entry]{none/global//global/global}
+  \entry{Kernighan.1988}{book}{}
+    \name{author}{2}{}{%
+      {{hash=KBW}{%
+         family={Kernighan},
+         familyi={K\bibinitperiod},
+         given={Brian\bibnamedelima W.},
+         giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=RDM}{%
+         family={Ritchie},
+         familyi={R\bibinitperiod},
+         given={Dennis\bibnamedelima M.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Prentice-Hall PTR}}%
+    }
+    \strng{namehash}{KBWRDM1}
+    \strng{fullhash}{KBWRDM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Tutorial introduction -- Types, operators, and expressions -- Control flow
+  -- Functions and program structure -- Pointers and arrays -- Structures --
+  Input and output -- UNIX system interface Introduces the features of the C
+  programming language, discusses data types, variables, operators, control
+  flow, functions, pointers, arrays, and structures, and looks at the UNIX
+  system interface%
+    }
+    \field{edition}{2. ed.}
+    \field{isbn}{9780133086249}
+    \field{series}{Safari books online}
+    \field{title}{The C programming language}
+    \verb{url}
+    \verb http://proquest.tech.safaribooksonline.de/book/programming/c/97801330
+    \verb 86249
+    \endverb
+    \list{location}{1}{%
+      {Upper Saddle River, NJ}%
+    }
+    \field{year}{1988}
+  \endentry
+
+  \entry{.05.10.2017}{misc}{}
+    \keyw{R FAQ}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    R FAQ%
+    }
+    \field{title}{R FAQ}
+    \verb{url}
+    \verb https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-R_003f
+    \endverb
+    \field{year}{05.10.2017}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+
+  \entry{.13.11.2017}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{title}{LAPACK: dgesv}
+    \verb{url}
+    \verb http://www.netlib.org/lapack/explore-html/d7/d3b/group__double_g_esol
+    \verb ve_ga5ee879032a8365897c3ba91e3dc8d512.html#ga5ee879032a8365897c3ba91e
+    \verb 3dc8d512
+    \endverb
+    \field{year}{13.11.2017}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+\enddatalist
 \endinput

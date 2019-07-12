@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  12 JUL 2019 08:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  12 JUL 2019 09:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1501,18 +1501,28 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
- (./thesis.bbl)
+ (./thesis.bbl
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '.05.10.2017':
+(biblatex)                - Invalid format of field 'urldate'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with '.13.11.2017':
+(biblatex)                - Invalid format of field 'urldate'.
+
+)
 Package biblatex Info: Reference section=0 on input line 62.
 Package biblatex Info: Reference segment=0 on input line 62.
 Package scrhack Info: undefining \float@addtolists on input line 62.
-<img/mni-logo.pdf, id=112, 1133.23375pt x 146.5475pt>
+<img/mni-logo.pdf, id=116, 1133.23375pt x 146.5475pt>
 File: img/mni-logo.pdf Graphic file (type pdf)
 <use img/mni-logo.pdf>
 Package pdftex.def Info: img/mni-logo.pdf  used on input line 69.
 (pdftex.def)             Requested size: 387.47061pt x 50.10722pt.
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 70.
-
-(/usr/share/texmf/tex/latex/lm/t1lmss.fd
+ (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 77.
@@ -1595,13 +1605,13 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout6 = `thesis.toc'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 104.
+(babel)             in language  on input line 111.
  [5
 
 ]
@@ -1610,14 +1620,15 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout7 = `thesis.lof'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 118.
  [6
+
 
 ] (./einleitung.tex
 chapter 1.
@@ -1642,6 +1653,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 
+
 ]
 chapter 2.
 Package babel Info: Redefining ngerman shorthand "|
@@ -1652,16 +1664,10 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 10.
-
-LaTeX Warning: Citation 'Kernighan.1988' on page 2 undefined on input line 11.
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 12.
-
-LaTeX Warning: Citation '.05.10.2017' on page 2 undefined on input line 14.
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1736,10 +1742,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 113.
-
-
-LaTeX Warning: Citation '.13.11.2017' on page 5 undefined on input line 116.
-
 ) (./ergebnisse.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
@@ -1875,13 +1877,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 88.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 128.
  [10] (./fazit.tex
 chapter without number
 Package babel Info: Redefining ngerman shorthand "|
@@ -1889,50 +1891,61 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 10.
 ) (./litverz.tex
-
-LaTeX Warning: Empty bibliography on input line 12.
-
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 12.
  [11
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
+chapter without number
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 12.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 12.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 12.
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 134.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 134.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 134.
+ [12
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A2689D89B1A7C1721D3474FA965C47E9;1895.
+(rerunfilecheck)             Checksum: 62CB2B4D79C5F9664363BC164188C668;1940.
 
 
 LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                thesis
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26782 strings out of 492982
- 482265 string characters out of 6134896
+ 26850 strings out of 492982
+ 483571 string characters out of 6134896
  873229 words of memory out of 5000000
- 29983 multiletter control sequences out of 15000+600000
- 581063 words of font info for 47 fonts, out of 8000000 for 9000
+ 30042 multiletter control sequences out of 15000+600000
+ 581382 words of font info for 48 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 47i,9n,66p,10421b,1758s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,9n,66p,10421b,1774s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1942,11 +1955,12 @@ x10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (17 pages, 238722 bytes).
+sr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmtt10.pfb>
+Output written on thesis.pdf (18 pages, 267850 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

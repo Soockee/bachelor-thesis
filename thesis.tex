@@ -75,7 +75,7 @@
 	\end{center}
 	\vfill
 	\begin{tabular}{ll}
-		Referent der Arbeit: & Prof. Dr.-Ing. Axel Schumann\\ 
+		Referent der Arbeit: & Prof. Dr. Harald Ritz\\ 
 	\end{tabular}
 \end{titlepage}
 \cleardoubleemptypage
@@ -100,8 +100,23 @@
 \cleardoubleemptypage
 
 %% Verzeichnissse
-\tableofcontents
-\listoffigures
+%% Kommando sorgt für das Entfernen der Seitennummerierung in römischen Zahlen 
+%% bei Inhaltsverzeichniss und Abbildnugsverzeichniss
+
+\pagestyle{empty}
+{
+	\renewcommand{\thispagestyle}[1]{}
+	\tableofcontents
+}
+\clearpage
+\pagestyle{plain}
+\pagestyle{empty}
+{
+	\renewcommand{\thispagestyle}[1]{}
+	\listoffigures
+}
+\clearpage
+\pagestyle{plain}
 
 \mainmatter 
 \pagestyle{headings}
