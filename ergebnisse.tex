@@ -1,0 +1,114 @@
+% ----------------------------------------------------------------------------
+% Copyright (c) 2016 by Burkhardt Renz. All rights reserved.
+% Die Vorlage für eine Abschlussarbeit in der Informatik am Fachbereich
+% MNI der THM ist lizenziert unter einer Creative Commons
+% Namensnennung-Nicht kommerziell 4.0 International Lizenz.
+%
+% Id:$
+% ----------------------------------------------------------------------------
+
+\chapter{Betrachtung der Rechenzeit verschiedener Implementierungen}
+
+Zu jeder Implementierung werden folgende Messdaten erhoben:
+\begin{itemize}
+	\item Berechnung der Inverse einer Matrix mit einer Größe von 100x100 über 10000 Iterationen
+	\item Berechnung der Inverse einer Matrix mit einer Größe von 1000x1000 über 50 Iterationen
+\end{itemize}
+
+Dabei ist zu erwähnen, dass sich die Rechenzeiten auf unterschiedlichen Systemen stark unterscheiden können.
+Das hier genutzte System besteht aus:
+\begin{itemize}
+	\item 64-Bit Ubuntu Betriebssystem
+	\item i5-2520M 2,5 GHz Prozessor mit 4 Kernen
+	\item 8 Gigabyte Arbeitsspeicher
+\end{itemize}
+\section{C naive Implementierung}
+Die naive C Implementierung kann sowohl die 100x100 als auch die 1000x1000 Matrix berechnen. Der Speicherverbrauch steigt mit der Anzahl der Iterationen.
+\subsection{100x100 Matrix}
+
+Die Rechenzeit beinhaltet in den ersten 4000 Iterationen nur kleine Schwankungen und diverse Ausreißer. Ab der ca. 4500 Iteration stellt sich eine Art Kurvenbewegung mit gleichgroßen Abschnitten in den Rechenzeiten ein, die zwischen 0.014 und 0.017 Sekunden Schwanken. Zum Ende, also ab ca. 9000 Iterationen  nimmt diese Schwankung stark zu.
+
+Die durschnittliche Rechenzeit pro Iteration über 10000 Iterationen beträgt 0,014822 Sekunden.
+
+Der Speicherverbrauch nimmt stetig zu. Dieser ist zum Ende hin bei ca. 1,5 Gigabyte.
+
+Siehe Abbildung: \ref{fig:naive_100}
+
+
+\subsection{1000x1000 Matrix}
+
+Auch bei der Berechnung von 1000x1000 ist ein stetiger Anstieg der Rechenzeiten zu erkennen. Die durchschnittliche Rechenzeit beträgt circa 17,0109 Sekunden. Der Speicherverbrauch nimmt stetig zu. Nach 50 Iterationen verbraucht das Programm ca. 750 Megabyte.
+Siehe Abbildung: \ref{fig:naive_1000}
+
+\newpage
+\section{C unter Vewendung von GSL}
+Die GSL Implementierung kann sowohl die 100x100 als auch die 1000x1000 Matrix berechnen. Der Speicherverbrauch bleibt konstant.
+\subsection{100x100 Matrix}
+
+Es sind Schwankungung in der Rechenzeit zu erkennen. Diese erstrecken sich im Bereich von 0.00145 bis 0.002. Es gibt diverse Ausreißer. Dennoch bleibt die Rechenzeit grundsätzlich konstant. Es ist ein Block bei ca. 9500 Iterationen zu erkennen, der mit seiner erhöhten Rechenzeit aufällt.
+Die durchschnittliche Laufzeit pro Iteration beträgt 0,001517 Sekunden
+
+Der Speicherverbrauch bleibt mit 344 Kilobyte extrem gering und konstant.
+
+
+Siehe Abbildung: \ref{fig:GSL_100}
+\subsection{1000x1000 Matrix}
+Es fallen sehr konstante Rechenzeiten auf. Dennoch sind die beiden ersten Rechenzeiten um etwa 0,1 bis 0,2 Sekunden höher. Auch ein extremer Aussreißer mit ca. 6,37 Sekunden ist zu erkennen. Die durchschnittliche Laufzeit beträgt 6,03 Sekunden.
+
+Der Speicherverbrauch bleibt wieder mit 15,8 MiB über die gesamte Laufzeit aller Iterationen gleich.
+
+Siehe Abbildung: \ref{fig:GSL_1000}
+
+\section{R standard solve Funktion}
+\subsection{100x100 Matrix}
+Es fallen absolut konstante Rechenzeiten in insgesamt 4 Kategorien auf. Die durchschnittliche Rechenzeit liegt bei 0,00266 Sekunden
+Der Speicherverbrauch liegt bei  40.5 Megabyte
+
+Siehe Abbildung: \ref{fig:solve_100}
+
+\subsection{1000x1000 Matrix}
+
+Bei sehr großen Matrizen scheint die Schwankung der Rechenzeiten etwas deutlicher auszufallen. Dennoch ist die Laufzeit pro Iteration extrem gering. Der Durschschnitt liegt bei 1,327 Sekunden. Der Speicherverbrauch verdoppelt sich circa auf 71 bis 86 Megabyte.
+
+Siehe Abbildung: \ref{fig:solve_1000}
+
+
+\section{R Matlib-Package}
+Das Matlib Paket ist für Bildungszwecken entwickelt worden. Es kann verschiedene Schritten innerhalb der Algorithmen veranschaulichen. Dementsprechen ist die Implementierung nicht auf Laufzeit bzw. Speichereffizients ausgerichtet. Intern wird auch das Gaußsches Eliminationsverfahren implementiert.
+
+\subsection{100x100 Matrix}
+Bereits der Berechnung des Inversen von 100x100 Matrizen geht diese Implementierung an die Grenzen des genutzten Systems. Bei 100 Iterationen werden 1,74 Gigabyte Speicher beansprucht. Aus diesem Grund konnten keine 10000 Iterationen durchgeführt werden, da der Arbeitspeicher nicht ausreicht.
+Die durschnittliche Rechenzeit beträgt 2,45 Sekunden. Auch sind starke Schwankungen der Laufzeit zu erkennen.
+
+\subsection{1000x1000 Matrix}
+
+Der Versuch mit dem Matlib Paket, das Inverse einer 1000x1000 Matrix zu berechnen, scheitert. Intern scheinen extrem ineffiziente Datenstrukturen verwendet zu werden, die die Systemgrenze von 8 Gigabyte Arbeitsspeicher überbeanspruchen. Aus diesem Grund können keine Messsdaten erhoben werden.
+
+\newpage
+\section{Ergebnisdiskussion}
+Jede Implementierung weist spezielle Eigenschaften auf.
+Die naive Implementierung in C scheint stark von den genannten Problematiken der Messmethode betroffen zu sein. Der Kontextwechsel des Prozessors ist einer dieser Problematiken. Dies könnte für die \emph{Blockformung} der Rechenzeiten verantworlich sein.  Auch ist durch den stetig ansteigenden Speicherverbrauch davon auszugehen, das die Implementierung ein \emph{Speicherleck} (engl. \href{https://en.wikipedia.org/wiki/Memory_leak}{Memory Leak}) aufweist. Dies könnte der Grund dafür sein, das die Rechenzeiten stufenweise schlechter werden.
+
+Die naive C Implementierung kann als ineffizient bezeichnet werden. Sie ist zwar in der Lage das Problem zu lösen, dennoch schneidet sie im Gegensatz zu GSL und der standard R Implementierung, bei der Berechnung des Inversen von 100x100 Matrizen um ca. den Faktor 10 schlechter ab. Diese Erkenntnis trifft auch auf die Berechnung der 1000x1000 zu. Dennoch sind die Ergebnisse deutlich besser, als die Messdaten, die mithilfe des Matlib Paket erhobenen Daten. Die durchschnittlichen Rechenzeit bei Matlib ist um den Faktor 165 langsamer.
+
+Die Matlib Implementierung lässt sich somit definitiv auf den letzten Platz einordnen. Nicht nur die Rechenzeit, sondern auch der Speicherverbrauch ist ungemein höher, als bei den anderen Programmen. Dieses ineffiziente Verhalten des Programms sorgt sogar dafür, dass 1000x1000 Matrizen nicht bearbeitet werden können.
+
+Die hochoptimierten Funktionen der GNU Scientific Library und der  Standard R Library liefern interessante Ergebnisse, die es in zwei Kategorien zu unterteilen gilt:
+\begin{enumerate}
+	\item \underline{100x100 Matizen}\\
+	Die \emph{solve} Funktion in R scheint bei der Berechnung der Matrizen mit verschiedenen Schwierigkeitsstufen konfrontiert zu sein, was die 4 Kategorien der Rechenzeit erklären würde. Das könnte mit unterschiedlichen Eigenschaften der gegebenen Matrix zusammenhängen. Nichtsdestotrotz lässt sich nicht ausschließen, dass die Messdaten vom Kontextwechsel der CPU betroffen waren.
+	Anhand der gegebenen Daten lässt sich dennoch darauf schließen, dass die GSL Implementierung um ca. den Faktor 1,5 schneller ist, als die R Funktion \emph{solve}, wenn es darum geht 100x100 Matizen zu behandeln.
+	Der Speicherverbrauch unterscheidet sich hingegen extrem. Bei GSL werden nur 336 Kilobyte Speicher beansprucht. Die R Variante ist durch ihren gesamten Bal­last, der durch die Sprache mitgeliefert wird, bei 40,5 Megabyte. Das bedeutet, dass GSL 121 mal weniger Speicherplatz benötigt, als R. 
+	\item \underline{1000x1000 Matizen}\\
+	In Anbetracht der bisherigen Daten, ist es interessant, dass die \emph{solve} Funktion bei großen Matizen signifikant besser abschneidet, als GSL. Dabei ist solve ca. 4,5 mal schneller. Dies könnte an der Natur von R liegen, mit großen Datenmengen effizient zu arbeiten. Der Speicherverbrauch nähert sich bei großen Matrizen etwas an. Dabei liegt GSL mit 15,3 Megabyte aber immernoch deutlich vor den 71 bis 89 Megabyte des R-Scripts.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+% ----------------------------------------------------------------------------

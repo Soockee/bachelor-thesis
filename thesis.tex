@@ -1,0 +1,120 @@
+% ----------------------------------------------------------------------------
+% Vorlage Abschlussarbeit Informatik THM (minimal)
+%
+% Copyright (c) 2016 by Burkhardt Renz. All rights reserved.
+% Die Vorlage für eine Abschlussarbeit in der Informatik am Fachbereich
+% MNI der THM ist lizenziert unter einer Creative Commons
+% Namensnennung-Nicht kommerziell 4.0 International Lizenz.
+%
+% $Id: vorlage.tex 3835 2016-09-26 09:17:05Z br $
+% ----------------------------------------------------------------------------
+
+\documentclass[%
+	BCOR=8.25mm,         % Bindekorrektur
+	DIV=12,              % Satzspiegel
+	parskip=half,				 % Abstand zwischen Absätzen
+	bibliography=totoc,	 % Literaturverzeichnis im Inhaltsverzeichnis
+	headsepline=on,      % Trennlinie Kolumnentitel
+	openany
+	]{scrbook}
+
+%% Präambel
+\usepackage[english, ngerman]{babel} % deutsche typogr. Regeln + Trenntabelle
+\usepackage[T1]{fontenc}             % interner TeX-Font-Codierung
+\usepackage{lmodern}                 % Font Latin Modern
+\usepackage[utf8]{inputenc}          % Font-Codierung der Eingabedatei
+\usepackage[babel]{csquotes}         % Anführungszeichen
+\usepackage{graphicx}                % Graphiken
+\usepackage{booktabs}                % Tabellen schöner
+\usepackage{listingsutf8}            % Listings mit Einstellungen
+\lstset{basicstyle=\small\ttfamily,
+	tabsize=2,
+	basewidth={0.5em,0.45em},
+	extendedchars=true}
+\usepackage{amsmath}	            % Mathematik
+\usepackage{enumitem}				% Listen Aufzählung
+\usepackage[section]{placeins}
+\makeatletter						% Expand placeins function to subsection
+\AtBeginDocument{%
+	\expandafter\renewcommand\expandafter\subsection\expandafter{%
+		\expandafter\@fb@secFB\subsection
+	}%
+}
+\makeatother
+\usepackage[pdftex]{hyperref}       
+\hypersetup{
+	bookmarksopen=true,
+	bookmarksopenlevel=3,
+	colorlinks,
+	citecolor=blue,
+	linkcolor=blue,
+}
+\usepackage[english]{babel}
+\usepackage[backend=bibtex,style=ieee]{biblatex}
+\addbibresource{bib/biblio.bib} 
+\usepackage{scrhack}								 % unterdrückt Fehlermeldung von listings
+
+%% Nummerierungstiefen
+\setcounter{tocdepth}{3}             % 3 Stufen im Inhaltsverzeichnis
+\setcounter{secnumdepth}{3} 		     % 3 Stufen in Abschnittnummerierung
+
+% ----------------------------------------------------------------------------
+\begin{document}
+
+\frontmatter
+
+%% Titelseite
+\begin{titlepage}
+	\begin{center}
+	\includegraphics[width=0.9\textwidth]{img/mni-logo}\\[5cm]
+	\textbf{\huge\sffamily Rechenzeitvergleich unter Verwendung von mathematischen Funktionen von C und R}\\[2cm]
+	\textsc{\Large Seminararbeit}\\Studiengang Informatik\\[2cm]
+	vorgelegt von\\
+	\textbf{Simon Stockhause}\\ [1.5cm] 
+	Juni 2018
+	\end{center}
+	\vfill
+	\begin{tabular}{ll}
+		Referent der Arbeit: & Prof. Dr.-Ing. Axel Schumann\\ 
+	\end{tabular}
+\end{titlepage}
+\cleardoubleemptypage
+
+%% Erklärung
+\pagestyle{empty}
+
+
+%% Zusammenfassung
+\pagestyle{empty}
+\begin{quote}
+	\vspace*{4cm}
+
+	\begin{center}
+		\textbf{\Large\sffamily Zusammenfassung}
+	\end{center}
+
+	Die Unterschiede der beiden Sprachen C und R lassen sich deutlich aufzeigen. Dabei ist die Balance zwischen den vorhandenen Ressourcen ein ausschlaggebender Faktor. Auch die spezielle Implementierung und die Schwierigkeit des zu behandelten Problems spielen eine Rolle.
+
+	
+\end{quote}
+\cleardoubleemptypage
+
+%% Verzeichnissse
+\tableofcontents
+\listoffigures
+
+\mainmatter 
+\pagestyle{headings}
+
+\input{einleitung}
+\input{methoden}
+\input{ergebnisse}
+
+\backmatter 
+
+\appendix
+\input{fazit}
+\input{litverz}
+
+\end{document}
+% ----------------------------------------------------------------------------

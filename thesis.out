@@ -1,0 +1,27 @@
+\BOOKMARK [0][]{chapter.1}{Einleitung}{}% 1
+\BOOKMARK [1][]{section.1.1}{Zielsetzung}{chapter.1}% 2
+\BOOKMARK [0][]{chapter.2}{Die untersuchten Sprachen}{}% 3
+\BOOKMARK [1][]{section.2.1}{Die Sprache C}{chapter.2}% 4
+\BOOKMARK [1][]{section.2.2}{Die Sprache R}{chapter.2}% 5
+\BOOKMARK [1][]{section.2.3}{Relevante unterschiede der Sprachen}{chapter.2}% 6
+\BOOKMARK [0][]{chapter.3}{Messmethode zur Ermittlung der Rechenzeit}{}% 7
+\BOOKMARK [1][]{section.3.1}{Messen der Gesamtlaufzeit mithilfe eines system call}{chapter.3}% 8
+\BOOKMARK [1][]{section.3.2}{Messen der Laufzeit einer Iteration durch Zeitdifferenz zwischen Codeabschnitten}{chapter.3}% 9
+\BOOKMARK [0][]{chapter.4}{Verwendete mathematische Funktion}{}% 10
+\BOOKMARK [1][]{section.4.1}{Gauss-Jordan Algorithmus}{chapter.4}% 11
+\BOOKMARK [1][]{section.4.2}{Optimierte Gau\337sche Eliminationsverfahren}{chapter.4}% 12
+\BOOKMARK [0][]{chapter.5}{Betrachtung der Rechenzeit verschiedener Implementierungen}{}% 13
+\BOOKMARK [1][]{section.5.1}{C naive Implementierung}{chapter.5}% 14
+\BOOKMARK [2][]{subsection.5.1.1}{100x100 Matrix}{section.5.1}% 15
+\BOOKMARK [2][]{subsection.5.1.2}{1000x1000 Matrix}{section.5.1}% 16
+\BOOKMARK [1][]{section.5.2}{C unter Vewendung von GSL}{chapter.5}% 17
+\BOOKMARK [2][]{subsection.5.2.1}{100x100 Matrix}{section.5.2}% 18
+\BOOKMARK [2][]{subsection.5.2.2}{1000x1000 Matrix}{section.5.2}% 19
+\BOOKMARK [1][]{section.5.3}{R standard solve Funktion}{chapter.5}% 20
+\BOOKMARK [2][]{subsection.5.3.1}{100x100 Matrix}{section.5.3}% 21
+\BOOKMARK [2][]{subsection.5.3.2}{1000x1000 Matrix}{section.5.3}% 22
+\BOOKMARK [1][]{section.5.4}{R Matlib-Package}{chapter.5}% 23
+\BOOKMARK [2][]{subsection.5.4.1}{100x100 Matrix}{section.5.4}% 24
+\BOOKMARK [2][]{subsection.5.4.2}{1000x1000 Matrix}{section.5.4}% 25
+\BOOKMARK [1][]{section.5.5}{Ergebnisdiskussion}{chapter.5}% 26
+\BOOKMARK [0][]{chapter*.3}{Fazit}{}% 27
