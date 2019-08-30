@@ -1,0 +1,14 @@
+% Encoding: UTF-8
+
+@Book{Beyer2016,
+  author        = {Beyer, B. and Jones, C. and Petoff, J. and Murphy, N.R.},
+  title         = {Site Reliability Engineering: How Google Runs Production Systems},
+  year          = {2016},
+  publisher     = {O'Reilly Media, Incorporated},
+  isbn          = {9781491929124},
+  url           = {https://books.google.de/books?id=81UrjwEACAAJ},
+  __markedentry = {[socke:6]},
+  lccn          = {2017304248},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
