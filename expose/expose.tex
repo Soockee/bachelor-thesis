@@ -176,7 +176,7 @@
 \pagenumbering{arabic}
 
 \section{Problemstellung}
-	In einem System werden oft Nachrichten ausgetauscht. In Falle eines verteilten Systems spielt dabei die Kommunikation über Prozessgrenzen eine zentrale Rolle.
+	In einem System werden Nachrichten ausgetauscht. In Falle eines verteilten Systems spielt dabei die Kommunikation über Prozessgrenzen eine zentrale Rolle.
 	Entscheidende Ereignisse und deren zeitliches Auftreten sind von besonderem Interesse. Diese Ereignisse werden Events genannt. Events bilden einzelne Zeitpunkte ab. Die Intrasystem-Netzwerkkommunikation bedarf Konzepte zur Nachvollziehbarkeit von Events und deren Beziehungen zueinander. 
 	
 	Das System generiert asynchron \emph{Frames} und sendet diese in gleichbleibenden Intervallen über eine Websocketverbindung an einen Client. Frames werden verworfen, sobald neuere Frames generiert wurden, d.h. innerhalb eines Intervals können mehrere Frames entstehen, aber nur eines ist relevant. Der Client kann die kommenden Frames durch Übermittlung von Daten über den Websocket beeinflussen. Die bei diesem Datenaustausch entstehenden Events wie z.B. das Starten einer Framegenerierung, dem Beending einer Framegenerierung, dem Senden eines fertiggestellten Frames und dem Empfangen eines Frames sollen erstellt werden. Anschließened muss die Menge von Events in eine eine Ordnung gebracht werden. Dazu stellt sich folgende Frage: \emph{Ist es möglich Events zu generieren und miteinander in Verbindung zu setzen, die es erlauben, einen Stream von Frames als Trace darzustellen}
