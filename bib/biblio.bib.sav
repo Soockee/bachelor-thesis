@@ -90,8 +90,81 @@
 
 @Online{HashiCorpa,
   author  = {HashiCorp},
+  title   = {Packer Intro},
   url     = {https://www.packer.io/intro/index.html},
   urldate = {2019-08-05},
+}
+
+@Online{opentracing,
+  title   = {opentracing trace overview figure},
+  year    = {2019},
+  url     = {https://opentracing.io/docs/overview/},
+  urldate = {2019-09-10},
+}
+
+@Article{Narayanan2003,
+  author  = {P. Barham and R. Isaacs and R. Moertier and D. Narayanan},
+  title   = {Magpie: online modelling and performance-aware systems},
+  journal = {Proceedings of USENIX HotOS IX},
+  year    = {2003},
+}
+
+@Article{Stocia2007,
+  author  = {R. Fonseca and G. Porter and R. Katz and S. Shenker and I. Stocia},
+  title   = {X-Trace: A Pervasive Network Tracing Framework},
+  journal = {Proceedings of USENIX NSDI},
+  year    = {2007},
+}
+
+@Article{Shanbhag2010,
+  author  = {Benjamin Sigelman and Luiz André Barroso and Mike Burrows and Pat Stephenson and Manoj Plakal and Donald Beaver and Saul Jaspan and Chandan Shanbhag},
+  title   = {Dapper, a Large-Scale Distributed Systems Tracing Infrastructure},
+  journal = {Google Techical Report dapper-2010-1},
+  year    = {2010},
+}
+
+@Article{Kaldor2017,
+  author       = {J. Kaldor and J. Mace and M. Bejda and E. Gao and W. Kuropatwa and J. O'Neill and K. Win Ong and B. Schaller and P. Shan and B. Viscomi and V. Venkataraman and K. Veeraraghavan and Y. Jiun Song},
+  title        = {Canopy: An End-to-End Performance Tracing And Analysis System},
+  journal      = {SOPS 2017},
+  journaltitle = {Proceedings of the 27th ACM Symposium on Operating Systems Principles},
+  year         = {2017},
+}
+
+@Book{Garg2008,
+  author = {Vijay K. Garg},
+  title  = {Elements of Distributed Computing},
+  date   = {2008-04-21},
+}
+
+@Article{Lamport1978,
+  author  = {Leslie Lamport},
+  title   = {Time, Clocks, and the Ordering of Events in a Distributed System},
+  journal = {Communications of the ACM},
+  year    = {1978},
+}
+
+@InProceedings{Perrin2016,
+  author    = {M. Perrin and A. Mostefaoui and C. Jard},
+  title     = {Causal consistency: beyond memory},
+  booktitle = {21st ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+  year      = {2016},
+}
+
+@Online{FraunhoferInstitut2019,
+  author  = {Fraunhofer-IGD},
+  editor  = {Fraunhofer-IGD},
+  title   = {Visual Computing},
+  year    = {2019},
+  url     = {https://www.igd.fraunhofer.de/},
+  urldate = {2019-10-10},
+}
+
+@Article{Leavitt2014,
+  author  = {Jonathan Leavitt},
+  title   = {End-to-End Tracing Models: Analysis and Unification},
+  journal = {D},
+  date    = {2014-05-05},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

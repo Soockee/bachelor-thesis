@@ -13,8 +13,8 @@
 \usepackage{scrextend}
 \usepackage{xcolor}
 \usepackage{listings}
-\usepackage[backend=bibtex,style=ieee]{biblatex}
-\addbibresource{bib/biblatex.bib} 
+\usepackage[backend=biber,maxnames=999,style=alphabetic]{biblatex}
+\addbibresource{bib/biblio.bib} 
 %\usepackage{showframe}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
@@ -79,6 +79,22 @@
 \let\oldsubparagraph\subparagraph
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+
+% Adapted from \footcite in numeric.cbx and generic citation
+% commands \citeauthor, \citetitle, \citeyear in biblatex.def
+\DeclareCiteCommand{\footpartcite}[\mkbibfootnote]
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+	\mkbibbrackets{\usebibmacro{cite}}%
+	\setunit{\addnbspace}
+	\printfield[citetitle]{title}%
+	\newunit
+	\printfield{year}
+}
+{\addsemicolon\space}
+{\usebibmacro{postnote}}
+
+\DeclareMultiCiteCommand{\footpartcites}[\mkbibfootnote]{\footpartcite}{\addsemicolon\space}
 
 % set default figure placement to htbp
 \makeatletter
@@ -158,33 +174,102 @@
 \tableofcontents
 \newpage
 \pagenumbering{arabic}
+
 \section{Problemstellung}
-\begin{itemize}
-	\item Verteiltes System
-	\item Welche Komponente brauch wie lange, um seine Aufgabe durchzuführen
-	\item Besonders im Fokus: Komponenten die mit Grafikkarten kommunizieren
-\end{itemize}
+	In einem System werden oft Nachrichten ausgetauscht. In Falle eines verteilten Systems spielt dabei die Kommunikation über Prozessgrenzen eine zentrale Rolle.
+	Entscheidende Ereignisse und deren zeitliches Auftreten sind von besonderem Interesse. Diese Ereignisse werden Events genannt. Events bilden einzelne Zeitpunkte ab. Die Intrasystem-Netzwerkkommunikation bedarf Konzepte zur Nachvollziehbarkeit von Events und deren Beziehungen zueinander. 
+	
+	Das System generiert asynchron \emph{Frames} und sendet diese in gleichbleibenden Intervallen über eine Websocketverbindung an einen Client. Frames werden verworfen, sobald neuere Frames generiert wurden, d.h. innerhalb eines Intervals können mehrere Frames entstehen, aber nur eines ist relevant. Der Client kann die kommenden Frames durch Übermittlung von Daten über den Websocket beeinflussen. Die bei diesem Datenaustausch entstehenden Events wie z.B. das Starten einer Framegenerierung, dem Beending einer Framegenerierung, dem Senden eines fertiggestellten Frames und dem Empfangen eines Frames sollen erstellt werden. Anschließened muss die Menge von Events in eine eine Ordnung gebracht werden. Dazu stellt sich folgende Frage: \emph{Ist es möglich Events zu generieren und miteinander in Verbindung zu setzen, die es erlauben, einen Stream von Frames als Trace darzustellen}
 \section{Erkenntnisinteresse}
-	\begin{itemize}
-		\item Entwicklung eines verteilten Systems
-		\item Dieses System erzeugt Frames 
-		\item Frames werden innerhalb eines Netzwerks versendet
-		\item Besonderheit: Mehrere Komponenten des Systems erzeugen Frames, die in einem Manager zusammengeführt werden.
-		\item Latenzen und Bottelnecks im System sind von interesse
-	\end{itemize}
+	Aufgrund der Streambasierenden Ansatzes des Systems, welcher kontinuierlich Frames an einen Client sendet, sollen die Unterschiede zu Request-Response basierender Kommunikation aufgezeigt werden. Zumdem soll festgestellt werden, welche Daten nötig sind, um eine Kausalordnung zwischen Events herzustellen. Dabei ist die Ordnung der Events in einem asynchronen Umfeld zu betrachten. Hierbei könnten Designunterscheide aufgezeigt werden. Diese wären z.B. das Speichern der Events in verteilten Datenbanken oder das \emph{Piggybacking}, d.h. das Mitführen von Tracemetadaten, welche die Events beinhaltet, über Prozessgrenzen hinweg.  
+	
 \section{Zielsetzung}
-	Latenzmessung vom Zeitpunkt der Generierung eines Frames bis hin zur Ankunft des Frames beim Clienten.
+	Es soll eine Bibliothek entwickelt werden, die es ermöglicht Tracingevents zu generieren. Dazu muss ein Datenmodell dieser Events entwickelt werden. Die Events könnten entweder in einer zentralen  Stelle(Piggybacking) oder in dezentralen Stellen(verteilte Datenbank) gesammelt und anschließend geordnet und visualisiert werden. 
 	
 \section{Forschungsstand}
+	Es gibt diverse Konzepte und Werkzeuge zur Erhebung von Tracingdaten. Darunter zählen Instrumentalisierungsbibliotheken von z.B.:
 	\begin{itemize}
-		\item Dapper
 		\item Zipkin
-		\item jaeger
-		\item opentracing
-		\item opencensus
+		\item Jaeger
+		\item Opentracing
+		\item Brown Tracing Framework
+		\item X-Trace
 	\end{itemize}
-\section{Gliederung}
-\section{Zeitplan}
+	Abgesehen von dem Brown Tracing Framework und dem X-Trace verwenden alle genannten Ansätze das spanbasierte Datenmodell. Die Brown University präsentiert in ihrer Veröffentlichung \emph{Universal Context Propagation for Distributed System Instrumentation} eine Schichten-Architektur zur Übermittlung von Tracingdaten in einem spezifizierten \emph{Baggage Context}. Der Baggage Context wird als Metadata mitgereicht und stellt somit eine Form des Piggybacking dar.  Das Paper \emph{End-to-End Tracing Models: Analysis and Unification} beschreibt das spanbasierte Modell als eine Sammlung von \emph{spans}, welche jeweils eine Block von Rechenarbeit darstellt. spans representieren ein Zeitinterval, weshalb sie eine Anfangs- und Endzeit benötigen.\footpartcite{Leavitt2014}
 
+\section{Gliederung}
+\begin{itemize}
+	\item Einleitung
+		\begin{itemize}
+			\item Motivation
+			\item Problemstellung
+			\item Foschungsstand
+			\item Thesisübersicht
+		\end{itemize}
+	\item Grundwissen / Themeneinstieg / Themenüberblick
+		\begin{itemize}
+			\item Verteilte Systeme
+			\begin{itemize}
+				\item Überwachung von verteilte Systemen
+				\item Synchronisation
+				\item Ordnung von Events
+			\end{itemize}
+			\item Bibliotheksentwicklung
+		\end{itemize}
+	\item Problembeschreibung
+		\begin{itemize}
+			\item Eventgenerierung
+			\begin{itemize}
+				\item Eventkorrelation
+				\item Synchronisation zwischen Eventgeneratoren
+			\end{itemize}
+			\item Eventübermittlung
+		\end{itemize}
+	\item Design
+	\begin{itemize}
+		\item Datenmodell
+		\begin{itemize}
+			\item Eventmodell
+			\item Eventgraph
+		\end{itemize}
+		\item Verarbeitsmodell
+		\begin{itemize}
+			\item Agenten
+			\item Collector
+		\end{itemize}
+	\end{itemize}
+	\item Implementierung
+	\begin{itemize}
+		\item Bibliothek: Eventgenerator
+		\item Eventagent
+		\item Eventcollector
+	\end{itemize}
+	\item Evaluierung
+	\begin{itemize}
+		\item Genauigkeit der Eventgenerierung
+		\item Darstellung der Events
+		\item Vergleich mit Jaeger
+		\begin{itemize}
+			\item Datenmodelle
+			\item Bereitstellung
+			\item Ergebnisse
+		\end{itemize}
+	\end{itemize}
+	\item Fazit
+\end{itemize}
+
+\section{Zeitplan}
+\begin{itemize}
+	
+\item		Gesamtzeitraum: 13.01 - 13.04 (91 Tage)
+
+\item		Recherche: 13.01 - 20.01 (7 Tage)
+\item		Implementierung: 21.01 - 14.02 (24 Tage)
+\item		Schreiben:  15.02 - 25.03 (39 Tage)
+\item		Abschluss: 16.03 - 13.04 (28 Tage)
+
+\end{itemize}
+\newpage
+\printbibliography[title=Literaturverzeichnis]
 
 \end{document}
