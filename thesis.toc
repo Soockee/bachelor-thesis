@@ -3,56 +3,72 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Zielsetzung}{1}{section.1.1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Die untersuchten Sprachen}{2}{chapter.2}
+\contentsline {section}{\numberline {1.2}Problemstellung}{1}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Die Sprache C}{2}{section.2.1}
+\contentsline {section}{\numberline {1.3}Foschungsstand}{1}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Die Sprache R}{2}{section.2.2}
+\contentsline {section}{\numberline {1.4}Thesis\IeC {\"u}bersicht}{1}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Relevante unterschiede der Sprachen}{2}{section.2.3}
+\contentsline {chapter}{\numberline {2}Themen\IeC {\"u}berblick}{2}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Messmethode zur Ermittlung der Rechenzeit}{3}{chapter.3}
+\contentsline {section}{\numberline {2.1}Verteilte Systeme}{2}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Messen der Gesamtlaufzeit mithilfe eines system call}{3}{section.3.1}
+\contentsline {subsection}{\numberline {2.1.1}\IeC {\"U}berwachung von verteilten Systemen}{2}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Messen der Laufzeit einer Iteration durch Zeitdifferenz zwischen Codeabschnitten}{3}{section.3.2}
+\contentsline {subsection}{\numberline {2.1.2}Synchronisation}{2}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Verwendete mathematische Funktion}{4}{chapter.4}
+\contentsline {subsection}{\numberline {2.1.3}Ordnung von events}{2}{subsection.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Gauss-Jordan Algorithmus}{4}{section.4.1}
+\contentsline {section}{\numberline {2.2}Bibliotheksentwicklung}{2}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Optimierte Gau\IeC {\ss }sche Eliminationsverfahren}{5}{section.4.2}
+\contentsline {chapter}{\numberline {3}Problembeschreibung}{3}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Betrachtung der Rechenzeit verschiedener Implementierungen}{6}{chapter.5}
+\contentsline {section}{\numberline {3.1}Eventgenerierung}{3}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}C naive Implementierung}{6}{section.5.1}
+\contentsline {subsection}{\numberline {3.1.1}Eventkorrelation}{3}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}100x100 Matrix}{6}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Synchronistion von Eventgeneratoren}{3}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}1000x1000 Matrix}{7}{subsection.5.1.2}
+\contentsline {section}{\numberline {3.2}Event\IeC {\"u}bermittlung}{3}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}C unter Vewendung von GSL}{8}{section.5.2}
+\contentsline {chapter}{\numberline {4}Design}{4}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}100x100 Matrix}{8}{subsection.5.2.1}
+\contentsline {section}{\numberline {4.1}Datenmodell}{4}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}1000x1000 Matrix}{8}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {4.1.1}Eventmodell}{4}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}R standard solve Funktion}{8}{section.5.3}
+\contentsline {subsection}{\numberline {4.1.2}Eventgraph}{4}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}100x100 Matrix}{8}{subsection.5.3.1}
+\contentsline {section}{\numberline {4.2}Verarbeitungsmodell}{4}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}1000x1000 Matrix}{8}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {4.2.1}Agenten}{4}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}R Matlib-Package}{9}{section.5.4}
+\contentsline {subsection}{\numberline {4.2.2}Collectoren}{4}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}100x100 Matrix}{9}{subsection.5.4.1}
+\contentsline {chapter}{\numberline {5}Implementierung}{5}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}1000x1000 Matrix}{9}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.1}Bilbiothek: Porkins}{5}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Ergebnisdiskussion}{10}{section.5.5}
+\contentsline {section}{\numberline {5.2}Eventagent}{5}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Fazit}{11}{chapter*.3}
+\contentsline {section}{\numberline {5.3}Eventcollector}{5}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{12}{chapter*.4}
+\contentsline {chapter}{\numberline {6}Evaluierung}{6}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Genauigkeit der Eventgenerierung}{6}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Darstellung der Events}{6}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Vergleich mit Jaeger}{6}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.1}Datenmodelle}{6}{subsection.6.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.2}Bereitstellung}{6}{subsection.6.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.3}Ergebnisse}{6}{subsection.6.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Fazit}{7}{chapter*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{8}{chapter*.4}

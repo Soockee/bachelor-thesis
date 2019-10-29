@@ -167,4 +167,10 @@
   date    = {2014-05-05},
 }
 
+@Book{Dragoni2017,
+  author = {Nicola Dragoni AND Saverio Giallorenzo AND Alberto Llunch Lafuente AND Manuel Mazzara AND Fabrizio Montesi AND Ruslan Mustafin AND Larisa Safina},
+  title  = {Present and Ulterior Software Engineering},
+  year   = {2017},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}

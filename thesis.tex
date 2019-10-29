@@ -50,13 +50,40 @@
 	linkcolor=blue,
 }
 \usepackage[english]{babel}
-\usepackage[backend=bibtex,style=ieee]{biblatex}
+\usepackage[backend=biber,maxnames=999,style=alphabetic]{biblatex}
 \addbibresource{bib/biblio.bib} 
 \usepackage{scrhack}								 % unterdrückt Fehlermeldung von listings
 
 %% Nummerierungstiefen
 \setcounter{tocdepth}{3}             % 3 Stufen im Inhaltsverzeichnis
 \setcounter{secnumdepth}{3} 		     % 3 Stufen in Abschnittnummerierung
+
+
+
+%% Literaturverzeichniss Format
+% Adapted from \footcite in numeric.cbx and generic citation
+% commands \citeauthor, \citetitle, \citeyear in biblatex.def
+\DeclareCiteCommand{\footpartcite}[\mkbibfootnote]
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+	\mkbibbrackets{\usebibmacro{cite}}%
+	\setunit{\addnbspace}
+	\printfield[citetitle]{title}%
+	\newunit
+	\printfield{year}
+}
+{\addsemicolon\space}
+{\usebibmacro{postnote}}
+
+\DeclareMultiCiteCommand{\footpartcites}[\mkbibfootnote]{\footpartcite}{\addsemicolon\space}
+
+
+%% Chapterschriftformatierung
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
 
 % ----------------------------------------------------------------------------
 \begin{document}
@@ -67,11 +94,11 @@
 \begin{titlepage}
 	\begin{center}
 	\includegraphics[width=0.9\textwidth]{img/mni-logo}\\[5cm]
-	\textbf{\huge\sffamily Inbetriebnahme und Überwachung von grafikkartenintensiven Anwendungen in verteilten Systemen unter Berücksichtigung der Steuerung von handlungsbedürftigen Zuständen}\\[2cm]
+	\textbf{\huge\sffamily Porkins: Eine Instrumentalisierungbibliothek zur Generierung von Tracingevents von streambasierten Anwendungen }\\[2cm]
 	\textsc{\Large Bachlorthesis/Seminararbeit}\\Studiengang Informatik\\[2cm]
 	vorgelegt von\\
 	\textbf{Simon Stockhause}\\ [1.5cm] 
-	Januar 2020
+	April 2020
 	\end{center}
 	\vfill
 	\center
@@ -97,6 +124,12 @@
 	\end{center}
 
 	Die heutigen Bedürfnisse der Anwender ein stets erreichbaren Service zur Verfügung zu haben, stellt hohe Erwartung an Unternehmen und damit hohe Erwartungen an die  Infrastruktur ihrer Mircoserviceanwendungen. Die enorme Skalierbarkeit einzelner Komponenten und die aussgezeichnete Resourcennutzung der Hardware löst viele Probleme der Vergangenheit. Allerdings schafft diese Umstellung neue Herausfoderungenen die es zu bewältigen gilt. 
+	
+	\begin{itemize}
+		\item Überwachung
+		\item Logs, Metrics, Traces
+		\item Performance
+	\end{itemize}
 	
 \end{quote}
 \cleardoubleemptypage
@@ -124,8 +157,11 @@
 \pagestyle{headings}
 
 \input{einleitung}
-\input{methoden}
-\input{ergebnisse}
+\input{themenueberblick}
+\input{problembeschreibung}
+\input{design}
+\input{implementierung}
+\input{evaluierung}
 
 \backmatter 
 

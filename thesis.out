@@ -1,28 +1,36 @@
 \BOOKMARK [0][]{chapter.1}{Einleitung}{}% 1
-\BOOKMARK [1][]{section.1.1}{Zielsetzung}{chapter.1}% 2
-\BOOKMARK [0][]{chapter.2}{Die untersuchten Sprachen}{}% 3
-\BOOKMARK [1][]{section.2.1}{Die Sprache C}{chapter.2}% 4
-\BOOKMARK [1][]{section.2.2}{Die Sprache R}{chapter.2}% 5
-\BOOKMARK [1][]{section.2.3}{Relevante unterschiede der Sprachen}{chapter.2}% 6
-\BOOKMARK [0][]{chapter.3}{Messmethode zur Ermittlung der Rechenzeit}{}% 7
-\BOOKMARK [1][]{section.3.1}{Messen der Gesamtlaufzeit mithilfe eines system call}{chapter.3}% 8
-\BOOKMARK [1][]{section.3.2}{Messen der Laufzeit einer Iteration durch Zeitdifferenz zwischen Codeabschnitten}{chapter.3}% 9
-\BOOKMARK [0][]{chapter.4}{Verwendete mathematische Funktion}{}% 10
-\BOOKMARK [1][]{section.4.1}{Gauss-Jordan Algorithmus}{chapter.4}% 11
-\BOOKMARK [1][]{section.4.2}{Optimierte Gau\337sche Eliminationsverfahren}{chapter.4}% 12
-\BOOKMARK [0][]{chapter.5}{Betrachtung der Rechenzeit verschiedener Implementierungen}{}% 13
-\BOOKMARK [1][]{section.5.1}{C naive Implementierung}{chapter.5}% 14
-\BOOKMARK [2][]{subsection.5.1.1}{100x100 Matrix}{section.5.1}% 15
-\BOOKMARK [2][]{subsection.5.1.2}{1000x1000 Matrix}{section.5.1}% 16
-\BOOKMARK [1][]{section.5.2}{C unter Vewendung von GSL}{chapter.5}% 17
-\BOOKMARK [2][]{subsection.5.2.1}{100x100 Matrix}{section.5.2}% 18
-\BOOKMARK [2][]{subsection.5.2.2}{1000x1000 Matrix}{section.5.2}% 19
-\BOOKMARK [1][]{section.5.3}{R standard solve Funktion}{chapter.5}% 20
-\BOOKMARK [2][]{subsection.5.3.1}{100x100 Matrix}{section.5.3}% 21
-\BOOKMARK [2][]{subsection.5.3.2}{1000x1000 Matrix}{section.5.3}% 22
-\BOOKMARK [1][]{section.5.4}{R Matlib-Package}{chapter.5}% 23
-\BOOKMARK [2][]{subsection.5.4.1}{100x100 Matrix}{section.5.4}% 24
-\BOOKMARK [2][]{subsection.5.4.2}{1000x1000 Matrix}{section.5.4}% 25
-\BOOKMARK [1][]{section.5.5}{Ergebnisdiskussion}{chapter.5}% 26
-\BOOKMARK [0][]{chapter*.3}{Fazit}{}% 27
-\BOOKMARK [0][]{chapter*.4}{Literatur}{}% 28
+\BOOKMARK [1][]{section.1.1}{Motivation}{chapter.1}% 2
+\BOOKMARK [1][]{section.1.2}{Problemstellung}{chapter.1}% 3
+\BOOKMARK [1][]{section.1.3}{Foschungsstand}{chapter.1}% 4
+\BOOKMARK [1][]{section.1.4}{Thesis\374bersicht}{chapter.1}% 5
+\BOOKMARK [0][]{chapter.2}{Themen\374berblick}{}% 6
+\BOOKMARK [1][]{section.2.1}{Verteilte Systeme}{chapter.2}% 7
+\BOOKMARK [2][]{subsection.2.1.1}{\334berwachung von verteilten Systemen}{section.2.1}% 8
+\BOOKMARK [2][]{subsection.2.1.2}{Synchronisation}{section.2.1}% 9
+\BOOKMARK [2][]{subsection.2.1.3}{Ordnung von events}{section.2.1}% 10
+\BOOKMARK [1][]{section.2.2}{Bibliotheksentwicklung}{chapter.2}% 11
+\BOOKMARK [0][]{chapter.3}{Problembeschreibung}{}% 12
+\BOOKMARK [1][]{section.3.1}{Eventgenerierung}{chapter.3}% 13
+\BOOKMARK [2][]{subsection.3.1.1}{Eventkorrelation}{section.3.1}% 14
+\BOOKMARK [2][]{subsection.3.1.2}{Synchronistion von Eventgeneratoren}{section.3.1}% 15
+\BOOKMARK [1][]{section.3.2}{Event\374bermittlung}{chapter.3}% 16
+\BOOKMARK [0][]{chapter.4}{Design}{}% 17
+\BOOKMARK [1][]{section.4.1}{Datenmodell}{chapter.4}% 18
+\BOOKMARK [2][]{subsection.4.1.1}{Eventmodell}{section.4.1}% 19
+\BOOKMARK [2][]{subsection.4.1.2}{Eventgraph}{section.4.1}% 20
+\BOOKMARK [1][]{section.4.2}{Verarbeitungsmodell}{chapter.4}% 21
+\BOOKMARK [2][]{subsection.4.2.1}{Agenten}{section.4.2}% 22
+\BOOKMARK [2][]{subsection.4.2.2}{Collectoren}{section.4.2}% 23
+\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 24
+\BOOKMARK [1][]{section.5.1}{Bilbiothek: Porkins}{chapter.5}% 25
+\BOOKMARK [1][]{section.5.2}{Eventagent}{chapter.5}% 26
+\BOOKMARK [1][]{section.5.3}{Eventcollector}{chapter.5}% 27
+\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 28
+\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 29
+\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 30
+\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 31
+\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 32
+\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 33
+\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 34
+\BOOKMARK [0][]{chapter*.3}{Fazit}{}% 35
+\BOOKMARK [0][]{chapter*.4}{Literatur}{}% 36

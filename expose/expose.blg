@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [1] Config.pm:305> INFO - Logfile is 'expose.blg'
-[36] biber:313> INFO - === Mo Okt 21, 2019, 17:03:36
-[57] Biber.pm:371> INFO - Reading 'expose.bcf'
-[128] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
+[35] biber:313> INFO - === Di Okt 29, 2019, 18:06:14
+[56] Biber.pm:371> INFO - Reading 'expose.bcf'
+[127] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
 [144] Biber.pm:3981> INFO - Processing section 0
-[161] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/biblio.bib' for section 0
-[163] bibtex.pm:1468> INFO - LaTeX decoding ...
-[183] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/biblio.bib'
-[202] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[202] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[202] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
-[202] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
-[205] bbl.pm:617> INFO - Writing 'expose.bbl' with encoding 'UTF-8'
-[205] bbl.pm:720> INFO - Output to expose.bbl
+[156] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/biblio.bib' for section 0
+[158] bibtex.pm:1468> INFO - LaTeX decoding ...
+[177] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/biblio.bib'
+[197] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[197] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[197] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
+[197] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
+[199] bbl.pm:617> INFO - Writing 'expose.bbl' with encoding 'UTF-8'
+[200] bbl.pm:720> INFO - Output to expose.bbl

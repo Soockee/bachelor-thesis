@@ -160,4 +160,11 @@
   urldate = {2019-10-10},
 }
 
+@Article{Leavitt2014,
+  author  = {Jonathan Leavitt},
+  title   = {End-to-End Tracing Models: Analysis and Unification},
+  journal = {D},
+  date    = {2014-05-05},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}

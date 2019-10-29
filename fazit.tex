@@ -8,21 +8,5 @@
 % ----------------------------------------------------------------------------
 
 \chapter{Fazit}
-Die Hypothese, die in der Zielsetzung definiert worden ist, besagt, dass die Implementierungen der Inversenberechnung in C bessere Laufzeiten aufweisen, als in R.
 
-Dies kann in Anbetracht der Messergebnis nur Teilweise bestätigt werden. 
-\begin{itemize}
-	\item Bei kleinen Matrizen trifft dies definitiv zu, wie in der Ergebnissdiskussion aufgezeigt wurde.
-	\item Bei immer größer werdenden Matrizen steigt die Performance von R im Verhältnis zu den C-Varianten.
-\end{itemize}
-
-Diese Arbeit hat jedoch auch deutlich gemacht, wie stark die Performance von einer Implementierung abhängt. Es wurden gleiche Algorithmen mit unterschiedlichen Implementierungen verglichen und es hat sich herausgestellt, dass deutliche Unterschiede festzustellen sind. 
-
-Die beiden naiven Ansätze leiden an gefährlichen Fehlern, wie z.B. Speicherlecks, die zum Absturz des Programms führen können. Das bedeutet, dass man bei der Auswahl seiner Werkzeuge, unbedingt die Rahmenbedingungen miteinbeziehen sollte. Damit ist gemeint, dass falls man die Möglichkeit hat, bewährte Packete einzusetzten, dann ist es empfohlen dies zu tun, anstatt das Rad neu zu erfinden.
-
-Die C-Varianten können vorallem bei dem Speicherbedarf glänzen. Dafür sind jedoch hoher Entwicklungsaufwand und extreme Vorsicht bei der Implementierung aufzubringen.
-
-Die R-Variante bietet eine enorme Auswahl an mathematischen Funktionen, die meistens sehr perfomant sind. Der Entwicklungsaufwand von Code ist ungemein geringer.
-
-In Anbetracht der heutigen Ressourcen kann man in vielen Anwendungsfällen beruhigt auf die einfacheren Scriptsprachen zurückgreifen. Es lässt sich aber in speziellen Fällen nicht umgehen, die volle Kontrolle, bei z.B. sicherheitskritischen Bereichen, zu übernehmen. In diesem Fall bietet sich C an.
 % ----------------------------------------------------------------------------
