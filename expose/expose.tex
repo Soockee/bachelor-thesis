@@ -115,7 +115,7 @@
 	\includegraphics[width=\textwidth, height=0.7\textheight]{img/LOGO_MNI.png}
 	\vfill
 	
-	\textsc{\Large Sommersemester 2019}\\[0.5cm]
+	\textsc{\Large Wintersemester 2019/2020}\\[0.5cm]
 	
 	
 	
@@ -130,7 +130,7 @@
 	\HRule\\[1.5cm]
 	\textsc{\Large Dozent}\\[0.5cm]
 	\textsc{ Prof. Dr. Harald Ritz}\\[0.5cm] % Major heading such as course name
-	\textsc{\Large Betreuer}\\[0.5cm]
+	\textsc{\Large Korreferent}\\[0.5cm]
 	\textsc{ M.Sc. Pascal Bormann}\\[0.5cm] % Major heading such as course name
 	\vspace{1.5cm}
 	\textsc{\Large Autor}\\[0.8cm]
@@ -179,9 +179,9 @@
 	In einem System werden Nachrichten ausgetauscht. In Falle eines verteilten Systems spielt dabei die Kommunikation über Prozessgrenzen eine zentrale Rolle.
 	Entscheidende Ereignisse und deren zeitliches Auftreten sind von besonderem Interesse. Diese Ereignisse werden Events genannt. Events bilden einzelne Zeitpunkte ab. Die Intrasystem-Netzwerkkommunikation bedarf Konzepte zur Nachvollziehbarkeit von Events und deren Beziehungen zueinander. 
 	
-	Das System generiert asynchron \emph{Frames} und sendet diese in gleichbleibenden Intervallen über eine Websocketverbindung an einen Client. Frames werden verworfen, sobald neuere Frames generiert wurden, d.h. innerhalb eines Intervals können mehrere Frames entstehen, aber nur eines ist relevant. Der Client kann die kommenden Frames durch Übermittlung von Daten über den Websocket beeinflussen. Die bei diesem Datenaustausch entstehenden Events wie z.B. das Starten einer Framegenerierung, dem Beending einer Framegenerierung, dem Senden eines fertiggestellten Frames und dem Empfangen eines Frames sollen erstellt werden. Die zeitliche Einordnung der Events hat dabei eine zentrale Rolle einzunehmen. Das Konstrukt von Events, die zueinander in Verbindung stehen, nennt sich \emph{Trace}. Dazu stellt sich folgende Frage: \emph{Ist es möglich Events zu generieren und miteinander in Verbindung zu setzen, die es erlauben, einen Stream von Frames als Trace darzustellen}.
+	Das System generiert asynchron \emph{Frames} und sendet diese in Intervallen über eine Websocketverbindung an einen Client. Frames werden verworfen, sobald neuere Frames generiert wurden, d.h. innerhalb eines Intervals können mehrere Frames entstehen, aber nur eines ist relevant. Das System generiert Frames innerhalb von 16ms. Die Antwortzeiten betragen ca. 100ms. Der Client kann asynchron Einfluss auf die zu generierenden Frames durch Übermittlung von Daten nehmen. Die bei diesem Datenaustausch entstehenden Events wie z.B. das Starten einer Framegenerierung, dem Beending einer Framegenerierung, dem Senden eines fertiggestellten Frames und dem Empfangen eines Frames sollen erstellt werden. Die zeitliche Einordnung der Events hat dabei eine zentrale Rolle einzunehmen. Die Eventgenerierung muss sich mit den zeitlichen Rahmenbedingungen vereinbaren lassen. Das Konstrukt von Events ,die zueinander in Verbindung stehen, soll untersucht werden. Dazu stellt sich folgende Frage: \emph{Ist es möglich Events in einem verteilten System zu generieren und miteinander in Verbindung zu setzen, die es erlauben, einen Stream von Frames als eine Anordnung von Events, die kausal miteinandern verbunden sind, darzustellen}.
 \section{Erkenntnisinteresse}
-	Aufgrund des streambasierenden Ansatzes des Systems, welcher kontinuierlich Frames an einen Client sendet, sollen die Unterschiede zu Request-Response basierender Kommunikation aufgezeigt werden. Zumdem soll festgestellt werden, welche Daten nötig sind, um eine Kausalordnung zwischen Events herzustellen. Dabei ist die Ordnung der Events in einem asynchronen Umfeld zu betrachten. Hierbei könnten Designunterscheide aufgezeigt werden. Diese wären z.B. das Speichern der Events in verteilten Datenbanken oder das \emph{Piggybacking}, d.h. das Mitführen von Tracemetadaten, welche die Events beinhaltet, über Prozessgrenzen hinweg.  
+	Aufgrund des streambasierenden Ansatzes des Systems, welcher kontinuierlich Frames an einen Client sendet, sollen die Unterschiede zu Request-Response basierender Kommunikation aufgezeigt werden. Zumdem soll festgestellt werden, welche Daten nötig sind, um eine Kausalordnung zwischen Events herzustellen. Dabei ist die Ordnung der Events in einem asynchronen Umfeld zu betrachten. Hierbei könnten Designunterscheide aufgezeigt werden. Diese wären z.B. das Speichern der Events in verteilten Datenbanken, ein verwaltender zentraler Service oder das \emph{Piggybacking}, d.h. das Mitführen von Tracemetadaten, welche die Events beinhaltet, über Prozessgrenzen hinweg.  
 	
 \section{Zielsetzung}
 	Es soll eine Bibliothek entwickelt werden, die es ermöglicht Tracingevents zu generieren. Dazu muss ein Datenmodell dieser Events entwickelt werden. Die Events könnten entweder in einer zentralen  Stelle(Piggybacking) oder in dezentralen Stellen(verteilte Datenbank) gesammelt und anschließend geordnet und visualisiert werden. 
@@ -195,7 +195,7 @@
 		\item Brown Tracing Framework
 		\item X-Trace
 	\end{itemize}
-	Abgesehen von dem Brown Tracing Framework und dem X-Trace verwenden alle genannten Ansätze das spanbasierte Datenmodell. Die Brown University präsentiert in ihrer Veröffentlichung \emph{Universal Context Propagation for Distributed System Instrumentation} eine Schichten-Architektur zur Übermittlung von Tracingdaten in einem spezifizierten \emph{Baggage Context}. Der Baggage Context wird als Metadata mitgereicht und stellt somit eine Form des Piggybacking dar.  Das Paper \emph{End-to-End Tracing Models: Analysis and Unification} beschreibt das spanbasierte Modell als eine Sammlung von \emph{spans}, welche jeweils eine Block von Rechenarbeit darstellt. spans representieren einen Zeitinterval, weshalb sie eine Anfangs- und Endzeit benötigen.\footpartcite{Leavitt2014}
+	Abgesehen von dem Brown Tracing Framework und dem X-Trace verwenden alle genannten Ansätze das spanbasierte Datenmodell. Die Brown University präsentiert in ihrer Veröffentlichung \emph{Universal Context Propagation for Distributed System Instrumentation} eine Schichten-Architektur zur Übermittlung von Tracingdaten in einem spezifizierten \emph{Baggage Context}. Der Baggage Context wird als Metadata mitgereicht und stellt somit eine Form des Piggybacking dar. Das Paper \emph{End-to-End Tracing Models: Analysis and Unification} beschreibt das spanbasierte Modell als eine Sammlung von \emph{spans}, welche jeweils eine Block von Rechenarbeit darstellt.\footpartcite{Leavitt2014}
 
 \section{Gliederung}
 \begin{itemize}
@@ -256,17 +256,19 @@
 		\end{itemize}
 	\end{itemize}
 	\item Fazit
+	\item Ausblick
 \end{itemize}
 
 \section{Zeitplan}
 \begin{itemize}
-	
-\item		Gesamtzeitraum: 13.01 - 13.04 (91 Tage)
+\item		Gesamtzeitraum: 17.02 - 17.05 (91 Tage)
 
-\item		Recherche: 13.01 - 20.01 (7 Tage)
-\item		Implementierung: 21.01 - 14.02 (24 Tage)
-\item		Schreiben:  15.02 - 25.03 (39 Tage)
-\item		Abschluss: 16.03 - 13.04 (28 Tage)
+\item		Detailierte Projektplanung: 17.02 - 18.02 (2 Tage)
+\item		Recherche: 19.02 - 05.03 (16 Tage)
+\item		Implementierung: 06.03 - 30.03 (25 Tage)
+\item		Schreiben:  31.03 - 05.05 (36 Tage)
+\item		Abschluss: 06.05 - 17.05 (12 Tage)
+
 
 \end{itemize}
 \newpage
