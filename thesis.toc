@@ -35,29 +35,39 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Design}{4}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Datenmodell}{4}{section.4.1}
+\contentsline {section}{\numberline {4.1}Anforderungsanalyse}{4}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Eventmodell}{4}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.1}Anforderungen}{4}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Eventgraph}{4}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Funktionale Anforderungen}{4}{subsubsection.4.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Verarbeitungsmodell}{4}{section.4.2}
+\contentsline {subsubsection}{\numberline {4.1.1.2}Nicht-Funktionale Anforderungen}{4}{subsubsection.4.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Agenten}{4}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.2}Datenmodell}{4}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Collectoren}{4}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.1}Eventmodell}{4}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Eventgraph}{4}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Verarbeitungsmodell}{4}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Agenten}{4}{subsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Collectoren}{4}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Implementierung}{5}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Bilbiothek: Porkins}{5}{section.5.1}
+\contentsline {section}{\numberline {5.1}Bilbiothek: Traktor}{5}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Eventagent}{5}{section.5.2}
+\contentsline {section}{\numberline {5.2}Traktor Agent}{5}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Eventcollector}{5}{section.5.3}
+\contentsline {section}{\numberline {5.3}Traktor Registry}{5}{section.5.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Evaluierung}{6}{chapter.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Genauigkeit der Eventgenerierung}{6}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.1}Uhren und Zeit}{6}{subsection.6.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Darstellung der Events}{6}{section.6.2}
 \defcounter {refsection}{0}\relax 
@@ -69,6 +79,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.3}Ergebnisse}{6}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Fazit}{7}{chapter*.3}
+\contentsline {chapter}{\numberline {7}Fazit}{7}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{8}{chapter*.4}
+\contentsline {section}{\numberline {7.1}Ausblick}{7}{section.7.1}

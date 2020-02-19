@@ -1,19 +1,9 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'thesis.blg'
-[36] biber:313> INFO - === Sa Okt 26, 2019, 15:28:59
+[35] biber:313> INFO - === Mi Feb 19, 2020, 14:38:57
 [57] Biber.pm:371> INFO - Reading 'thesis.bcf'
-[127] Biber.pm:857> INFO - Found 4 citekeys in bib section 0
-[143] Biber.pm:3981> INFO - Processing section 0
-[154] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/biblio.bib' for section 0
-[155] bibtex.pm:1468> INFO - LaTeX decoding ...
-[175] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/biblio.bib'
-[191] Utils.pm:169> WARN - I didn't find a database entry for 'Kernighan.1988' (section 0)
-[191] Utils.pm:169> WARN - I didn't find a database entry for '.05.10.2017' (section 0)
-[192] Utils.pm:169> WARN - I didn't find a database entry for '.13.11.2017' (section 0)
-[206] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[206] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[206] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
-[206] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
-[211] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[212] bbl.pm:720> INFO - Output to thesis.bbl
-[212] Biber.pm:110> INFO - WARNINGS: 3
+[125] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
+[134] Utils.pm:169> WARN - The file 'thesis.bcf' does not contain any citations!
+[141] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[141] bbl.pm:720> INFO - Output to thesis.bbl
+[141] Biber.pm:110> INFO - WARNINGS: 1

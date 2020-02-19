@@ -15,22 +15,27 @@
 \BOOKMARK [2][]{subsection.3.1.2}{Synchronistion von Eventgeneratoren}{section.3.1}% 15
 \BOOKMARK [1][]{section.3.2}{Event\374bermittlung}{chapter.3}% 16
 \BOOKMARK [0][]{chapter.4}{Design}{}% 17
-\BOOKMARK [1][]{section.4.1}{Datenmodell}{chapter.4}% 18
-\BOOKMARK [2][]{subsection.4.1.1}{Eventmodell}{section.4.1}% 19
-\BOOKMARK [2][]{subsection.4.1.2}{Eventgraph}{section.4.1}% 20
-\BOOKMARK [1][]{section.4.2}{Verarbeitungsmodell}{chapter.4}% 21
-\BOOKMARK [2][]{subsection.4.2.1}{Agenten}{section.4.2}% 22
-\BOOKMARK [2][]{subsection.4.2.2}{Collectoren}{section.4.2}% 23
-\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 24
-\BOOKMARK [1][]{section.5.1}{Bilbiothek: Porkins}{chapter.5}% 25
-\BOOKMARK [1][]{section.5.2}{Eventagent}{chapter.5}% 26
-\BOOKMARK [1][]{section.5.3}{Eventcollector}{chapter.5}% 27
-\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 28
-\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 29
-\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 30
-\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 31
-\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 32
-\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 33
-\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 34
-\BOOKMARK [0][]{chapter*.3}{Fazit}{}% 35
-\BOOKMARK [0][]{chapter*.4}{Literatur}{}% 36
+\BOOKMARK [1][]{section.4.1}{Anforderungsanalyse}{chapter.4}% 18
+\BOOKMARK [2][]{subsection.4.1.1}{Anforderungen}{section.4.1}% 19
+\BOOKMARK [3][-]{subsubsection.4.1.1.1}{Funktionale Anforderungen}{subsection.4.1.1}% 20
+\BOOKMARK [3][-]{subsubsection.4.1.1.2}{Nicht-Funktionale Anforderungen}{subsection.4.1.1}% 21
+\BOOKMARK [1][]{section.4.2}{Datenmodell}{chapter.4}% 22
+\BOOKMARK [2][]{subsection.4.2.1}{Eventmodell}{section.4.2}% 23
+\BOOKMARK [2][]{subsection.4.2.2}{Eventgraph}{section.4.2}% 24
+\BOOKMARK [1][]{section.4.3}{Verarbeitungsmodell}{chapter.4}% 25
+\BOOKMARK [2][]{subsection.4.3.1}{Agenten}{section.4.3}% 26
+\BOOKMARK [2][]{subsection.4.3.2}{Collectoren}{section.4.3}% 27
+\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 28
+\BOOKMARK [1][]{section.5.1}{Bilbiothek: Traktor}{chapter.5}% 29
+\BOOKMARK [1][]{section.5.2}{Traktor Agent}{chapter.5}% 30
+\BOOKMARK [1][]{section.5.3}{Traktor Registry}{chapter.5}% 31
+\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 32
+\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 33
+\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 34
+\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 35
+\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 36
+\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 37
+\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 38
+\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 39
+\BOOKMARK [0][]{chapter.7}{Fazit}{}% 40
+\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 41
