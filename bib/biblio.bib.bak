@@ -11,16 +11,6 @@
   lccn          = {2017304248},
 }
 
-@Misc{Ritter2017,
-  author       = {Jordan Ritter},
-  title        = {EXAMPLES.md},
-  year         = {2017},
-  howpublished = {https://github.com/jpr5/ngrep},
-  url          = {https://github.com/jpr5/ngrep/blob/master/EXAMPLES.md},
-  urldate      = {2019-07-29},
-  commit       = {3cb4c580a9de4afe11c2c17b0f354b59b74ae974},
-}
-
 @Misc{Stearns2001,
   author       = {William Stearns},
   title        = {Ngrep and regular expressions to the rescue},
@@ -28,20 +18,6 @@
   howpublished = {http://www.stearns.org/},
   url          = {http://www.stearns.org/doc/ngrep-intro.current.html},
   urldate      = {2019-07-29},
-}
-
-@Online{Elastic2019,
-  author = {Elastic},
-  title  = {Query DSL},
-  date   = {2019-07-30},
-  url    = {https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html},
-}
-
-@Online{Elastic2019a,
-  author = {Elastic},
-  title  = {Specify which transaction protocols to monitor},
-  date   = {2019-07-30},
-  url    = {https://www.elastic.co/guide/en/beats/packetbeat/current/configuration-protocols.html},
 }
 
 @Online{Watson2017,
@@ -58,41 +34,6 @@
   url          = {https://www.redhat.com/de/topics/automation/whats-it-automation},
   organization = {Red Hat Inc},
   urldate      = {2019-07-31},
-}
-
-@Online{HashiCorp,
-  author  = {HashiCorp},
-  title   = {Packer-Builders},
-  url     = {https://www.packer.io/docs/builders/amazon.html},
-  urldate = {2019-08-01},
-}
-
-@Online{Security,
-  author  = {SSH Communications Security},
-  title   = {SSH Config File},
-  url     = {https://www.ssh.com/ssh/config/},
-  urldate = {2019-08-02},
-}
-
-@Online{RedHata,
-  author  = {Red Hat, Inc},
-  title   = {Ansible Documentation - About Ansible},
-  url     = {https://docs.ansible.com/ansible/latest/index.html},
-  urldate = {2019-08-02},
-}
-
-@Report{Bormann2019,
-  author      = {Pascal Bormann},
-  title       = {Praktikumsplan},
-  institution = {Fraunhofer Institute for Computer Graphics Research},
-  date        = {2019-06-17},
-}
-
-@Online{HashiCorpa,
-  author  = {HashiCorp},
-  title   = {Packer Intro},
-  url     = {https://www.packer.io/intro/index.html},
-  urldate = {2019-08-05},
 }
 
 @Online{opentracing,
@@ -151,20 +92,107 @@
   year      = {2016},
 }
 
-@Online{FraunhoferInstitut2019,
-  author  = {Fraunhofer-IGD},
-  editor  = {Fraunhofer-IGD},
-  title   = {Visual Computing},
-  year    = {2019},
-  url     = {https://www.igd.fraunhofer.de/},
-  urldate = {2019-10-10},
-}
-
 @Article{Leavitt2014,
   author  = {Jonathan Leavitt},
   title   = {End-to-End Tracing Models: Analysis and Unification},
   journal = {D},
   date    = {2014-05-05},
+}
+
+@Book{Dragoni2017,
+  author = {Nicola Dragoni AND Saverio Giallorenzo AND Alberto Llunch Lafuente AND Manuel Mazzara AND Fabrizio Montesi AND Ruslan Mustafin AND Larisa Safina},
+  title  = {Present and Ulterior Software Engineering},
+  year   = {2017},
+}
+
+@InProceedings{10.1145/2815400.2815415,
+  author    = {Mace, Jonathan and Roelke, Ryan and Fonseca, Rodrigo},
+  title     = {Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems},
+  booktitle = {Proceedings of the 25th Symposium on Operating Systems Principles},
+  year      = {2015},
+  series    = {SOSP ’15},
+  publisher = {Association for Computing Machinery},
+  location  = {Monterey, California},
+  isbn      = {9781450338349},
+  pages     = {378–393},
+  doi       = {10.1145/2815400.2815415},
+  url       = {https://doi.org/10.1145/2815400.2815415},
+  address   = {New York, NY, USA},
+  numpages  = {16},
+}
+
+@InProceedings{10.5555/1267680.1267689,
+  author    = {Reynolds, Patrick and Killian, Charles and Wiener, Janet L. and Mogul, Jeffrey C. and Shah, Mehul A. and Vahdat, Amin},
+  title     = {Pip: Detecting the Unexpected in Distributed Systems},
+  booktitle = {Proceedings of the 3rd Conference on Networked Systems Design \& Implementation - Volume 3},
+  year      = {2006},
+  series    = {NSDI’06},
+  publisher = {USENIX Association},
+  location  = {San Jose, CA},
+  pages     = {9},
+  address   = {USA},
+  numpages  = {1},
+}
+
+@InProceedings{8752866,
+  author    = {S. {Nedelkoski} and J. {Cardoso} and O. {Kao}},
+  title     = {Anomaly Detection and Classification using Distributed Tracing and Deep Learning},
+  booktitle = {2019 19th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID)},
+  year      = {2019},
+  month     = {May},
+  pages     = {241-250},
+  doi       = {10.1109/CCGRID.2019.00038},
+  issn      = {null},
+  keywords  = {Big Data;cloud computing;pattern classification;security of data;system monitoring;unsupervised learning;artificial intelligence;IT operations tasks;large-scale production cloud;heterogeneous hardware;large-scale distributed systems;distributed tracing records;network data;machine learning;big data;AIOps;unsupervised dynamic error threshold approach;deep learning data;response time anomaly detection;AIOps, anomaly detection, service reliability, time series, distributed tracing, autoencoders, RNNs, GRUs, CNNs},
+}
+
+@InProceedings{Sun2016GeneralBM,
+  author = {Hongkai Sun and Rodrigo Fonseca},
+  title  = {General Baggage Model for End-to-End Tracing and Its Application on Critical Path Analysis},
+  year   = {2016},
+}
+
+@InProceedings{10.1145/2987550.2987568,
+  author    = {Sambasivan, Raja R. and Shafer, Ilari and Mace, Jonathan and Sigelman, Benjamin H. and Fonseca, Rodrigo and Ganger, Gregory R.},
+  title     = {Principled Workflow-Centric Tracing of Distributed Systems},
+  booktitle = {Proceedings of the Seventh ACM Symposium on Cloud Computing},
+  year      = {2016},
+  series    = {SoCC ’16},
+  publisher = {Association for Computing Machinery},
+  location  = {Santa Clara, CA, USA},
+  isbn      = {9781450345255},
+  pages     = {401–414},
+  doi       = {10.1145/2987550.2987568},
+  url       = {https://doi.org/10.1145/2987550.2987568},
+  address   = {New York, NY, USA},
+  numpages  = {14},
+}
+
+@InProceedings{10.5555/2387880.2387910,
+  author    = {Attariyan, Mona and Chow, Michael and Flinn, Jason},
+  title     = {X-Ray: Automating Root-Cause Diagnosis of Performance Anomalies in Production Software},
+  booktitle = {Proceedings of the 10th USENIX Conference on Operating Systems Design and Implementation},
+  year      = {2012},
+  series    = {OSDI’12},
+  publisher = {USENIX Association},
+  location  = {Hollywood, CA, USA},
+  isbn      = {9781931971966},
+  pages     = {307–320},
+  address   = {USA},
+  numpages  = {14},
+}
+
+@InProceedings{10.5555/1251254.1251272,
+  author    = {Barham, Paul and Donnelly, Austin and Isaacs, Rebecca and Mortier, Richard},
+  title     = {Using Magpie for Request Extraction and Workload Modelling},
+  booktitle = {Proceedings of the 6th Conference on Symposium on Operating Systems Design \& Implementation - Volume 6},
+  year      = {2004},
+  series    = {OSDI’04},
+  publisher = {USENIX Association},
+  location  = {San Francisco, CA},
+  pages     = {18},
+  address   = {USA},
+  numpages  = {1},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
