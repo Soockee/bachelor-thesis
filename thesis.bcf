@@ -1920,9 +1920,26 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">bib/biblio.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">bib/library.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">10.1145/2815400.2815415</bcf:citekey>
+    <bcf:citekey order="2">10.1145/2987550.2987568</bcf:citekey>
+    <bcf:citekey order="3">10.1145/3190508.3190526</bcf:citekey>
+    <bcf:citekey order="4">10.5555/1251254.1251272</bcf:citekey>
+    <bcf:citekey order="5">10.5555/1267680.1267689</bcf:citekey>
+    <bcf:citekey order="6">10.5555/2387880.2387910</bcf:citekey>
+    <bcf:citekey order="7">8752866</bcf:citekey>
+    <bcf:citekey order="8">Beyer2016</bcf:citekey>
+    <bcf:citekey order="9">Kaldor2017</bcf:citekey>
+    <bcf:citekey order="10">Narayanan2003</bcf:citekey>
+    <bcf:citekey order="11">RedHat</bcf:citekey>
+    <bcf:citekey order="12">SCROCCA2018</bcf:citekey>
+    <bcf:citekey order="13">Shanbhag2010</bcf:citekey>
+    <bcf:citekey order="14">Stearns2001</bcf:citekey>
+    <bcf:citekey order="15">Stocia2007</bcf:citekey>
+    <bcf:citekey order="16">Watson2017</bcf:citekey>
+    <bcf:citekey order="17">opentracing</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

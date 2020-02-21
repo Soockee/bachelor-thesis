@@ -51,9 +51,9 @@
 }
 \usepackage[english]{babel}
 \usepackage[backend=biber,maxnames=999,style=alphabetic]{biblatex}
-\addbibresource{bib/biblio.bib} 
+\addbibresource{bib/library.bib} 
 \usepackage{scrhack}								 % unterdrückt Fehlermeldung von listings
-
+\input{glossar}
 %% Nummerierungstiefen
 \setcounter{tocdepth}{3}             % 3 Stufen im Inhaltsverzeichnis
 \setcounter{secnumdepth}{3} 		     % 3 Stufen in Abschnittnummerierung
@@ -121,8 +121,9 @@
 	\begin{center}
 		\textbf{\Large\sffamily Zusammenfassung}
 	\end{center}
-
+	
 	Die heutigen Bedürfnisse der Anwender ein stets erreichbaren Service zur Verfügung zu haben, stellt hohe Erwartung an Unternehmen und damit hohe Erwartungen an die  Infrastruktur ihrer Mircoserviceanwendungen. Die enorme Skalierbarkeit einzelner Komponenten und die aussgezeichnete Resourcennutzung der Hardware löst viele Probleme der Vergangenheit. Allerdings schafft diese Umstellung neue Herausfoderungenen die es zu bewältigen gilt. 
+	
 	
 	\begin{itemize}
 		\item Überwachung
@@ -166,6 +167,7 @@
 
 \appendix
 \input{litverz}
+\input{glossarverz}
 
 \end{document}
 % ----------------------------------------------------------------------------

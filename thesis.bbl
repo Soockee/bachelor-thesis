@@ -16,5 +16,816 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{10.5555/2387880.2387910}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=104d8fc06f8928b6d9db8820656f5573}{%
+           family={Attariyan},
+           familyi={A\bibinitperiod},
+           given={Mona},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d1eda5581c5ff8b3f08137f4fd51d8c9}{%
+           family={Chow},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f4346d60a31f7ab04012be5dd0ffdae9}{%
+           family={Flinn},
+           familyi={F\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {USENIX Association}%
+      }
+      \strng{namehash}{90e6939b54ea355cce7d69bf542d03d9}
+      \strng{fullhash}{90e6939b54ea355cce7d69bf542d03d9}
+      \strng{bibnamehash}{90e6939b54ea355cce7d69bf542d03d9}
+      \strng{authorbibnamehash}{90e6939b54ea355cce7d69bf542d03d9}
+      \strng{authornamehash}{90e6939b54ea355cce7d69bf542d03d9}
+      \strng{authorfullhash}{90e6939b54ea355cce7d69bf542d03d9}
+      \field{labelalpha}{ACF12}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 10th USENIX Conference on Operating Systems Design and Implementation}
+      \field{isbn}{9781931971966}
+      \field{series}{OSDI'12}
+      \field{title}{{X-Ray: Automating Root-Cause Diagnosis of Performance Anomalies in Production Software}}
+      \field{year}{2012}
+      \field{pages}{307\bibrangedash 320}
+      \range{pages}{14}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Attariyan, Chow, Flinn - 2012 - X-Ray Automating Root-Cause Diagnosis of Performance Anomalies in Production Software.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Narayanan2003}{article}{}
+      \name{author}{4}{}{%
+        {{hash=793be578dd2e09e228d097207d0b21cb}{%
+           family={Barham},
+           familyi={B\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0348591ed77aa956f1788356d4c87946}{%
+           family={Isaacs},
+           familyi={I\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1935b9a2457b9df352ceb5d7ca6c811a}{%
+           family={Moertier},
+           familyi={M\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2ec9abfe174e70eae82bd658784c6b03}{%
+           family={Narayanan},
+           familyi={N\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{fullhash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{bibnamehash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{authorbibnamehash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{authornamehash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{authorfullhash}{b58802df2f73a26b66b5abfb94e908be}
+      \field{labelalpha}{Bar+03}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of USENIX HotOS IX}
+      \field{title}{{Magpie: online modelling and performance-aware systems}}
+      \field{year}{2003}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Barham et al. - 2003 - Magpie online modelling and performance-aware systems.pdf:pdf
+      \endverb
+    \endentry
+    \entry{10.5555/1251254.1251272}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=08cf514c08137f94d73b590060797f5b}{%
+           family={Barham},
+           familyi={B\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=fcddcffcfa0e21eb61da2d24cf6340b8}{%
+           family={Donnelly},
+           familyi={D\bibinitperiod},
+           given={Austin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f7d7e0101ad5b439d1efaccb9707d501}{%
+           family={Isaacs},
+           familyi={I\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ba494cf2fcd5b5c3ed0f9d081c6a4556}{%
+           family={Mortier},
+           familyi={M\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {USENIX Association}%
+      }
+      \strng{namehash}{63756215fd9980bedb986eb977f2afd8}
+      \strng{fullhash}{63756215fd9980bedb986eb977f2afd8}
+      \strng{bibnamehash}{63756215fd9980bedb986eb977f2afd8}
+      \strng{authorbibnamehash}{63756215fd9980bedb986eb977f2afd8}
+      \strng{authornamehash}{63756215fd9980bedb986eb977f2afd8}
+      \strng{authorfullhash}{63756215fd9980bedb986eb977f2afd8}
+      \field{labelalpha}{Bar+04}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 6th Conference on Symposium on Operating Systems Design {\&} Implementation - Volume 6}
+      \field{series}{OSDI'04}
+      \field{title}{{Using Magpie for Request Extraction and Workload Modelling}}
+      \field{year}{2004}
+      \field{pages}{18}
+      \range{pages}{1}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Barham et al. - 2004 - Using Magpie for Request Extraction and Workload Modelling.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Beyer2016}{book}{}
+      \name{author}{4}{}{%
+        {{hash=0daaf4b78a8af821c6a4106e532da26c}{%
+           family={Beyer},
+           familyi={B\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=cf42e1fe5bf176e13553f90b13160496}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+        {{hash=60bc12dd06db6011f1bcdc8e29d2e7f6}{%
+           family={Petoff},
+           familyi={P\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=984c5175abd6decf2d6443d616e2284b}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={N\bibnamedelima R},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Incorporated}%
+      }
+      \strng{namehash}{e9b3ed5b4f806cc7c762fc67d150e709}
+      \strng{fullhash}{e9b3ed5b4f806cc7c762fc67d150e709}
+      \strng{bibnamehash}{e9b3ed5b4f806cc7c762fc67d150e709}
+      \strng{authorbibnamehash}{e9b3ed5b4f806cc7c762fc67d150e709}
+      \strng{authornamehash}{e9b3ed5b4f806cc7c762fc67d150e709}
+      \strng{authorfullhash}{e9b3ed5b4f806cc7c762fc67d150e709}
+      \field{labelalpha}{Bey+16}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781491929124}
+      \field{title}{{Site Reliability Engineering: How Google Runs Production Systems}}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://books.google.de/books?id=81UrjwEACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.de/books?id=81UrjwEACAAJ
+      \endverb
+    \endentry
+    \entry{Stocia2007}{article}{}
+      \name{author}{5}{}{%
+        {{hash=017e9afc5894252aa67649ed7d3e642c}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b7795c5dd50e7d4bb0f7140b4087c17d}{%
+           family={Porter},
+           familyi={P\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2f99cc19c4b9526959c88686875d57fb}{%
+           family={Katz},
+           familyi={K\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5eff2ff1177e432d0ef04145d255074c}{%
+           family={Shenker},
+           familyi={S\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3c9d7487fb6a23eefd2b6e94113aac79}{%
+           family={Stocia},
+           familyi={S\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{20f3524ad3c67f203700bf435d06ad02}
+      \strng{fullhash}{20f3524ad3c67f203700bf435d06ad02}
+      \strng{bibnamehash}{20f3524ad3c67f203700bf435d06ad02}
+      \strng{authorbibnamehash}{20f3524ad3c67f203700bf435d06ad02}
+      \strng{authornamehash}{20f3524ad3c67f203700bf435d06ad02}
+      \strng{authorfullhash}{20f3524ad3c67f203700bf435d06ad02}
+      \field{labelalpha}{Fon+07}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of USENIX NSDI}
+      \field{title}{{X-Trace: A Pervasive Network Tracing Framework}}
+      \field{year}{2007}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Fonseca et al. - 2007 - X-Trace A Pervasive Network Tracing Framework.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Kaldor2017}{article}{}
+      \name{author}{13}{}{%
+        {{hash=105a110592388793215833f35213a13e}{%
+           family={Kaldor},
+           familyi={K\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c33c953b8ce7c2b1eb97c8bd6006f5d2}{%
+           family={Mace},
+           familyi={M\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=000f6ff10a405d7c3d67a1b6b045f2de}{%
+           family={Bejda},
+           familyi={B\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a81a73d346950bed329362059f1cacea}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{hash=25dffa66c54acac872bbb5c84418b3ab}{%
+           family={Kuropatwa},
+           familyi={K\bibinitperiod},
+           given={W},
+           giveni={W\bibinitperiod}}}%
+        {{hash=4a02ff97fd393d27f6b9b4a756316604}{%
+           family={O'Neill},
+           familyi={O\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ab50686480a9b9652d2df3d288f64b4c}{%
+           family={Ong},
+           familyi={O\bibinitperiod},
+           given={K\bibnamedelima Win},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=72d28dbf97bbbdc5324b3520e25bdff1}{%
+           family={Schaller},
+           familyi={S\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=b109a81368a0d594337fee41ef3e9ba8}{%
+           family={Shan},
+           familyi={S\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=30d57104934165de1f56495fa7ffbb3b}{%
+           family={Viscomi},
+           familyi={V\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=75a6881e11e56ac12570675651f3cacc}{%
+           family={Venkataraman},
+           familyi={V\bibinitperiod},
+           given={V},
+           giveni={V\bibinitperiod}}}%
+        {{hash=bc6a1da4f02cd123c50b8a63895d39f7}{%
+           family={Veeraraghavan},
+           familyi={V\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b31dff1825a3bba5ec389f5f991a81ff}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Y\bibnamedelima Jiun},
+           giveni={Y\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7181e2543a9f20d5bb5a5f111c23363}
+      \strng{fullhash}{e7181e2543a9f20d5bb5a5f111c23363}
+      \strng{bibnamehash}{e7181e2543a9f20d5bb5a5f111c23363}
+      \strng{authorbibnamehash}{e7181e2543a9f20d5bb5a5f111c23363}
+      \strng{authornamehash}{e7181e2543a9f20d5bb5a5f111c23363}
+      \strng{authorfullhash}{e7181e2543a9f20d5bb5a5f111c23363}
+      \field{labelalpha}{Kal+17}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SOPS 2017}
+      \field{title}{{Canopy: An End-to-End Performance Tracing And Analysis System}}
+      \field{year}{2017}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kaldor et al. - 2017 - Canopy An End-to-End Performance Tracing And Analysis System(2).pdf:pdf
+      \endverb
+    \endentry
+    \entry{10.1145/3190508.3190526}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=b7cff53e80ad544b7cfe875cf9594433}{%
+           family={Mace},
+           familyi={M\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7ac67101266fa4441ee76cf3a31eb8bc}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{d853bc7e22eb6501b47652f445b65aef}
+      \strng{fullhash}{d853bc7e22eb6501b47652f445b65aef}
+      \strng{bibnamehash}{d853bc7e22eb6501b47652f445b65aef}
+      \strng{authorbibnamehash}{d853bc7e22eb6501b47652f445b65aef}
+      \strng{authornamehash}{d853bc7e22eb6501b47652f445b65aef}
+      \strng{authorfullhash}{d853bc7e22eb6501b47652f445b65aef}
+      \field{labelalpha}{MF18}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Thirteenth EuroSys Conference}
+      \field{isbn}{9781450355841}
+      \field{series}{EuroSys '18}
+      \field{title}{{Universal Context Propagation for Distributed System Instrumentation}}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1145/3190508.3190526
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3190508.3190526
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3190508.3190526
+      \endverb
+    \endentry
+    \entry{10.1145/2815400.2815415}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=b7cff53e80ad544b7cfe875cf9594433}{%
+           family={Mace},
+           familyi={M\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=769db351cdfb7c52e623f4de86483866}{%
+           family={Roelke},
+           familyi={R\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7ac67101266fa4441ee76cf3a31eb8bc}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{c2aefadee74b3b5c4da63e2a4d3227c8}
+      \strng{fullhash}{c2aefadee74b3b5c4da63e2a4d3227c8}
+      \strng{bibnamehash}{c2aefadee74b3b5c4da63e2a4d3227c8}
+      \strng{authorbibnamehash}{c2aefadee74b3b5c4da63e2a4d3227c8}
+      \strng{authornamehash}{c2aefadee74b3b5c4da63e2a4d3227c8}
+      \strng{authorfullhash}{c2aefadee74b3b5c4da63e2a4d3227c8}
+      \field{labelalpha}{MRF15}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 25th Symposium on Operating Systems Principles}
+      \field{isbn}{9781450338349}
+      \field{series}{SOSP '15}
+      \field{title}{{Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems}}
+      \field{year}{2015}
+      \field{pages}{378\bibrangedash 393}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1145/2815400.2815415
+      \endverb
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Mace, Roelke, Fonseca - 2015 - Pivot Tracing Dynamic Causal Monitoring for Distributed Systems.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2815400.2815415
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2815400.2815415
+      \endverb
+    \endentry
+    \entry{8752866}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=b163b33b856b5fa1144f653a8359b141}{%
+           family={Nedelkoski},
+           familyi={N\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7c76f55ad96933231248c53b8ef8f132}{%
+           family={Cardoso},
+           familyi={C\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c4178c9fdd62c264dc10e8118bfb3272}{%
+           family={Kao},
+           familyi={K\bibinitperiod},
+           given={O},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{651f2040f5b99c5249e50a52b6ee4762}
+      \strng{fullhash}{651f2040f5b99c5249e50a52b6ee4762}
+      \strng{bibnamehash}{651f2040f5b99c5249e50a52b6ee4762}
+      \strng{authorbibnamehash}{651f2040f5b99c5249e50a52b6ee4762}
+      \strng{authornamehash}{651f2040f5b99c5249e50a52b6ee4762}
+      \strng{authorfullhash}{651f2040f5b99c5249e50a52b6ee4762}
+      \field{labelalpha}{NCK19}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 19th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing (CCGRID)}
+      \field{issn}{null}
+      \field{title}{{Anomaly Detection and Classification using Distributed Tracing and Deep Learning}}
+      \field{year}{2019}
+      \field{pages}{241\bibrangedash 250}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/CCGRID.2019.00038
+      \endverb
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Nedelkoski, Cardoso, Kao - 2019 - Anomaly Detection and Classification using Distributed Tracing and Deep Learning.pdf:pdf
+      \endverb
+      \keyw{Big Data;cloud computing;pattern classification;se,CNNs,GRUs,RNNs,anomaly detection,autoencoders,distributed tracing,service reliability,time series}
+    \endentry
+    \entry{opentracing}{online}{}
+      \name{author}{1}{}{%
+        {{hash=60cc08af993eb09bd0f22b81510848da}{%
+           family={OpenTracting},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{60cc08af993eb09bd0f22b81510848da}
+      \strng{fullhash}{60cc08af993eb09bd0f22b81510848da}
+      \strng{bibnamehash}{60cc08af993eb09bd0f22b81510848da}
+      \strng{authorbibnamehash}{60cc08af993eb09bd0f22b81510848da}
+      \strng{authornamehash}{60cc08af993eb09bd0f22b81510848da}
+      \strng{authorfullhash}{60cc08af993eb09bd0f22b81510848da}
+      \field{labelalpha}{Ope19}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{opentracing trace overview figure}
+      \field{year}{2019}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Unknown - 2019 - opentracing trace overview figure.png:png
+      \endverb
+      \verb{urlraw}
+      \verb https://opentracing.io/docs/overview/
+      \endverb
+      \verb{url}
+      \verb https://opentracing.io/docs/overview/
+      \endverb
+    \endentry
+    \entry{RedHat}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d45320c6f0c22d1baef1c2832b46a026}{%
+           family={{Red Hat}},
+           familyi={R\bibinitperiod},
+           given={Inc},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Red Hat Inc}%
+      }
+      \strng{namehash}{d45320c6f0c22d1baef1c2832b46a026}
+      \strng{fullhash}{d45320c6f0c22d1baef1c2832b46a026}
+      \strng{bibnamehash}{d45320c6f0c22d1baef1c2832b46a026}
+      \strng{authorbibnamehash}{d45320c6f0c22d1baef1c2832b46a026}
+      \strng{authornamehash}{d45320c6f0c22d1baef1c2832b46a026}
+      \strng{authorfullhash}{d45320c6f0c22d1baef1c2832b46a026}
+      \field{labelalpha}{Red}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Was ist IT-Automatisierung?}}
+      \verb{urlraw}
+      \verb https://www.redhat.com/de/topics/automation/whats-it-automation
+      \endverb
+      \verb{url}
+      \verb https://www.redhat.com/de/topics/automation/whats-it-automation
+      \endverb
+    \endentry
+    \entry{10.5555/1267680.1267689}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=7397266a7dd3e534246bf6deceffa5ce}{%
+           family={Reynolds},
+           familyi={R\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0ac0f379b83cb858ebc1c439d451fdaf}{%
+           family={Killian},
+           familyi={K\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+        {{hash=165acaeca101c0122b0d1ec37aa7aa37}{%
+           family={Wiener},
+           familyi={W\bibinitperiod},
+           given={Janet\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=73f910d1cc7aa5aff6e8ef618cd8651a}{%
+           family={Mogul},
+           familyi={M\bibinitperiod},
+           given={Jeffrey\bibnamedelima C},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f0fe6144ca447430645fb7d019ab7003}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Mehul\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8999178b72243773300917591e511e88}{%
+           family={Vahdat},
+           familyi={V\bibinitperiod},
+           given={Amin},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {USENIX Association}%
+      }
+      \strng{namehash}{d8a674b02a93e66e0f00421b61cd34a9}
+      \strng{fullhash}{d8a674b02a93e66e0f00421b61cd34a9}
+      \strng{bibnamehash}{d8a674b02a93e66e0f00421b61cd34a9}
+      \strng{authorbibnamehash}{d8a674b02a93e66e0f00421b61cd34a9}
+      \strng{authornamehash}{d8a674b02a93e66e0f00421b61cd34a9}
+      \strng{authorfullhash}{d8a674b02a93e66e0f00421b61cd34a9}
+      \field{labelalpha}{Rey+06}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 3rd Conference on Networked Systems Design {\&} Implementation - Volume 3}
+      \field{series}{NSDI'06}
+      \field{title}{{Pip: Detecting the Unexpected in Distributed Systems}}
+      \field{year}{2006}
+      \field{pages}{9}
+      \range{pages}{1}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Reynolds et al. - 2006 - Pip Detecting the Unexpected in Distributed Systems.pdf:pdf
+      \endverb
+    \endentry
+    \entry{10.1145/2987550.2987568}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=4ad24c804ebf5277b37fdc1b9021ee85}{%
+           family={Sambasivan},
+           familyi={S\bibinitperiod},
+           given={Raja\bibnamedelima R},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=dca6f1201971ae7372dd7a86c7052a38}{%
+           family={Shafer},
+           familyi={S\bibinitperiod},
+           given={Ilari},
+           giveni={I\bibinitperiod}}}%
+        {{hash=b7cff53e80ad544b7cfe875cf9594433}{%
+           family={Mace},
+           familyi={M\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3bac31250c0c8ec5d58e851e94073f6e}{%
+           family={Sigelman},
+           familyi={S\bibinitperiod},
+           given={Benjamin\bibnamedelima H},
+           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7ac67101266fa4441ee76cf3a31eb8bc}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2a13c76a770e6e0786f77d6285aadd78}{%
+           family={Ganger},
+           familyi={G\bibinitperiod},
+           given={Gregory\bibnamedelima R},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{fcdcabe168f9fa07c25b3b60c076f90c}
+      \strng{fullhash}{fcdcabe168f9fa07c25b3b60c076f90c}
+      \strng{bibnamehash}{fcdcabe168f9fa07c25b3b60c076f90c}
+      \strng{authorbibnamehash}{fcdcabe168f9fa07c25b3b60c076f90c}
+      \strng{authornamehash}{fcdcabe168f9fa07c25b3b60c076f90c}
+      \strng{authorfullhash}{fcdcabe168f9fa07c25b3b60c076f90c}
+      \field{labelalpha}{Sam+16}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Seventh ACM Symposium on Cloud Computing}
+      \field{isbn}{9781450345255}
+      \field{series}{SoCC '16}
+      \field{title}{{Principled Workflow-Centric Tracing of Distributed Systems}}
+      \field{year}{2016}
+      \field{pages}{401\bibrangedash 414}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1145/2987550.2987568
+      \endverb
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Sambasivan et al. - 2016 - Principled Workflow-Centric Tracing of Distributed Systems.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2987550.2987568
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2987550.2987568
+      \endverb
+    \endentry
+    \entry{SCROCCA2018}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=4202ddcbb5159d814d394fb3989ad64e}{%
+           family={SCROCCA},
+           familyi={S\bibinitperiod},
+           given={MARIO},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Politecnico Di Milano}%
+      }
+      \strng{namehash}{4202ddcbb5159d814d394fb3989ad64e}
+      \strng{fullhash}{4202ddcbb5159d814d394fb3989ad64e}
+      \strng{bibnamehash}{4202ddcbb5159d814d394fb3989ad64e}
+      \strng{authorbibnamehash}{4202ddcbb5159d814d394fb3989ad64e}
+      \strng{authornamehash}{4202ddcbb5159d814d394fb3989ad64e}
+      \strng{authorfullhash}{4202ddcbb5159d814d394fb3989ad64e}
+      \field{labelalpha}{SCR18}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Distributed software systems and cloud-based micro-service solutions are getting momentum. Although this paradigm-shift foster scalability, it is making architectures too complicated to maintain using traditional techniques. How to supervise such complex systems is not apparent, and industry is investigating the subject under the observability umbrella. In this thesis, we investigate observability as a research problem. First, we provide a definition that clarifies the scientific boundaries. Then we investigate the following research questions: how to expose and how to make sense of the system behaviour at runtime. In particular, in order to expose the system behaviour: (i) we employ event as a unifying data model for metrics, logs, and trace data, (ii) we explain how to map existing data formats to the proposed model, and (iii) we discuss the benefits of a unified abstraction for observability. Moreover, in order to make sense of the system behaviour: (i) we elicit a set of requirements, and (ii) we build a proof-of-concept implementing a stream processing solution that satisfies them. Notably, since the state-of-the-art already provides a stream processing solution that makes sense of metrics and logs, we focus on trace stream processing. We followed the Design Science framework to realise our proof-of-concept. I.e., we design and implement an artifact (Kaiju, a Trace Stream Processor) and we study its interactions in the addressed context (Rim, a reproducible environment capable of emulating a distributed system and its typical issues). We provide evidence of the artifact validity comparing it with state-of-the-art distributed tracing tools, and against the typical use cases for such systems recreated in Rim. Last but not least, we discuss the benefits of processing together metrics, logs and trace data. Since stream processing solutions cannot tame the heterogeneity of metrics, logs, and trace data, we employed a stream reasoning approach. In this direction, we propose an ontology to model trace data, and we report an explorative analysis of an RSP engine consuming this type of data.}
+      \field{title}{{Towards observability with (RDF) trace stream processing}}
+      \field{type}{phdthesis}
+      \field{year}{2018}
+      \verb{file}
+      \verb :home/socke/Downloads/2018{\_}12{\_}Scrocca.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://hdl.handle.net/10589/144741
+      \endverb
+      \verb{url}
+      \verb http://hdl.handle.net/10589/144741
+      \endverb
+      \keyw{distributed tracing,observability,stream processing,stream reasoning}
+    \endentry
+    \entry{Shanbhag2010}{article}{}
+      \name{author}{8}{}{%
+        {{hash=8e867ca0d153c3c555f292bfd041ce42}{%
+           family={Sigelman},
+           familyi={S\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6c889cb35f90b2ccda33b04a5e14e80f}{%
+           family={Barroso},
+           familyi={B\bibinitperiod},
+           given={Luiz\bibnamedelima Andr{é}},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=52bd219ee38c5f14ff2c280e7e4216d1}{%
+           family={Burrows},
+           familyi={B\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=55ea53762f4b3b84627371e84b2503b5}{%
+           family={Stephenson},
+           familyi={S\bibinitperiod},
+           given={Pat},
+           giveni={P\bibinitperiod}}}%
+        {{hash=fc103b936ff1d8fa40cfdc0b5ee79f52}{%
+           family={Plakal},
+           familyi={P\bibinitperiod},
+           given={Manoj},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8293acfe90aa8eaf9b54bb2d780b215f}{%
+           family={Beaver},
+           familyi={B\bibinitperiod},
+           given={Donald},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8769aaaafced9152f74d947681e81b2b}{%
+           family={Jaspan},
+           familyi={J\bibinitperiod},
+           given={Saul},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fac2ed311ee97c6a34c4ffeafe5b28dd}{%
+           family={Shanbhag},
+           familyi={S\bibinitperiod},
+           given={Chandan},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{7260287721c6572c3a666da3d5fab668}
+      \strng{fullhash}{7260287721c6572c3a666da3d5fab668}
+      \strng{bibnamehash}{7260287721c6572c3a666da3d5fab668}
+      \strng{authorbibnamehash}{7260287721c6572c3a666da3d5fab668}
+      \strng{authornamehash}{7260287721c6572c3a666da3d5fab668}
+      \strng{authorfullhash}{7260287721c6572c3a666da3d5fab668}
+      \field{labelalpha}{Sig+10}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Google Techical Report dapper-2010-1}
+      \field{title}{{Dapper, a Large-Scale Distributed Systems Tracing Infrastructure}}
+      \field{year}{2010}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Sigelman et al. - 2010 - Dapper, a Large-Scale Distributed Systems Tracing Infrastructure.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Stearns2001}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1d6a6f8d51b7dfd63f03a84f1bc945de}{%
+           family={Stearns},
+           familyi={S\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d6a6f8d51b7dfd63f03a84f1bc945de}
+      \strng{fullhash}{1d6a6f8d51b7dfd63f03a84f1bc945de}
+      \strng{bibnamehash}{1d6a6f8d51b7dfd63f03a84f1bc945de}
+      \strng{authorbibnamehash}{1d6a6f8d51b7dfd63f03a84f1bc945de}
+      \strng{authornamehash}{1d6a6f8d51b7dfd63f03a84f1bc945de}
+      \strng{authorfullhash}{1d6a6f8d51b7dfd63f03a84f1bc945de}
+      \field{labelalpha}{Ste01}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://www.stearns.org/}
+      \field{title}{{Ngrep and regular expressions to the rescue}}
+      \field{year}{2001}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Stearns - 2001 - Ngrep and regular expressions to the rescue.html:html
+      \endverb
+      \verb{urlraw}
+      \verb http://www.stearns.org/doc/ngrep-intro.current.html
+      \endverb
+      \verb{url}
+      \verb http://www.stearns.org/doc/ngrep-intro.current.html
+      \endverb
+    \endentry
+    \entry{Watson2017}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c53791474c83cf712109e716e0e54f88}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c53791474c83cf712109e716e0e54f88}
+      \strng{fullhash}{c53791474c83cf712109e716e0e54f88}
+      \strng{bibnamehash}{c53791474c83cf712109e716e0e54f88}
+      \strng{authorbibnamehash}{c53791474c83cf712109e716e0e54f88}
+      \strng{authornamehash}{c53791474c83cf712109e716e0e54f88}
+      \strng{authorfullhash}{c53791474c83cf712109e716e0e54f88}
+      \field{labelalpha}{Wat17}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{8 Key Application Performance Metrics {\&} How to Measure Them}}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://stackify.com/application-performance-metrics/
+      \endverb
+      \verb{url}
+      \verb https://stackify.com/application-performance-metrics/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

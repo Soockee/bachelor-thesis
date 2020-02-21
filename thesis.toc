@@ -82,3 +82,7 @@
 \contentsline {chapter}{\numberline {7}Fazit}{7}{chapter.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.1}Ausblick}{7}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}ZitatTest}{7}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{8}{chapter*.3}

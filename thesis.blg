@@ -1,9 +1,17 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
-[1] Config.pm:305> INFO - Logfile is 'thesis.blg'
-[35] biber:313> INFO - === Do Feb 20, 2020, 14:43:00
+[0] Config.pm:305> INFO - Logfile is 'thesis.blg'
+[35] biber:313> INFO - === Fr Feb 21, 2020, 12:06:24
 [56] Biber.pm:371> INFO - Reading 'thesis.bcf'
-[126] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
-[136] Utils.pm:169> WARN - The file 'thesis.bcf' does not contain any citations!
-[143] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[144] bbl.pm:720> INFO - Output to thesis.bbl
-[144] Biber.pm:110> INFO - WARNINGS: 1
+[125] Biber.pm:857> INFO - Found 17 citekeys in bib section 0
+[141] Biber.pm:3981> INFO - Processing section 0
+[152] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/library.bib' for section 0
+[154] bibtex.pm:1468> INFO - LaTeX decoding ...
+[176] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/library.bib'
+[340] Utils.pm:169> WARN - BibTeX subsystem: /tmp/BNjNrqcB0g/library.bib_15052.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[381] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[381] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[381] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
+[381] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
+[408] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[416] bbl.pm:720> INFO - Output to thesis.bbl
+[416] Biber.pm:110> INFO - WARNINGS: 1
