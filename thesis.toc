@@ -85,4 +85,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.2}ZitatTest}{7}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{8}{chapter*.3}
+\contentsline {chapter}{Glossar}{8}{section*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{9}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{10}{chapter*.7}

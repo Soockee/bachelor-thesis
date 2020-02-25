@@ -41,19 +41,10 @@
 	}%
 }
 \makeatother
-\usepackage[pdftex]{hyperref}       
-\hypersetup{
-	bookmarksopen=true,
-	bookmarksopenlevel=3,
-	colorlinks,
-	citecolor=blue,
-	linkcolor=blue,
-}
 \usepackage[english]{babel}
 \usepackage[backend=biber,maxnames=999,style=alphabetic]{biblatex}
 \addbibresource{bib/library.bib} 
 \usepackage{scrhack}								 % unterdrückt Fehlermeldung von listings
-\input{glossar}
 %% Nummerierungstiefen
 \setcounter{tocdepth}{3}             % 3 Stufen im Inhaltsverzeichnis
 \setcounter{secnumdepth}{3} 		     % 3 Stufen in Abschnittnummerierung
@@ -84,10 +75,29 @@
 \newcommand{\hsp}{\hspace{20pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 
+\usepackage[pdftex]{hyperref}       
+\hypersetup{
+	bookmarksopen=true,
+	bookmarksopenlevel=3,
+	colorlinks,
+	citecolor=blue,
+	linkcolor=blue,
+}
+
+%% Glossardefinition
+\usepackage[toc,acronym]{glossaries} % Glossarpaket
+\makeglossaries
+\renewcommand*{\acronymname}{Abkürzungsverzeichnis}
+\newglossaryentry{latex}
+{
+	name={latex},
+	description={Is a mark up language specially suited for scientific documents}
+}
+\newacronym{fpsLabel}{FPS}{Frames per Second}
+
 
 % ----------------------------------------------------------------------------
 \begin{document}
-
 \frontmatter
 
 %% Titelseite
@@ -121,16 +131,6 @@
 	\begin{center}
 		\textbf{\Large\sffamily Zusammenfassung}
 	\end{center}
-	
-	Die heutigen Bedürfnisse der Anwender ein stets erreichbaren Service zur Verfügung zu haben, stellt hohe Erwartung an Unternehmen und damit hohe Erwartungen an die  Infrastruktur ihrer Mircoserviceanwendungen. Die enorme Skalierbarkeit einzelner Komponenten und die aussgezeichnete Resourcennutzung der Hardware löst viele Probleme der Vergangenheit. Allerdings schafft diese Umstellung neue Herausfoderungenen die es zu bewältigen gilt. 
-	
-	
-	\begin{itemize}
-		\item Überwachung
-		\item Logs, Metrics, Traces
-		\item Performance
-	\end{itemize}
-	
 \end{quote}
 \cleardoubleemptypage
 
@@ -167,7 +167,7 @@
 
 \appendix
 \input{litverz}
-\input{glossarverz}
+
 
 \end{document}
 % ----------------------------------------------------------------------------
