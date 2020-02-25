@@ -335,6 +335,39 @@
       \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kaldor et al. - 2017 - Canopy An End-to-End Performance Tracing And Analysis System(2).pdf:pdf
       \endverb
     \endentry
+    \entry{Leavitt2014}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ff3091aaf5386da51fd6a1eaefdc7576}{%
+           family={Leavitt},
+           familyi={L\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff3091aaf5386da51fd6a1eaefdc7576}
+      \strng{fullhash}{ff3091aaf5386da51fd6a1eaefdc7576}
+      \strng{bibnamehash}{ff3091aaf5386da51fd6a1eaefdc7576}
+      \strng{authorbibnamehash}{ff3091aaf5386da51fd6a1eaefdc7576}
+      \strng{authornamehash}{ff3091aaf5386da51fd6a1eaefdc7576}
+      \strng{authorfullhash}{ff3091aaf5386da51fd6a1eaefdc7576}
+      \field{labelalpha}{Lea14}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{i Abstract Many applications today require distributed systems to store and process massive amounts of data. The complexity of these applications grows as the systems running them become more complex, and as the applications require more systems in order to run. End-to-end tracing is the process of following a request through the network of machines running one or more distributed systems in order to aid in the maintenance, debugging, and optimization of the systems. We will analyze the two primary models used for end-to-end tracing systems, the span model and the event model. We will show that spans are the less powerful model through a formal proof and a practical implementation of the proof, as well as discuss the consequences of using the span model. We will finish by proposing a joint model that incorporates both spans and events.}
+      \field{journaltitle}{D}
+      \field{title}{{End-to-End Tracing Models: Analysis and Unification}}
+      \field{year}{2014}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Leavitt - Unknown - End-to-End Tracing Models Analysis and Unification.pdf:pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://cs.brown.edu/{~}rfonseca/pubs/leavitt.pdf
+      \endverb
+      \verb{url}
+      \verb http://cs.brown.edu/%7B~%7Drfonseca/pubs/leavitt.pdf
+      \endverb
+    \endentry
     \entry{10.1145/3190508.3190526}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=b7cff53e80ad544b7cfe875cf9594433}{%
