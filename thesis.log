@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  25 FEB 2020 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  25 FEB 2020 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1886,17 +1886,34 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 20.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 20.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
-Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 22.
+
+Overfull \hbox (23.15349pt too wide) in paragraph at lines 23--25
+\T1/lmr/m/n/10.95 Events ge-nannt. Events bil-den ein-zel-ne Zeit-punk-te ab. D
+ie Intrasystem-Netzwerkkommunikation
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 27.
+[1
+
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 28.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 28.
 ) (./themenueberblick.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
@@ -1906,9 +1923,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 10.
- [1
-
-]
+ [2]
 chapter 2.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
@@ -1943,7 +1958,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 10.
- [2
+ [3
 
 ]
 chapter 3.
@@ -1976,7 +1991,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 10.
- [3
+ [4
 
 ]
 chapter 4.
@@ -2033,7 +2048,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 9.
- [4
+ [5
 
 ]
 chapter 5.
@@ -2062,7 +2077,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 10.
- [5
+ [6
 
 ]
 chapter 6.
@@ -2107,7 +2122,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 10.
- [6
+ [7
 
 ]
 chapter 7.
@@ -2139,7 +2154,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 166.
- [7
+ [8
 
 ] (./litverz.tex (./thesis.gls
 Package babel Info: Redefining ngerman shorthand "|
@@ -2155,7 +2170,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
- [8
+ [9
 
 
 
@@ -2173,7 +2188,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 14.
- [9
+ [10
 
 
 ]
@@ -2194,7 +2209,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 14.
- [10
+ [11
 
 ]
 Overfull \hbox (23.7963pt too wide) in paragraph at lines 16--16
@@ -2219,7 +2234,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 172.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 172.
- [11]
+ [12]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
@@ -2231,10 +2246,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33022 strings out of 492982
- 601293 string characters out of 6134896
+ 33024 strings out of 492982
+ 601314 string characters out of 6134896
  1187325 words of memory out of 5000000
- 36041 multiletter control sequences out of 15000+600000
+ 36042 multiletter control sequences out of 15000+600000
  587395 words of font info for 50 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  57i,8n,66p,10490b,2093s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2242,12 +2257,12 @@ Here is how much of TeX's memory you used:
 public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmtt10.pfb>
-Output written on thesis.pdf (19 pages, 228163 bytes).
+texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on thesis.pdf (20 pages, 257702 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 399 compressed objects within 4 object streams
- 88 named destinations out of 1000 (max. 500000)
+ 441 PDF objects out of 1000 (max. 8388607)
+ 405 compressed objects within 5 object streams
+ 89 named destinations out of 1000 (max. 500000)
  366 words of extra memory for PDF output out of 10000 (max. 10000000)
 
