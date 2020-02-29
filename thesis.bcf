@@ -1924,23 +1924,26 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">Leavitt2014</bcf:citekey>
-    <bcf:citekey order="2">10.1145/2815400.2815415</bcf:citekey>
-    <bcf:citekey order="3">10.1145/2987550.2987568</bcf:citekey>
-    <bcf:citekey order="4">10.1145/3190508.3190526</bcf:citekey>
-    <bcf:citekey order="5">10.5555/1251254.1251272</bcf:citekey>
-    <bcf:citekey order="6">10.5555/1267680.1267689</bcf:citekey>
-    <bcf:citekey order="7">10.5555/2387880.2387910</bcf:citekey>
-    <bcf:citekey order="8">8752866</bcf:citekey>
-    <bcf:citekey order="9">Beyer2016</bcf:citekey>
-    <bcf:citekey order="10">Kaldor2017</bcf:citekey>
-    <bcf:citekey order="11">Narayanan2003</bcf:citekey>
-    <bcf:citekey order="12">RedHat</bcf:citekey>
-    <bcf:citekey order="13">SCROCCA2018</bcf:citekey>
-    <bcf:citekey order="14">Shanbhag2010</bcf:citekey>
-    <bcf:citekey order="15">Stearns2001</bcf:citekey>
-    <bcf:citekey order="16">Stocia2007</bcf:citekey>
-    <bcf:citekey order="17">Watson2017</bcf:citekey>
-    <bcf:citekey order="18">opentracing</bcf:citekey>
+    <bcf:citekey order="2">10.5555/1202502</bcf:citekey>
+    <bcf:citekey order="3">lamport78</bcf:citekey>
+    <bcf:citekey order="4">lamport87</bcf:citekey>
+    <bcf:citekey order="5">10.1145/2815400.2815415</bcf:citekey>
+    <bcf:citekey order="6">10.1145/2987550.2987568</bcf:citekey>
+    <bcf:citekey order="7">10.1145/3190508.3190526</bcf:citekey>
+    <bcf:citekey order="8">10.5555/1251254.1251272</bcf:citekey>
+    <bcf:citekey order="9">10.5555/1267680.1267689</bcf:citekey>
+    <bcf:citekey order="10">10.5555/2387880.2387910</bcf:citekey>
+    <bcf:citekey order="11">8752866</bcf:citekey>
+    <bcf:citekey order="12">Beyer2016</bcf:citekey>
+    <bcf:citekey order="13">Kaldor2017</bcf:citekey>
+    <bcf:citekey order="14">Narayanan2003</bcf:citekey>
+    <bcf:citekey order="15">RedHat</bcf:citekey>
+    <bcf:citekey order="16">SCROCCA2018</bcf:citekey>
+    <bcf:citekey order="17">Shanbhag2010</bcf:citekey>
+    <bcf:citekey order="18">Stearns2001</bcf:citekey>
+    <bcf:citekey order="19">Stocia2007</bcf:citekey>
+    <bcf:citekey order="20">Watson2017</bcf:citekey>
+    <bcf:citekey order="21">opentracing</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

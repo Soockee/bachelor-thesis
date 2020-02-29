@@ -10,8 +10,80 @@
 \chapter{Themenüberblick}
 
 \section{Verteilte Systeme}
+
+Verteilte Systeme nach Tanenbaum:
+
+\begin{quote}
+	Ein verteiltes System ist eine Kollektion unabhängiger Computer, die den Benutzern als ein Einzelcomputer erscheinen\footpartcite{10.5555/1202502} 
+\end{quote}
+
+\subsection{Eigenschaften eines verteilten Systems}
+\begin{itemize}
+	\item Knoten
+	\item Einzelne Knoten führen einzelne Komponten des Systems aus 
+	\item Einzelne Komponenten sind für einzelne Aufgaben zuständig
+\end{itemize}
 \subsection{Überwachung von verteilten Systemen}
+\begin{itemize}
+	\item Infrastruktur
+	\begin{itemize}
+		\item CPU
+		\item GPU
+		\item Speicher
+	\end{itemize}
+	\item Netzwerk
+	\begin{itemize}
+		\item Anzahl Packete
+		\item Latenz zwischen Komponenten bzw. Client
+		\item Übertragungsanomalien
+	\end{itemize}
+	\item Anwendung
+	\begin{itemize}
+		\item Logs
+		\item Metriken
+		\item Graphen etc. 
+	\end{itemize}
+\end{itemize}
+Quelle beziehen:
+\href{https://de.wikipedia.org/wiki/Verteiltes_System}{Verteilte Systeme Zitate}
 \subsection{Synchronisation}
+\begin{itemize}
+	\item 
+	\item 
+	\item
+\end{itemize}
 \subsection{Ordnung von events}
+\begin{itemize}
+	\item Bezug auf Lamports Eventordnung\footpartcite{lamport78}
+\end{itemize}
 \section{Bibliotheksentwicklung}
+\begin{itemize}
+	\item 
+	\item 
+	\item
+\end{itemize}
+
+\section{Distributed Tracing}
+Verteilte Systeme wurden bereits definiert. Allerdings lohnt es sich eine alternative Definition zu betrachten.
+
+\begin{quote}
+	Ein verteiltes System ist ein System, mit dem ich nicht arbeiten kann, weil irgendein Rechner abgestürzt ist, von dem ich nicht einmal weiß, dass es ihn überhaupt gibt.\footpartcite{lamport87}
+\end{quote}
+
+
+Diese Definition lässt sich so auffassen, dass Lamport im Jahr 1987 die Problematik der Fehlersuche während der Laufzeit, des Debuggings während der Entwicklungsphase und des organisatorischen Aufwands im Allgemeinen, also damit der grundsätzlich hohen Unübersichtlichkeit und Komplexität von verteilten Systemen, beschreibt. Diese Probleme und Herausforderungen, mit denen man in der heutigen Zeit zusammenstößt, eventuell sogar noch intensiver, als zur damaligen Zeit, können durch distributed tracing angegangen werden. 
+
+
+\begin{itemize}
+	\item Beschreibe, was distributed tracing werkzeuge bezwecken
+	\item Beschreibe, was blackbox bezweckt und warum es nicht das gleiche ist
+	\item beschreibe, was metriken sind: bezug zu überwachung
+	\item beschreibe was logs sind: bezug zu überwachung
+	\item beschreibe was traces sind
+	\item beschreibe ziele von distributed tracing
+	\item beschreibe nicht-ziele von distributed tracing
+	\item 
+\end{itemize}
+ 
+ 
 % ----------------------------------------------------------------------------

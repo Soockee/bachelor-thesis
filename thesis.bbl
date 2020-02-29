@@ -335,6 +335,74 @@
       \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Kaldor et al. - 2017 - Canopy An End-to-End Performance Tracing And Analysis System(2).pdf:pdf
       \endverb
     \endentry
+    \entry{lamport78}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5d77435450d10a850a5b58577b9a456b}{%
+           family={Lamport},
+           familyi={L\bibinitperiod},
+           given={Leslie},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{fullhash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{bibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorbibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authornamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorfullhash}{5d77435450d10a850a5b58577b9a456b}
+      \field{labelalpha}{Lam78}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The concept of one event happening before another in a distributed system is examined, and is shown to define a partial ordering of the events. A distributed algorithm is given for synchronizing a system of logical clocks which can be used to totally order the events. The use of the total ordering is illustrated with a method for solving synchronization problems. The algorithm is then specialized for synchronizing physical clocks, and a bound is derived on how far out of synchrony the clocks can become. {©} 1978, ACM. All rights reserved.}
+      \field{issn}{15577317}
+      \field{journaltitle}{Communications of the ACM}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{{Time, Clocks, and the Ordering of Events in a Distributed System}}
+      \field{volume}{21}
+      \field{year}{1978}
+      \field{pages}{558\bibrangedash 565}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/359545.359563
+      \endverb
+      \keyw{clock synchronization,computer networks,distributed systems,multiprocess systems}
+    \endentry
+    \entry{lamport87}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5d77435450d10a850a5b58577b9a456b}{%
+           family={Lamport},
+           familyi={L\bibinitperiod},
+           given={Leslie},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{fullhash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{bibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorbibnamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authornamehash}{5d77435450d10a850a5b58577b9a456b}
+      \strng{authorfullhash}{5d77435450d10a850a5b58577b9a456b}
+      \field{labelalpha}{Lam87}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Email by Lamport containing Opinion and Definition of distributed Systems}
+      \field{title}{{Distributed Systems Definition by Lamport}}
+      \field{urlday}{29}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{1987}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lamport.azurewebsites.net/pubs/distributed-system.txt
+      \endverb
+      \verb{url}
+      \verb https://lamport.azurewebsites.net/pubs/distributed-system.txt
+      \endverb
+      \keyw{Email}
+    \endentry
     \entry{Leavitt2014}{article}{}
       \name{author}{1}{}{%
         {{hash=ff3091aaf5386da51fd6a1eaefdc7576}{%
@@ -829,6 +897,42 @@
       \verb{url}
       \verb http://www.stearns.org/doc/ngrep-intro.current.html
       \endverb
+    \endentry
+    \entry{10.5555/1202502}{book}{}
+      \name{author}{2}{}{%
+        {{hash=162cef018affd43eb8d81b34cd723931}{%
+           family={Tanenbaum},
+           familyi={T\bibinitperiod},
+           given={Andrew\bibnamedelima S},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=7ef720d0b57800861b86b5ce45425837}{%
+           family={Steen},
+           familyi={S\bibinitperiod},
+           given={Maarten},
+           giveni={M\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Prentice-Hall, Inc.}%
+      }
+      \strng{namehash}{4c9c07d64594388d360fdc0fda270da4}
+      \strng{fullhash}{4c9c07d64594388d360fdc0fda270da4}
+      \strng{bibnamehash}{4c9c07d64594388d360fdc0fda270da4}
+      \strng{authorbibnamehash}{4c9c07d64594388d360fdc0fda270da4}
+      \strng{authornamehash}{4c9c07d64594388d360fdc0fda270da4}
+      \strng{authorfullhash}{4c9c07d64594388d360fdc0fda270da4}
+      \field{labelalpha}{TS06}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0132392275}
+      \field{title}{{Distributed Systems: Principles and Paradigms (2nd Edition)}}
+      \field{year}{2006}
     \endentry
     \entry{Watson2017}{online}{}
       \name{author}{1}{}{%

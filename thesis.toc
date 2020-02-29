@@ -15,78 +15,82 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Verteilte Systeme}{3}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}\IeC {\"U}berwachung von verteilten Systemen}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Eigenschaften eines verteilten Systems}{3}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Synchronisation}{3}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}\IeC {\"U}berwachung von verteilten Systemen}{3}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Ordnung von events}{3}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.3}Synchronisation}{4}{subsection.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Bibliotheksentwicklung}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.1.4}Ordnung von events}{4}{subsection.2.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Problembeschreibung}{4}{chapter.3}
+\contentsline {section}{\numberline {2.2}Bibliotheksentwicklung}{4}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Eventgenerierung}{4}{section.3.1}
+\contentsline {section}{\numberline {2.3}Distributed Tracing}{4}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Eventkorrelation}{4}{subsection.3.1.1}
+\contentsline {chapter}{\numberline {3}Problembeschreibung}{6}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}Synchronistion von Eventgeneratoren}{4}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.1}Eventgenerierung}{6}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Event\IeC {\"u}bermittlung}{4}{section.3.2}
+\contentsline {subsection}{\numberline {3.1.1}Eventkorrelation}{6}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Design}{5}{chapter.4}
+\contentsline {subsection}{\numberline {3.1.2}Synchronistion von Eventgeneratoren}{6}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Anforderungsanalyse}{5}{section.4.1}
+\contentsline {section}{\numberline {3.2}Event\IeC {\"u}bermittlung}{6}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Anforderungen}{5}{subsection.4.1.1}
+\contentsline {chapter}{\numberline {4}Design}{7}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1.1}Funktionale Anforderungen}{5}{subsubsection.4.1.1.1}
+\contentsline {section}{\numberline {4.1}Anforderungsanalyse}{7}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1.2}Nicht-Funktionale Anforderungen}{5}{subsubsection.4.1.1.2}
+\contentsline {subsection}{\numberline {4.1.1}Anforderungen}{7}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Datenmodell}{5}{section.4.2}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Funktionale Anforderungen}{7}{subsubsection.4.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Eventmodell}{5}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.1.1.2}Nicht-Funktionale Anforderungen}{7}{subsubsection.4.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Eventgraph}{5}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.2}Datenmodell}{7}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Verarbeitungsmodell}{5}{section.4.3}
+\contentsline {subsection}{\numberline {4.2.1}Eventmodell}{7}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Agenten}{5}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.2.2}Eventgraph}{7}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Collectoren}{5}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.3}Verarbeitungsmodell}{7}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Implementierung}{6}{chapter.5}
+\contentsline {subsection}{\numberline {4.3.1}Agenten}{7}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Bilbiothek: Traktor}{6}{section.5.1}
+\contentsline {subsection}{\numberline {4.3.2}Collectoren}{7}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Traktor Agent}{6}{section.5.2}
+\contentsline {chapter}{\numberline {5}Implementierung}{8}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Traktor Registry}{6}{section.5.3}
+\contentsline {section}{\numberline {5.1}Bilbiothek: Traktor}{8}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Evaluierung}{7}{chapter.6}
+\contentsline {section}{\numberline {5.2}Traktor Agent}{8}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Genauigkeit der Eventgenerierung}{7}{section.6.1}
+\contentsline {section}{\numberline {5.3}Traktor Registry}{8}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}Uhren und Zeit}{7}{subsection.6.1.1}
+\contentsline {chapter}{\numberline {6}Evaluierung}{9}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Darstellung der Events}{7}{section.6.2}
+\contentsline {section}{\numberline {6.1}Genauigkeit der Eventgenerierung}{9}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Vergleich mit Jaeger}{7}{section.6.3}
+\contentsline {subsection}{\numberline {6.1.1}Uhren und Zeit}{9}{subsection.6.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}Datenmodelle}{7}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.2}Darstellung der Events}{9}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Bereitstellung}{7}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.3}Vergleich mit Jaeger}{9}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Ergebnisse}{7}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.1}Datenmodelle}{9}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Fazit}{8}{chapter.7}
+\contentsline {subsection}{\numberline {6.3.2}Bereitstellung}{9}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Ausblick}{8}{section.7.1}
+\contentsline {subsection}{\numberline {6.3.3}Ergebnisse}{9}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}ZitatTest}{8}{section.7.2}
+\contentsline {chapter}{\numberline {7}Fazit}{10}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Glossar}{9}{section*.3}
+\contentsline {section}{\numberline {7.1}Ausblick}{10}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{10}{section*.5}
+\contentsline {section}{\numberline {7.2}ZitatTest}{10}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{11}{chapter*.7}
+\contentsline {chapter}{Glossar}{11}{section*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{12}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{13}{chapter*.7}
