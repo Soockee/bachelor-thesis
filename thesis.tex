@@ -68,6 +68,9 @@
 
 \DeclareMultiCiteCommand{\footpartcites}[\mkbibfootnote]{\footpartcite}{\addsemicolon\space}
 
+%% Römische Nummer im Textverweden
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\newcommand{\lowroman}[1]{\romannumeral#1\relax}
 
 %% Chapterschriftformatierung
 \usepackage{titlesec, blindtext, color}
@@ -96,6 +99,7 @@
 \newacronym{fpsLabel}{FPS}{Frames per Second}
 
 
+\pagenumbering{roman}
 % ----------------------------------------------------------------------------
 \begin{document}
 \frontmatter
@@ -121,7 +125,12 @@
 
 %% Erklärung
 \pagestyle{empty}
-
+{
+	\renewcommand{\thispagestyle}[1]{}
+ Hier Steht Erklärung
+}
+\clearpage
+\pagestyle{plain}
 
 %% Zusammenfassung
 \pagestyle{empty}
@@ -156,6 +165,7 @@
 \mainmatter 
 \pagestyle{headings}
 
+\pagenumbering{arabic}
 \input{einleitung}
 \input{themenueberblick}
 \input{problembeschreibung}

@@ -395,6 +395,9 @@
       \field{urlyear}{2020}
       \field{year}{1987}
       \field{urldateera}{ce}
+      \verb{file}
+      \verb :home/socke/Downloads/Lamport - 1978 - Time, Clocks, and the Ordering of Events in a Distributed System.pdf:pdf
+      \endverb
       \verb{urlraw}
       \verb https://lamport.azurewebsites.net/pubs/distributed-system.txt
       \endverb
@@ -864,6 +867,41 @@
       \field{year}{2010}
       \verb{file}
       \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Sigelman et al. - 2010 - Dapper, a Large-Scale Distributed Systems Tracing Infrastructure.pdf:pdf
+      \endverb
+    \endentry
+    \entry{VanSteen2017}{book}{}
+      \name{author}{2}{}{%
+        {{hash=0bbeda49a16c6323b5605feb5a996f9b}{%
+           family={Steen},
+           familyi={S\bibinitperiod},
+           given={Martinus\bibnamedelima Richardus},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=162cef018affd43eb8d81b34cd723931}{%
+           family={Tanenbaum},
+           familyi={T\bibinitperiod},
+           given={Andrew\bibnamedelima S},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5531e0dbdc7d858823e7e1c8077ba24c}
+      \strng{fullhash}{5531e0dbdc7d858823e7e1c8077ba24c}
+      \strng{bibnamehash}{5531e0dbdc7d858823e7e1c8077ba24c}
+      \strng{authorbibnamehash}{5531e0dbdc7d858823e7e1c8077ba24c}
+      \strng{authornamehash}{5531e0dbdc7d858823e7e1c8077ba24c}
+      \strng{authorfullhash}{5531e0dbdc7d858823e7e1c8077ba24c}
+      \field{labelalpha}{ST17}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Self-published, open publication}
+      \field{edition}{3rd}
+      \field{isbn}{978-15-430573-8-6}
+      \field{title}{{Distributed Systems}}
+      \field{year}{2017}
+      \verb{file}
+      \verb :home/socke/Downloads/Distributed{\_}Systems{\_}3-200302.pdf:pdf
       \endverb
     \endentry
     \entry{Stearns2001}{misc}{}

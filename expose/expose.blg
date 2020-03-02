@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
-[0] Config.pm:305> INFO - Logfile is 'expose.blg'
-[33] biber:313> INFO - === Di Feb 25, 2020, 14:35:17
-[54] Biber.pm:371> INFO - Reading 'expose.bcf'
-[130] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
-[146] Biber.pm:3981> INFO - Processing section 0
-[157] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/biblio.bib' for section 0
-[159] bibtex.pm:1468> INFO - LaTeX decoding ...
-[179] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/biblio.bib'
-[197] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[197] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[197] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
-[197] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
-[199] bbl.pm:617> INFO - Writing 'expose.bbl' with encoding 'UTF-8'
-[200] bbl.pm:720> INFO - Output to expose.bbl
+[1] Config.pm:305> INFO - Logfile is 'expose.blg'
+[33] biber:313> INFO - === Mo Mär  2, 2020, 16:04:13
+[60] Biber.pm:371> INFO - Reading 'expose.bcf'
+[134] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
+[152] Biber.pm:3981> INFO - Processing section 0
+[165] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/biblio.bib' for section 0
+[166] bibtex.pm:1468> INFO - LaTeX decoding ...
+[186] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/biblio.bib'
+[208] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[208] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[208] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
+[209] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
+[211] bbl.pm:617> INFO - Writing 'expose.bbl' with encoding 'UTF-8'
+[211] bbl.pm:720> INFO - Output to expose.bbl

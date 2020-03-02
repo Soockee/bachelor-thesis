@@ -1,18 +1,18 @@
-[0] Config.pm:302> INFO - This is Biber 2.9
+[1] Config.pm:302> INFO - This is Biber 2.9
 [1] Config.pm:305> INFO - Logfile is 'thesis.blg'
-[36] biber:313> INFO - === Sa Feb 29, 2020, 11:44:00
+[34] biber:313> INFO - === Mo Mär  2, 2020, 15:04:58
 [57] Biber.pm:371> INFO - Reading 'thesis.bcf'
-[127] Biber.pm:857> INFO - Found 21 citekeys in bib section 0
-[143] Biber.pm:3981> INFO - Processing section 0
-[156] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/library.bib' for section 0
-[158] bibtex.pm:1468> INFO - LaTeX decoding ...
-[186] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/library.bib'
-[218] Utils.pm:169> WARN - month field 'jul' in entry 'lamport78' is not an integer - this will probably not sort properly.
-[368] Utils.pm:169> WARN - BibTeX subsystem: /tmp/_9vxspCpHu/library.bib_19040.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[408] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[408] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[409] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
-[409] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
-[439] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[449] bbl.pm:720> INFO - Output to thesis.bbl
-[449] Biber.pm:110> INFO - WARNINGS: 2
+[129] Biber.pm:857> INFO - Found 22 citekeys in bib section 0
+[146] Biber.pm:3981> INFO - Processing section 0
+[158] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/library.bib' for section 0
+[161] bibtex.pm:1468> INFO - LaTeX decoding ...
+[193] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/library.bib'
+[235] Utils.pm:169> WARN - month field 'jul' in entry 'lamport78' is not an integer - this will probably not sort properly.
+[404] Utils.pm:169> WARN - BibTeX subsystem: /tmp/8d3z_GFRWc/library.bib_6813.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[455] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[455] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[455] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
+[455] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
+[489] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[500] bbl.pm:720> INFO - Output to thesis.bbl
+[500] Biber.pm:110> INFO - WARNINGS: 2

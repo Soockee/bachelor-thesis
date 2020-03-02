@@ -11,39 +11,44 @@
 
 \section{Verteilte Systeme}
 
-Verteilte Systeme nach Tanenbaum:
+Verteilte Systeme dienen als Anwendungsfeld für die Instrumentalisierungsbibliothek. Auch das in dieser Arbeit vorgestellte Testbett ist ein solches verteiltes System. Dazu ist es wichtig,  verschiedene Eigenschaften und Konzepte von verteilten Systemen zu definieren. Diese Eigenschaften und Konzepte nehmen einen entscheidenden Faktor bei der Ermittlung, Analyse und Umsetzung von Anforderungen der Instrumentalisierungsbibliothek ein. Demstsprechenend wird zunächt der Begriff des verteilten Systems definiert:
 
 \begin{quote}
 	Ein verteiltes System ist eine Kollektion unabhängiger Computer, die den Benutzern als ein Einzelcomputer erscheinen\footpartcite{10.5555/1202502} 
 \end{quote}
 
 \subsection{Eigenschaften eines verteilten Systems}
-\begin{itemize}
-	\item Knoten
-	\item Einzelne Knoten führen einzelne Komponten des Systems aus 
-	\item Einzelne Komponenten sind für einzelne Aufgaben zuständig
-\end{itemize}
-\subsection{Überwachung von verteilten Systemen}
-\begin{itemize}
-	\item Infrastruktur
+	Die Definition von van Steen und Tanenbaum geht mit zwei charakteristischen Eigenschaften von verteilten Systemen einher. Die erste Eigenschaft äußert sich darin, dass alle Komponenten eines Systems unabhängig voneinander agieren können. Komponenten werden in diesem Zusammenhang auch Knoten genannt. Knoten sind Hardwarekomponenten, also pysikalische Recheneinheiten. Auch Prozesse innerhalb einer Hardwareeinheit können Knoten sein. Dabei ist es möglich, dass mehrere Knoten auf einer Hardwareheinheit sind.\footpartcite[p. 2]{VanSteen2017}.
+
+	Diese Knoten kommunizieren mittels Nachrichten miteinander. 
+\subsection{Beobachtbarkeit von verteilten Systemen}
+	Die Beobachtbarkeit von verteilten Systemen kann in erster Linie durch Überwachung diverser Komponenten des Systems ermöglicht werden. Dabei lassen sich diese Komponenten in drei Kategorien unterteilen (\lowroman{1}) \textbf{Hardware}, (\lowroman{2}) \textbf{Netwerke} und (\lowroman{3}) \textbf{Anwendungen}
+
+	
+	\textbf{Hardware}\space\space\space some text
+	
 	\begin{itemize}
 		\item CPU
 		\item GPU
 		\item Speicher
 	\end{itemize}
-	\item Netzwerk
+	
+	\textbf{Netzwerk}\space\space\space some text
+	
 	\begin{itemize}
 		\item Anzahl Packete
 		\item Latenz zwischen Komponenten bzw. Client
 		\item Übertragungsanomalien
 	\end{itemize}
-	\item Anwendung
+	
+	\textbf{Anwendung}\space\space\space some text
+	
 	\begin{itemize}
 		\item Logs
 		\item Metriken
 		\item Graphen etc. 
 	\end{itemize}
-\end{itemize}
+
 Quelle beziehen:
 \href{https://de.wikipedia.org/wiki/Verteiltes_System}{Verteilte Systeme Zitate}
 \subsection{Synchronisation}
