@@ -1,1 +1,5 @@
 \glossaryentry{FPS?\glossentry{fpsLabel}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{CPU?\glossentry{cpuLabel}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{GPU?\glossentry{gpuLabel}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{RAM?\glossentry{ramLabel}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{RAM?\glossentry{hddLabel}|setentrycounter[]{page}\glsnumberformat}{4}

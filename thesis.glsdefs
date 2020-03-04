@@ -1,0 +1,30 @@
+\ifglsentryexists{fpsLabel}{}%
+{%
+\gls@defglossaryentry{fpsLabel}%
+{%
+name={FPS},%
+sort={FPS},%
+type={acronym},%
+first={Frames per Second\glsspace (FPS)},%
+firstplural={Frames per Second\acrpluralsuffix \glsspace (FPS\acrpluralsuffix )},%
+text={FPS},%
+plural={FPS\acrpluralsuffix },%
+description={Frames per Second},%
+descriptionplural={Frames per Second\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Frames per Second},%
+longplural={Frames per Seconds},%
+short={FPS},%
+shortplural={FPSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

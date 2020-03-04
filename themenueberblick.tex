@@ -20,18 +20,13 @@ Verteilte Systeme dienen als Anwendungsfeld für die Instrumentalisierungsbiblio
 \subsection{Eigenschaften eines verteilten Systems}
 	Die Definition von van Steen und Tanenbaum geht mit zwei charakteristischen Eigenschaften von verteilten Systemen einher. Die erste Eigenschaft äußert sich darin, dass alle Komponenten eines Systems unabhängig voneinander agieren können. Komponenten werden in diesem Zusammenhang auch Knoten genannt. Knoten sind Hardwarekomponenten, also pysikalische Recheneinheiten. Auch Prozesse innerhalb einer Hardwareeinheit können Knoten sein. Dabei ist es möglich, dass mehrere Knoten auf einer Hardwareheinheit sind.\footpartcite[p. 2]{VanSteen2017}.
 
-	Diese Knoten kommunizieren mittels Nachrichten miteinander. 
+	Knoten sind miteinandern über Netzwerke verknüpft. Innerhalb des Netzwerk kommunizieren Knoten mittels Nachrichten miteinander. Beim Ansprechen eines verteilten Systems soll dem Anfragesteller, zum Beispiel ein Client eines Webservers, nicht ersichtlich sein, dass mehrere Komponenten ein Gesamtsystem bilden, welches die Anfrage verarbeitet und entsprechende Vorgänge ausführt. 
 \subsection{Beobachtbarkeit von verteilten Systemen}
-	Die Beobachtbarkeit von verteilten Systemen kann in erster Linie durch Überwachung diverser Komponenten des Systems ermöglicht werden. Dabei lassen sich diese Komponenten in drei Kategorien unterteilen (\lowroman{1}) \textbf{Hardware}, (\lowroman{2}) \textbf{Netwerke} und (\lowroman{3}) \textbf{Anwendungen}
+
+	Die Beobachtbarkeit von verteilten Systemen kann in erster Linie durch Überwachung diverser Komponenten des Systems ermöglicht werden. Dabei lassen sich diese Komponenten in drei Kategorien unterteilen. Aufzuzählen sind (\lowroman{1}) \textbf{Hardware} auf denen die Knoten angesiedelt sind, die (\lowroman{2}) \textbf{Netwerke}, in denen die Kommunikation der einzelnen Knoten stattfindent und der (\lowroman{3}) \textbf{Anwendung}, welches sich auf alle Knoten verteilten kann.
 
 	
-	\textbf{Hardware}\space\space\space some text
-	
-	\begin{itemize}
-		\item CPU
-		\item GPU
-		\item Speicher
-	\end{itemize}
+	\textbf{Hardware}\space\space\space Aufgrund der vielzahl an Hardwarekomponenten in einem System gilt es, besonders Interessante, im Kontext der Verteiltheit, zu beobachten. Als Hauptkomponenten der meisten Systeme zählen zum Beispiel die \emph{\gls{cpuLabel}}, die \emph{\gls{gpuLabel}} oder auch die verschiedenen Speicher wie zum Beispiel der \emph{\gls{ramLabel}} oder die \emph{\gls{hddLabel}}. Aus der Beobachtung dieser Komponeten gewinnt man allgemeine Informationen über das Gesamtsystem. Diese Informationen können zum Beispiel dazu genutzt werden, die Auslastung einzelner Knoten zu ermitteln und eventuell auf unbalancierte Nutzung der Konten reagieren zu können.
 	
 	\textbf{Netzwerk}\space\space\space some text
 	
