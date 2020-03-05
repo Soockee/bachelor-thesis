@@ -2,4 +2,7 @@
 \glossaryentry{CPU?\glossentry{cpuLabel}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{GPU?\glossentry{gpuLabel}|setentrycounter[]{page}\glsnumberformat}{4}
 \glossaryentry{RAM?\glossentry{ramLabel}|setentrycounter[]{page}\glsnumberformat}{4}
-\glossaryentry{RAM?\glossentry{hddLabel}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{HDD?\glossentry{hddLabel}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{TCP?\glossentry{tcpLabel}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{IP?\glossentry{ipLabel}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{HTTP?\glossentry{httpLabel}|setentrycounter[]{page}\glsnumberformat}{4}

@@ -8,55 +8,74 @@
 % ----------------------------------------------------------------------------
 
 \chapter{Themenüberblick}
+\label{chapter:Themenüberblick}
 
 \section{Verteilte Systeme}
+\label{section:Verteilte Systeme}
 
-Verteilte Systeme dienen als Anwendungsfeld für die Instrumentalisierungsbibliothek. Auch das in dieser Arbeit vorgestellte Testbett ist ein solches verteiltes System. Dazu ist es wichtig,  verschiedene Eigenschaften und Konzepte von verteilten Systemen zu definieren. Diese Eigenschaften und Konzepte nehmen einen entscheidenden Faktor bei der Ermittlung, Analyse und Umsetzung von Anforderungen der Instrumentalisierungsbibliothek ein. Demstsprechenend wird zunächt der Begriff des verteilten Systems definiert:
+Verteilte Systeme dienen als Anwendungsfeld für die Instrumentalisierungsbibliothek. Auch das in dieser Arbeit vorgestellte Testbett ist ein solches verteiltes System. Dazu ist es wichtig,  verschiedene Eigenschaften und Konzepte von verteilten Systemen zu definieren. Diese Eigenschaften und Konzepte nehmen einen entscheidenden Faktor bei der Ermittlung, Analyse und Umsetzung von Anforderungen der Instrumentalisierungsbibliothek ein. Dementsprechenend wird zunächt der Begriff des verteilten Systems definiert:
 
 \begin{quote}
 	Ein verteiltes System ist eine Kollektion unabhängiger Computer, die den Benutzern als ein Einzelcomputer erscheinen\footpartcite{10.5555/1202502} 
 \end{quote}
 
 \subsection{Eigenschaften eines verteilten Systems}
+\label{subsection:Eigenschaften eines verteilten Systems}
 	Die Definition von van Steen und Tanenbaum geht mit zwei charakteristischen Eigenschaften von verteilten Systemen einher. Die erste Eigenschaft äußert sich darin, dass alle Komponenten eines Systems unabhängig voneinander agieren können. Komponenten werden in diesem Zusammenhang auch Knoten genannt. Knoten sind Hardwarekomponenten, also pysikalische Recheneinheiten. Auch Prozesse innerhalb einer Hardwareeinheit können Knoten sein. Dabei ist es möglich, dass mehrere Knoten auf einer Hardwareheinheit sind.\footpartcite[p. 2]{VanSteen2017}.
 
 	Knoten sind miteinandern über Netzwerke verknüpft. Innerhalb des Netzwerk kommunizieren Knoten mittels Nachrichten miteinander. Beim Ansprechen eines verteilten Systems soll dem Anfragesteller, zum Beispiel ein Client eines Webservers, nicht ersichtlich sein, dass mehrere Komponenten ein Gesamtsystem bilden, welches die Anfrage verarbeitet und entsprechende Vorgänge ausführt. 
 \subsection{Beobachtbarkeit von verteilten Systemen}
+\label{subsection:Beobachtbarkeit von verteilten Systemen}
+	Unter Beobachtbarkeit versteht man die Möglichkeiten der Betrachtung eines System. Die Symptome, die entstehen können, falls unerwünschte oder unvorhergesehene Zustände in dem System entstehen, sind oft schwer nachvollziehbar. Speziell verteilte Systeme erschweren die Reproduktion solcher Symptome, da das komplexe ineinandergreifen der Komponenten die Erfassung der Vorgänge erschweren. 
 
-	Die Beobachtbarkeit von verteilten Systemen kann in erster Linie durch Überwachung diverser Komponenten des Systems ermöglicht werden. Dabei lassen sich diese Komponenten in drei Kategorien unterteilen. Aufzuzählen sind (\lowroman{1}) \textbf{Hardware} auf denen die Knoten angesiedelt sind, die (\lowroman{2}) \textbf{Netwerke}, in denen die Kommunikation der einzelnen Knoten stattfindent und der (\lowroman{3}) \textbf{Anwendung}, welches sich auf alle Knoten verteilten kann.
+	Die Beobachtbarkeit von verteilten Systemen kann in erster Linie durch Überwachung diverser Komponenten des Systems ermöglicht werden. Dabei lassen sich diese Komponenten in drei Kategorien unterteilen. Aufzuzählen sind (\lowroman{1}) \textbf{Hardware} auf denen die Knoten angesiedelt sind, (\lowroman{2}) \textbf{Netwerke}, in denen die Kommunikation der einzelnen Knoten stattfindent und die (\lowroman{3}) \textbf{Anwendung}, welches sich auf alle Knoten verteilten kann.
 
 	
-	\textbf{Hardware}\space\space\space Aufgrund der vielzahl an Hardwarekomponenten in einem System gilt es, besonders Interessante, im Kontext der Verteiltheit, zu beobachten. Als Hauptkomponenten der meisten Systeme zählen zum Beispiel die \emph{\gls{cpuLabel}}, die \emph{\gls{gpuLabel}} oder auch die verschiedenen Speicher wie zum Beispiel der \emph{\gls{ramLabel}} oder die \emph{\gls{hddLabel}}. Aus der Beobachtung dieser Komponeten gewinnt man allgemeine Informationen über das Gesamtsystem. Diese Informationen können zum Beispiel dazu genutzt werden, die Auslastung einzelner Knoten zu ermitteln und eventuell auf unbalancierte Nutzung der Konten reagieren zu können.
+	\textbf{Hardware}\space\space\space Aufgrund der vielzahl an Hardwarekomponenten in einem System gilt es, besonders interessante Komponenten, im Kontext der Fehlerfindung beziehungsweise der Performanceanalyse, zu beobachten. Als Hauptkomponenten der meisten Systeme zählen zum Beispiel die \emph{\gls{cpuLabel}}, die \emph{\gls{gpuLabel}} oder auch die verschiedenen Speicher wie zum Beispiel der \emph{\gls{ramLabel}} oder die \emph{\gls{hddLabel}}. Aus der Beobachtung dieser Komponeten gewinnt man allgemeine Informationen über das Gesamtsystem. Diese Informationen können zum Beispiel dazu genutzt werden, die Auslastung einzelner Knoten zu ermitteln und eventuell auf unbalancierte Nutzung der Konten reagieren zu können oder auftretende \emph{bottlenecks}, das heißt stark auffällige performancebeeinträchtigende Komponenten im System, erkennen zu können. Diese könnten beispielsweise langsame HDDs sein, auf die oft zugegriffen wird.
 	
-	\textbf{Netzwerk}\space\space\space some text
+	\textbf{Netzwerk}\space\space\space Die Kommunikation innerhalb des Systems wird durch das Netzwerk, also die Verknüpfung der jeweiligen Knoten miteinandern, ermöglicht. Verschiedene Protokolle zur Regelung des Nachrichtenaustauschs kommen dabei zum Einsatz. Besonders nennenswert sind die Protokolle \emph{\gls{tcpLabel}} und \emph{\gls{ipLabel}}. Diese beiden Protokolle dienen als Grundlage für zwei darauf aufbauende Protokolle. Zum einen das \gls{httpLabel} und das Websocket Protocol. Der Anwendungsfall der Protokolle wird im \cref{chapter:Design} genauer betrachtet.
+	
+	Auch das Netzwerk generiert aussagekräftige Daten über das verteilte System. Die in dem Netzwerk verkehrenden Datenmengen sind dabei zu betrachten. Diese Datenmengen können auf unterschiedliche Weise gemessen und Schlussfolgerungen aus den Ergebnissen gezogen werden. Gemessen wird Netzwerkverkehr beispielsweise anhand der Größe der Datenpakete, der Geschwindigkeit der Datenpakete vom Sender zum Empfänger oder einer Knotenerreichbarkeitsprüfung. Diese Daten für sich können schon informativ sein. Allerdings lassen sich auch weitere Informationen durch Korrelation gewinnen. Bespielsweise könnte in einem Anwendungsfall eine Korrelation zwischen Geschwindigkeitsanomalien und Tageszeit bestehen. Auch denkbar wären Anomalien, die sich in Paketverlusten äußern. Diese könnten zum Beispiel durch erhöhte Beanspruchung eines bestimmten Knotens beziehungsweise einer bestimmten Komponente ausgelöst werden. Durch feststellung von Korrelationen können Maßnahmen durchgeführt werden, die der auftretende Anomalie entgegensteuert oder gar ganz beseitigt.
+	
+	\textbf{Anwendung}\space\space\space Die Beobachtung der Anwendung ist, im zusammenspiel mit dem Nachrichtenaustausch über das Netzwerk, zentral. Die Beobachtbarkeit der Anwendung sorgt dafür, dass Anwendungsdaten erhoben, ver- und aufgearbeitet und anschließend präsentiert werden. Die Präsentation der Daten hilft den Verantwortlichen Informationen über die internen Vorgänge des Systems zu gewinnen und entsprechend agieren zu können. Es ist zudem möglich gewisse Daten interpretieren zu lassen. Die daraus gewonnenen Informationen können von weiteren Systemen dazu genutzt werden, automatisiert zu steuern. Grundsätzlich kann man auch hier zwischen drei verschiedenen Datenquellen unterscheiden. Diese drei Datenquellen sind:
 	
 	\begin{itemize}
-		\item Anzahl Packete
-		\item Latenz zwischen Komponenten bzw. Client
-		\item Übertragungsanomalien
-	\end{itemize}
-	
-	\textbf{Anwendung}\space\space\space some text
-	
-	\begin{itemize}
-		\item Logs
-		\item Metriken
-		\item Graphen etc. 
+		\item Metriken\footpartcite{Watson2017} z.B.:
+		\begin{itemize}
+			\item Systemdaten
+			\item Anzahl von Instanzen
+			\item Anfrageanzahl
+			\item Fehlerrate
+		\end{itemize}
+		\item Applikationslogs, z.B.:
+		\begin{itemize}
+			\item Fehler
+			\item Warnungen
+			\item Applikationsinformationen
+		\end{itemize}
+		\item Traces, z.B:
+		\begin{itemize}
+			\item Segmente
+			\item Subsegmente
+			\item Kontext
+		\end{itemize}
 	\end{itemize}
 
-Quelle beziehen:
-\href{https://de.wikipedia.org/wiki/Verteiltes_System}{Verteilte Systeme Zitate}
+	
 \subsection{Synchronisation}
+\label{subsection:Synchronisation}
 \begin{itemize}
 	\item 
 	\item 
 	\item
 \end{itemize}
-\subsection{Ordnung von events}
+\subsection{Ordnung von Events}
+\label{subsection:Ordnung von Events}
 \begin{itemize}
 	\item Bezug auf Lamports Eventordnung\footpartcite{lamport78}
 \end{itemize}
 \section{Bibliotheksentwicklung}
+\label{subsection:Bibliotheksentwicklung}
 \begin{itemize}
 	\item 
 	\item 
@@ -64,6 +83,7 @@ Quelle beziehen:
 \end{itemize}
 
 \section{Distributed Tracing}
+\label{subsection:Erkenntnisinteresse}
 Verteilte Systeme wurden bereits definiert. Allerdings lohnt es sich eine alternative Definition zu betrachten.
 
 \begin{quote}
@@ -71,7 +91,13 @@ Verteilte Systeme wurden bereits definiert. Allerdings lohnt es sich eine altern
 \end{quote}
 
 
-Diese Definition lässt sich so auffassen, dass Lamport im Jahr 1987 die Problematik der Fehlersuche während der Laufzeit, des Debuggings während der Entwicklungsphase und des organisatorischen Aufwands im Allgemeinen, also damit der grundsätzlich hohen Unübersichtlichkeit und Komplexität von verteilten Systemen, beschreibt. Diese Probleme und Herausforderungen, mit denen man in der heutigen Zeit zusammenstößt, eventuell sogar noch intensiver, als zur damaligen Zeit, können durch distributed tracing angegangen werden. 
+Diese Definition lässt sich so auffassen, dass Lamport im Jahr 1987 die Problematik der Fehlersuche während der Laufzeit, des Debuggings während der Entwicklungsphase und des organisatorischen Aufwands im Allgemeinen, also damit der grundsätzlich hohen Unübersichtlichkeit und Komplexität von verteilten Systemen, beschreibt. Diese Probleme und Herausforderungen, mit denen man in der heutigen Zeit der serviceorientierten Architektur beziehungsweise der Microservicearchitektur konfrontiert wird, können durch distributed tracing angegangen werden. Tracing ist ein Konzept, welches als Werkzeug umgesetzt werden kann. 
+
+
+Distributed tracing umfasst zwei Teilbereiche der im \cref{subsection:Beobachtbarkeit von verteilten Systemen} beschriebenen Beobobachtbarkeit von verteilten Systemen. Das ist zum einen die verteilte Anwendung und zum anderen das Netzwerk. 
+
+
+Distributed tracing beinhaltet das Eingreifen in Anwedungsquellcode mittels Instrumnetalisierungsbibliothek.
 
 
 \begin{itemize}

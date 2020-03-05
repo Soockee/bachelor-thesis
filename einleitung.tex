@@ -8,9 +8,11 @@
 % ----------------------------------------------------------------------------
 
 \chapter{Einleitung}
+\label{chapter:Einleitung}
 
 
 \section{Motivation}
+\label{section:Motivation}
 	Die heutigen Bedürfnisse der Anwender ein stets erreichbaren, fehlerfreien und ??schnellen?? Service zur Verfügung zu haben, stellt hohe Erwartung an Unternehmen. Um den Ansprüchen der Nutzer gerecht zu werden, müssen Systeme gewährleisten, dass ein gewisser Grad von Beobachtbarkeit des Systems erreicht wird. Die Beobachtbarkeit sorgt für die nötige reaktionsfähigkeit der Entwickler und Operatoren, um möglicherweise auftretende Komplikationen, die die  Benutzerbedürfnisse beeinträchtigen, schnell, präzise und langfristig beheben zu können.
 	
 	Die Komplexität des Gesamtsystems, welches aus vielen kleinen Komponenten bestehen kann, ist eine große Herausforderung für Entwickler und Operatoren. Die enorme Skalierbarkeit einzelner Komponenten und die aussgezeichnete Resourcennutzung der Hardware löst zwar viele Probleme der Vergangenheit, wie zum Beispiel Überbelastung einzelner Knoten, Ausfall von Komponenten und Latenzprobleme. Allerdings schafft diese Umstellung neue Schwierigkeiten, die es zu bewältigen gilt. 
@@ -20,11 +22,13 @@
 	Glossarbeispiel \gls{latex}
 	Glossarbeispiel \gls{fpsLabel}
 \section{Problemstellung}
+\label{section:Problemstellung}
 	In einem System werden Nachrichten ausgetauscht. In Falle eines verteilten Systems spielt dabei die Kommunikation über Prozessgrenzen eine zentrale Rolle.
 	Entscheidende Ereignisse und deren zeitliches Auftreten sind von besonderem Interesse. Diese Ereignisse werden Events genannt. Events bilden einzelne Zeitpunkte ab. Die Intrasystem-Netzwerkkommunikation bedarf Konzepte zur Nachvollziehbarkeit von Events und deren Beziehungen zueinander. 
 	
 	Das System generiert asynchron \emph{Frames} und sendet diese in Intervallen über eine Websocketverbindung an einen Client. Frames werden verworfen, sobald neuere Frames generiert wurden, d.h. innerhalb eines Intervals können mehrere Frames entstehen, aber nur eines ist relevant. Das System generiert Frames innerhalb von 16ms. Die Antwortzeiten betragen ca. 100ms. Der Client kann asynchron Einfluss auf die zu generierenden Frames durch Übermittlung von Daten nehmen. Die bei diesem Datenaustausch entstehenden Events wie z.B. das Starten einer Framegenerierung, dem Beending einer Framegenerierung, dem Senden eines fertiggestellten Frames und dem Empfangen eines Frames sollen erstellt werden. Die zeitliche Einordnung der Events hat dabei eine zentrale Rolle einzunehmen. Die Eventgenerierung muss sich mit den zeitlichen Rahmenbedingungen vereinbaren lassen. Das Konstrukt von Events ,die zueinander in Verbindung stehen, soll untersucht werden. Dazu stellt sich folgende Frage: \emph{Ist es möglich Events in einem verteilten System zu generieren und miteinander in Verbindung zu setzen, die es erlauben, einen Stream von Frames als eine Anordnung von Events, die kausal miteinandern verbunden sind, darzustellen}
 \section{Foschungsstand}
+\label{section:Forschungsstand}
 
 Es gibt diverse Konzepte und Werkzeuge zur Erhebung von Tracingdaten. Darunter zählen Instrumentalisierungsbibliotheken von z.B.:
 \begin{itemize}
@@ -37,4 +41,5 @@ Es gibt diverse Konzepte und Werkzeuge zur Erhebung von Tracingdaten. Darunter z
 Abgesehen von dem Brown Tracing Framework und dem X-Trace verwenden alle genannten Ansätze das spanbasierte Datenmodell. Die Brown University präsentiert in ihrer Veröffentlichung \emph{Universal Context Propagation for Distributed System Instrumentation} eine Schichten-Architektur zur Übermittlung von Tracingdaten in einem spezifizierten \emph{Baggage Context}. Der Baggage Context wird als Metadata mitgereicht und stellt somit eine Form des Piggybacking dar. Das Paper \emph{End-to-End Tracing Models: Analysis and Unification} beschreibt das spanbasierte Modell als eine Sammlung von \emph{spans}, welche jeweils eine Block von Rechenarbeit darstellt.\footpartcite{Leavitt2014}
 
 \section{Thesisübersicht}
+\label{section:Thesisübersicht}
 % ----------------------------------------------------------------------------

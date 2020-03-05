@@ -15,7 +15,8 @@
 	parskip=half,				 % Abstand zwischen Absätzen
 	bibliography=totoc,	 % Literaturverzeichnis im Inhaltsverzeichnis
 	headsepline=on,      % Trennlinie Kolumnentitel
-	openany
+	openany,
+	ngerman
 	]{scrbook}
 
 %% Präambel
@@ -27,6 +28,8 @@
 \usepackage{graphicx}                % Graphiken
 \usepackage{booktabs}                % Tabellen schöner
 \usepackage{listingsutf8}            % Listings mit Einstellungen
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}   % Document Wide cite index
 \lstset{basicstyle=\small\ttfamily,
 	tabsize=2,
 	basewidth={0.5em,0.45em},
@@ -86,7 +89,8 @@
 	citecolor=blue,
 	linkcolor=blue,
 }
-
+\usepackage{cleveref}               % Smart Cross-Doc refs
+\urlstyle{same}  % don't use monospace font for urls
 %% Glossardefinition
 \usepackage[toc,acronym]{glossaries} % Glossarpaket
 \makeglossaries
