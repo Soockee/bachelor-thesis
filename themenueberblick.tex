@@ -56,19 +56,24 @@ Verteilte Systeme dienen als Anwendungsfeld für die Instrumentalisierungsbiblio
 		\item Traces, z.B:
 		\begin{itemize}
 			\item Segmente
-			\item Subsegmente
 			\item Kontext
 		\end{itemize}
 	\end{itemize}
 
 	
-\subsection{Synchronisation}
+\subsection{Synchronisation / Zeitproblem?} 
 \label{subsection:Synchronisation}
-\begin{itemize}
-	\item 
-	\item 
-	\item
-\end{itemize}
+Ein Trace ist die Sammlung von Events die im Laufe des Weges durch ein verteiltes System generiert wurden. Die Knoten, die diesen Weg umfassen, generieren Events, indem sie Programmcode ausführen, welcher instrumtalisiert wurden. Diese Events sind die kleinsten Einheiten eines Traces und unterliegen einer Kausalordnung. Das \emph{Happend Before Model} nach Lamport beschreibt die Kausalordnung. Die Kausalordnung ist eine partielle Ordnung.\footpartcite{Garg2002}. 
+
+\begin{minipage}[c]{\textwidth}
+	\centering
+	\includegraphics[scale=0.5]{img/synchronisation/PartialOrdering_Concurrent.png}
+	\captionof{figure}[Abbildung]{Zeigt Prozesse P1, P2 und P3. Diese generieren jeweils ein Event. (1), (2) und (3) finden gleichzeitig statt.}
+	\label{fig:Partial_Ordering_Concurrent}
+\end{minipage} 
+
+Die \cref{fig:Partial_Ordering_Concurrent} zeigt eine Situation, in der drei Prozesse jeweils ein Event erzeugen. Intuitiv würde man interpretieren, dass (1) von P1 vor (2) von P2 erzeugt wurde und das darauf (3) von P3 folgt. Dies mag stimmen, in der Annahme, das es nur eine globale Zeit als richtwert gäbe. Allerdings verhält es sich in der Umgebung von Nebenläufigkeit nicht so einfach. Lamport stellt fest, dass in einer Umgebung, in der eine Ordnung anhand eines Zeitstempels physikalischer Zeit festgelegt wird, eine physikalische Uhr vorhanden sein muss.\footpartcite[S. 559]{lamport78} Die Einbindung einer physikalischen Uhr in ein verteiltes System ist eine aufwendige und komplexe Aufgabe. Probleme wie Synchronisation verschiedener Uhren mit keiner absoluten Präzision und dem dazugehörigen Drift, dem algorithmisch entgegengewirkt werden muss, treten auf.  Aus diesem Grund ist es naheliegend zu versuche eine Lösung zu finden, die auf physikalische Uhren verzichtet.
+
 \subsection{Ordnung von Events}
 \label{subsection:Ordnung von Events}
 \begin{itemize}

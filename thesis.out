@@ -7,7 +7,7 @@
 \BOOKMARK [1][]{section.2.1}{Verteilte Systeme}{chapter.2}% 7
 \BOOKMARK [2][]{subsection.2.1.1}{Eigenschaften eines verteilten Systems}{section.2.1}% 8
 \BOOKMARK [2][]{subsection.2.1.2}{Beobachtbarkeit von verteilten Systemen}{section.2.1}% 9
-\BOOKMARK [2][]{subsection.2.1.3}{Synchronisation}{section.2.1}% 10
+\BOOKMARK [2][]{subsection.2.1.3}{Synchronisation / Zeitproblem?}{section.2.1}% 10
 \BOOKMARK [2][]{subsection.2.1.4}{Ordnung von Events}{section.2.1}% 11
 \BOOKMARK [1][]{section.2.2}{Bibliotheksentwicklung}{chapter.2}% 12
 \BOOKMARK [1][]{section.2.3}{Distributed Tracing}{chapter.2}% 13
