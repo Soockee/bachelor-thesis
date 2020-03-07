@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  7 MAR 2020 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  7 MAR 2020 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1942,12 +1942,13 @@ Overfull \hbox (10.95pt too wide) in paragraph at lines 86--92
 []$[]$ 
  []
 
-[6 <./img/synchronisation/PartialOrdering_Concurrent.png>]
+[6 <./img/synchronisation/PartialOrdering_Concurrent.png>] [7 <./img/synchronis
+ation/PartialOrdering_ChildO.png>]
 
-LaTeX Warning: Citation 'Lamport1978' on page 7 undefined on input line 112.
+LaTeX Warning: Citation 'Lamport1978' on page 8 undefined on input line 116.
 
-[7 <./img/synchronisation/PartialOrdering_ChildO.png>]
-Overfull \hbox (19.48729pt too wide) in paragraph at lines 136--137
+
+Overfull \hbox (19.48729pt too wide) in paragraph at lines 140--141
 []\T1/lmr/m/n/10.95 Distributed trac-ing um-fasst zwei Teil-bere-iche der im Ab
 -schnitt [][]2.1.2[][] beschriebe-nen Beobobacht-
  []
@@ -2055,7 +2056,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  36154 strings out of 492982
  668081 string characters out of 6134896
- 1240066 words of memory out of 5000000
+ 1239066 words of memory out of 5000000
  39098 multiletter control sequences out of 15000+600000
  619031 words of font info for 62 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
@@ -2072,7 +2073,7 @@ ublic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (27 pages, 395016 bytes).
+Output written on thesis.pdf (27 pages, 395177 bytes).
 PDF statistics:
  585 PDF objects out of 1000 (max. 8388607)
  531 compressed objects within 6 object streams
