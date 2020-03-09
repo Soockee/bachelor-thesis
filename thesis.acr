@@ -3,9 +3,6 @@
 \glsgroupheading{C}\relax \glsresetentrylist %
 \glossentry{cpuLabel}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{4}}}\glsgroupskip
-\glsgroupheading{F}\relax \glsresetentrylist %
-\glossentry{fpsLabel}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{1}}}\glsgroupskip
 \glsgroupheading{G}\relax \glsresetentrylist %
 \glossentry{gpuLabel}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{4}}}\glsgroupskip

@@ -60,70 +60,59 @@ Verteilte Systeme dienen als Anwendungsfeld für die Instrumentalisierungsbiblio
 		\end{itemize}
 	\end{itemize}
 
-	
-\subsection{Synchronisation / Zeitproblem?} 
-\label{subsection:Synchronisation}
-Ein Trace ist die Sammlung von Events die im Laufe des Weges durch ein verteiltes System generiert wurden. Die Knoten, die diesen Weg umfassen, generieren Events, indem sie Programmcode ausführen, welcher instrumtalisiert wurden. Diese Events sind die kleinsten Einheiten eines Traces und unterliegen einer Kausalordnung. Das \emph{Happend Before Model} nach Lamport beschreibt die Kausalordnung. Die Kausalordnung ist eine strikte partielle Ordnung.\footpartcite{Garg2002}. 
-
-\begin{minipage}[c]{\textwidth}
-	\centering
-	\includegraphics[scale=0.5]{img/synchronisation/PartialOrdering_Concurrent.png}
-	\captionof{figure}[Abbildung]{Zeigt Prozesse P1, P2 und P3. Diese generieren jeweils ein Event. (1), (2) und (3) finden gleichzeitig statt.}
-	\label{fig:Partial_Ordering_Concurrent}
-\end{minipage} 
-
-
-Die \cref{fig:Partial_Ordering_Concurrent} zeigt eine Situation, in der drei Prozesse jeweils ein Event erzeugen. Intuitiv würde man interpretieren, dass (1) von P1 vor (2) von P2 erzeugt wurde und das darauf (3) von P3 folgt. Dies mag stimmen, in der Annahme, das es nur eine globale Zeit als richtwert gäbe. Allerdings verhält es sich in der Umgebung von Nebenläufigkeit nicht so einfach. Lamport stellt fest, dass in einer Umgebung, in der eine Ordnung anhand eines Zeitstempels physikalischer Zeit festgelegt wird, eine physikalische Uhr vorhanden sein muss.\footpartcite[S. 559]{lamport78} Die Einbindung einer physikalischen Uhr in ein verteiltes System ist eine aufwendige und komplexe Aufgabe. Probleme wie Synchronisation verschiedener Uhren mit keiner absoluten Präzision und dem dazugehörigen Drift, dem algorithmisch entgegengewirkt werden muss, treten auf.  Aus diesem Grund ist es naheliegend zu versuche eine Lösung zu finden, die auf physikalische Uhren verzichtet.
-
 
 \subsection{Ordnung von Events}
 \label{subsection:Ordnung von Events}
-\begin{itemize}
-	\item Bezug auf Lamports Eventordnung\footpartcite{lamport78}
-\end{itemize}
-Drei Bedingungen müssen nach Lamport erfüllt sein, damit eine Beziehung zwischen Events partiell geordnet ist. \glqq (1) Wenn \emph{a} und \emph{b} Events im selben Prozess sind und \emph{a} vor \emph{b} stattfindet, dann \emph{a} $\rightarrow$ \emph{b}. (2) Wenn \emph{a} das Senden einer Nachricht eines Prozesses ist und \emph{b} das Empfangen einer Nachricht eines anderen Prozesses ist, dann \emph{a} $\rightarrow$ \emph{b}. (3) Wenn \emph{a} $\rightarrow$ \emph{b} und \emph{b} $\rightarrow$ \emph{c}, dann \emph{a} $\rightarrow$ \emph{c}.\grqq \:\footpartcite[p.559]{lamport78}
+	
+Ein Trace ist die Sammlung von Events die im Laufe des Weges durch ein verteiltes System generiert wurden. Die Knoten, die diesen Weg umfassen, generieren Events, indem sie Programmcode ausführen, welcher instrumtalisiert ist. Diese Events sind die kleinsten Einheiten eines Traces und unterliegen einer Kausalordnung. Das \emph{Happend Before Model} nach Lamport beschreibt die Kausalordnung. Die Kausalordnung ist eine strikte partielle Ordnung.\footpartcite{Garg2002}. 
 
-\begin{minipage}[c]{\textwidth}
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}[t]{.49\linewidth}
+		\centering\includegraphics[width=.8\linewidth]{img/synchronisation/PartialOrdering_Concurrent.png}
+		\caption[Abbildung]{Zeigt Prozesse P1, P2 und P3. Diese generieren jeweils ein Event.}
+		\label{fig:Partial_Ordering_Concurrent_explained_1}
+	\end{subfigure}
+	\begin{subfigure}[t]{.49\linewidth}
+		\centering\includegraphics[width=.8\linewidth]{img/synchronisation/PartialOrdering_Concurrent_Explained}
+		\caption[Abbildung]{Events (1), (2) und (3) finden parallel statt.}
+		\label{fig:Partial_Ordering_Concurrent_explained_2}
+	\end{subfigure}
+\caption[Partielle Ordnung der Events dreier Prozesse]{}
+\end{figure} 
+
+
+Die \cref{fig:Partial_Ordering_Concurrent_explained_1} stellt eine Situation dar, in der drei Prozesse jeweils ein Event erzeugen. Intuitiv würde man interpretieren, dass (1) von P1 vor (2) von P2 erzeugt wurde und das darauf (3) von P3 folgt. Dies mag stimmen, in der Annahme, das es nur eine globale Zeit als richtwert gäbe. Allerdings lässt sich die Ordnung, in dem Kontext von verteilten Systemen und Nebenläufigkeit, nicht ohne Berücksichtignug verschiedener Einflussfaktoren feststellen. Lamport erläutert, dass in einer Umgebung, in der eine Ordnung anhand eines Zeitstempels physikalischer Zeit festgelegt wird, eine physikalische Uhr vorhanden sein muss.\footpartcite[S. 559]{lamport78} Die Einbindung einer physikalischen Uhr in ein verteiltes System ist eine aufwendige und komplexe Aufgabe. Probleme wie Synchronisation verschiedener Uhren mit keiner absoluten Präzision und dem dazugehörigen Drift, dem algorithmisch entgegengewirkt werden muss, treten auf. \cref{fig:Partial_Ordering_Concurrent_explained_2} zeigt, dass die Events, unter der Berücksichtigung der Definition von Lamport, nebenläufig stattfindet.  Aus diesem Grund ist es naheliegend zu versuche eine Lösung zu finden, die auf physikalische Uhren verzichtet.
+
+
+Drei Bedingungen müssen nach Lamport erfüllt sein, damit eine Beziehung zwischen Events partiell geordnet ist. 
+\begin{quote}
+	\glqq (1) Wenn \emph{a} und \emph{b} Events im selben Prozess sind und \emph{a} vor \emph{b} stattfindet, dann \emph{a} $\rightarrow$ \emph{b}. (2) Wenn \emph{a} das Senden einer Nachricht eines Prozesses ist und \emph{b} das Empfangen einer Nachricht eines anderen Prozesses ist, dann \emph{a} $\rightarrow$ \emph{b}. (3) Wenn \emph{a} $\rightarrow$ \emph{b} und \emph{b} $\rightarrow$ \emph{c}, dann \emph{a} $\rightarrow$ \emph{c}.\grqq \:\footpartcite[S. 559]{lamport78}
+\end{quote}
+
+\begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.5]{img/synchronisation/PartialOrdering_ChildO.png}
-	\captionof{figure}[Abbildung]{Zeigt Prozesse P1 und P2. Diese generieren jeweils Events. Logische Reihenfolge des Auftretens der Events anhand der gestrichelten Linien [1], [2], [3] und [4] ersichtlich.}
+	\caption[Partielle Ordnung von nebenläufigen Events]{Zeigt Prozesse P1 und P2. Diese generieren jeweils Events. Logische Reihenfolge des Auftretens der Events anhand der gestrichelten Linien [1], [2], [3] und [4] ersichtlich.}
 	\label{fig:Partial_Ordering_Concurrent}
-\end{minipage} 
+\end{figure}
 
-Kausalordnung = strike partialordnung
-
- kausal unabhängigen Ereignissen
-
-\begin{itemize}
-	\item -[1] als erstes, weil erstes event und send
-	\item -[1] $\rightarrow$ [2], weil send $\rightarrow$ recieve
-	\item -[1] $\rightarrow$ [4], weil gleicher prozess $\rightarrow$ und nachfolgend
-	\item -[1] $\rightarrow$ [3], weil  [1] $\rightarrow$ [2] und [2] $\rightarrow$ [3]: \textbf{Transivität}
-	\item -[2] is nebenläufig zu [4], weil P1 u. P2 kein realen Informationsaustausch betrieben haben, P2 kann nur \emph{vermuten} was P1 vor hat, also (3) auslöst
-	\item -[3] is nebenläufig zu [4], weil P1 u. P2 kein realen Informationsaustausch betrieben haben, P2 kann nur \emph{vermuten} was P1 vor hat, also (4) auslöst
-	\item -[3] $\rightarrow$ [5],  weil send $\rightarrow$ recieve
-	\item -[1] $\rightarrow$ [5], weil  [1] $\rightarrow$ [2], [2] $\rightarrow$ [3] und [3] $\rightarrow$ [5]: \textbf{Transivität}
-	\item -[2] $\not\rightarrow$ [1], weil \textbf{Asymmentrisch}, 2 Ist nicht vor 1 passiert -> macht sinn: trotzdem wichtig zu sagen, weil das eine partialordnung ausmacht
-	\item -[1] $\not\rightarrow$ [1], weil ein event in diesem kontext, nicht vor sich selbst stattfinden kann, -> \textbf{Irreflexive}
-\end{itemize}
-\textbf{Irreflexive}, \textbf{Asymmetrisch} und \textbf{Transivität} = strike Partialordnung
-
-Zudem muss die \emph{Clock Condition} berücksichtigt werden. Diese Bedingungen besagt:
+Um die feststellnug von Lamport zu verdeutlichen wird \cref{fig:Partial_Ordering_Concurrent} untersucht. Die Abbildung stellt zwei Prozesse dar, dabei wird angenommen, dass diese in unterschiedlichen Rechensystemen angesiedelt sind. Das bedeutet, dass auf eine globale physikalische Uhr verzichtet wird. Diese Prozesse können sich mittels senden einer Nachricht und empfangen einer Nachricht verständigen. Das verteilte System generiert insgesamt fünf Events. P1 erzeugt (1) in der logischen Zeitspanne [1] und sendet anschließend eine Nachricht an P2. Das empfangen wird durch (2) dargestellt. Daraus folgt, dass eine \emph{Happens Before Relation} zwischen (1) und (2) besteht, also (1) $\rightarrow$ (2). Nebenläufig dazu, findet in P1 Event (4) statt. (4) kann durch P1 in keiner Weise beeinflusst werden. Das heißt, dass (4) ein von (2)  kausal unabhängiges Ereignis ist, (2) $\not\rightarrow$ (4). (4) ist aber kausal von (1) abhängig, da es das direkt folgende Event im gleichen Prozess ist, also (1) $\rightarrow$ (4). (4) bildet dabei, als neues abhängiges Event, Zeitspanne [2]. Weitergehend zu folgern ist, (2) $\rightarrow$ (3), weshalb [3] entsteht. Auch hier ist eine kausale unabhängigkeit von (3) zu (4) zu sehen. An dieser Stelle spielt eine weitere Bedingung eine Rolle. Es muss die \emph{Clock Condition} berücksichtigt werden. Diese Bedingungen besagt:
 
 \[
 \text{Clock Condition}: \; \text{wenn} \; \emph{a} \rightarrow \emph{b} \; \text{dann} \; C(\emph{a})<C(\emph{b})
 \]
-Diese Bedingung führt $C$ als logische Uhr ein. Eine logische Uhr ist ein von der physikalischen Zeit unabhängiger Zähler, der einem Event eine Zahl zuweist. Die Clock Conditions ist erfüllt, sobald (1) darauf geachtet wird, dass zwischen zwei Events eines Prozesses die logische Uhr voranschreitet und (2) das einem Event ein Zeitstempel zugewiesen wird. \footpartcite[p.560]{Lamport1978}
+Diese Bedingung führt $C$ als logische Uhr ein. Eine logische Uhr ist ein von der physikalischen Zeit unabhängiger Zähler, der einem Event eine Zahl zuweist. Die Clock Conditions ist erfüllt, sobald (1) darauf geachtet wird, dass zwischen zwei Events eines Prozesses die logische Uhr voranschreitet und (2) das einem Event ein Zeitstempel zugewiesen wird, der folgende Eigenschaften hat\footpartcite[S. 560]{lamport78}:
+\[
+ T_m = C_i \langle a \rangle \; 
+ \text{dann} \; 
+ {{C}_{j+1}} = \max[C_j,T_m]
+\]
+Dabei ist $T_m$ der Zeitstempel eines Events, welcher eine Nachricht $m$ zu einem anderen Prozess sendet, zum Zeitpunkt $C_i \langle a \rangle$. Beim empfangenen Prozess wird das erzeugte Event mit dem Zeitstempel ${{C}_{j+1}} = \max[C_j,T_m]$ versehen. Das bedeutet für die Darstellung, dass (3) $\not\rightarrow$ (4), (3) $\rightarrow$ (5) und $C_{P1} \langle 4 \rangle < C_{P2} \langle 3 \rangle$. Diese Annahme kann getroffen werden, weil (2)$\rightarrow$ (3) und somit diese beiden Events nicht zu einem Zeitpunkt mit (4) stattfinden können, weil es $C_{P2} \langle 2 \rangle < C_{P2} \langle 3 \rangle$ widersprechen würde.
+
+ Die \textbf{Transitivität} ist durch (1) $\rightarrow$ (2) und (2) $\rightarrow$ (3) gegeben. Das heißt eine Relation zwischen (1) und (3) besteht, also (1) $\rightarrow$ (3). Die zweite Charakteristik, dass ein Event nicht vor sich selbst stattfinden kann, ist gegeben.(1) $\rightarrow$ (1) kann also nicht bestehen und ist somit \textbf{Irreflexiv}. Zuletzt die ist durch die Tatsache, dass ein Event nicht vor und nach einem anderen parallel bestehen kann, also (1) $\rightarrow$ (2) und (2) $\rightarrow$ (1), gezeigt, dass die Relation \textbf{Antisymmetrisch} ist. Die Kombination der drei Charakterisitken machen eine strikte partielle Ordnung aus, eine sogenannte Kausalordnung.
 
 Die gezeigte Kausalordnung von Events stellt das Fundament zur Erhebung von Tracedaten in verteilten Systemen dar und ist somit unerlässlich, um ein verteiltes System beobachtbar zu machen, also einen Teil der \emph{Oberservability} zu ermöglichen.
-
-\section{Bibliotheksentwicklung}
-\label{subsection:Bibliotheksentwicklung}
-\begin{itemize}
-	\item 
-	\item 
-	\item
-\end{itemize}
 
 \section{Distributed Tracing}
 \label{subsection:Erkenntnisinteresse}
@@ -154,5 +143,15 @@ Distributed tracing beinhaltet das Eingreifen in Anwedungsquellcode mittels Inst
 	\item 
 \end{itemize}
  
- 
+\section{Bibliotheksentwicklung}
+\label{subsection:Bibliotheksentwicklung}
+
+Das Konzept von \emph{distributed tracing} ist als Bibliothek in der Programmiersprache C\# umgesetzt. Die Auswahl der Sprache ergibt sich aus dem Anwendungsbereich. Aufgrund der Anforderung, dass eine einfache Integration in bereits bestehende Projekte wünschenswert ist, wird die Bilbiothek über den Packetmanager \emph{Nuget} veröffentlicht. Dies ermöglicht in den Entwicklungsumgebungen wie zum Beispiel \emph{Unity} auf Linux wie auch auf Windows eine einfache und schnelle integration. Durch den Entwicklungsprozess ist eine \gls{ciGlossar} Pipeline aufgebaut worden. 
+
+\begin{itemize}
+	\item c\# 
+	\item tracing kozept als bibliothek umgesetzt
+	\item bereitstellung über packetmanager nuget
+	\item weil entwicklungsumgebung windows als auch linux 
+\end{itemize} 
 % ----------------------------------------------------------------------------

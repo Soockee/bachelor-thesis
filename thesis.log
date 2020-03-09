@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  7 MAR 2020 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  9 MAR 2020 10:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1495,6 +1495,11 @@ LaTeX Info: Redefining \labelcref on input line 2301.
 LaTeX Info: Redefining \labelcpageref on input line 2301.
 Package cleveref Info: `listings' support loaded on input line 3062.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+\c@subfigure=\count428
+\c@subtable=\count429
+)
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2017/11/14 v4.35 (NLCT)
 
@@ -1506,7 +1511,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks26
 \XKV@tempa@toks=\toks27
 )
-\XKV@depth=\count428
+\XKV@depth=\count430
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
@@ -1525,7 +1530,7 @@ Package: datatool-base 2017/11/12 v2.29 (NLCT)
 
 (/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count429
+\c@su@anzahl=\count431
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-fp.sty
 Package: datatool-fp 2017/11/12 v2.29 (NLCT)
@@ -1536,19 +1541,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count430
+\actioncount=\count432
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count431
-\FP@xia=\count432
-\FP@xib=\count433
-\FP@xfa=\count434
-\FP@xfb=\count435
-\FP@rega=\count436
-\FP@regb=\count437
-\FP@regs=\count438
-\FP@times=\count439
+\FP@xs=\count433
+\FP@xia=\count434
+\FP@xib=\count435
+\FP@xfa=\count436
+\FP@xfb=\count437
+\FP@rega=\count438
+\FP@regb=\count439
+\FP@regs=\count440
+\FP@times=\count441
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -1567,7 +1572,7 @@ Package: fp-pas 1994/08/29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count440
+\FPseed=\count442
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -1579,14 +1584,14 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks30
-\@dtl@tmpcount=\count441
+\@dtl@tmpcount=\count443
 \dtl@tmplength=\skip83
-\dtl@sortresult=\count442
-\@dtl@numgrpsepcount=\count443
-\@dtl@datatype=\count444
-\dtl@codeA=\count445
-\dtl@codeB=\count446
-\@dtl@foreach@level=\count447
+\dtl@sortresult=\count444
+\@dtl@numgrpsepcount=\count445
+\@dtl@datatype=\count446
+\dtl@codeA=\count447
+\dtl@codeB=\count448
+\@dtl@foreach@level=\count449
 )
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-
 307.sty
@@ -1602,7 +1607,7 @@ Package: translator 2018/01/04 v1.12 Easy translation of strings in LaTeX
 f
 File: glossaries-german.ldf 2014/11/23 v1.0
 )
-\gls@level=\count448
+\gls@level=\count450
 \@gls@tmpb=\toks31
 \gls@tmplen=\skip84
 \glskeylisttok=\toks32
@@ -1625,16 +1630,16 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip87
 \LTpre=\skip88
 \LTpost=\skip89
-\LTchunksize=\count449
+\LTchunksize=\count451
 \LTcapwidth=\dimen180
 \LT@head=\box50
 \LT@firsthead=\box51
 \LT@foot=\box52
 \LT@lastfoot=\box53
-\LT@cols=\count450
-\LT@rows=\count451
-\c@LT@tables=\count452
-\c@LT@chunks=\count453
+\LT@cols=\count452
+\LT@rows=\count453
+\c@LT@tables=\count454
+\c@LT@chunks=\count455
 \LT@p@ftn=\toks36
 )
 Class scrbook Info: longtable captions redefined on input line 43.
@@ -1646,7 +1651,7 @@ Package: glossary-super 2017/11/14 v4.35 (NLCT)
 
 (/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count454
+\c@tracingst=\count456
 \ST@wd=\dimen181
 \ST@rightskip=\skip92
 \ST@leftskip=\skip93
@@ -1671,11 +1676,11 @@ Package: glossary-tree 2017/11/14 v4.35 (NLCT)
 \glo@main@file=\write6
 \openout6 = `thesis.glo'.
 
-Package glossaries Info: Writing glossary file thesis.glo on input line 98.
+Package glossaries Info: Writing glossary file thesis.glo on input line 99.
 \glo@acronym@file=\write7
 \openout7 = `thesis.acn'.
 
-Package glossaries Info: Writing glossary file thesis.acn on input line 98.
+Package glossaries Info: Writing glossary file thesis.acn on input line 99.
 
 (./glossar.tex)
 Package csquotes Info: Checking for multilingual support...
@@ -1697,31 +1702,24 @@ Package biblatex Info: ... file 'german.lbx' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 ))
-(./thesis.aux
-
-LaTeX Warning: Label `fig:Partial_Ordering_Concurrent' multiply defined.
-
-
-LaTeX Warning: Label `fig:Partial_Ordering_Concurrent@cref' multiply defined.
-
-)
+(./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 109.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 110.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1738,16 +1736,16 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count455
+\scratchcounter=\count457
 \scratchdimen=\dimen192
 \scratchbox=\box55
-\nofMPsegments=\count456
-\nofMParguments=\count457
+\nofMPsegments=\count458
+\nofMParguments=\count459
 \everyMPshowfont=\toks37
-\MPscratchCnt=\count458
+\MPscratchCnt=\count460
 \MPscratchDim=\dimen193
-\MPnumerator=\count459
-\makeMPintoPDFobject=\count460
+\MPnumerator=\count461
+\makeMPintoPDFobject=\count462
 \everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1766,7 +1764,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count461
+\c@lstlisting=\count463
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1775,70 +1773,78 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 
-(./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 109.
-Package biblatex Info: Reference segment=0 on input line 109.
-Package scrhack Info: undefining \float@addtolists on input line 109.
+(./thesis.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Lamport1978
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 110.
+Package biblatex Info: Reference segment=0 on input line 110.
+Package scrhack Info: undefining \float@addtolists on input line 110.
 \AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring ON on input line 109.
+Package hyperref Info: Link coloring ON on input line 110.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count462
+\c@section@level=\count464
 )
-LaTeX Info: Redefining \ref on input line 109.
-LaTeX Info: Redefining \pageref on input line 109.
-LaTeX Info: Redefining \nameref on input line 109.
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write8
 \openout8 = `thesis.out'.
 
  (./thesis.glsdefs)
-<img/mni-logo.pdf, id=192, 1133.23375pt x 146.5475pt>
+<img/mni-logo.pdf, id=188, 1133.23375pt x 146.5475pt>
 File: img/mni-logo.pdf Graphic file (type pdf)
 <use img/mni-logo.pdf>
-Package pdftex.def Info: img/mni-logo.pdf  used on input line 115.
+Package pdftex.def Info: img/mni-logo.pdf  used on input line 116.
 (pdftex.def)             Requested size: 387.47061pt x 50.10722pt.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 116.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 117.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 124.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 125.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 124.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 125.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 124
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 125
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 124
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 125
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 124.
+(Font)              <10.95> on input line 125.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 124.
+(Font)              <8> on input line 125.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 124.
+(Font)              <6> on input line 125.
  [1
 
 \openout5 = `thesis.ist'.
@@ -1904,51 +1910,34 @@ chapter 2.
 [3
 
 ] [4]
-<img/synchronisation/PartialOrdering_Concurrent.png, id=344, 472.76625pt x 439.
+<img/synchronisation/PartialOrdering_Concurrent.png, id=339, 472.76625pt x 439.
 6425pt>
 File: img/synchronisation/PartialOrdering_Concurrent.png Graphic file (type png
 )
 <use img/synchronisation/PartialOrdering_Concurrent.png>
 Package pdftex.def Info: img/synchronisation/PartialOrdering_Concurrent.png  us
-ed on input line 70.
-(pdftex.def)             Requested size: 236.38254pt x 219.82071pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 71.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (10.95pt too wide) in paragraph at lines 68--74
-[]$[]$ 
- []
-
-[5]
-<img/synchronisation/PartialOrdering_ChildO.png, id=362, 472.76625pt x 439.6425
+ed on input line 72.
+(pdftex.def)             Requested size: 168.76865pt x 156.9429pt.
+<img/synchronisation/PartialOrdering_Concurrent_Explained.png, id=341, 472.7662
+5pt x 439.6425pt>
+File: img/synchronisation/PartialOrdering_Concurrent_Explained.png Graphic file
+ (type png)
+<use img/synchronisation/PartialOrdering_Concurrent_Explained.png>
+Package pdftex.def Info: img/synchronisation/PartialOrdering_Concurrent_Explain
+ed.png  used on input line 77.
+(pdftex.def)             Requested size: 168.76865pt x 156.9429pt.
+ [5]
+<img/synchronisation/PartialOrdering_ChildO.png, id=357, 472.76625pt x 439.6425
 pt>
 File: img/synchronisation/PartialOrdering_ChildO.png Graphic file (type png)
 <use img/synchronisation/PartialOrdering_ChildO.png>
 Package pdftex.def Info: img/synchronisation/PartialOrdering_ChildO.png  used o
-n input line 88.
+n input line 95.
 (pdftex.def)             Requested size: 236.38254pt x 219.82071pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 89.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (10.95pt too wide) in paragraph at lines 86--92
-[]$[]$ 
- []
-
-[6 <./img/synchronisation/PartialOrdering_Concurrent.png>] [7 <./img/synchronis
-ation/PartialOrdering_ChildO.png>]
-
-LaTeX Warning: Citation 'Lamport1978' on page 8 undefined on input line 116.
-
-
-Overfull \hbox (19.48729pt too wide) in paragraph at lines 140--141
+ [6 <./img/synchronisation/PartialOrdering_Concurrent.png> <./img/synchronisati
+on/PartialOrdering_Concurrent_Explained.png>] [7 <./img/synchronisation/Partial
+Ordering_ChildO.png>]
+Overfull \hbox (19.48729pt too wide) in paragraph at lines 129--130
 []\T1/lmr/m/n/10.95 Distributed trac-ing um-fasst zwei Teil-bere-iche der im Ab
 -schnitt [][]2.1.2[][] beschriebe-nen Beobobacht-
  []
@@ -2029,54 +2018,42 @@ pres-sions to the res-cue\T1/lmr/m/n/10.95 . http://www.stearns.org/.
  []
 
 [18])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 187.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
  [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1FAC5ABE1BF9FF0233039911012B378D;3008.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                thesis
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 75B6DE43C8243C74185C4900BA970831;2925.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36154 strings out of 492982
- 668081 string characters out of 6134896
- 1239066 words of memory out of 5000000
- 39098 multiletter control sequences out of 15000+600000
- 619031 words of font info for 62 fonts, out of 8000000 for 9000
+ 36251 strings out of 492982
+ 670327 string characters out of 6134896
+ 1241027 words of memory out of 5000000
+ 39196 multiletter control sequences out of 15000+600000
+ 619025 words of font info for 62 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  57i,9n,77p,10490b,2708s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm
 /lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc
-10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fon
+f/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmm
+i10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb><
 /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (27 pages, 395177 bytes).
+Output written on thesis.pdf (27 pages, 384602 bytes).
 PDF statistics:
- 585 PDF objects out of 1000 (max. 8388607)
- 531 compressed objects within 6 object streams
- 123 named destinations out of 1000 (max. 500000)
- 392 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 582 PDF objects out of 1000 (max. 8388607)
+ 526 compressed objects within 6 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 389 words of extra memory for PDF output out of 10000 (max. 10000000)
 

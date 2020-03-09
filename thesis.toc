@@ -19,13 +19,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.2}Beobachtbarkeit von verteilten Systemen}{4}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Synchronisation / Zeitproblem?}{5}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.3}Ordnung von Events}{5}{subsection.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.4}Ordnung von Events}{6}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Distributed Tracing}{8}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Bibliotheksentwicklung}{8}{section.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Distributed Tracing}{8}{section.2.3}
+\contentsline {section}{\numberline {2.3}Bibliotheksentwicklung}{9}{section.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Problembeschreibung}{10}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -89,8 +87,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.2}ZitatTest}{14}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Glossar}{15}{section*.3}
+\contentsline {chapter}{Glossar}{15}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{16}{section*.5}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{16}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{17}{chapter*.7}
+\contentsline {chapter}{\nonumberline Bibliography}{17}{chapter*.9}
