@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  9 MAR 2020 10:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  10 MAR 2020 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1773,15 +1773,7 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 
-(./thesis.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Lamport1978
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+(./thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 110.
 Package biblatex Info: Reference segment=0 on input line 110.
 Package scrhack Info: undefining \float@addtolists on input line 110.
@@ -1867,7 +1859,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \openout9 = `thesis.toc'.
 
  [6]
-(./thesis.lof)
+(./thesis.lof
+Overfull \hbox (6.13336pt too wide) in paragraph at lines 16--16
+ [][] [][][]\T1/lmr/m/n/10.95 Anwendungsinstrumentalisierung und Net-zw-erkkom-
+mu-nika-tion über TCP/IP 
+ []
+
+)
 \tf@lof=\write10
 \openout10 = `thesis.lof'.
 
@@ -1906,11 +1904,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 39.
 ) (./themenueberblick.tex [2]
+[3]
 chapter 2.
-[3
+[4
 
-] [4]
-<img/synchronisation/PartialOrdering_Concurrent.png, id=339, 472.76625pt x 439.
+] [5]
+<img/synchronisation/PartialOrdering_Concurrent.png, id=349, 472.76625pt x 439.
 6425pt>
 File: img/synchronisation/PartialOrdering_Concurrent.png Graphic file (type png
 )
@@ -1918,7 +1917,7 @@ File: img/synchronisation/PartialOrdering_Concurrent.png Graphic file (type png
 Package pdftex.def Info: img/synchronisation/PartialOrdering_Concurrent.png  us
 ed on input line 72.
 (pdftex.def)             Requested size: 168.76865pt x 156.9429pt.
-<img/synchronisation/PartialOrdering_Concurrent_Explained.png, id=341, 472.7662
+<img/synchronisation/PartialOrdering_Concurrent_Explained.png, id=351, 472.7662
 5pt x 439.6425pt>
 File: img/synchronisation/PartialOrdering_Concurrent_Explained.png Graphic file
  (type png)
@@ -1926,37 +1925,70 @@ File: img/synchronisation/PartialOrdering_Concurrent_Explained.png Graphic file
 Package pdftex.def Info: img/synchronisation/PartialOrdering_Concurrent_Explain
 ed.png  used on input line 77.
 (pdftex.def)             Requested size: 168.76865pt x 156.9429pt.
- [5]
-<img/synchronisation/PartialOrdering_ChildO.png, id=357, 472.76625pt x 439.6425
+ [6]
+<img/synchronisation/PartialOrdering_ChildO.png, id=366, 472.76625pt x 439.6425
 pt>
 File: img/synchronisation/PartialOrdering_ChildO.png Graphic file (type png)
 <use img/synchronisation/PartialOrdering_ChildO.png>
 Package pdftex.def Info: img/synchronisation/PartialOrdering_ChildO.png  used o
 n input line 95.
 (pdftex.def)             Requested size: 236.38254pt x 219.82071pt.
- [6 <./img/synchronisation/PartialOrdering_Concurrent.png> <./img/synchronisati
-on/PartialOrdering_Concurrent_Explained.png>] [7 <./img/synchronisation/Partial
-Ordering_ChildO.png>]
+ [7 <./img/synchronisation/PartialOrdering_Concurrent.png> <./img/synchronisati
+on/PartialOrdering_Concurrent_Explained.png>] [8 <./img/synchronisation/Partial
+Ordering_ChildO.png>] [9]
 Overfull \hbox (19.48729pt too wide) in paragraph at lines 129--130
 []\T1/lmr/m/n/10.95 Distributed trac-ing um-fasst zwei Teil-bere-iche der im Ab
 -schnitt [][]2.1.2[][] beschriebe-nen Beobobacht-
  []
 
-[8]) (./problembeschreibung.tex [9]
-chapter 3.
-) (./design.tex [10
 
-]
+Overfull \hbox (1.21245pt too wide) in paragraph at lines 131--132
+[]\T1/lmr/m/n/10.95 Ziel von dis-tributed trac-ing soll sein, mit möglichst wen
+ig \T1/lmr/m/it/10.95 over-head \T1/lmr/m/n/10.95 und \T1/lmr/m/it/10.95 min-i-
+malem Aufwand
+ []
+
+) (./problembeschreibung.tex [10]
+chapter 3.
+<img/synchronisation/distributed_system_application_minimal.png, id=405, 313.17
+pt x 102.3825pt>
+File: img/synchronisation/distributed_system_application_minimal.png Graphic fi
+le (type png)
+<use img/synchronisation/distributed_system_application_minimal.png>
+Package pdftex.def Info: img/synchronisation/distributed_system_application_min
+imal.png  used on input line 18.
+(pdftex.def)             Requested size: 156.58461pt x 51.19112pt.
+<img/synchronisation/distributed_system_application_inside.png, id=407, 433.62p
+t x 142.5325pt>
+File: img/synchronisation/distributed_system_application_inside.png Graphic fil
+e (type png)
+<use img/synchronisation/distributed_system_application_inside.png>
+Package pdftex.def Info: img/synchronisation/distributed_system_application_ins
+ide.png  used on input line 28.
+(pdftex.def)             Requested size: 189.86273pt x 62.40782pt.
+<img/synchronisation/distributed_system_network.png, id=408, 473.77pt x 112.42p
+t>
+File: img/synchronisation/distributed_system_network.png Graphic file (type png
+)
+<use img/synchronisation/distributed_system_network.png>
+Package pdftex.def Info: img/synchronisation/distributed_system_network.png  us
+ed on input line 33.
+(pdftex.def)             Requested size: 210.96002pt x 50.05847pt.
+) (./design.tex [11
+
+ <./img/synchronisation/distributed_system_application_minimal.png> <./img/sync
+hronisation/distributed_system_application_inside.png> <./img/synchronisation/d
+istributed_system_network.png>]
 chapter 4.
-) (./implementierung.tex [11
+) (./implementierung.tex [12
 
 ]
 chapter 5.
-) (./evaluierung.tex [12
+) (./evaluierung.tex [13
 
 ]
 chapter 6.
-) (./fazit.tex [13
+) (./fazit.tex [14
 
 ]
 chapter 7.
@@ -1967,13 +1999,13 @@ Overfull \hbox (12.70647pt too wide) in paragraph at lines 13--30
 17[][]] [[][]Bar+03[][]]
  []
 
-) [14
+) [15
 
-] (./litverz.tex (./thesis.gls) (./thesis.acr [15
+] (./litverz.tex (./thesis.gls) (./thesis.acr [16
 
 
 
-]) [16
+]) [17
 
 
 ]
@@ -1990,7 +2022,7 @@ Overfull \hbox (7.5788pt too wide) in paragraph at lines 16--16
  . txt$[][] (vis-ited on 02/29/2020). 
  []
 
-[17
+[18
 
 ]
 Overfull \hbox (6.55034pt too wide) in paragraph at lines 16--16
@@ -2017,27 +2049,27 @@ Overfull \hbox (35.84087pt too wide) in paragraph at lines 16--16
 pres-sions to the res-cue\T1/lmr/m/n/10.95 . http://www.stearns.org/.
  []
 
-[18])
+[19])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
- [19]
+ [20]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 75B6DE43C8243C74185C4900BA970831;2925.
+(rerunfilecheck)             Checksum: 788A8AEBF077A6A7C23ABFF355D5EDEC;2926.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36251 strings out of 492982
- 670327 string characters out of 6134896
+ 36288 strings out of 492982
+ 671993 string characters out of 6134896
  1241027 words of memory out of 5000000
- 39196 multiletter control sequences out of 15000+600000
+ 39227 multiletter control sequences out of 15000+600000
  619025 words of font info for 62 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 57i,9n,77p,10490b,2708s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,9n,77p,10490b,2052s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm
@@ -2050,10 +2082,10 @@ ublic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (27 pages, 384602 bytes).
+Output written on thesis.pdf (28 pages, 401722 bytes).
 PDF statistics:
- 582 PDF objects out of 1000 (max. 8388607)
- 526 compressed objects within 6 object streams
- 120 named destinations out of 1000 (max. 500000)
- 389 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 600 PDF objects out of 1000 (max. 8388607)
+ 537 compressed objects within 6 object streams
+ 123 named destinations out of 1000 (max. 500000)
+ 404 words of extra memory for PDF output out of 10000 (max. 10000000)
 
