@@ -8,6 +8,19 @@
 % ----------------------------------------------------------------------------
 
 \chapter{Design}
+
+Designgoals Dapper:
+\begin{itemize}
+	\item low overhead
+	\item application level transparency
+	\item scalabilty -> Registry ist counter scalabilty; unsere Infrastruktur ist vorerst fixed und überschaubar, deswegen nicht so schlimm
+\end{itemize}
+Designgoals von mir:
+\begin{itemize}
+	\item maintainabilty / usage of standardization: Opentracing
+	\item protabilty/usabilty: C\# u. Managed Code
+	\item Data Availabilty: near "real-time observabilty" -> sowas WebUI, die die traces buffered und dann darstellt?
+\end{itemize}
 \label{chapter:Design}
 \section{Anforderungsanalyse}
 \label{section:Anforderungsanalyse}
