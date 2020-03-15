@@ -13,7 +13,7 @@
 \section{Verteilte Systeme}
 \label{section:Verteilte Systeme}
 
-Verteilte Systeme dienen als Anwendungsfeld für die Instrumentalisierungsbibliothek. Auch das in dieser Arbeit vorgestellte Testbett ist ein solches verteiltes System. Dazu ist es wichtig,  verschiedene Eigenschaften und Konzepte von verteilten Systemen zu definieren. Diese Eigenschaften und Konzepte nehmen einen entscheidenden Faktor bei der Ermittlung, Analyse und Umsetzung von Anforderungen der Instrumentalisierungsbibliothek ein. Dementsprechenend wird zunächt der Begriff des verteilten Systems definiert:
+Verteilte Systeme dienen als Anwendungsfeld für die Instrumentalisierungsbibliothek. Auch das in dieser Arbeit vorgestellte Testbett, sowie das verteilte rendering System, in welches Traktor zum Einsatz kommt, sind solche verteilten Systeme. Dafür ist es wichtig, verschiedene Eigenschaften und Konzepte von verteilten Systemen zu definieren. Diese Eigenschaften und Konzepte nehmen einen entscheidenden Faktor bei der Ermittlung, Analyse und Umsetzung von Anforderungen der Instrumentalisierungsbibliothek ein. Dementsprechenend wird zunächt der Begriff des verteilten Systems definiert:
 
 \begin{quote}
 	Ein verteiltes System ist eine Kollektion unabhängiger Computer, die den Benutzern als ein Einzelcomputer erscheinen\footpartcite{10.5555/1202502} 
@@ -136,10 +136,4 @@ Ziel von distributed tracing soll sein, mit möglichst wenig \emph{overhead} und
 
 Das Konzept von \emph{distributed tracing} ist als Bibliothek in der Programmiersprache C\# umgesetzt. Die Auswahl der Sprache ergibt sich aus dem Anwendungsbereich. Aufgrund der Anforderung, dass eine einfache Integration in bereits bestehende Projekte wünschenswert ist, wird die Bilbiothek über den Packetmanager \emph{Nuget} veröffentlicht. Dies ermöglicht in den Entwicklungsumgebungen wie zum Beispiel \emph{Unity} auf Linux wie auch auf Windows eine einfache und schnelle integration. Durch den Entwicklungsprozess ist eine \gls{ciGlossar} Pipeline aufgebaut worden. 
 
-\begin{itemize}
-	\item c\# 
-	\item tracing kozept als bibliothek umgesetzt
-	\item bereitstellung über packetmanager nuget
-	\item weil entwicklungsumgebung windows als auch linux 
-\end{itemize} 
 % ----------------------------------------------------------------------------
