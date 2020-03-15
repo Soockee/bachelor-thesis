@@ -11,36 +11,38 @@
 \BOOKMARK [1][]{section.2.2}{Distributed Tracing}{chapter.2}% 11
 \BOOKMARK [1][]{section.2.3}{Bibliotheksentwicklung}{chapter.2}% 12
 \BOOKMARK [0][]{chapter.3}{Problembeschreibung}{}% 13
-\BOOKMARK [1][]{section.3.1}{Eventgenerierung}{chapter.3}% 14
-\BOOKMARK [2][]{subsection.3.1.1}{Eventkorrelation}{section.3.1}% 15
-\BOOKMARK [2][]{subsection.3.1.2}{Synchronistion von Eventgeneratoren}{section.3.1}% 16
-\BOOKMARK [1][]{section.3.2}{Event\374bermittlung}{chapter.3}% 17
-\BOOKMARK [0][]{chapter.4}{Design}{}% 18
-\BOOKMARK [1][]{section.4.1}{Anforderungsanalyse}{chapter.4}% 19
-\BOOKMARK [2][]{subsection.4.1.1}{Anforderungen}{section.4.1}% 20
-\BOOKMARK [3][-]{subsubsection.4.1.1.1}{Funktionale Anforderungen}{subsection.4.1.1}% 21
-\BOOKMARK [3][-]{subsubsection.4.1.1.2}{Nicht-Funktionale Anforderungen}{subsection.4.1.1}% 22
-\BOOKMARK [1][]{section.4.2}{Datenmodell}{chapter.4}% 23
-\BOOKMARK [2][]{subsection.4.2.1}{Eventmodell}{section.4.2}% 24
-\BOOKMARK [2][]{subsection.4.2.2}{Eventgraph}{section.4.2}% 25
-\BOOKMARK [1][]{section.4.3}{Verarbeitungsmodell}{chapter.4}% 26
-\BOOKMARK [2][]{subsection.4.3.1}{Agenten}{section.4.3}% 27
-\BOOKMARK [2][]{subsection.4.3.2}{Collectoren}{section.4.3}% 28
-\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 29
-\BOOKMARK [1][]{section.5.1}{Instrumnetalisierungsbibliothek: Traktor}{chapter.5}% 30
-\BOOKMARK [1][]{section.5.2}{Traktor Agent}{chapter.5}% 31
-\BOOKMARK [1][]{section.5.3}{Traktor Registry}{chapter.5}% 32
-\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 33
-\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 34
-\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 35
-\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 36
-\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 37
-\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 38
-\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 39
-\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 40
-\BOOKMARK [0][]{chapter.7}{Fazit}{}% 41
-\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 42
-\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 43
-\BOOKMARK [0][]{section*.7}{Glossar}{}% 44
-\BOOKMARK [0][]{section*.9}{Abk\374rzungsverzeichnis}{}% 45
-\BOOKMARK [0][]{chapter*.11}{Bibliography}{}% 46
+\BOOKMARK [1][]{section.3.1}{Anwendungs\374berwachung}{chapter.3}% 14
+\BOOKMARK [1][]{section.3.2}{Eventgenerierung}{chapter.3}% 15
+\BOOKMARK [2][]{subsection.3.2.1}{Eventkorrelation}{section.3.2}% 16
+\BOOKMARK [2][]{subsection.3.2.2}{Synchronistion von Eventgeneratoren}{section.3.2}% 17
+\BOOKMARK [1][]{section.3.3}{Event\374bermittlung}{chapter.3}% 18
+\BOOKMARK [1][]{section.3.4}{Anforderungsanalyse}{chapter.3}% 19
+\BOOKMARK [0][]{chapter.4}{Design}{}% 20
+\BOOKMARK [1][]{section.4.1}{Anforderungsanalyse}{chapter.4}% 21
+\BOOKMARK [2][]{subsection.4.1.1}{Anforderungen}{section.4.1}% 22
+\BOOKMARK [3][-]{subsubsection.4.1.1.1}{Funktionale Anforderungen}{subsection.4.1.1}% 23
+\BOOKMARK [3][-]{subsubsection.4.1.1.2}{Nicht-Funktionale Anforderungen}{subsection.4.1.1}% 24
+\BOOKMARK [1][]{section.4.2}{Datenmodell}{chapter.4}% 25
+\BOOKMARK [2][]{subsection.4.2.1}{Eventmodell}{section.4.2}% 26
+\BOOKMARK [2][]{subsection.4.2.2}{Eventgraph}{section.4.2}% 27
+\BOOKMARK [1][]{section.4.3}{Verarbeitungsmodell}{chapter.4}% 28
+\BOOKMARK [2][]{subsection.4.3.1}{Agenten}{section.4.3}% 29
+\BOOKMARK [2][]{subsection.4.3.2}{Collectoren}{section.4.3}% 30
+\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 31
+\BOOKMARK [1][]{section.5.1}{Instrumnetalisierungsbibliothek: Traktor}{chapter.5}% 32
+\BOOKMARK [1][]{section.5.2}{Traktor Agent}{chapter.5}% 33
+\BOOKMARK [1][]{section.5.3}{Traktor Registry}{chapter.5}% 34
+\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 35
+\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 36
+\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 37
+\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 38
+\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 39
+\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 40
+\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 41
+\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 42
+\BOOKMARK [0][]{chapter.7}{Fazit}{}% 43
+\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 44
+\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 45
+\BOOKMARK [0][]{section*.8}{Glossar}{}% 46
+\BOOKMARK [0][]{section*.10}{Abk\374rzungsverzeichnis}{}% 47
+\BOOKMARK [0][]{chapter*.12}{Bibliography}{}% 48

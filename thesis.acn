@@ -5,3 +5,5 @@
 \glossaryentry{TCP?\glossentry{tcpLabel}|setentrycounter[]{page}\glsnumberformat}{5}
 \glossaryentry{IP?\glossentry{ipLabel}|setentrycounter[]{page}\glsnumberformat}{5}
 \glossaryentry{HTTP?\glossentry{httpLabel}|setentrycounter[]{page}\glsnumberformat}{5}
+\glossaryentry{IoT?\glossentry{iotLabel}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{FPS?\glossentry{fpsLabel}|setentrycounter[]{page}\glsnumberformat}{13}

@@ -9,13 +9,47 @@
 
 \chapter{Problembeschreibung}
 \label{chapter:Problembeschreibung}
+In diesem Kapitel wird die Problematik, um das Generieren und Ordnen von Events in einem verteilten System mit asynchroner Kommunikation, beschrieben. Dabei betrachten man die Relevanz der Problemstellung. Ausserdem werden Fragen aufgestellt, die diese Problemstellung umfassen. Anschließend wird eine Anforderungsanalyse durchgeführt.
+
+\section{Anwendungsüberwachung}
+\label{section:Tracing von Anwendungen}
+Viele Bereiche der Wirtschschaft, der Wisschenschaft und grundsätzlich des alltäglichen Lebens sind Software unterstützt. Trends wie beispielsweise \gls{iotLabel}, Hausautomatisierung, Mobile Geräte, etc. sind Anwendungsbeispiele. Diese sind von Natur aus stark verteilte Anwendungen. Aber auch potentiell neue Anwendungsbereiche, wie zum Beispiel verteiltes \gls{renderingGlossar}, benötigen detailierte Einsicht in die internen Vorgänge der Anwendung. 
+
+Dabei spielen zwei Eigenschaften in der Überwachung der Anwendung eine zentrale Rolle. 
+Zum einen ist das die (\lowroman{1}) \emph{Performance} und zum Anderen die (\lowroman{2}) \emph{Korrektheit}.
+
+
+\textbf{Performance} \space\space\space 
+Viele Anwendungsbereiche setzten gewisse Rahmenbedingungen, die erfüllt werden müssen. 
+Nutzererwartungen im Bezug auf interaktive Systeme, welches einer der beiden Anwendungsfälle der Instrumentalisierungsbibliothek ist, äußern sich beispielsweise in der Reaktionszeit der Anwendung auf Benutzereingaben. 
+Das Rendering nimmt dabei nur einen Teil der Gesamtlatenz ein.
+Ein beispielhafter Gesamtpfad, der durch die verteilte Renderinganwendung genommen werden kann, besteht aus dem Senden der Benutzereingabe, der Übermittlung der Benutzereingabe zum verteilten System, der Verarbeitung der Eingabe und der Übermittlung des Ergebnisses an die Benutzeranwendung.
+\cref{fig:Anwendungsueberwachung_Gesamtsystem} verdeutlicht diesen Pfad von kausal relatierenden Events.
+Dabei ist jede Komponente des Pfades ein generiertes Event.
+Zu sehen ist, dass das (1) Senden der Benutzereingabe vor dem (2) Übermitteln der Benutzereingabe stattfinden.
+Anschließend wird die Eingabe (3) Empfangen.
+Auch die (4) Verarbeitung im verteilten System, das für den Benutzer, wie in \cref{subsection:Eigenschaften eines verteilten Systems} definiert, nicht als solches kenntlich sein muss, generiert in diesem Beispiel ein Event.
+Die Antwort wird (5) gesendet und die (6) Übermittlung wird durchgeführt.
+Zuletzt wird die Antwort (7) empfangen. Das Empfangen schließt den Pfad ab. Die Gesamtdauer des Pfades wird als Latenz eines Frames bezeichnet.
+Daraus kann eine Durschschnittslatenz über eine Zeitspanne berechnet werden, welches als Performanceindikator dient. Die Zeitspanne zwischen den einzelnen Events können verglichen werden. Dabei ist es möglich sog. \emph{Bottlenecks} zu identifizieren. Bottlnecks sind besonders lange Zeitspannen, die auf dem \emph{kritischen Pfad} liegen. Diese Art der Anwendungsüberwachung soll die Möglichkeit bieten, Bottlenecks zu identifiezieren. Wie in \cref{subsection:Ordnung von Events} beschrieben, verlangt eine Messung der Zeit über verschiedene physikalisch Entitäten entweder eine globale physikalische Uhr oder jeweils eine physikalische Uhr in jeder Entität, die über alle Entitäten synchrone sind beziehungsweise synchronisiert werden. Dabei stellt sich die Frage, \emph{inwiefern eine solche Zeitmessung von Zeitspannen zwischen Events konzipiert werden kann. } 
+
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.5]{img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png}
+	\caption[Kausaler Pfad einer Vorgangs in dem verteilten rendering System]{Kausaler Pfad einer Vorgangs in dem verteilten rendering System}
+	\label{fig:Anwendungsueberwachung_Gesamtsystem}
+\end{figure}
+
+\textbf{Korrektheit} \space\space\space Die Korrektheit eines Systems ist dann gegeben, wenn die Eigenschaften eines Systems einer \emph{Spezifikation} entsprechen. Das bedeutet, dass die Beobachtung des Verhaltens einer (verteilten) Anwendung nicht ausreicht, um seine Korrektheit zu beweisen. Tracing soll also nicht die Korrektheit einer verteilten Anwendung beweisen. Tracing kann aber dabei unterstützen, indem es das Verhalten einer Anwendung beobachtbar macht. Insbesondere die Zusammenhänge der Komponenten und die entstehenden Nebenläufigkeiten sind erschwerende Faktoren in der Verifikation. Damit man sich  auf Verhaltensinformationen verlassen kann stellt sich die Frage, ob \emph{kausal zusammenhängende Events einen Ablauf in der Anwendung darstellen.}
+
 \section{Eventgenerierung}
 \label{section:Eventgenerierung}
 
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.5]{img/synchronisation/distributed_system_application_minimal.png}
+	\includegraphics[scale=0.5]{img/Problembeschreibung/distributed_system_application_minimal.png}
 	\caption[Minimale Struktur eines verteilten Systems]{Minimale Struktur eines verteilten Systems, bestehend aus zwei Komponenten}
 	\label{fig:distributed_system_application_minimal}
 \end{figure}
@@ -25,17 +59,18 @@ Wir definieren ein minimales verteiltes System, bestehend aus zwei Komponenten. 
 \begin{figure}[!ht]
 	\centering
 	\begin{subfigure}[t]{.49\linewidth}
-		\centering\includegraphics[width=0.9\linewidth]{img/synchronisation/distributed_system_application_inside.png}
+		\centering\includegraphics[width=0.9\linewidth]{img/Problembeschreibung/distributed_system_application_inside.png}
 		\caption[Abbildung]{zeigt Knoten mit instrumentalisiertem Anwendungscode}
 		\label{fig:distributed_system_application_inside}
 	\end{subfigure}
 	\begin{subfigure}[t]{.49\linewidth}
-		\centering\includegraphics[width=\linewidth]{img/synchronisation/distributed_system_network.png}
+		\centering\includegraphics[width=\linewidth]{img/Problembeschreibung/distributed_system_network.png}
 		\caption[Abbildung]{Netzwerkkommunikation über TCP/IP}
 		\label{fig:distributed_system_network}
 	\end{subfigure}
 	\caption[Anwendungsinstrumentalisierung und Netzwerkkommunikation über TCP/IP in verteilten Systemen]{}
 \end{figure} 
+
 
 \subsection{Eventkorrelation}
 \label{subsection:Eventkorrelation}
@@ -43,5 +78,14 @@ Wir definieren ein minimales verteiltes System, bestehend aus zwei Komponenten. 
 \label{subsection:Synchronistion von Eventgeneratoren}
 \section{Eventübermittlung}
 \label{section:Eventübermittlung}
+\section{Anforderungsanalyse}
+\label{section:Anforderungsanalyse}
+
+Das Systems für das die Instrumentalisierungsbilbiothek entwickelt wird ist ein System für verteiltes Rendering. Im Fokus der Überwachung soll die (\lowroman{1}) \textbf{End-zu-End Latenz}, sowie die (\lowroman{2}) \textbf{Generierungszeit eines Frames} stehen.
+
+\textbf{End-zu-End Latenz} \space\space\space
+
+\textbf{Generierungszeit eines Frames} \space\space\space
+Die Renderinggeschwindigkeit in \gls{fpsLabel} gemessen, also die Anzahl der generierten Bilder pro Sekunde. Der Generierungsprozess eines \emph{Frames} umfasst vier Ebenen. Diese Ebenen sind die Applikationsebene, die Geometrieprozessierung, die Rasterung und die Pixelprozessierung.
 
 % ----------------------------------------------------------------------------

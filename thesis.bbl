@@ -65,6 +65,49 @@
       \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Attariyan, Chow, Flinn - 2012 - X-Ray Automating Root-Cause Diagnosis of Performance Anomalies in Production Software.pdf:pdf
       \endverb
     \endentry
+    \entry{10.5555/3294495}{book}{}
+      \name{author}{3}{}{%
+        {{hash=1bff0d4ace2df45c493614e77b97627c}{%
+           family={Akenine-Mller},
+           familyi={A\bibinithyphendelim M\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f2cd5883c9757f88d9a81f92ee663907}{%
+           family={Haines},
+           familyi={H\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=eed616961e0274036a96489be8cd147e}{%
+           family={Hoffman},
+           familyi={H\bibinitperiod},
+           given={Naty},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {A. K. Peters, Ltd.}%
+      }
+      \strng{namehash}{2d9ba74dcd4cae27733d882d6ffb030c}
+      \strng{fullhash}{2d9ba74dcd4cae27733d882d6ffb030c}
+      \strng{bibnamehash}{2d9ba74dcd4cae27733d882d6ffb030c}
+      \strng{authorbibnamehash}{2d9ba74dcd4cae27733d882d6ffb030c}
+      \strng{authornamehash}{2d9ba74dcd4cae27733d882d6ffb030c}
+      \strng{authorfullhash}{2d9ba74dcd4cae27733d882d6ffb030c}
+      \field{labelalpha}{AHH18}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4th}
+      \field{isbn}{0134997832}
+      \field{title}{{Real-Time Rendering, Fourth Edition}}
+      \field{year}{2018}
+      \verb{file}
+      \verb :home/socke/Downloads/9781138627000{\_}Real{\_}Time{\_}Rendering{\_}4th{\_}Edition{\_}5726.pdf:pdf
+      \endverb
+    \endentry
     \entry{Narayanan2003}{article}{}
       \name{author}{4}{}{%
         {{hash=793be578dd2e09e228d097207d0b21cb}{%
