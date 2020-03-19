@@ -65,48 +65,64 @@
       \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Attariyan, Chow, Flinn - 2012 - X-Ray Automating Root-Cause Diagnosis of Performance Anomalies in Production Software.pdf:pdf
       \endverb
     \endentry
-    \entry{10.5555/3294495}{book}{}
-      \name{author}{3}{}{%
-        {{hash=1bff0d4ace2df45c493614e77b97627c}{%
-           family={Akenine-Mller},
-           familyi={A\bibinithyphendelim M\bibinitperiod},
-           given={Tomas},
-           giveni={T\bibinitperiod}}}%
-        {{hash=f2cd5883c9757f88d9a81f92ee663907}{%
-           family={Haines},
-           familyi={H\bibinitperiod},
-           given={Eric},
-           giveni={E\bibinitperiod}}}%
-        {{hash=eed616961e0274036a96489be8cd147e}{%
-           family={Hoffman},
-           familyi={H\bibinitperiod},
-           given={Naty},
-           giveni={N\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {USA}%
+    \entry{Aguilera2003}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=58bd8c47d0a8a5074924743e71b1054a}{%
+           family={Aguilera},
+           familyi={A\bibinitperiod},
+           given={Marcos\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=cff1273777b58d5475a88dab99b4ce2c}{%
+           family={Mogul},
+           familyi={M\bibinitperiod},
+           given={Jeffrey\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d4e28b9fced6003cba45c0abac9f421a}{%
+           family={Wiener},
+           familyi={W\bibinitperiod},
+           given={Janet\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=7397266a7dd3e534246bf6deceffa5ce}{%
+           family={Reynolds},
+           familyi={R\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6272407b3a4585f7b6d2c0f34eb5ac1f}{%
+           family={Muthitacharoen},
+           familyi={M\bibinitperiod},
+           given={Athicha},
+           giveni={A\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {A. K. Peters, Ltd.}%
+        {Association for Computing Machinery}%
       }
-      \strng{namehash}{2d9ba74dcd4cae27733d882d6ffb030c}
-      \strng{fullhash}{2d9ba74dcd4cae27733d882d6ffb030c}
-      \strng{bibnamehash}{2d9ba74dcd4cae27733d882d6ffb030c}
-      \strng{authorbibnamehash}{2d9ba74dcd4cae27733d882d6ffb030c}
-      \strng{authornamehash}{2d9ba74dcd4cae27733d882d6ffb030c}
-      \strng{authorfullhash}{2d9ba74dcd4cae27733d882d6ffb030c}
-      \field{labelalpha}{AHH18}
+      \strng{namehash}{dadfe7154d31f7bff2b50dd8b854ee1c}
+      \strng{fullhash}{dadfe7154d31f7bff2b50dd8b854ee1c}
+      \strng{bibnamehash}{dadfe7154d31f7bff2b50dd8b854ee1c}
+      \strng{authorbibnamehash}{dadfe7154d31f7bff2b50dd8b854ee1c}
+      \strng{authornamehash}{dadfe7154d31f7bff2b50dd8b854ee1c}
+      \strng{authorfullhash}{dadfe7154d31f7bff2b50dd8b854ee1c}
+      \field{labelalpha}{Agu+03}
       \field{sortinit}{A}
       \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{4th}
-      \field{isbn}{0134997832}
-      \field{title}{{Real-Time Rendering, Fourth Edition}}
-      \field{year}{2018}
-      \verb{file}
-      \verb :home/socke/Downloads/9781138627000{\_}Real{\_}Time{\_}Rendering{\_}4th{\_}Edition{\_}5726.pdf:pdf
+      \field{abstract}{Many interesting large-scale systems are distributed systems of multiple communicating components. Such systems can be very hard to debug, especially when they exhibit poor performance. The problem becomes much harder when systems are composed of "black-box" components: software from many different (perhaps competing) vendors, usually without source code available. Typical solutions-provider employees are not always skilled or experienced enough to debug these systems efficiently. Our goal is to design tools that enable modestly-skilled programmers (and experts, too) to isolate performance bottlenecks in distributed systems composed of black-box nodes. We approach this problem by obtaining message-level traces of system activity, as passively as possible and without any knowledge of node internals or message semantics. We have developed two very different algorithms for inferring the dominant causal paths through a distributed system from these traces. One uses timing information from RPC messages to infer inter-call causality; the other uses signal-processing techniques. Our algorithms can ascribe delay to specific nodes on specific causal paths. Unlike previous approaches to similar problems, our approach requires no modifications to applications, middleware, or messages. Copyright 2003 ACM.}
+      \field{booktitle}{Operating Systems Review (ACM)}
+      \field{issn}{01635980}
+      \field{number}{5}
+      \field{title}{{Performance debugging for distributed systems of black boxes}}
+      \field{volume}{37}
+      \field{year}{2003}
+      \field{pages}{74\bibrangedash 89}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1145/1165389.945454
       \endverb
+      \verb{file}
+      \verb :home/socke/Downloads/blackboxes{\_}sosp03.pdf:pdf
+      \endverb
+      \keyw{Black box systems,Distributed systems,Performance analysis,Performance debugging}
     \endentry
     \entry{Narayanan2003}{article}{}
       \name{author}{4}{}{%
