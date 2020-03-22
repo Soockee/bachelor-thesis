@@ -262,6 +262,68 @@
       \verb https://books.google.de/books?id=81UrjwEACAAJ
       \endverb
     \endentry
+    \entry{BrendanGreggPerf}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=15eccfdd54e37eba270bda31c8f9febe}{%
+           family={{Brendan D. Gregg}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{fullhash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{bibnamehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{authorbibnamehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{authornamehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{authorfullhash}{15eccfdd54e37eba270bda31c8f9febe}
+      \field{labelalpha}{Bre}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{perf example and perf{\_}events definition}
+      \field{title}{{Linux perf Examples}}
+      \field{urlday}{22}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.brendangregg.com/perf.html
+      \endverb
+      \verb{url}
+      \verb http://www.brendangregg.com/perf.html
+      \endverb
+    \endentry
+    \entry{BrendanGregg2011}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=15eccfdd54e37eba270bda31c8f9febe}{%
+           family={{Brendan D. Gregg}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{fullhash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{bibnamehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{authorbibnamehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{authornamehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{authorfullhash}{15eccfdd54e37eba270bda31c8f9febe}
+      \field{labelalpha}{Bre15}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Brendan Gregg's Flame Graph}
+      \field{month}{8}
+      \field{title}{{Flame Graph Search}}
+      \field{urlday}{20}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.brendangregg.com/blog/2015-08-11/flame-graph-search.html
+      \endverb
+      \verb{url}
+      \verb http://www.brendangregg.com/blog/2015-08-11/flame-graph-search.html
+      \endverb
+    \endentry
     \entry{Stocia2007}{article}{}
       \name{author}{5}{}{%
         {{hash=017e9afc5894252aa67649ed7d3e642c}{%

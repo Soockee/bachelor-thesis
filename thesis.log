@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  19 MAR 2020 15:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  22 MAR 2020 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1973,7 +1973,7 @@ Overfull \hbox (10.48628pt too wide) in paragraph at lines 40--41
 dung ist, im zusam-men-spiel mit dem Nachricht-
  []
 
-<img/Themenueberblick/PartialOrdering_Concurrent.png, id=334, 472.76625pt x 439
+<img/Themenueberblick/PartialOrdering_Concurrent.png, id=340, 472.76625pt x 439
 .6425pt>
 File: img/Themenueberblick/PartialOrdering_Concurrent.png Graphic file (type pn
 g)
@@ -1981,7 +1981,7 @@ g)
 Package pdftex.def Info: img/Themenueberblick/PartialOrdering_Concurrent.png  u
 sed on input line 72.
 (pdftex.def)             Requested size: 163.9579pt x 152.47511pt.
-<img/Themenueberblick/PartialOrdering_Concurrent_Explained.png, id=336, 472.766
+<img/Themenueberblick/PartialOrdering_Concurrent_Explained.png, id=342, 472.766
 25pt x 439.6425pt>
 File: img/Themenueberblick/PartialOrdering_Concurrent_Explained.png Graphic fil
 e (type png)
@@ -1990,7 +1990,7 @@ Package pdftex.def Info: img/Themenueberblick/PartialOrdering_Concurrent_Explai
 ned.png  used on input line 77.
 (pdftex.def)             Requested size: 163.9579pt x 152.47511pt.
 [6]
-<img/Themenueberblick/PartialOrdering_ChildO.png, id=351, 472.76625pt x 439.642
+<img/Themenueberblick/PartialOrdering_ChildO.png, id=357, 472.76625pt x 439.642
 5pt>
 File: img/Themenueberblick/PartialOrdering_ChildO.png Graphic file (type png)
 <use img/Themenueberblick/PartialOrdering_ChildO.png>
@@ -2004,7 +2004,7 @@ chapter 3.
 [11
 
 ]
-<img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png, id=402, 533.9
+<img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png, id=408, 533.9
 95pt x 102.3825pt>
 File: img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png Graphic f
 ile (type png)
@@ -2012,7 +2012,7 @@ ile (type png)
 Package pdftex.def Info: img/Problembeschreibung/Anwendungsueberwachung_Gesamts
 ystem.png  used on input line 39.
 (pdftex.def)             Requested size: 266.99684pt x 51.19112pt.
-<img/Problembeschreibung/distributed_system_application_minimal.png, id=403, 31
+<img/Problembeschreibung/distributed_system_application_minimal.png, id=409, 31
 3.17pt x 102.3825pt>
 File: img/Problembeschreibung/distributed_system_application_minimal.png Graphi
 c file (type png)
@@ -2020,7 +2020,7 @@ c file (type png)
 Package pdftex.def Info: img/Problembeschreibung/distributed_system_application
 _minimal.png  used on input line 48.
 (pdftex.def)             Requested size: 156.58461pt x 51.19112pt.
-<img/Problembeschreibung/distributed_system_application_inside.png, id=404, 433
+<img/Problembeschreibung/distributed_system_application_inside.png, id=410, 433
 .62pt x 142.5325pt>
 File: img/Problembeschreibung/distributed_system_application_inside.png Graphic
  file (type png)
@@ -2028,7 +2028,7 @@ File: img/Problembeschreibung/distributed_system_application_inside.png Graphic
 Package pdftex.def Info: img/Problembeschreibung/distributed_system_application
 _inside.png  used on input line 55.
 (pdftex.def)             Requested size: 184.45068pt x 60.62878pt.
-<img/Problembeschreibung/distributed_system_network.png, id=405, 473.77pt x 112
+<img/Problembeschreibung/distributed_system_network.png, id=411, 473.77pt x 112
 .42pt>
 File: img/Problembeschreibung/distributed_system_network.png Graphic file (type
  png)
@@ -2037,29 +2037,68 @@ Package pdftex.def Info: img/Problembeschreibung/distributed_system_network.png
   used on input line 60.
 (pdftex.def)             Requested size: 204.94661pt x 48.63127pt.
  [12 <./img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png> <./img
-/Problembeschreibung/distributed_system_application_minimal.png>] [13 <./img/Pr
-oblembeschreibung/distributed_system_application_inside.png> <./img/Problembesc
-hreibung/distributed_system_network.png>] [14]) (./design.tex [15]
+/Problembeschreibung/distributed_system_application_minimal.png>]
+Overfull \hbox (20.38297pt too wide) in paragraph at lines 71--73
+\T1/lmr/m/n/10.95 kann, Leis-tung zu verbessern und Fe-hel-erquellen von Funk-t
+io-nen zu lokalisieren.[][][][][] 
+ []
+
+
+Overfull \hbox (4.2933pt too wide) in paragraph at lines 74--76
+\T1/lmr/m/n/10.95 Von dem Szenario aus-ge-hend, dass man Events in-ner-halb des
+ Min-i-mal-beispiels analysieren
+ []
+
+[13 <./img/Problembeschreibung/distributed_system_application_inside.png> <./im
+g/Problembeschreibung/distributed_system_network.png>]
+
+LaTeX Warning: Command \" invalid in math mode on input line 85.
+
+<img/Problembeschreibung/problembeschreibung_flamengraph.png, id=435, 723.70375
+pt x 440.64626pt>
+File: img/Problembeschreibung/problembeschreibung_flamengraph.png Graphic file 
+(type png)
+<use img/Problembeschreibung/problembeschreibung_flamengraph.png>
+Package pdftex.def Info: img/Problembeschreibung/problembeschreibung_flamengrap
+h.png  used on input line 93.
+(pdftex.def)             Requested size: 361.85098pt x 220.32259pt.
+<img/Problembeschreibung/flamegraph_3D.png, id=438, 1208.515pt x 566.115pt>
+File: img/Problembeschreibung/flamegraph_3D.png Graphic file (type png)
+<use img/Problembeschreibung/flamegraph_3D.png>
+Package pdftex.def Info: img/Problembeschreibung/flamegraph_3D.png  used on inp
+ut line 100.
+(pdftex.def)             Requested size: 362.5573pt x 169.8358pt.
+<img/Problembeschreibung/flamegraph_3D_closing.png, id=439, 563.10374pt x 372.3
+9125pt>
+File: img/Problembeschreibung/flamegraph_3D_closing.png Graphic file (type png)
+
+<use img/Problembeschreibung/flamegraph_3D_closing.png>
+Package pdftex.def Info: img/Problembeschreibung/flamegraph_3D_closing.png  use
+d on input line 107.
+(pdftex.def)             Requested size: 281.55118pt x 186.19516pt.
+[14 <./img/Problembeschreibung/problembeschreibung_flamengraph.png>] [15 <./img
+/Problembeschreibung/flamegraph_3D.png> <./img/Problembeschreibung/flamegraph_3
+D_closing.png>] [16]) (./design.tex [17]
 chapter 4.
-) (./implementierung.tex [16
+) (./implementierung.tex [18
 
 ]
 chapter 5.
-) (./evaluierung.tex [17
+) (./evaluierung.tex [19
 
 ]
 chapter 6.
-) (./fazit.tex [18
+) (./fazit.tex [20
 
 ]
 chapter 7.
-) [19
+) [21
 
-] (./litverz.tex (./thesis.gls) (./thesis.acr [20
+] (./litverz.tex (./thesis.gls) (./thesis.acr [22
 
 
 
-]) [21
+]) [23
 
 
 ]
@@ -2070,7 +2109,7 @@ Overfull \hbox (0.99678pt too wide) in paragraph at lines 16--16
 : Au-tomat-ing Root-
  []
 
-[22
+[24
 
 ]
 Overfull \hbox (0.11018pt too wide) in paragraph at lines 16--16
@@ -2099,7 +2138,7 @@ ew fig-ure\T1/lmr/m/n/10.95 . 2019. \T1/lmr/m/sc/10.95 url\T1/lmr/m/n/10.95 : [
 ][]$https : / / opentracing .
  []
 
-[23]
+[25]
 Overfull \hbox (48.11298pt too wide) in paragraph at lines 16--16
 []\T1/lmr/m/n/10.95 William Stearns. \T1/lmr/m/it/10.95 Ngrep and reg-u-lar ex-
 pres-sions to the res-cue\T1/lmr/m/n/10.95 . http://www.stearns.org/.
@@ -2107,22 +2146,22 @@ pres-sions to the res-cue\T1/lmr/m/n/10.95 . http://www.stearns.org/.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
- [24]
+ [26]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FCAC1E0FA6296D91F6BC2531B5286529;2613.
+(rerunfilecheck)             Checksum: 5D5EA8C31DC53115209656D94DD3104C;2614.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36812 strings out of 492982
- 680637 string characters out of 6134896
- 1253168 words of memory out of 5000000
- 39730 multiletter control sequences out of 15000+600000
+ 36845 strings out of 492982
+ 681868 string characters out of 6134896
+ 1254168 words of memory out of 5000000
+ 39752 multiletter control sequences out of 15000+600000
  619025 words of font info for 62 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  57i,9n,77p,10490b,2052s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2141,10 +2180,10 @@ lic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (32 pages, 422991 bytes).
+Output written on thesis.pdf (34 pages, 529138 bytes).
 PDF statistics:
- 635 PDF objects out of 1000 (max. 8388607)
- 566 compressed objects within 6 object streams
- 136 named destinations out of 1000 (max. 500000)
- 377 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 673 PDF objects out of 1000 (max. 8388607)
+ 594 compressed objects within 6 object streams
+ 144 named destinations out of 1000 (max. 500000)
+ 392 words of extra memory for PDF output out of 10000 (max. 10000000)
 
