@@ -43,6 +43,9 @@ Daraus kann eine Durschschnittslatenz über eine Zeitspanne berechnet werden, we
 
 \textbf{Korrektheit} \space\space\space Die Korrektheit eines Systems ist dann gegeben, wenn die Eigenschaften eines Systems einer \emph{Spezifikation} entsprechen. Das bedeutet, dass die Beobachtung des Verhaltens einer (verteilten) Anwendung nicht ausreicht, um seine Korrektheit zu beweisen. Tracing soll also nicht die Korrektheit einer verteilten Anwendung beweisen. Tracing kann aber dabei unterstützen, indem es das Verhalten einer Anwendung beobachtbar macht. Insbesondere die Zusammenhänge der Komponenten und die entstehenden Nebenläufigkeiten sind erschwerende Faktoren in der Verifikation. So stellt sich die Frage, ob \emph{kausal zusammenhängende Events derart dargestellt werden können, dass anhand einer Visualisierung feststellbar ist, ob das Verhalten der Anwendung starke Ausreißer, die auf Fehlimplmenentierung deuten könnten, aufweist.}
 
+
+\section{Zusammenführung von Events}
+\label{section: Ordnungsproblem von Events}
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.5]{img/Problembeschreibung/distributed_system_application_minimal.png}
@@ -66,34 +69,52 @@ Daraus kann eine Durschschnittslatenz über eine Zeitspanne berechnet werden, we
 
 Man definieren ein minimales verteiltes System, welches das verteilte rendering System vereinfacht darstellt. Dieses besteht aus zwei Komponenten. \cref{fig:distributed_system_application_minimal} bildet ein solches System ab. Die Knoten beinhalten zwei für das Generieren und Ordnen von Events interessante Aspekte. Dies ist zum einen die in \cref{fig:distributed_system_application_inside} dargestellte verteilte Anwendung mit ihrem instrumentalisiertem Code und zum anderen das in \cref{fig:distributed_system_network} dargestellte Netzwerk, über welches Nachrichten ausgetauscht werden. 
 
-Die Komponenten des Systems besitzen jeweils einen Linux Kernel. Der Kernel bietet die Funktionalität \emph{perf\_events} zu erheben. 
-\begin{quote}
-	perf\_events ist ein eventorientiertes Überwachungswerkzeug, welches helfen kann, Leistung zu verbessern und Fehelerquellen von Funktionen zu lokalisieren. 
-	\footpartcite{BrendanGreggPerf}
-\end{quote}
-Von dem Szenario ausgehend, dass man Events innerhalb des Minimalbeispiels analysieren möchte, eignen sich Flammengraphen.
- Der in \cref{fig:problembeschreibung_flamengraph} gezeigte Flammengraphe stellt perf\_events dar, die während einer TCP Kommunikation erhoben worden sind.  Dabei ist die Länge der Balken, die Zeit, die das Event, relativ zur Gesamtzeit der Messung, insgesamt eingenommen hat. Die erhobenen perf\_event Daten sind Stichproben. Man geht in diesem Beispiel allerdings davon aus, das alle Events aufgenommen worden sind. Diese Darstellung erlaubt es, die Events \emph{eines} Systems ziemlich genau zu beschreiben. Nun kommt das zweite System hinzu, mit dem die Kommunikation stattgefunden hat. Auch hier sei gegeben, dass das zweite System Daten generiert hat, welche zu einer ähnlich aufgebaute Visualisierung führt. Die beiden Flammengraphen werden miteinandener verbunden. Dies führt zu einer dreidimensionalen Darstellung von Flammengraphen, wie in \cref{fig:flamegraph_3D} gezeigt. Wie in einer TCP-Verbindung üblich, wird eine Kommunikationskanal aufgebaut. Über den Kanal können Nachrichten ausgetauscht werden. Anschließend wird die Verbindung mit einem Vier-Wege-Handschlag beendet. Die obersten Blöcke und ihre systemübergreifenden Verbindungslinien, dargetellt durch die gestrichelten Linien mit Pfeilrichtung, stellen die Terminierung der TCP-Verbindung dar.
- 
- Der Terminierungsprozess wird genauer betrachtet. \cref{fig:flamegraph_3D_closing} zeigt vier Events. \textbf{A} ist die \emph{FIN} Markierung des Initiators. Sie leitet die Terminierung ein. \textbf{C} stellt das Empfangen und Beantworten mittels \emph{ACK} und \emph{FIN} dar. \textbf{B} ist der Terminierungsmoment des Initatorsystems. Dieser findet nach Zeitpunkt des Eintreffens des Empfänger \emph{FINs}. Dieser Zeitpunkt ist das Senden des letzten \emph{ACK} des Initators, addiert mit einer Konstante \emph{Timeout}.  Event \textbf{B} ist also definiert als:
- 
-\[
-	\text{B}: \; Ack_{init} + Timeout  
-\]
-
- \textbf{D} ist der Terminierungsmoment des Empfängersystems. Dieser Zeitpunkt ist das Erhalten der letzten, vom Initiatorsystem gesendeten, \emph{ACK} Makierung. Die \emph{Übertragungszeit} als unbekannte Variable nimmt Einfluss auf den Zeitpunkt. Event \textbf{D} ist also definiert als:
- \[
- \text{D}: \; Ack_{init} + Übertragungszeit 
- \]
- 
- Zu untersuchen sind die Relationen zwischen diesen vier Events.
- Dabei sind zwei Relationen, wie in \cref{subsection:Ordnung von Events} beschrieben, als $\text{A}\rightarrow\text{B}$ und $\text{C}\rightarrow\text{D}$ definiert. Durch die kausale Abhängigkeit von $\text{C}$ von $\text{A}$ gilt $\text{A}\rightarrow\text{C}$.
-
  \begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.5]{img/Problembeschreibung/problembeschreibung_flamengraph.png}
 	\caption[Visualisierung von CPU Performancedaten]{Visualisierung von CPU Performancedaten dargestellt als Flammengraph von Brendan D. Gregg \cite{BrendanGregg2011}}
 	\label{fig:problembeschreibung_flamengraph}
 \end{figure}
+
+Die Komponenten des Systems besitzen jeweils einen Linux Kernel. Der Kernel bietet die Funktionalität \emph{perf\_events} zu erheben. 
+\begin{quote}
+	perf\_events ist ein eventorientiertes Überwachungswerkzeug, welches helfen kann, Leistung zu verbessern und Fehelerquellen von Funktionen zu lokalisieren. 
+	\footpartcite{BrendanGreggPerf}
+\end{quote}
+Von dem Szenario ausgehend, dass man Events innerhalb des Minimalbeispiels analysieren möchte, eignen sich Flammengraphen.
+ Der in \cref{fig:problembeschreibung_flamengraph} gezeigte Flammengraphe stellt perf\_events dar, die während einer TCP Kommunikation erhoben worden sind.  Dabei ist die Länge der Balken, die Zeit, die das Event, relativ zur Gesamtzeit der Messung, insgesamt eingenommen hat. Die erhobenen perf\_event Daten sind Stichproben. Man geht in diesem Beispiel allerdings davon aus, das alle Events aufgenommen worden sind. Diese Darstellung erlaubt es, die Events \emph{eines} Systems genau zu beschreiben. Nun kommt das zweite System hinzu, mit dem die Kommunikation stattgefunden hat. Auch hier sei gegeben, dass das zweite System Daten generiert hat, welche zu einer ähnlich aufgebaute Visualisierung führt. Die beiden Flammengraphen werden miteinandener verbunden. Dies führt zu einer dreidimensionalen Darstellung von Flammengraphen, gezeigt in \cref{fig:flamegraph_3D}. Wie in einer TCP-Verbindung üblich, wird eine Kommunikationskanal aufgebaut. Über den Kanal können Nachrichten ausgetauscht werden. Anschließend wird die Verbindung mit einem Vier-Wege-Handschlag beendet. Die obersten Blöcke und ihre systemübergreifenden Verbindungslinien, dargetellt durch die gestrichelten Linien mit Pfeilrichtung, stellen die Terminierung der TCP-Verbindung dar.
+ 
+ Der Terminierungsprozess wird genauer betrachtet. \cref{fig:flamegraph_3D_closing} zeigt vier Events. \textbf{A} ist die \emph{FIN} Markierung des Initiators. Sie leitet die Terminierung ein. \textbf{C} stellt das Empfangen und Beantworten mittels \emph{ACK} und \emph{FIN} dar. \\
+ \textbf{B} ist der Terminierungsmoment des Initatorsystems. Dieser findet nach dem Zeitpunkt des Eintreffens von \emph{FIN} des Empfänger statt. Dieser Zeitpunkt ist das Senden des letzten \emph{ACK} des Initators, addiert mit einer Konstante \emph{Timeout}.  Event \textbf{B} ist also definiert als:
+ 
+\[
+	\text{B}: \; Ack_{init} + Timeout  
+\]
+
+ \textbf{D} ist der Terminierungsmoment des Empfängersystems. Dieser Zeitpunkt ist das Erhalten der letzten, vom Initiatorsystem gesendeten, \emph{ACK} Makierung. Die unbekannte Variable \emph{Übertragungszeit} nimmt Einfluss auf den Zeitpunkt. Event \textbf{D} ist also definiert als:
+ \[
+ \text{D}: \; Ack_{init} + Übertragungszeit 
+ \]
+ 
+ Zu untersuchen sind die Relationen zwischen diesen vier Events.
+ Dabei sind zwei Relationen, wie in \cref{subsection:Ordnung von Events} beschrieben, als $\text{A}\rightarrow\text{B}$ und $\text{C}\rightarrow\text{D}$ definiert. Durch die kausale Abhängigkeit von $\text{C}$ von $\text{A}$ gilt $\text{A}\rightarrow\text{C}$. Durch die \emph{Transitivität} ist entsprechend  $\text{A}\rightarrow\text{D}$ gegeben.  Es ist zu untersuchen, ob $\text{B}\rightarrow\text{D}$ gilt.
+ Dabei sind die Bedingungen, die von Lamport definiert worden sind, zu betrachten. Da man zwei miteinander kommunizierende Systeme betrachtet, muss folgende Bedingung erfüllt sein, sodass eine \emph{Happens-Before} Relation gegeben ist. 
+ \begin{quote}
+ 	(\lowroman{1}) Wenn $\text{a}$ das Senden einer Nachricht ist und $\text{b}$ das Empfangen derselben Nachricht in einem anderen System ist, dann $\text{a}\rightarrow\text{b}$\footpartcite{lamport78}
+ \end{quote}
+
+Nach der Definition von \textbf{D} ist es mit $\text{b}$ gleichzusetzen, somit ist ein Teil der Bedingung erfüllt. \textbf{B} ist jedoch nicht das Senden der Nachricht, also des letzten \emph{Ack}, sonder ein Event, welches darauf folgt. Die Events sind nebenläufig. Führ die TCP-Kommunikation ist dieser spezielle Zeitpunkt $\text{B}$ nicht relevant. Die Zustandsdefinitionen des TCP erlauben eine fehlerfreie Terminierung. Allerdings könnte dieser Zeitpunkt ein Anwendungsfall für Tracing sein und eine eigene Terminierung für eine ähnliche Situation benötigen. Es ist zu untersuchen, ob Events, ähnlich wie TCP Pakete, die über mehrere Tracer verteilt sein können, durch einen Terminierungsprozess eines Traces allesamt erfasst werden können.
+
+Aus dieser Darstellung folgern zwei Fragestellungen:
+\begin{quote}
+	(\lowroman{1}) Müssen Traceingwerkzeuge ähnliche Terminierungsmechanismen implementieren, wie z.B Netzwerkprotokolle, um alle Events, in allen Prozessen, zu erkennen?
+	
+	(\lowroman{2}) Sind 3D Flammengraphen eine mögliche Darstellungsform von Tracingdaten?
+\end{quote}
+
+
+
+ 
 
 \begin{figure}[!ht]
 	\centering
@@ -109,24 +130,21 @@ Von dem Szenario ausgehend, dass man Events innerhalb des Minimalbeispiels analy
 	\label{fig:flamegraph_3D_closing}
 \end{figure}
 
+\section{Kontextproblem von Events}
+\label{section: Kontextproblem von Events}
 
 \section{Anforderungsanalyse}
 \label{section:Anforderungsanalyse}
 
 Das Systems, für das die Instrumentalisierungsbilbiothek entwickelt wird, ist ein System für verteiltes Rendering. Die Instrumentalisierungsbilbiothek muss notwendige Funktionalitäten spezifizieren, die es ermöglichen ein Modell aus kausal abhängigen Events darzustellen. Zur Erstellung des Modells muss sich mit den Funktionalitäten der \textbf{Eventgenerierung}, der \textbf{Eventrelation}, der \textbf{Synchronisation von Eventgeneratoren}, der \textbf{Eventübermittlnug} und der \textbf{Ordnung von Events} beschäftigt werden. Im Fokus der Interpretation des Modells soll die \textbf{end-zu-end Latenz}, sowie die \textbf{Generierungszeit eines Frames} stehen. Rahmenbedingungen wie die eingeschränkte \textbf{Nachrichtenmodifikation} sind zu berücksichtigen.
 
-
-
-Semantisch relevante Ereignisse sind zu definieren. Eine Funktionalität muss geschaffen werden, die es erlaubt diese Ereginisse als ein Event abzubilden. Die Generierungfunktionalität muss dafür sorgen, dass die Events einem spezifizierten Aufbau aufweisen, um weiterverarbeitet und ausgewertet werden zu können.
+Semantisch relevante Ereignisse sind zu definieren. Eine Funktionalität muss geschaffen werden, die es erlaubt, diese Ereginisse als ein Event abzubilden. Die Generierungfunktionalität muss dafür sorgen, dass die Events einem spezifizierten Aufbau aufweisen, um weiterverarbeitet und ausgewertet werden zu können. Die Nutzung einer standarisierten und erprobten \gls{apiLabel} ist wünschenswert.
  
-
-
 \subsection{Funktionalitäten}
+
 \subsubsection{Eventgenerierung}
 \label{section:Eventgenerierung}
 Events müssen in einem für die Anwendung semantisch relevanten Bereich generiert werden können. 
-
-
 
 \subsubsection{Eventrelation}
 \label{subsection:Eventkorrelation}
