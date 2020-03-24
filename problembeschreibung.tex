@@ -82,7 +82,7 @@ Die Komponenten des Systems besitzen jeweils einen Linux Kernel. Der Kernel biet
 	\footpartcite{BrendanGreggPerf}
 \end{quote}
 Von dem Szenario ausgehend, dass man Events innerhalb des Minimalbeispiels analysieren möchte, eignen sich Flammengraphen.
- Der in \cref{fig:problembeschreibung_flamengraph} gezeigte Flammengraphe stellt perf\_events dar, die während einer TCP Kommunikation erhoben worden sind.  Dabei ist die Länge der Balken, die Zeit, die das Event, relativ zur Gesamtzeit der Messung, insgesamt eingenommen hat. Die erhobenen perf\_event Daten sind Stichproben. Man geht in diesem Beispiel allerdings davon aus, das alle Events aufgenommen worden sind. Diese Darstellung erlaubt es, die Events \emph{eines} Systems genau zu beschreiben. Nun kommt das zweite System hinzu, mit dem die Kommunikation stattgefunden hat. Auch hier sei gegeben, dass das zweite System Daten generiert hat, welche zu einer ähnlich aufgebaute Visualisierung führt. Die beiden Flammengraphen werden miteinandener verbunden. Dies führt zu einer dreidimensionalen Darstellung von Flammengraphen, gezeigt in \cref{fig:flamegraph_3D}. Wie in einer TCP-Verbindung üblich, wird eine Kommunikationskanal aufgebaut. Über den Kanal können Nachrichten ausgetauscht werden. Anschließend wird die Verbindung mit einem Vier-Wege-Handschlag beendet. Die obersten Blöcke und ihre systemübergreifenden Verbindungslinien, dargetellt durch die gestrichelten Linien mit Pfeilrichtung, stellen die Terminierung der TCP-Verbindung dar.
+ Der in \cref{fig:problembeschreibung_flamengraph} gezeigte Flammengraphe stellt perf\_events dar, die während einer TCP Kommunikation erhoben worden sind.  Dabei ist die Länge der Balken, die Zeit, die das Event, relativ zur Gesamtzeit der Messung, insgesamt eingenommen hat. Die Profilingdaten weisen keine kausalität auf. Die erhobenen perf\_event Daten sind Stichproben. Man geht in diesem Beispiel allerdings davon aus, das alle Events aufgenommen worden sind. Diese Darstellung erlaubt es, die Events \emph{eines} Systems genau zu beschreiben. Nun kommt das zweite System hinzu, mit dem die Kommunikation stattgefunden hat. Auch hier sei gegeben, dass das zweite System Daten generiert hat, welche zu einer ähnlich aufgebaute Visualisierung führt. Die beiden Flammengraphen werden miteinandener verbunden. Dies führt zu einer dreidimensionalen Darstellung von Flammengraphen, gezeigt in \cref{fig:flamegraph_3D}. Wie in einer TCP-Verbindung üblich, wird eine Kommunikationskanal aufgebaut. Über den Kanal können Nachrichten ausgetauscht werden. Anschließend wird die Verbindung mit einem Vier-Wege-Handschlag beendet. Die obersten Blöcke und ihre systemübergreifenden Verbindungslinien, dargetellt durch die gestrichelten Linien mit Pfeilrichtung, stellen die Terminierung der TCP-Verbindung dar.
  
  Der Terminierungsprozess wird genauer betrachtet. \cref{fig:flamegraph_3D_closing} zeigt vier Events. \textbf{A} ist die \emph{FIN} Markierung des Initiators. Sie leitet die Terminierung ein. \textbf{C} stellt das Empfangen und Beantworten mittels \emph{ACK} und \emph{FIN} dar. \\
  \textbf{B} ist der Terminierungsmoment des Initatorsystems. Dieser findet nach dem Zeitpunkt des Eintreffens von \emph{FIN} des Empfänger statt. Dieser Zeitpunkt ist das Senden des letzten \emph{ACK} des Initators, addiert mit einer Konstante \emph{Timeout}.  Event \textbf{B} ist also definiert als:
@@ -98,30 +98,26 @@ Von dem Szenario ausgehend, dass man Events innerhalb des Minimalbeispiels analy
  
  Zu untersuchen sind die Relationen zwischen diesen vier Events.
  Dabei sind zwei Relationen, wie in \cref{subsection:Ordnung von Events} beschrieben, als $\text{A}\rightarrow\text{B}$ und $\text{C}\rightarrow\text{D}$ definiert. Durch die kausale Abhängigkeit von $\text{C}$ von $\text{A}$ gilt $\text{A}\rightarrow\text{C}$. Durch die \emph{Transitivität} ist entsprechend  $\text{A}\rightarrow\text{D}$ gegeben.  Es ist zu untersuchen, ob $\text{B}\rightarrow\text{D}$ gilt.
- Dabei sind die Bedingungen, die von Lamport definiert worden sind, zu betrachten. Da man zwei miteinander kommunizierende Systeme betrachtet, muss folgende Bedingung erfüllt sein, sodass eine \emph{Happens-Before} Relation gegeben ist. 
+ Dabei sind die Bedingungen, die von Lamport definiert worden sind, zu betrachten. Da zwei Systeme miteinander kommunizieren, muss folgende Bedingung erfüllt sein, sodass eine \emph{Happens-Before} Relation gegeben ist. 
  \begin{quote}
  	(\lowroman{1}) Wenn $\text{a}$ das Senden einer Nachricht ist und $\text{b}$ das Empfangen derselben Nachricht in einem anderen System ist, dann $\text{a}\rightarrow\text{b}$\footpartcite{lamport78}
  \end{quote}
 
-Nach der Definition von \textbf{D} ist es mit $\text{b}$ gleichzusetzen, somit ist ein Teil der Bedingung erfüllt. \textbf{B} ist jedoch nicht das Senden der Nachricht, also des letzten \emph{Ack}, sonder ein Event, welches darauf folgt. Die Events sind nebenläufig. Führ die TCP-Kommunikation ist dieser spezielle Zeitpunkt $\text{B}$ nicht relevant. Die Zustandsdefinitionen des TCP erlauben eine fehlerfreie Terminierung. Allerdings könnte dieser Zeitpunkt ein Anwendungsfall für Tracing sein und eine eigene Terminierung für eine ähnliche Situation benötigen. Es ist zu untersuchen, ob Events, ähnlich wie TCP Pakete, die über mehrere Tracer verteilt sein können, durch einen Terminierungsprozess eines Traces allesamt erfasst werden können.
+Nach der Definition von \textbf{D} ist es mit $\text{b}$ gleichzusetzen, somit ist ein Teil der Bedingung erfüllt. \textbf{B} ist jedoch nicht das Senden der Nachricht, also des letzten \emph{Ack}, sonder ein Event, welches darauf folgt. Die Events sind nebenläufig. 
+
+%Für die TCP-Kommunikation ist dieser spezielle Zeitpunkt $\text{B}$ nicht relevant. 
+%Die Zustandsdefinitionen des TCP erlauben eine fehlerfreie Terminierung. 
+%Allerdings könnte dieser Zeitpunkt ein Anwendungsfall für Tracing sein und eine eigene Terminierung für eine ähnliche Situation benötigen. 
+%Es ist zu untersuchen, ob Events, ähnlich wie TCP Pakete, die über mehrere Tracer verteilt sind, durch einen Terminierungsprozess eines Traces allesamt erfasst werden können.
 
 Aus dieser Darstellung folgern zwei Fragestellungen:
 \begin{quote}
 	(\lowroman{1}) Müssen Traceingwerkzeuge ähnliche Terminierungsmechanismen implementieren, wie z.B Netzwerkprotokolle, um alle Events, in allen Prozessen, zu erkennen?
 	
-	(\lowroman{2}) Sind 3D Flammengraphen eine mögliche Darstellungsform von Tracingdaten?
+	(\lowroman{2}) Welche Darstellungensformen gibt es für verteilte Tracingdaten?
 \end{quote}
 
 
-
- 
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[scale=0.3]{img/Problembeschreibung/flamegraph_3D.png}
-	\caption[3D Flammengraph]{Skizzierung eines dreidimensionalen Flammengraphs mit Nachrichtenaustausch}
-	\label{fig:flamegraph_3D}
-\end{figure}
 
 \begin{figure}[!ht]
 	\centering
@@ -129,9 +125,6 @@ Aus dieser Darstellung folgern zwei Fragestellungen:
 	\caption[Flammengraph TCP schließung]{Detailierte Betrachtung des in \cref{fig:flamegraph_3D} gezeigte Nachrichtenaustauschs. Stellt die Schließung einer TCP Verbindung dar}
 	\label{fig:flamegraph_3D_closing}
 \end{figure}
-
-\section{Kontextproblem von Events}
-\label{section: Kontextproblem von Events}
 
 \section{Anforderungsanalyse}
 \label{section:Anforderungsanalyse}
@@ -143,31 +136,37 @@ Semantisch relevante Ereignisse sind zu definieren. Eine Funktionalität muss ge
 \subsection{Funktionalitäten}
 
 \subsubsection{Eventgenerierung}
-\label{section:Eventgenerierung}
-Events müssen in einem für die Anwendung semantisch relevanten Bereich generiert werden können. 
+\label{subsubsection:Eventgenerierung}
+Events müssen in einem für die Anwendung semantisch relevanten Bereich generiert werden können. Die Generierung eines Event, welches den Startpunkt eines Traces darstellt, muss dafür sorgen, dass der Traces eindeutig identifizierbar ist. Alle Events, die auf ein anderes Event folgen, müssen eine Relation auf das Elternevent aufweisen.
 
 \subsubsection{Eventrelation}
-\label{subsection:Eventkorrelation}
+\label{subsubsection:Eventkorrelation}
 Es muss ein Modell für Events konzipiert werden. Das Modell muss in der Lage sein, Relationen abbilden zu können. Diese Relationen sollen die kausalen Zusammenhänge der Events darstellen. 
 
 \subsubsection{Synchronistion von Eventgeneratoren}
-\label{subsection:Synchronistion von Eventgeneratoren}
+\label{subsubsection:Synchronistion von Eventgeneratoren}
 Eventgeneratoren sind oftmals auf verschiedenen Komponenten des verteilten Systems angesiedelt. Wie kann also ein Konzept aussehen, dass dafür sorgt, dass Events geordnet werden können.
 
 \subsubsection{Eventübermittlung}
-\label{section:Eventübermittlung}
-Damit ein Kausalpfad erstellt werden kann, müssen die verstreuten Events in einer Form zusammengeführt werden können.
+\label{subsubsection:Eventübermittlung}
+Damit ein Kausalpfad erstellt werden kann, müssen die Events, die in einem anderen System generiert werden und zum kausalpfad gehören, in einer Form zusammengeführt werden können.
 
-\subsubsection{Eventordnung}
+\subsubsection{Eventkontext}
+\label{subsubsection:Eventkontext}
+Das erste generiert Event bildet den Startpunkt eines neuen Traces dar. Mehrere Anfragen können zur gleichen von dem in \cref{fig:distributed_system_application_minimal} beschriebenen System angenommen werden. Dadurch ist gegeben, dass mehrere Traces parallel existieren. Um diese eindeutig zu machen muss ein Tracekontext definiert werden, der es erlaubt, Traces eindeutig, über Prozessgrenzen hinaus, zu identifizieren und Events diesem zuzuordnen.
 
-\subsection{Interpretation des Modells}
-
+\subsection{Rahmenbedingen}
+\label{subsection:Rahmenbedingen}
 \subsubsection{end-zu-end Latenz}
+\label{subsubsection:end-zu-end Latenz}
+Die durchschnittliche Antwortzeit des verteilten rendering Systems ist im Durchschnitt 100ms. Die durchschnittliche Generierungszeit eines Frames beträgt 16ms. Die Instrumentalisierung des Quellcodes fügt zusätzliche Programmlogik hinzu, weshalb eine erhöhte Verarbeitungszeit entsteht. Diese Verarbeitungszeit soll das verteilte rendering System möglichst geringfügig belasten. Vorallem die Generierungszeit der Frames muss unverändert sein.
 
 \subsubsection{Generierungszeit eines Frames}
+\label{subsubsection:Generierungszeit eines Frames}
 Die Renderinggeschwindigkeit wird anhand der Zeit gemessen, also wieviele \emph{ms} gebraucht werden, um ein Bild zu generieren. gemessen Der Generierungsprozess eines \emph{Frames} umfasst vier Ebenen. Diese Ebenen sind die Applikationsebene, die Geometrieprozessierung, die Rasterung und die Pixelprozessierung. Die Verarbeitung wird, abhängig von der bearbeitet Ebene, von der \gls{cpuLabel} oder der \gls{gpuLabel} durchgeführt. Es ist wünschenswert GPU und CPU Aktivitäten überwachen zu können.
 
 \subsubsection{Nachrichtenmodifikation}
+\label{subsubsection:Nachrichtenmodifikation}
 
 Die Generierung von Events kann von zwei Perspektiven aus betrachtet werden.
 Zum einen die \emph{Blackbox} Perspektive und zum anderen die \emph{Whitebox} Perspektive.
