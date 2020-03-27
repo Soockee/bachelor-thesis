@@ -11,19 +11,23 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Kausaler Pfad einer Vorgangs in dem verteilten rendering System}}{13}{figure.caption.5}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Kausaler Pfad einer Vorgangs in dem verteilten rendering System}}{12}{figure.caption.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Minimale Struktur eines verteilten Systems}}{13}{figure.caption.6}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Minimale Struktur eines verteilten Systems}}{14}{figure.caption.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Anwendungsinstrumentalisierung und Netzwerkkommunikation \IeC {\"u}ber TCP/IP in verteilten Systemen}}{14}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Visualisierung von CPU Performancedaten}}{14}{figure.caption.8}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Visualisierung von CPU Performancedaten}}{15}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces Flammengraph TCP schlie\IeC {\ss }ung}}{16}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces 3D Flammengraph}}{22}{figure.caption.10}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Tracingkontexts in einem Threads innerhalb einer Anwendung}}{22}{figure.caption.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Tracingkontexts \IeC {\"u}ber mehrere Threads innerhalb einer Anwendung}}{23}{figure.caption.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces 3D Flammengraph}}{24}{figure.caption.12}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

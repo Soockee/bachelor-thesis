@@ -43,10 +43,61 @@ Dapper ist für eine Infrastruktur konzipiert, die globalen  Maßstäben entspri
 
 \section{Datenmodell}
 \label{section:Datenmodell}
-\subsection{Eventmodell}
-\label{subsection:Eventmodell}
-\subsection{Eventgraph}
-\label{subsection:Eventgraph}
+
+\textbf{F1: }Inwiefern lässt sich eine Zeitmessung von Eventzeitspannen konzipieren
+
+In diesem Abschnitt wird das Problem \textbf{F1} diskutiert.
+Dieses Problem erfordert die Konzipierung eines Datenmodells, welches drei Aspekte berücksichtig. Der erste Aspekt wird durch die Zeitspanne des Events selbst dargestellt. Dabei muss das Event derart repräsentiert werden, sodass eine Zeitspanne als Information daraus gewonnen werden kann. Die detailierte Darstellung wird in \cref{subsection:Spans} erläutert. Der zweite Aspekt entsteht durch die Gegebenheit eines lokalen Kontexts. Dieser wird in \cref{subsection:Tracingcontext innerhalb eines Systems} beschrieben. Der dritte Aspekt ist durch die Kommuniktion von Komponenten des Systems gegeben. Dieser wird  in \cref{subsection:Tracingcontext über Systemgrenzen} dargestellt.
+
+
+Das Datenmodell beruht auf dem Spanmodell, welches in der vorher beschrieben Fachpuplikation \emph{Dapper} vorgestellt und durch die Spezifikation von \emph{Opentracing} erweitert und dem Anwendungsfall des verteilten rendering Systems und des Entwicklungsprojekts angepasst wird.
+
+Das Spanmodell bildet \emph{Traces} als größte Einheit ab. Traces sind Eventsammlungen die den Weg einer Anfrage durch ein verteiltes System darstellen. Ein Trace ist die Reise der Anfrage, wohingegen einzelne Events die Etappen dieser Reise sind. Ein Trace beinhaltet ein bis beliebig viele \emph{Spans}. Ein Span ist die kleinste Einheit eines Traces. Spans bilden einen Arbeitsprozess innerhalb eines Prozesses ab. Innerhalb eines \emph{Threads} ist zu jeder Zeit nur ein Span \emph{aktiv}.
+
+
+\subsection{Spans}
+\label{subsection:Spans}
+\subsection{Tracingcontext innerhalb eines Systems}
+\label{subsection:Tracingcontext innerhalb eines Systems}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.5]{img/Design/SpanThreadKontext.png}
+	\caption[Tracingkontexts in einem Threads innerhalb einer Anwendung]{Anwendung mit einem Thread. Ein von der Instrumentalisierung veranlasster Kontextwechsel innerhalb eines Threads}
+	\label{fig:SpanThreadKontext}
+\end{figure}
+
+
+Ein Prozess kann mehrer \emph{Threads} implementieren. Die Events die in einem Thread stattfinden können ihren Lebenszyklus entweder in diesem abschließen oder in einem Thread beginnen und in einem anderen Thread enden. Der Tracer, also die übergeordnete Verwaltungseinheit, muss jedoch jederzeit feststellen können, welches Event \emph{aktiv} ist. Der Grund dafür ist beispielsweise das Erstellen von Relationen für zu generierende Events, die ihr Elternevent kennen müssen. In \cref{fig:SpanThreadKontext} wird eine Situation dargestellt, in der der Kontext innerhalb eines Threads geändert wird. Es sei gegeben, dass eine Anwendung ein Threads implementiert. Dabei exisiteren zwei parallele Traces. Trace 1 beinhaltet das Event 1. Event 1 sendet asynchron eine große Datei an ein Frontend, wie dies in dem verteilten rendering System der Fall sein könnte.  Trace 2 beinhaltet Event 2. Event 2 liest eine kleinen Datei aus einem Speicher. Es wird davon ausgegangen, dass das Schreiben deutlich mehr Zeit beansprucht, als das Lesen. 
+
+Notizen für weiteren Inhalt:
+\begin{itemize}
+	\item E1 ist im \emph{Scope} gerade aktiviert. 
+	\item Da E1 async vor sich hinbrödelt, wird E2 angegangen, welches zu einem anderen Trace gehört.
+	\item K1 stellt den ersten Kontextwechsel dar.
+	\item K1 sorgt dafür, dass E2 Aktiviert wird. 
+	\item E1 nimmt indirekt den Zustand \emph{nicht beendet} ein
+	\item In dem Scope ist E2 nun aktiv
+	\item dieser ist das aktive lesen einer datei
+	\item E2 schließt ab.
+	\item Trace 2 schließt, da E2 ohne Elternknoten.
+	\item K2 aktiviert E1.
+	\item E1 Sendeabschluss tritt ein
+	\item E1 beendet und schließt Trace 1, da E1 ohne elternknoten 
+\end{itemize}
+
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.5]{img/Design/SpanMultipleThreadKontext.png}
+	\caption[Tracingkontexts über mehrere Threads innerhalb einer Anwendung]{Anwendung mit zwei Threads. Ein von der Instrumentalisierung veranlasster Kontextwechsel zwischen Threads}
+	\label{fig:SpanMultipleThreadKontext}
+\end{figure}
+
+\subsection{Tracingcontext über Systemgrenzen}
+\label{subsection:Tracingcontext über Systemgrenzen}
+
+
 \section{Verarbeitungsmodell}
 \label{section:Verarbeitungsmodell}
 \subsection{Agenten}

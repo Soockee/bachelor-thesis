@@ -21,29 +21,30 @@
 \BOOKMARK [2][]{subsection.4.1.1}{Ziele}{section.4.1}% 21
 \BOOKMARK [2][]{subsection.4.1.2}{Nicht-Ziele}{section.4.1}% 22
 \BOOKMARK [1][]{section.4.2}{Datenmodell}{chapter.4}% 23
-\BOOKMARK [2][]{subsection.4.2.1}{Eventmodell}{section.4.2}% 24
-\BOOKMARK [2][]{subsection.4.2.2}{Eventgraph}{section.4.2}% 25
-\BOOKMARK [1][]{section.4.3}{Verarbeitungsmodell}{chapter.4}% 26
-\BOOKMARK [2][]{subsection.4.3.1}{Agenten}{section.4.3}% 27
-\BOOKMARK [2][]{subsection.4.3.2}{Collectoren}{section.4.3}% 28
-\BOOKMARK [1][]{section.4.4}{Visualisierung}{chapter.4}% 29
-\BOOKMARK [2][]{subsection.4.4.1}{Tracegraph}{section.4.4}% 30
-\BOOKMARK [2][]{subsection.4.4.2}{Dreidimensionale Flammengraphen}{section.4.4}% 31
-\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 32
-\BOOKMARK [1][]{section.5.1}{Instrumnetalisierungsbibliothek: Traktor}{chapter.5}% 33
-\BOOKMARK [1][]{section.5.2}{Traktor Agent}{chapter.5}% 34
-\BOOKMARK [1][]{section.5.3}{Traktor Registry}{chapter.5}% 35
-\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 36
-\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 37
-\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 38
-\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 39
-\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 40
-\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 41
-\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 42
-\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 43
-\BOOKMARK [0][]{chapter.7}{Fazit}{}% 44
-\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 45
-\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 46
-\BOOKMARK [0][]{section*.11}{Glossar}{}% 47
-\BOOKMARK [0][]{section*.13}{Abk\374rzungsverzeichnis}{}% 48
-\BOOKMARK [0][]{chapter*.15}{Bibliography}{}% 49
+\BOOKMARK [2][]{subsection.4.2.1}{Spans}{section.4.2}% 24
+\BOOKMARK [2][]{subsection.4.2.2}{Tracingcontext innerhalb eines Systems}{section.4.2}% 25
+\BOOKMARK [2][]{subsection.4.2.3}{Tracingcontext \374ber Systemgrenzen}{section.4.2}% 26
+\BOOKMARK [1][]{section.4.3}{Verarbeitungsmodell}{chapter.4}% 27
+\BOOKMARK [2][]{subsection.4.3.1}{Agenten}{section.4.3}% 28
+\BOOKMARK [2][]{subsection.4.3.2}{Collectoren}{section.4.3}% 29
+\BOOKMARK [1][]{section.4.4}{Visualisierung}{chapter.4}% 30
+\BOOKMARK [2][]{subsection.4.4.1}{Tracegraph}{section.4.4}% 31
+\BOOKMARK [2][]{subsection.4.4.2}{Dreidimensionale Flammengraphen}{section.4.4}% 32
+\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 33
+\BOOKMARK [1][]{section.5.1}{Instrumnetalisierungsbibliothek: Traktor}{chapter.5}% 34
+\BOOKMARK [1][]{section.5.2}{Traktor Agent}{chapter.5}% 35
+\BOOKMARK [1][]{section.5.3}{Traktor Registry}{chapter.5}% 36
+\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 37
+\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 38
+\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 39
+\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 40
+\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 41
+\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 42
+\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 43
+\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 44
+\BOOKMARK [0][]{chapter.7}{Fazit}{}% 45
+\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 46
+\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 47
+\BOOKMARK [0][]{section*.13}{Glossar}{}% 48
+\BOOKMARK [0][]{section*.15}{Abk\374rzungsverzeichnis}{}% 49
+\BOOKMARK [0][]{chapter*.17}{Bibliography}{}% 50

@@ -18,6 +18,12 @@ Viele Bereiche der Wirtschschaft, der Wisschenschaft und grundsätzlich des allt
 Dabei spielen zwei Eigenschaften in der Überwachung der Anwendung eine zentrale Rolle. 
 Zum einen ist das die (\lowroman{1}) \emph{Performance} und zum anderen die (\lowroman{2}) \emph{Korrektheit}.
 
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.5]{img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png}
+	\caption[Kausaler Pfad einer Vorgangs in dem verteilten rendering System]{Kausaler Pfad einer Vorgangs in dem verteilten rendering System}
+	\label{fig:Anwendungsueberwachung_Gesamtsystem}
+\end{figure}
 
 \textbf{Performance} \space\space\space 
 Viele Anwendungsbereiche setzten gewisse Rahmenbedingungen, die erfüllt werden müssen. 
@@ -31,18 +37,23 @@ Anschließend wird die Eingabe (3) Empfangen.
 Auch die (4) Verarbeitung im verteilten System, das für den Benutzer, wie in \cref{subsection:Eigenschaften eines verteilten Systems} definiert, nicht als solches kenntlich sein muss, generiert in diesem Beispiel ein Event.
 Die Antwort wird (5) gesendet und die (6) Übermittlung wird durchgeführt.
 Zuletzt wird die Antwort (7) empfangen. Das Empfangen schließt den Pfad ab. Die Gesamtdauer des Pfades wird als Latenz eines Frames bezeichnet.
-Daraus kann eine Durschschnittslatenz über eine Zeitspanne berechnet werden, welches als Performanceindikator dient. Die Zeitspanne zwischen den einzelnen Events können verglichen werden. Dabei ist es möglich sog. \emph{Bottlenecks} zu identifizieren. Bottlnecks sind Vorgänge, die einen großteil der Gesamtdauer ausmachen. Sind werden durch die Zeitspanne zwischen zwei Events, die auf dem \emph{kritischen Pfad} liegen, bestimmt. Diese Art der Anwendungsüberwachung soll die Möglichkeit bieten, Bottlenecks zu identifizieren. Wie in \cref{subsection:Ordnung von Events} beschrieben, verlangt eine Messung der Zeit über verschiedene physikalisch Entitäten entweder eine globale physikalische Uhr oder jeweils eine physikalische Uhr in jeder Entität, die über alle Entitäten synchrone sind beziehungsweise, synchronisiert werden. Dabei stellt sich die Frage, \emph{inwiefern eine solche Zeitmessung von Zeitspannen zwischen Events konzipiert werden kann. } 
+Daraus kann eine Durschschnittslatenz über eine Zeitspanne berechnet werden, welches als Performanceindikator dient. Die Zeitspanne zwischen den einzelnen Events können verglichen werden. Dabei ist es möglich sog. \emph{Bottlenecks} zu identifizieren. Bottlnecks sind Vorgänge, die einen großteil der Gesamtdauer ausmachen. Sind werden durch die Zeitspanne zwischen zwei Events, die auf dem \emph{kritischen Pfad} liegen, bestimmt. Diese Art der Anwendungsüberwachung soll die Möglichkeit bieten, Bottlenecks zu identifizieren. Wie in \cref{subsection:Ordnung von Events} beschrieben, verlangt eine Messung der Zeit über verschiedene physikalisch Entitäten entweder eine globale physikalische Uhr oder jeweils eine physikalische Uhr in jeder Entität, die über alle Entitäten synchrone sind beziehungsweise, synchronisiert werden. Dabei stellt sich die Frage \textbf{F1}:
 
+\begin{quote}
+	\cbstart
+		\textbf{F1:}\\
+		Inwiefern lässt sich eine Zeitmessung von Eventzeitspannen konzipieren
+	\cbend
+\end{quote}
 
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[scale=0.5]{img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png}
-	\caption[Kausaler Pfad einer Vorgangs in dem verteilten rendering System]{Kausaler Pfad einer Vorgangs in dem verteilten rendering System}
-	\label{fig:Anwendungsueberwachung_Gesamtsystem}
-\end{figure}
+\textbf{Korrektheit} \space\space\space Die Korrektheit eines Systems ist dann gegeben, wenn die Eigenschaften eines Systems einer \emph{Spezifikation} entsprechen. Das bedeutet, dass die Beobachtung des Verhaltens einer (verteilten) Anwendung nicht ausreicht, um seine Korrektheit zu beweisen. Tracing soll also nicht die Korrektheit einer verteilten Anwendung beweisen. Tracing kann aber dabei unterstützen, indem es das Verhalten einer Anwendung beobachtbar macht. Insbesondere die Zusammenhänge der Komponenten und die entstehenden Nebenläufigkeiten sind erschwerende Faktoren in der Verifikation. So stellt sich die Frage \textbf{F2}:
 
-\textbf{Korrektheit} \space\space\space Die Korrektheit eines Systems ist dann gegeben, wenn die Eigenschaften eines Systems einer \emph{Spezifikation} entsprechen. Das bedeutet, dass die Beobachtung des Verhaltens einer (verteilten) Anwendung nicht ausreicht, um seine Korrektheit zu beweisen. Tracing soll also nicht die Korrektheit einer verteilten Anwendung beweisen. Tracing kann aber dabei unterstützen, indem es das Verhalten einer Anwendung beobachtbar macht. Insbesondere die Zusammenhänge der Komponenten und die entstehenden Nebenläufigkeiten sind erschwerende Faktoren in der Verifikation. So stellt sich die Frage, ob \emph{kausal zusammenhängende Events derart dargestellt werden können, dass anhand einer Visualisierung feststellbar ist, ob das Verhalten der Anwendung starke Ausreißer, die auf Fehlimplmenentierung deuten könnten, aufweist.}
-
+\begin{quote}
+	\cbstart
+	\textbf{F2:}\\
+	Welche Visualisierungsformen können genutzt werden, um kausal zusammenhängende Events derart darzugestellen, sodass anhand der Visualisierung feststellbar ist, ob das Verhalten der Anwendung starke Ausreißer, die auf Fehlimplmenentierung deuten könnten, aufweist.
+	\cbend
+\end{quote}
 
 \section{Zusammenführung von Events}
 \label{section: Ordnungsproblem von Events}
@@ -112,9 +123,11 @@ Nach der Definition von \textbf{D} ist es mit $\text{b}$ gleichzusetzen, somit i
 
 Aus dieser Darstellung folgern zwei Fragestellungen:
 \begin{quote}
-	(\lowroman{1}) Müssen Traceingwerkzeuge ähnliche Terminierungsmechanismen implementieren, wie z.B Netzwerkprotokolle, um alle Events, in allen Prozessen, zu erkennen?
+	\cbstart
+	\textbf{F3:} Müssen Traceingwerkzeuge ähnliche Terminierungsmechanismen implementieren, wie z.B Netzwerkprotokolle, um alle Events, in allen Prozessen, zu erkennen?
 	
-	(\lowroman{2}) Welche Darstellungensformen gibt es für verteilte Tracingdaten?
+	\textbf{F4:} Welche Darstellungensformen gibt es für verteilte Tracingdaten?
+	\cbend
 \end{quote}
 
 
