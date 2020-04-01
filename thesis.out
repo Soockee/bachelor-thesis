@@ -25,8 +25,8 @@
 \BOOKMARK [2][]{subsection.4.2.2}{Tracingcontext innerhalb eines Systems}{section.4.2}% 25
 \BOOKMARK [2][]{subsection.4.2.3}{Tracingcontext \374ber Prozessgrenzen}{section.4.2}% 26
 \BOOKMARK [1][]{section.4.3}{Verarbeitungsmodell}{chapter.4}% 27
-\BOOKMARK [2][]{subsection.4.3.1}{Agenten}{section.4.3}% 28
-\BOOKMARK [2][]{subsection.4.3.2}{Collectoren}{section.4.3}% 29
+\BOOKMARK [2][]{subsection.4.3.1}{Reporter}{section.4.3}% 28
+\BOOKMARK [2][]{subsection.4.3.2}{Kollektor}{section.4.3}% 29
 \BOOKMARK [1][]{section.4.4}{Visualisierung}{chapter.4}% 30
 \BOOKMARK [2][]{subsection.4.4.1}{Tracegraph}{section.4.4}% 31
 \BOOKMARK [2][]{subsection.4.4.2}{Dreidimensionale Flammengraphen}{section.4.4}% 32
@@ -45,6 +45,6 @@
 \BOOKMARK [0][]{chapter.7}{Fazit}{}% 45
 \BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 46
 \BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 47
-\BOOKMARK [0][]{section*.14}{Glossar}{}% 48
-\BOOKMARK [0][]{section*.16}{Abk\374rzungsverzeichnis}{}% 49
-\BOOKMARK [0][]{chapter*.18}{Bibliography}{}% 50
+\BOOKMARK [0][]{section*.17}{Glossar}{}% 48
+\BOOKMARK [0][]{section*.19}{Abk\374rzungsverzeichnis}{}% 49
+\BOOKMARK [0][]{chapter*.21}{Bibliography}{}% 50

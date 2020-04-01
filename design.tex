@@ -9,7 +9,7 @@
 
 \chapter{Design}
 \label{chapter:Design}
-In diesem Kapitel werden die in \cref{chapter:Problembeschreibung} beschriebenen Problemstellung bearbeitet. Anfänglich werden Designziele definiert, die den Rahmen für die Konzipierung bilden. In \cref{section:Datenmodell} wird ein Datenmodell vorgestellt, welches sich an Standards von bereits existierenden Tracingmodellen orientiert. \cref{section:Verarbeitungsmodell} präsentiert ein Konzept zur verarbeitung der erhobenen Tracingdaten. Der \cref{section:Visualisierung} beschäftigt sich mit der Darstellung der Tracingdaten zur Informationsgewinnen durch den Anwender der Bibliothek. Somit wird ein Konzept für die Tracinginfrastruktur zur Erhebung, Verarbeitung und Visualisierung von Tracingdaten vorgestellt.
+In diesem Kapitel werden die in \cref{chapter:Problembeschreibung} beschriebenen Problemstellung bearbeitet. Anfänglich werden Designziele definiert, die den Rahmen für die Konzipierung bilden. In \cref{section:Datenmodell} wird ein Datenmodell vorgestellt, welches sich an Standards von bereits existierenden Tracingmodellen orientiert. \cref{section:Verarbeitungsmodell} präsentiert ein Konzept zur verarbeitung der erhobenen Tracingdaten. Der \cref{section:Visualisierung} beschäftigt sich mit der Darstellung der Tracingdaten zur Informationsgewinnen durch den Anwender der Bibliothek. Somit wird ein Konzept für die Tracinginfrastruktur \textbf{Traktor }zur Erhebung, Verarbeitung und Visualisierung von Tracingdaten vorgestellt.
 
 \section{Designziele}
 \label{section:Designziele}
@@ -39,7 +39,7 @@ Dapper ist für eine Infrastruktur konzipiert, die globalen  Maßstäben entspri
 
 \textbf{Anwendungs-Level Transparenz}\space\space\space Instrumentalisierung erfordert eingreifen in Anwendungsquellcode. Dapper löst dies durch Ausnutzung von Bibliotheken. Diese werden Instrumentalisiert und in der Anwendungslogik verwendet. Somit ist die Tracinginfrastruktur für den Anwendungsentwickler nicht wahrnehmbar. Die Instrumentalisierung des verteilten rendering Systems soll an semantisch relevanten Bereichen stattfinden und flexibel sein. Dies gelingt durch direktes modifizieren der Anwendungslogik. Der Anwendungsentwickler muss sich dementsprechend selbst um die Instrumentalisierung kümmern. 
 
-\textbf{Skalierbarkeit} \space\space\space Das verteilte rendering System ist, in seiner einfachsten Form, statisch. Das bedeutet, dass eine Skalierbarkeit keine zentrale Rolle in dem Design der Tracinginfrastruktur darstellt. Die Skalierbarkeit soll allerdings bewertet werden. 
+\textbf{Skalierbarkeit} \space\space\space Der Aufbau des verteilte rendering System ist, in seiner einfachsten Form, statisch. Das bedeutet, dass eine Skalierbarkeit keine zentrale Rolle in dem Design der Tracinginfrastruktur darstellt. Die Skalierbarkeit soll allerdings bewertet werden. 
 
 \section{Datenmodell}
 \label{section:Datenmodell}
@@ -52,16 +52,35 @@ Dieses Problem erfordert die Konzipierung eines Datenmodells, welches drei Aspek
 
 Das Datenmodell beruht auf dem Spanmodell, welches in der vorher beschrieben Fachpuplikation \emph{Dapper} vorgestellt, durch die Spezifikation von \emph{Opentracing} erweitert und dem Anwendungsfall des verteilten rendering Systems und des Entwicklungsprojekts angepasst wird.
 
-Ein Überblick über das Spanmodell wird gezeigt. Ein \emph{Trace} bildet die größte Einheit des Modells ab. Traces sind Eventsammlungen, die den Weg einer Anfrage durch ein verteiltes System darstellen.Ein Trace ist die Reise der Anfrage, wohingegen einzelne Events die Etappen dieser Reise sind.Die Events werden weiterführend als Spans bezeichnet.  Ein Trace beinhaltet ein bis beliebig viele \emph{Spans}. Ein Span ist die kleinste Einheit eines Traces. Spans bilden einen Arbeitsprozess innerhalb eines Prozesses ab. Innerhalb eines \emph{Threads} ist zu jeder Zeit nur ein Span \emph{aktiv}.
+Ein Überblick über das Spanmodell wird gezeigt. Ein \emph{Trace} bildet die größte Einheit des Modells ab. Traces sind Eventsammlungen, die den Weg einer Anfrage durch ein verteiltes System darstellen.Ein Trace ist die Reise der Anfrage, wohingegen einzelne Events die Etappen dieser Reise sind. Die Events werden weiterführend als Spans bezeichnet.  Ein Trace beinhaltet ein bis beliebig viele \emph{Spans}. Ein Span ist die kleinste Einheit eines Traces. Spans bilden einen Arbeitsprozess innerhalb eines Prozesses ab. Innerhalb eines \emph{Threads} ist zu jeder Zeit nur ein Span \emph{aktiv}.
 
 
 \subsection{Spans}
 \label{subsection:Spans}
+Um Daten zu repräsentieren und zusammenzufassen, braucht es einen Datencontainer. Die Datencontainer eines Traces sind Spans. Spans beinhalten die Daten die nötig sind, um eine Reihenfolge herzustellen. Ausserdem besteht die Möglichkeit Anwendungsinformationen, wie zum Beispiel Anwendungslogs, in Spans mitzuführen.
+
+Ein Span kapselt folgende Informationen:
+\begin{itemize}
+	\item Ein Operationsnamen
+	\item Ein Startzeitpunkt
+	\item Ein Endzeitpunkt
+	\item Ein Spankontext
+\end{itemize}
+
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.7]{img/Design/Span.png}
 	\caption[Zeitliche Darstellung eines Spans]{Darstellung eines Spans mit Anfangszeit, Endzeit und Operationsnamen}
-	\label{fig:SpanThreadKontext}
+	\label{fig:Span}
+\end{figure}
+
+Der Spankontext wiederum ist auch ein Datencontainer. Dieser beinhaltet eine \emph{SpanID} und eine \emph{TraceID}. Auch ein Beziehungstyp mitgeführt. Der Beziehungstyp kann zum einen eine \emph{Child-of} Beziehung oder eine \emph{Follows-From} Beziehung annehmen. Die SpanID ist eine eindeutig identifizierbare Nummer, die bei der Erstellung eines Spans generiert und in dem Spankontext gespeichert wird. Die TraceID ist eine eindeutig identifizierbare Nummer, die bei der Erstellung des ersten Spans eines Traces erstellt wird. Die TraceID wird auch in dem Spankontext gespeichert. Nachfolgende Spans, die zu diesem Trace gehören, übernehmen die TraceID. Dadurch ist eine Zuordnung jedes Spans zu einem Trace gegeben. Die zeitliche Einordnung des Startzetpunktes und des Endzeitpunktes eines Spans ist in  \cref{fig:Span} dargestellt. Die Konzipierung der Start- und Endzeit sind die zentralen Daten, mit der sich Fragestellung \textbf{F1} lösen lässt. Durch die Relationbildung mittels einer Beziehungstypdefinition und der Zeitstempel, ist eine Zeitmessung von Eventzeitspannen gegeben. Das Beispiel aus \cref{fig:Eventzeitspannen} verdeutlicht dies. Die Gesamtzeit eines Events bzw. eines Spans lässt sich durch die Differenz zweier Zeitstempel ermitteln. Die Zeitspanne die von dem Span \emph{FormatiereNachricht} eingenommen wird, ergibt sich aus $t3 - t2$. Dies wäre ein Event mit einer Lebensdauer von 0.5. Die Relationstypen werden dazu genutzt, um den Zustand des Traces zu definieren. Ein Trace ist dann abgeschlossen, sobald der letzte Span eines Traces, ohne \emph{Child-Of} Beziehung beendet ist. \emph{EmpfangeAntwort} ist in diesem Fall der letzte Span. Ausserdem besitzt dieser keinen Übergeordneten Span, gegeben aus einer \emph{Follows-From} Beziehung zum Ursprungsspan. Daraus folgert der Abschluss des Traces.
+
+\begin{figure}[!b]
+	\centering
+	\includegraphics[scale=0.7]{img/Design/Eventzeitspannen.png}
+	\caption[Zeitmessung von Spans eines Traces]{Darstellung eines Trace mit mehreren Spans. Anfangszeit und Endzeit ergeben die Gesamtzeit eines Traces}
+	\label{fig:Eventzeitspannen}
 \end{figure}
 
 
@@ -91,20 +110,41 @@ Im ersten Beisiel sei gegeben, dass eine Anwendung ein Thread implementiert. Dab
 
 Im zweiten Beispiel sei gegeben, dass eine Anwendung zwei Threads implementiert. Es exisitert ein Trace, welches Event 1 beinhaltet. Thread 1 beinhaltet Event 1. Event 1 sorgt für die die Erstellung eines Scopes in dem der Span von Event 1 erstellt und aktiviert wird. Kontextwechsel K1 findet statt. Der Scope schließt in Thread 1 schließt. Da Event 1 in Thread 2 weitergeführt wird, beendet der Span nicht bei K1. In Thread 2 findet die Weiterführung von Event 1 statt, weshalb ein Scope eröffnet wird. In diesem Scope wird der in dem vorherigen Scope aktive Span eingeführt. Dies stellt die Kontextübermittlung dar. Event 1 endet anschließend und Trace 1 wird geschlossen.
 
-Diese beiden Beispiele zeigen die Relevanz von Scopes zur Verfolgung des Kontexts innerhalb eines Systems ohne Netzwerkkommunikation. Sie lösen das Problem der Kontextverfolgbarkeit. Damit lassen sich Endzeiten von Spans innerhalb eines Systems, auch über Threadgrenzen hinaus, bestimmen. 
+Diese beiden Beispiele zeigen die Relevanz von Scopes zur Verfolgung des Kontexts innerhalb eines Systems ohne Netzwerkkommunikation. Scopes lösen das Problem der lokalen  Kontextverfolgbarkeit. Damit lassen sich Endzeiten von Spans innerhalb eines Systems, auch über Threadgrenzen hinaus, bestimmen. 
 
 \subsection{Tracingcontext über Prozessgrenzen}
 \label{subsection:Tracingcontext über Systemgrenzen}
 
-Die Kontextverfolgung über Prozessgrenzen stellt wohl das schwierigste Problem im verteilten tracing dar.
+	\textbf{F3:} Welche Konzepte für Tracingwerkzeugegibt es, um über Prozessgrenzen hinaus Relationen bilden zu können, bei der eine Reihenfolge der Events feststellbar ist
 
+Die Kontextverfolgung über Prozessgrenzen stellt wohl das schwierigste Problem im verteilten tracing dar. Im Fokus steht hierbei die Fragestellung \textbf{F3}. Es werden zwei Konzepte vorgestellt, die es ermöglichen sollen, Tracingkontext über Prozessgrenzen hinaus zu transportieren. 
+
+
+Das erste Konzept ist die \textbf{Traktor Registry}. 
+Der Infrastrukturaufbau, bestehend aus der Registry und der Tracer, die mit der Registry verbunden sind, erfüllt die Aufgabe der Kontextpropagierung. Die Traktor Registry dient als Nachrichtenproxy für die Tracer-Instanzen. Bei der Initialisierung einer Traktorinstanz stellt diese eine Websocketverbindung zur Registry her. Bei eingeleiteter Kontextpropagieren wird eine Websocketnachricht, die den Tracekontext beinhaltet, an die Registry gesendet. Die Registry empfängt die Nachricht und sendet diese an ihr Zieltracer weiter. Der Zieltracer, der auch eine Verbindung zur Registry aufgebaut hat, empfängt die Nachricht. Der Nachrichteninhalt wird extrahiert und für die Erstellung für kommende Spans des aktuellen Traces und der damit verbundenen Relationsbildung genutzt. Die Verarbeitungsablauf dieses Registryservices lässt sich aus \cref{fig:Traktor-Registry} erschließen.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.65]{img/Design/Traktor-Registry.png}
+	\caption[Aktivitätendiagramm der Traktor Registry]{Aktivitätendiagramm der Traktor Registry}
+	\label{fig:Traktor-Registry}
+\end{figure}
+
+Das zweite Konzept beruht auf dem Abfangen und dem Modifizieren von spezifizierten Nachrichten, die aus dem System gesendet werden. Es werden Betriebssystemabähngige Funktionalitäten genutzt, um ausgehende Nachrichten zu identifizieren und einzuordnen. Dabei wird auf Nachrichten gelauscht, die von einem Port ausgehen, die die Anwendungskomponente belegt. Entspricht diese Nachricht den Vorgaben, kann diese um Kontextdaten erweitert werden. Anschließend wird die Nachricht in modifizierter Form an ihren Empfänger weitergeleitet. Auf dem Empfängersystem sitzt der gleiche \emph{Interceptor}. Dieser lauscht auf auf eingehende Nachrichten und filtert, wie beim Senden, die gewünschten Nachrichten heraus. Der Tracingkontext wird aus der Nachricht extrahiert. Anschließend wird die Nachricht, so wie sie von der Senderanwendung geschickt wurde, an die Empfängeranwendung weitergeleitet. \cref{fig:Nachrichteninterceptor} zeigt das die Nachrichtenmodifikation, bei der ein Anwendung auf dem Sendersystem Nachrichten über die Ports 8080 und 8090 an eine Empfängeranwendung sendet. Ports die nicht von der Anwendung beansprucht werden, wie zum Beispiel Port 1337, sind von der Modifikation nicht betroffen. Der Interceptor erweitert die Nachrichten um den TrancingKontext, welches von dem Emfpängerinterceptor entpackt werden. Durch diese Funktionalität lässt sich die Registry, also einem potentiellen \emph{single point of failure}, ersetzten. Allerdings werden dazu auf jedem System zusätzliche, neben der Anwendung laufende, Scripte benötigt.
+
+ \begin{figure}[!t]
+ 	\centering
+ 	\includegraphics[scale=0.65]{img/Design/Nachrichteninterceptor.png}
+ 	\caption[Design des Nachrichteninterceptor]{Design des Nachrichteninterceptor}
+ 	\label{fig:Nachrichteninterceptor}
+ \end{figure}
 
 \section{Verarbeitungsmodell}
 \label{section:Verarbeitungsmodell}
-\subsection{Agenten}
-\label{subsection:Agenten}
-\subsection{Collectoren}
-\label{subsection:Collectoren}
+\subsection{Reporter}
+\label{subsection:Reporter}
+\subsection{Kollektor}
+\label{subsection:Kollektor}
 
 \section{Visualisierung}
 \label{section:Visualisierung}
