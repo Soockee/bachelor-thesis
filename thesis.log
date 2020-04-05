@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  6 APR 2020 00:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  6 APR 2020 01:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2231,13 +2231,14 @@ Overfull \hbox (12.56679pt too wide) in paragraph at lines 207--209
  []|  [] 
  []
 
-<img/Design/3D-Flammengraph-Vergleich.png, id=655, 1034.86626pt x 323.2075pt>
+[32 <./img/Design/3D-Flammengraph-Konzept.png>]
+<img/Design/3D-Flammengraph-Vergleich.png, id=660, 1034.86626pt x 343.2825pt>
 File: img/Design/3D-Flammengraph-Vergleich.png Graphic file (type png)
 <use img/Design/3D-Flammengraph-Vergleich.png>
 Package pdftex.def Info: img/Design/3D-Flammengraph-Vergleich.png  used on inpu
-t line 219.
-(pdftex.def)             Requested size: 413.93916pt x 129.2807pt.
-) (./implementierung.tex [32 <./img/Design/3D-Flammengraph-Konzept.png>]
+t line 217.
+(pdftex.def)             Requested size: 413.93916pt x 137.31056pt.
+) (./implementierung.tex
 [33 <./img/Design/3D-Flammengraph-Vergleich.png>]
 chapter 5.
 ) (./evaluierung.tex [34
@@ -2337,7 +2338,7 @@ ublic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (49 pages, 708306 bytes).
+Output written on thesis.pdf (49 pages, 709436 bytes).
 PDF statistics:
  872 PDF objects out of 1000 (max. 8388607)
  752 compressed objects within 8 object streams
