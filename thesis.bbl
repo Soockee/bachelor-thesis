@@ -19,6 +19,16 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{mantime}{manual}{}
+      \field{labelalpha}{13}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{edition}{3.54}
+      \field{month}{9}
+      \field{title}{{time(1) Linux User's Manual}}
+      \field{year}{2013}
+    \endentry
     \entry{10.5555/2387880.2387910}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=104d8fc06f8928b6d9db8820656f5573}{%

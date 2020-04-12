@@ -49,9 +49,26 @@ Die Tracer API erweitert die OpenTracing API um vier Funktionen, die notwendig s
 Die Kontextdaten werden in einer \emph{Carrier} Instanz gespeichert und über die Leitung gesendet. In der Implementierung gibt es einen Carriertyp. Der BinaryCarrier ist ein Datencontainer, der die Kontextinformationen als MemoryStream speichert. Der MemoryStream speichert die Daten im Arbeitsspeicher als Bytearray. Das Format würde für die Übertragung über eine TCP/IP Verbindung ausgewählt. 
 Die Spangenerierung wird durch eine \emph{SpanBuilder} Instanz geregelt. Der Operationsname wird der SpanBuilder Instanz mitgegeben und für die Generierung des Spans genutzt. Die Kontextpropagierung wird durch die beiden sich ergänzenden asynchronen Funktionen \emph{SendContext} und \emph{ReceiveContext} implementiert. Diese nutzen die \emph{Extract} und \emph{Inject}, um die BinaryCarrier zu erstellen beziehungsweise die Daten aus dem Carrier zu extrahieren.
 
+Der Tracer hält eine \textbf{Scopemanager} Instanz. Der Scopemanager verwaltet die Spans. Über den Scopemanager kann der Tracer den aktuell aktiven Span ermitteln.
+
 
 \subsection{Span}
 \label{subsection:Span}
+Der Span ist beinhaltet alle relevanten Daten, die für das Repäsentieren eines Events in einem System notwendig sind. Darunter zählt ein Operationsname. Der Operationsname kann beispielsweise die Sematik des Events beschreiben. Auch bietet sich ein Funktionsname innerhalb der Anwendung an, falls der Span genau diesen umfasst. Der \textbf{Startzeitstempel} und der \textbf{Endzeitstempel} beschreibt die Zeitspanne, in der das Event stattfindet. Diese sind in der Implementierung \emph{Datetime} instanzen. Das Datetimeformat, welches für die tracinginfrastruktur genutzt wird, hat folgenden Aufbau:
+
+\begin{minipage}[]{\textwidth}
+	\begin{lstlisting}[frame=trBL]
+	MM/dd/yyyy hh:mm:ss.ffff tt
+	\end{lstlisting}
+	\captionof{lstlisting}{Zeitstempelformat der Spans}
+	\label{listing:Tracer Verbindungsaufbau}
+\end{minipage} 
+
+Der Aufbau orientiert sich an dem amerikanischen Zeitformat. \textbf{MM} steht für den Monat, \textbf{dd} für den Tag und \textbf{yyyy} für das Jahr. Interessanter wird es bei dem Tageszeitformat, den in einem System bei dem Zeit eine kritische Rolle spielt, sind kleinste Zeitunterschiede von Bedeutung. \textbf{hh} und \textbf{mm} sind entsprechend die Stunden und Minunten. \textbf{ss.ffff} entspricht den Sekunden und dem tausendstel einer Sekunde. Die \textbf{Systemuhr Resolution} ist an dieser Stelle erwähnenswert. Die Resolution einer Uhr beschreibt die kleinste Einheit von Zeit, die akkurat von einer Uhr gemessen werden kann. Die Resolution der Systemuhr hängt von dem Betriebsystem ab. In einem Windows 8  Betriebsystem ist die Standardresolution bei 15.6 ms. Das .NET Framework, welches für die Implementierung genutzt wird, behandelt verschiedene Timer wiederum eigenständig. Diese kann manuell auf 0.5 reduziert werden. In einem Linux-basierenden Betriebssystem hängt die Resolution von der Software Clock ab. Dabei wird die Zeit in sog. \textbf{Jiffies} gemessen. Die Linux-Kernel version 2.6.0 führt eine jiffiegröße von 0.001 sekunden ein\footpartcite{mantime}. Dementsprechen sind die gemessenen Zeitstempel mit diesen Hintergrundinformationen zu bewerten.
+
+Ein Span besitzt einen Spankontext und eine Referenzliste. Der Inhalt des Spankontext wird in \cref{subsection:SpanContext} beschrieben. Die Referenzliste beinhaltet alle Spans, die eine \textbf{Happens-Before Relation} zu dem Span aufweisen. Das bedeutet, das alle Elternspans, beispielsweise aus \emph{Child-Of} und \emph{Follows-From} resultierenden Beziehungen, in dieser Liste referenziert werden.
+
+Schlussendlich kennt ein Span seinen Tracer. Dies ist erforderlich, da beim fertigstellen des Spans die \emph{Finish} Funktion aufgerufen wird. Diese sorgt dafür, das der Endzeitstempel gesetzt wird. Ausserdem wird die \emph{Report} Funktion der Reporterinstanz, bekannt durch den Tracer, aufgerufen.
 
 \subsection{SpanBuilder}
 \label{subsection:SpanBuilder}
