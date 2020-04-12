@@ -9,7 +9,7 @@
 \chapter{Implementierung}
 \label{chapter:Implementierung}
 
-In diesem Kapitel werden Implementierungen von Prototypen gezeigt, die im Kapitel \cref{chapter:Design} besprochen sind. In \cref{section:Instrumentalisierungsbibliothek: Traktor} werden die implementierungsdetails der Instrumentalisierungsbilbiothek \textbf{Traktor} vorgestellt. In \cref{section:Traktor Agent} und in \cref{section:Traktor Registry} die werden die Traktor Services beschrieben. Anschließend werden zwei Anwendungsfälle gezeigt. Der Anwendungsfall des rendering System in \cref{section:Unity Rendering System} und der Anwendungsfall einer verteilten Webanwendung in \cref{section:Webserver Entwicklungsumgebung}
+In diesem Kapitel werden Implementierungen von Prototypen gezeigt, die im Kapitel \cref{chapter:Design} besprochen sind. In \cref{section:Instrumentalisierungsbibliothek: Traktor} werden die implementierungsdetails der Instrumentalisierungsbilbiothek \textbf{Traktor} vorgestellt. In \cref{section:Traktor Agent} und in \cref{section:Traktor Registry} werden die Traktor Services beschrieben. Anschließend werden zwei Anwendungsfälle gezeigt. Der Anwendungsfall des rendering System in \cref{section:Unity Rendering System} und der Anwendungsfall einer verteilten Webanwendung in \cref{section:Webserver Entwicklungsumgebung}
 
 \section{Instrumentalisierungsbibliothek: Traktor}
 \label{section:Instrumentalisierungsbibliothek: Traktor}
@@ -19,11 +19,54 @@ Traktor ist eine Instrumentalisierungsbibliothek, die sich die OpenTracing API a
 
 Die Traktor Instrumentalisierungsbibliothek beinhaltet zwei wichtie Einheiten. Das ist zum einen der \textbf{Tracer} und zum anderen \textbf{Spans}. 
 
-\textbf{Tracer}\space\space\space Der Tracer ist die zentrale Verwaltungseinheit der Instrumentalisierung. Dieser verwaltet die Verbindung der Anwendungsinstrumentalisierung zu dem Agenten und der Registry. Der Tracer kümmert sich um das Generieren von Spans und die Herstellung von kausalzusammenhängenen zwischen den Spans. Ausserdem stellt der Tracer die Funktionalitäten zur Kontextpropagierung über die Registry bereit. Die Spans sind Darstellungen von ausgeführter Arbeit in einer instrumentalisierten Anwendung. 
-
 \textbf{Span}\space\space\space Die Spans tragen die Daten, die für eine Ordnungsbildung notwendig sind. Das sind zum einen die Zeitstempel der Startzeit und der Endzeit der ausgeführten arbeit, sowie Identifikationsnummer zur identifizierung der Spans. Die Identifizierung muss durch zwei Daten gegeben sein. Die TraceID stellt die zugehörigekeit eines Spans zu einem Trace dar. Die SpanID ist die Nummer, die ein Span innerhalb eines Traces von anderen Spans unterscheidbar macht. Ein Spankontext wird im Span gespeichert. Dieser stellt gegebenenfalls die nötige Relation zu einem Elternspan her. Durch die Verfolgung der Kontextinhalte, lassen sich die Traces rekonstruieren und eine anschließene Analyse beziehungsweise eine Visualisierung durchführen.
 
+\subsection{Tracer}
+\label{subsection:Tracer}
+Der Tracer ist die zentrale Verwaltungseinheit der Instrumentalisierung. Dieser verwaltet die Verbindung der Anwendungsinstrumentalisierung zu dem Agenten und der Registry. Der Tracer kümmert sich um das Generieren von Spans und die Herstellung von Kausalzusammenhängen zwischen den Spans. Ausserdem stellt der Tracer die Funktionalitäten zur Kontextpropagierung über die Registry bereit. Die Spans sind Darstellungen von ausgeführter Arbeit in einer instrumentalisierten Anwendung. 
 
+Die Tracer API erweitert die OpenTracing API um vier Funktionen, die notwendig sind, um sich mit der Tracinginfrastuktur zu verbinden. Die \emph{Configure} Funktion sorgt für einen Verbindungsaufbau, abhängig von den übergebenen Parametern. Ein vollständiger Verbindungsaufbau ist nötig, um eine Kontextpropagierung zu ermögliche. Ausserdem wird der Udp Klient initzialisiert, damit beendete Spans reportet werden können. Der Udp klient hat einen Port zu belegen, der angegeben werden muss. Die IP-Adressen der Services sind dem Tracer bekannt zu geben. Auch der Port auf der die Anwendung lauscht, muss übergeben werden. Die Configure Funktion verwendet die \emph{Register} Funktion zur Erstellung einer \textbf{WebSocketClient} Instanz. Die Websocketverbindung wird über die Lebensdauer des Tracer offen gehalten. Über diesen Kommunikationskanal werden die Kontextinformationen übermittelt. \cref{listing:Tracer Verbindungsaufbau} zeigt eine Beispielhafte Konfigurierung. Dabei wird eine Tracerinstanz instanziiert und mit den Adressen der Traktorservices konfiguriert.
+
+\begin{minipage}[]{\textwidth}
+	\begin{lstlisting}[frame=trBL]
+	using Traktor;
+	
+	var registryAddress = "localhost";
+	var registryPort = "8080";
+	var agentAddress = "localhost"
+	var agentPort = 13337;
+	var reporterPort = 13338;
+	
+	Tracer tracer = new Tracer()
+	tracer.Configure(registryAddress,registryPort,agentAddress,
+				agentPort,reporterPort);
+	
+	\end{lstlisting}
+	\captionof{lstlisting}{Tracer Verbindungsaufbau mit der Registry und dem Reporter }
+	\label{listing:Tracer Verbindungsaufbau}
+\end{minipage} 
+
+Die Kontextdaten werden in einer \emph{Carrier} Instanz gespeichert und über die Leitung gesendet. In der Implementierung gibt es einen Carriertyp. Der BinaryCarrier ist ein Datencontainer, der die Kontextinformationen als MemoryStream speichert. Der MemoryStream speichert die Daten im Arbeitsspeicher als Bytearray. Das Format würde für die Übertragung über eine TCP/IP Verbindung ausgewählt. 
+Die Spangenerierung wird durch eine \emph{SpanBuilder} Instanz geregelt. Der Operationsname wird der SpanBuilder Instanz mitgegeben und für die Generierung des Spans genutzt. Die Kontextpropagierung wird durch die beiden sich ergänzenden asynchronen Funktionen \emph{SendContext} und \emph{ReceiveContext} implementiert. Diese nutzen die \emph{Extract} und \emph{Inject}, um die BinaryCarrier zu erstellen beziehungsweise die Daten aus dem Carrier zu extrahieren.
+
+
+\subsection{Span}
+\label{subsection:Span}
+
+\subsection{SpanBuilder}
+\label{subsection:SpanBuilder}
+
+\subsection{SpanContext}
+\label{subsection:SpanContext}
+
+\subsection{Scope}
+\label{subsection:Scope}
+
+\subsection{ScopeManager}
+\label{subsection:SpanManager}
+
+\subsection{Reporter}
+\label{subsection:Reporter}
 \newpage
 \begin{landscape}
 	\begin{figure}

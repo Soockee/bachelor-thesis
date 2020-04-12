@@ -28,16 +28,24 @@
 \usepackage[figurename=Abbildung]{caption}
 \usepackage{graphicx}                % Graphiken
 \usepackage{booktabs}                % Tabellen schöner
-\usepackage{listingsutf8}            % Listings mit Einstellungen
 \usepackage{chngcntr}
 \usepackage[xcolor,leftbars]{changebar}
 \usepackage{rotating}
 \usepackage{pdflscape}
 \counterwithout{footnote}{chapter}   % Document Wide cite index
-\lstset{basicstyle=\small\ttfamily,
-	tabsize=2,
-	basewidth={0.5em,0.45em},
-	extendedchars=true}
+\usepackage{listingsutf8}
+
+%% Listings Konfig
+
+\lstset{ %Formatting for code in appendix
+	basicstyle=\footnotesize,
+	numbers=left,
+	stepnumber=1,
+	showstringspaces=false,
+	tabsize=1,
+	breaklines=true,
+	breakatwhitespace=true,
+}
 \usepackage{amsmath}	            % Mathematik
 \usepackage{enumitem}				% Listen Aufzählung
 \usepackage[section]{placeins}
@@ -178,6 +186,15 @@
 }
 \clearpage
 \pagestyle{plain}
+
+\pagestyle{empty}
+{
+	\renewcommand{\thispagestyle}[1]{}
+	\lstlistoflistings
+}
+\clearpage
+\pagestyle{plain}
+
 
 \mainmatter 
 \pagestyle{headings}

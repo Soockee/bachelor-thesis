@@ -5,53 +5,53 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Partielle Ordnung der Events dreier Prozesse}}{7}{figure.caption.3}
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Partielle Ordnung der Events dreier Prozesse}}{7}{figure.caption.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Partielle Ordnung von nebenl\IeC {\"a}ufigen Events}}{8}{figure.caption.4}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Kausaler Pfad einer Vorgangs in dem verteilten rendering System}}{12}{figure.caption.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Minimale Struktur eines verteilten Systems}}{14}{figure.caption.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Anwendungsinstrumentalisierung und Netzwerkkommunikation \IeC {\"u}ber TCP/IP in verteilten Systemen}}{14}{figure.caption.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Visualisierung von CPU Performancedaten}}{15}{figure.caption.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces 3D Flammengraph}}{16}{figure.caption.9}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Flammengraph TCP schlie\IeC {\ss }ung}}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Partielle Ordnung von nebenl\IeC {\"a}ufigen Events}}{8}{figure.caption.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Zeitliche Darstellung eines Spans}}{23}{figure.caption.11}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Kausaler Pfad einer Vorgangs in dem verteilten rendering System}}{12}{figure.caption.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Zeitmessung von Spans eines Traces}}{23}{figure.caption.12}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Minimale Struktur eines verteilten Systems}}{14}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Tracingkontexts in einem Threads innerhalb einer Anwendung}}{24}{figure.caption.13}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Anwendungsinstrumentalisierung und Netzwerkkommunikation \IeC {\"u}ber TCP/IP in verteilten Systemen}}{14}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Tracingkontexts \IeC {\"u}ber mehrere Threads innerhalb einer Anwendung}}{25}{figure.caption.14}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Visualisierung von CPU Performancedaten}}{15}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Aktivit\IeC {\"a}tendiagramm der Traktor Registry}}{26}{figure.caption.15}
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces 3D Flammengraph}}{16}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Design des Nachrichteninterceptor}}{27}{figure.caption.16}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Oberste Ebene der Frame Galerie}}{29}{figure.caption.17}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Mittlere Ebene der Frame Galerie}}{29}{figure.caption.18}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Untere Ebene der Frame Galerie: Beispiel 2}}{30}{figure.caption.19}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Untere Ebene der Frame Galerie: Beispiel 1}}{30}{figure.caption.20}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Darstellungsbeispiel eines 3D-Flammengraph }}{31}{figure.caption.21}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Darstellungsbeispiel eines Tracevergleich mit einem 3D Flammengraph}}{32}{figure.caption.22}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Flammengraph TCP schlie\IeC {\ss }ung}}{17}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Klassendiagramm der Traktor Instrumentalisierungsbibliothek}}{35}{figure.caption.23}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Zeitliche Darstellung eines Spans}}{23}{figure.caption.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Zeitmessung von Spans eines Traces}}{23}{figure.caption.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Tracingkontexts in einem Threads innerhalb einer Anwendung}}{24}{figure.caption.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Tracingkontexts \IeC {\"u}ber mehrere Threads innerhalb einer Anwendung}}{25}{figure.caption.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Aktivit\IeC {\"a}tendiagramm der Traktor Registry}}{26}{figure.caption.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Design des Nachrichteninterceptor}}{27}{figure.caption.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Oberste Ebene der Frame Galerie}}{29}{figure.caption.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Mittlere Ebene der Frame Galerie}}{29}{figure.caption.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Untere Ebene der Frame Galerie: Beispiel 2}}{30}{figure.caption.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Untere Ebene der Frame Galerie: Beispiel 1}}{30}{figure.caption.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Darstellungsbeispiel eines 3D-Flammengraph }}{31}{figure.caption.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Darstellungsbeispiel eines Tracevergleich mit einem 3D Flammengraph}}{32}{figure.caption.23}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Klassendiagramm der Traktor Instrumentalisierungsbibliothek}}{36}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  9 APR 2020 23:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  12 APR 2020 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -587,83 +587,26 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@lastruleclass=\count102
 \@thisrulewidth=\dimen125
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/listingsutf8.sty
-Package: listingsutf8 2016/05/16 v1.3 Allow UTF-8 in listings input (HO)
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count103
-\lst@gtempboxa=\box28
-\lst@token=\toks18
-\lst@length=\count104
-\lst@currlwidth=\dimen126
-\lst@column=\count105
-\lst@pos=\count106
-\lst@lostspace=\dimen127
-\lst@width=\dimen128
-\lst@newlines=\count107
-\lst@lineno=\count108
-\lst@maxwidth=\dimen129
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count109
-\lst@skipnumbers=\count110
-\lst@framebox=\box29
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2015/06/04 1.6 listings configuration
-))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
-Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdfescape.sty
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-)))
 (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
 (/usr/share/texlive/texmf-dist/tex/latex/changebar/changebar.sty
 Package: changebar 2018/02/04 v3.6b Indicate changes with marginal bars
-\cb@nextpoint=\count111
-\cb@topleft=\count112
-\cb@topright=\count113
-\cb@botleft=\count114
-\cb@botright=\count115
-\cb@cnta=\count116
-\cb@cntb=\count117
-\cb@dima=\dimen130
-\cb@curbarwd=\dimen131
-\cb@page=\count118
-\cb@pagecount=\count119
-\cb@odd@left=\dimen132
-\cb@odd@right=\dimen133
-\cb@even@left=\dimen134
-\cb@even@right=\dimen135
+\cb@nextpoint=\count103
+\cb@topleft=\count104
+\cb@topright=\count105
+\cb@botleft=\count106
+\cb@botright=\count107
+\cb@cnta=\count108
+\cb@cntb=\count109
+\cb@dima=\dimen126
+\cb@curbarwd=\dimen127
+\cb@page=\count110
+\cb@pagecount=\count111
+\cb@odd@left=\dimen128
+\cb@odd@right=\dimen129
+\cb@even@left=\dimen130
+\cb@even@right=\dimen131
 \cb@writexy=\write3
 \cb@readxy=\read1
 \openout3 = `thesis.cb2'.
@@ -671,7 +614,7 @@ Package: changebar 2018/02/04 v3.6b Indicate changes with marginal bars
 \changebarwidth=\skip56
 \deletebarwidth=\skip57
 \changebarsep=\skip58
-\c@changebargrey=\count120
+\c@changebargrey=\count112
 
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -701,11 +644,11 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count121
+\c@r@tfl@t=\count113
 \rotFPtop=\skip59
 \rotFPbot=\skip60
-\rot@float@box=\box30
-\rot@mess@toks=\toks19
+\rot@float@box=\box28
+\rot@mess@toks=\toks18
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -713,11 +656,68 @@ Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/listingsutf8.sty
+Package: listingsutf8 2016/05/16 v1.3 Allow UTF-8 in listings input (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count114
+\lst@gtempboxa=\box29
+\lst@token=\toks19
+\lst@length=\count115
+\lst@currlwidth=\dimen132
+\lst@column=\count116
+\lst@pos=\count117
+\lst@lostspace=\dimen133
+\lst@width=\dimen134
+\lst@newlines=\count118
+\lst@lineno=\count119
+\lst@maxwidth=\dimen135
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count120
+\lst@skipnumbers=\count121
+\lst@framebox=\box30
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip61
@@ -1401,7 +1401,7 @@ Class scrbook Warning: Usage of package `titlesec' together
 (scrbook)              the extended optional argument of the section
 (scrbook)              commands.
 (scrbook)              Nevertheless, using requested
-(scrbook)              package `titlesec' on input line 93.
+(scrbook)              package `titlesec' on input line 101.
 
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
@@ -1438,7 +1438,7 @@ Package titlesec Warning: Non standard sectioning command detected
 )
 
 Class scrbook Warning: Activating an ugly workaround for a missing
-(scrbook)              feature of package `titlesec` on input line 93.
+(scrbook)              feature of package `titlesec` on input line 101.
 
 (/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
@@ -1467,7 +1467,7 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 98.
+(scrhack)             need that hack, on input line 106.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
@@ -1561,8 +1561,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip88
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 104.
-Package hyperref Info: Option `colorlinks' set `true' on input line 104.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 112.
+Package hyperref Info: Option `colorlinks' set `true' on input line 112.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/02/08 v0.21.1 Intelligent cross-referencing
@@ -1760,11 +1760,11 @@ Package: glossary-tree 2017/11/14 v4.35 (NLCT)
 \glo@main@file=\write8
 \openout8 = `thesis.glo'.
 
-Package glossaries Info: Writing glossary file thesis.glo on input line 110.
+Package glossaries Info: Writing glossary file thesis.glo on input line 118.
 \glo@acronym@file=\write9
 \openout9 = `thesis.acn'.
 
-Package glossaries Info: Writing glossary file thesis.acn on input line 110.
+Package glossaries Info: Writing glossary file thesis.acn on input line 118.
 
 (./glossar.tex)
 Package csquotes Info: Checking for multilingual support...
@@ -1786,24 +1786,31 @@ Package biblatex Info: ... file 'german.lbx' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 ))
-(./thesis.aux)
+(./thesis.aux
+
+LaTeX Warning: Label `subsection:Reporter' multiply defined.
+
+
+LaTeX Warning: Label `subsection:Reporter@cref' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 121.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 129.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1893,11 +1900,11 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 121.
-Package biblatex Info: Reference segment=0 on input line 121.
-Package scrhack Info: undefining \float@addtolists on input line 121.
+Package biblatex Info: Reference section=0 on input line 129.
+Package biblatex Info: Reference segment=0 on input line 129.
+Package scrhack Info: undefining \float@addtolists on input line 129.
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring ON on input line 121.
+Package hyperref Info: Link coloring ON on input line 129.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1906,56 +1913,56 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count478
 )
-LaTeX Info: Redefining \ref on input line 121.
-LaTeX Info: Redefining \pageref on input line 121.
-LaTeX Info: Redefining \nameref on input line 121.
+LaTeX Info: Redefining \ref on input line 129.
+LaTeX Info: Redefining \pageref on input line 129.
+LaTeX Info: Redefining \nameref on input line 129.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write10
 \openout10 = `thesis.out'.
 
  (./thesis.glsdefs)
-<img/mni-logo.pdf, id=213, 1133.23375pt x 146.5475pt>
+<img/mni-logo.pdf, id=241, 1133.23375pt x 146.5475pt>
 File: img/mni-logo.pdf Graphic file (type pdf)
 <use img/mni-logo.pdf>
-Package pdftex.def Info: img/mni-logo.pdf  used on input line 127.
+Package pdftex.def Info: img/mni-logo.pdf  used on input line 135.
 (pdftex.def)             Requested size: 376.4258pt x 48.67834pt.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 128.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 136.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 136.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 144.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 136.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 144.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 136
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 144
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 136
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 144
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 136.
+(Font)              <10.95> on input line 144.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 136.
+(Font)              <8> on input line 144.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 136.
+(Font)              <6> on input line 144.
  [1
 
 \openout7 = `thesis.ist'.
@@ -1991,8 +1998,11 @@ mu-nika-tion über TCP/IP
  [7
 
 
-] [8
+] (./thesis.lol)
+\tf@lol=\write13
+\openout13 = `thesis.lol'.
 
+ [8
 
 
 ] (./einleitung.tex
@@ -2004,6 +2014,9 @@ baren, fehler-freien und ??schnellen??
  []
 
 [1
+
+
+
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 33.
@@ -2039,7 +2052,7 @@ Overfull \hbox (10.48628pt too wide) in paragraph at lines 40--41
 dung ist, im zusam-men-spiel mit dem Nachricht-
  []
 
-<img/Themenueberblick/PartialOrdering_Concurrent.png, id=416, 472.76625pt x 439
+<img/Themenueberblick/PartialOrdering_Concurrent.png, id=454, 472.76625pt x 439
 .6425pt>
 File: img/Themenueberblick/PartialOrdering_Concurrent.png Graphic file (type pn
 g)
@@ -2047,7 +2060,7 @@ g)
 Package pdftex.def Info: img/Themenueberblick/PartialOrdering_Concurrent.png  u
 sed on input line 72.
 (pdftex.def)             Requested size: 163.9579pt x 152.47511pt.
-<img/Themenueberblick/PartialOrdering_Concurrent_Explained.png, id=418, 472.766
+<img/Themenueberblick/PartialOrdering_Concurrent_Explained.png, id=456, 472.766
 25pt x 439.6425pt>
 File: img/Themenueberblick/PartialOrdering_Concurrent_Explained.png Graphic fil
 e (type png)
@@ -2056,7 +2069,7 @@ Package pdftex.def Info: img/Themenueberblick/PartialOrdering_Concurrent_Explai
 ned.png  used on input line 77.
 (pdftex.def)             Requested size: 163.9579pt x 152.47511pt.
 [6]
-<img/Themenueberblick/PartialOrdering_ChildO.png, id=433, 472.76625pt x 439.642
+<img/Themenueberblick/PartialOrdering_ChildO.png, id=471, 472.76625pt x 439.642
 5pt>
 File: img/Themenueberblick/PartialOrdering_ChildO.png Graphic file (type png)
 <use img/Themenueberblick/PartialOrdering_ChildO.png>
@@ -2067,7 +2080,7 @@ on input line 95.
 lick/PartialOrdering_Concurrent_Explained.png>] [8 <./img/Themenueberblick/Part
 ialOrdering_ChildO.png>] [9] [10]) (./problembeschreibung.tex [11]
 chapter 3.
-<img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png, id=480, 533.9
+<img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png, id=518, 533.9
 95pt x 102.3825pt>
 File: img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png Graphic f
 ile (type png)
@@ -2078,7 +2091,7 @@ ystem.png  used on input line 23.
 [12
 
  <./img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png>]
-<img/Problembeschreibung/distributed_system_application_minimal.png, id=491, 31
+<img/Problembeschreibung/distributed_system_application_minimal.png, id=529, 31
 3.17pt x 102.3825pt>
 File: img/Problembeschreibung/distributed_system_application_minimal.png Graphi
 c file (type png)
@@ -2086,7 +2099,7 @@ c file (type png)
 Package pdftex.def Info: img/Problembeschreibung/distributed_system_application
 _minimal.png  used on input line 62.
 (pdftex.def)             Requested size: 156.58461pt x 51.19112pt.
-<img/Problembeschreibung/distributed_system_application_inside.png, id=492, 433
+<img/Problembeschreibung/distributed_system_application_inside.png, id=530, 433
 .62pt x 142.5325pt>
 File: img/Problembeschreibung/distributed_system_application_inside.png Graphic
  file (type png)
@@ -2094,7 +2107,7 @@ File: img/Problembeschreibung/distributed_system_application_inside.png Graphic
 Package pdftex.def Info: img/Problembeschreibung/distributed_system_application
 _inside.png  used on input line 69.
 (pdftex.def)             Requested size: 184.45068pt x 60.62878pt.
-<img/Problembeschreibung/distributed_system_network.png, id=493, 473.77pt x 112
+<img/Problembeschreibung/distributed_system_network.png, id=531, 473.77pt x 112
 .42pt>
 File: img/Problembeschreibung/distributed_system_network.png Graphic file (type
  png)
@@ -2106,7 +2119,7 @@ Package pdftex.def Info: img/Problembeschreibung/distributed_system_network.png
 Underfull \vbox (badness 3302) has occurred while \output is active []
 
  [13]
-<img/Problembeschreibung/problembeschreibung_flamengraph.png, id=501, 723.70375
+<img/Problembeschreibung/problembeschreibung_flamengraph.png, id=539, 723.70375
 pt x 440.64626pt>
 File: img/Problembeschreibung/problembeschreibung_flamengraph.png Graphic file 
 (type png)
@@ -2133,13 +2146,13 @@ mbeschreibung/distributed_system_network.png>]
 LaTeX Warning: Command \" invalid in math mode on input line 107.
 
 [15 <./img/Problembeschreibung/problembeschreibung_flamengraph.png>]
-<img/Problembeschreibung/flamegraph_3D.png, id=527, 1208.515pt x 566.115pt>
+<img/Problembeschreibung/flamegraph_3D.png, id=565, 1208.515pt x 566.115pt>
 File: img/Problembeschreibung/flamegraph_3D.png Graphic file (type png)
 <use img/Problembeschreibung/flamegraph_3D.png>
 Package pdftex.def Info: img/Problembeschreibung/flamegraph_3D.png  used on inp
 ut line 133.
 (pdftex.def)             Requested size: 362.5573pt x 169.8358pt.
-<img/Problembeschreibung/flamegraph_3D_closing.png, id=528, 554.07pt x 272.0162
+<img/Problembeschreibung/flamegraph_3D_closing.png, id=566, 554.07pt x 272.0162
 5pt>
 File: img/Problembeschreibung/flamegraph_3D_closing.png Graphic file (type png)
 
@@ -2159,20 +2172,20 @@ en, somit soll auch die Tracing-
  []
 
 [21]
-<img/Design/Span.png, id=590, 127.47626pt x 125.46875pt>
+<img/Design/Span.png, id=629, 127.47626pt x 125.46875pt>
 File: img/Design/Span.png Graphic file (type png)
 <use img/Design/Span.png>
 Package pdftex.def Info: img/Design/Span.png  used on input line 70.
 (pdftex.def)             Requested size: 89.23276pt x 87.82751pt.
  [22]
-<img/Design/Eventzeitspannen.png, id=597, 523.9575pt x 192.72pt>
+<img/Design/Eventzeitspannen.png, id=636, 523.9575pt x 192.72pt>
 File: img/Design/Eventzeitspannen.png Graphic file (type png)
 <use img/Design/Eventzeitspannen.png>
 Package pdftex.def Info: img/Design/Eventzeitspannen.png  used on input line 79
 .
 (pdftex.def)             Requested size: 366.76775pt x 134.90306pt.
  [23 <./img/Design/Span.png> <./img/Design/Eventzeitspannen.png>]
-<img/Design/SpanThreadKontext.png, id=606, 492.84125pt x 244.915pt>
+<img/Design/SpanThreadKontext.png, id=644, 492.84125pt x 244.915pt>
 File: img/Design/SpanThreadKontext.png Graphic file (type png)
 <use img/Design/SpanThreadKontext.png>
 Package pdftex.def Info: img/Design/SpanThreadKontext.png  used on input line 9
@@ -2180,14 +2193,14 @@ Package pdftex.def Info: img/Design/SpanThreadKontext.png  used on input line 9
 (pdftex.def)             Requested size: 246.42001pt x 122.45718pt.
 
 [24 <./img/Design/SpanThreadKontext.png>]
-<img/Design/SpanMultipleThreadKontext.png, id=614, 492.84125pt x 242.9075pt>
+<img/Design/SpanMultipleThreadKontext.png, id=652, 492.84125pt x 242.9075pt>
 File: img/Design/SpanMultipleThreadKontext.png Graphic file (type png)
 <use img/Design/SpanMultipleThreadKontext.png>
 Package pdftex.def Info: img/Design/SpanMultipleThreadKontext.png  used on inpu
 t line 104.
 (pdftex.def)             Requested size: 246.42001pt x 121.45345pt.
  [25 <./img/Design/SpanMultipleThreadKontext.png>]
-<img/Design/Traktor-Registry.png, id=622, 719.68875pt x 538.01pt>
+<img/Design/Traktor-Registry.png, id=660, 719.68875pt x 538.01pt>
 File: img/Design/Traktor-Registry.png Graphic file (type png)
 <use img/Design/Traktor-Registry.png>
 Package pdftex.def Info: img/Design/Traktor-Registry.png  used on input line 12
@@ -2199,7 +2212,7 @@ Overfull \hbox (49.53842pt too wide) in paragraph at lines 125--126
  []
 
 [26 <./img/Design/Traktor-Registry.png>]
-<img/Design/Nachrichteninterceptor.png, id=630, 236.885pt x 433.62pt>
+<img/Design/Nachrichteninterceptor.png, id=668, 236.885pt x 433.62pt>
 File: img/Design/Nachrichteninterceptor.png Graphic file (type png)
 <use img/Design/Nachrichteninterceptor.png>
 Package pdftex.def Info: img/Design/Nachrichteninterceptor.png  used on input l
@@ -2212,13 +2225,13 @@ Overfull \hbox (1.28354pt too wide) in paragraph at lines 154--155
  []
 
 [28]
-<img/Design/FrameGalerieObereEbene.png, id=641, 472.76625pt x 141.52875pt>
+<img/Design/FrameGalerieObereEbene.png, id=679, 472.76625pt x 141.52875pt>
 File: img/Design/FrameGalerieObereEbene.png Graphic file (type png)
 <use img/Design/FrameGalerieObereEbene.png>
 Package pdftex.def Info: img/Design/FrameGalerieObereEbene.png  used on input l
 ine 165.
 (pdftex.def)             Requested size: 378.2135pt x 113.22314pt.
-<img/Design/FrameGalerieMittlereEbene.png, id=643, 392.46625pt x 322.20375pt>
+<img/Design/FrameGalerieMittlereEbene.png, id=681, 392.46625pt x 322.20375pt>
 File: img/Design/FrameGalerieMittlereEbene.png Graphic file (type png)
 <use img/Design/FrameGalerieMittlereEbene.png>
 Package pdftex.def Info: img/Design/FrameGalerieMittlereEbene.png  used on inpu
@@ -2226,13 +2239,13 @@ t line 174.
 (pdftex.def)             Requested size: 313.9734pt x 257.76334pt.
  [29 <./img/Design/FrameGalerieObereEbene.png> <./img/Design/FrameGalerieMittle
 reEbene.png>]
-<img/Design/FrameGalerieUntereEbene2.png, id=652, 482.80376pt x 87.32625pt>
+<img/Design/FrameGalerieUntereEbene2.png, id=690, 482.80376pt x 87.32625pt>
 File: img/Design/FrameGalerieUntereEbene2.png Graphic file (type png)
 <use img/Design/FrameGalerieUntereEbene2.png>
 Package pdftex.def Info: img/Design/FrameGalerieUntereEbene2.png  used on input
  line 185.
 (pdftex.def)             Requested size: 386.24353pt x 69.86108pt.
-<img/Design/FrameGalerieUntereEbene1.png, id=653, 482.80376pt x 394.47375pt>
+<img/Design/FrameGalerieUntereEbene1.png, id=691, 482.80376pt x 394.47375pt>
 File: img/Design/FrameGalerieUntereEbene1.png Graphic file (type png)
 <use img/Design/FrameGalerieUntereEbene1.png>
 Package pdftex.def Info: img/Design/FrameGalerieUntereEbene1.png  used on input
@@ -2245,7 +2258,7 @@ Overfull \hbox (11.58435pt too wide) in paragraph at lines 201--202
 s rechteck-ige Flächen dargestellt
  []
 
-<img/Design/3D-Flammengraph-Konzept.png, id=661, 1348.03625pt x 423.5825pt>
+<img/Design/3D-Flammengraph-Konzept.png, id=699, 1348.03625pt x 423.5825pt>
 File: img/Design/3D-Flammengraph-Konzept.png Graphic file (type png)
 <use img/Design/3D-Flammengraph-Konzept.png>
 Package pdftex.def Info: img/Design/3D-Flammengraph-Konzept.png  used on input 
@@ -2257,7 +2270,7 @@ Overfull \hbox (12.56679pt too wide) in paragraph at lines 205--207
  []
 
 [31 <./img/Design/3D-Flammengraph-Konzept.png>]
-<img/Design/3D-Flammengraph-Vergleich.png, id=668, 1034.86626pt x 343.2825pt>
+<img/Design/3D-Flammengraph-Vergleich.png, id=706, 1034.86626pt x 343.2825pt>
 File: img/Design/3D-Flammengraph-Vergleich.png Graphic file (type png)
 <use img/Design/3D-Flammengraph-Vergleich.png>
 Package pdftex.def Info: img/Design/3D-Flammengraph-Vergleich.png  used on inpu
@@ -2268,31 +2281,42 @@ t line 215.
 chapter 5.
 [33
 
-] [34]
-<img/Implementierung/TraktorKlassendiagramm.png, id=693, 1250.6725pt x 904.3787
+]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 45.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 30--48
+[]$[]$ 
+ []
+
+[34] [35]
+<img/Implementierung/TraktorKlassendiagramm.png, id=750, 1250.6725pt x 904.3787
 5pt>
 File: img/Implementierung/TraktorKlassendiagramm.png Graphic file (type png)
 <use img/Implementierung/TraktorKlassendiagramm.png>
 Package pdftex.def Info: img/Implementierung/TraktorKlassendiagramm.png  used o
-n input line 31.
+n input line 75.
 (pdftex.def)             Requested size: 500.26015pt x 361.7451pt.
- [35 <./img/Implementierung/TraktorKlassendiagramm.png>])
-(./evaluierung.tex [36
+ [36 <./img/Implementierung/TraktorKlassendiagramm.png>])
+(./evaluierung.tex [37
 
 
 ]
 chapter 6.
-) (./fazit.tex [37
+) (./fazit.tex [38
 
 ]
 chapter 7.
-) [38
+) [39
 
-] (./litverz.tex (./thesis.gls) (./thesis.acr [39
+] (./litverz.tex (./thesis.gls) (./thesis.acr [40
 
 
 
-]) [40
+]) [41
 
 
 ]
@@ -2303,7 +2327,7 @@ Overfull \hbox (0.99678pt too wide) in paragraph at lines 16--16
 : Au-tomat-ing Root-
  []
 
-[41
+[42
 
 ]
 Overfull \hbox (0.11018pt too wide) in paragraph at lines 16--16
@@ -2332,37 +2356,41 @@ ew fig-ure\T1/lmr/m/n/10.95 . 2019. \T1/lmr/m/sc/10.95 url\T1/lmr/m/n/10.95 : [
 ][]$https : / / opentracing .
  []
 
-[42]
+[43]
 Overfull \hbox (48.11298pt too wide) in paragraph at lines 16--16
 []\T1/lmr/m/n/10.95 William Stearns. \T1/lmr/m/it/10.95 Ngrep and reg-u-lar ex-
 pres-sions to the res-cue\T1/lmr/m/n/10.95 . http://www.stearns.org/.
  []
 
-) [43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
+) [44]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0DBB11D0301D3C0BDC99695FE77775B4;3335.
+(rerunfilecheck)             Checksum: 4A01F70DCF511967E2B1430B6E9711AF;3763.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--199
+Underfull \hbox (badness 10000) in paragraph at lines 116--216
 
  []
 
  ) 
 Here is how much of TeX's memory you used:
- 37808 strings out of 492982
- 697285 string characters out of 6134896
- 1271940 words of memory out of 5000000
- 40634 multiletter control sequences out of 15000+600000
+ 38120 strings out of 492982
+ 700183 string characters out of 6134896
+ 1281632 words of memory out of 5000000
+ 40921 multiletter control sequences out of 15000+600000
  619025 words of font info for 62 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 57i,9n,77p,10490b,2778s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,9n,77p,10490b,2059s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{glo:lfLabel} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2381,10 +2409,10 @@ lic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (51 pages, 784128 bytes).
+Output written on thesis.pdf (52 pages, 790960 bytes).
 PDF statistics:
- 906 PDF objects out of 1000 (max. 8388607)
- 782 compressed objects within 8 object streams
- 191 named destinations out of 1000 (max. 500000)
- 537 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 966 PDF objects out of 1000 (max. 8388607)
+ 840 compressed objects within 9 object streams
+ 213 named destinations out of 1000 (max. 500000)
+ 593 words of extra memory for PDF output out of 10000 (max. 10000000)
 
