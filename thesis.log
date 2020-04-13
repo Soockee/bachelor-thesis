@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  12 APR 2020 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  13 APR 2020 23:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1928,7 +1928,7 @@ LaTeX Info: Redefining \nameref on input line 129.
 \openout10 = `thesis.out'.
 
  (./thesis.glsdefs)
-<img/mni-logo.pdf, id=241, 1133.23375pt x 146.5475pt>
+<img/mni-logo.pdf, id=245, 1133.23375pt x 146.5475pt>
 File: img/mni-logo.pdf Graphic file (type pdf)
 <use img/mni-logo.pdf>
 Package pdftex.def Info: img/mni-logo.pdf  used on input line 135.
@@ -2058,7 +2058,7 @@ Overfull \hbox (10.48628pt too wide) in paragraph at lines 40--41
 dung ist, im zusam-men-spiel mit dem Nachricht-
  []
 
-<img/Themenueberblick/PartialOrdering_Concurrent.png, id=456, 472.76625pt x 439
+<img/Themenueberblick/PartialOrdering_Concurrent.png, id=461, 472.76625pt x 439
 .6425pt>
 File: img/Themenueberblick/PartialOrdering_Concurrent.png Graphic file (type pn
 g)
@@ -2066,7 +2066,7 @@ g)
 Package pdftex.def Info: img/Themenueberblick/PartialOrdering_Concurrent.png  u
 sed on input line 72.
 (pdftex.def)             Requested size: 163.9579pt x 152.47511pt.
-<img/Themenueberblick/PartialOrdering_Concurrent_Explained.png, id=458, 472.766
+<img/Themenueberblick/PartialOrdering_Concurrent_Explained.png, id=463, 472.766
 25pt x 439.6425pt>
 File: img/Themenueberblick/PartialOrdering_Concurrent_Explained.png Graphic fil
 e (type png)
@@ -2075,7 +2075,7 @@ Package pdftex.def Info: img/Themenueberblick/PartialOrdering_Concurrent_Explai
 ned.png  used on input line 77.
 (pdftex.def)             Requested size: 163.9579pt x 152.47511pt.
 [6]
-<img/Themenueberblick/PartialOrdering_ChildO.png, id=473, 472.76625pt x 439.642
+<img/Themenueberblick/PartialOrdering_ChildO.png, id=478, 472.76625pt x 439.642
 5pt>
 File: img/Themenueberblick/PartialOrdering_ChildO.png Graphic file (type png)
 <use img/Themenueberblick/PartialOrdering_ChildO.png>
@@ -2086,7 +2086,7 @@ on input line 95.
 lick/PartialOrdering_Concurrent_Explained.png>] [8 <./img/Themenueberblick/Part
 ialOrdering_ChildO.png>] [9] [10]) (./problembeschreibung.tex [11]
 chapter 3.
-<img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png, id=520, 533.9
+<img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png, id=525, 533.9
 95pt x 102.3825pt>
 File: img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png Graphic f
 ile (type png)
@@ -2097,7 +2097,7 @@ ystem.png  used on input line 23.
 [12
 
  <./img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png>]
-<img/Problembeschreibung/distributed_system_application_minimal.png, id=531, 31
+<img/Problembeschreibung/distributed_system_application_minimal.png, id=536, 31
 3.17pt x 102.3825pt>
 File: img/Problembeschreibung/distributed_system_application_minimal.png Graphi
 c file (type png)
@@ -2105,7 +2105,7 @@ c file (type png)
 Package pdftex.def Info: img/Problembeschreibung/distributed_system_application
 _minimal.png  used on input line 62.
 (pdftex.def)             Requested size: 156.58461pt x 51.19112pt.
-<img/Problembeschreibung/distributed_system_application_inside.png, id=532, 433
+<img/Problembeschreibung/distributed_system_application_inside.png, id=537, 433
 .62pt x 142.5325pt>
 File: img/Problembeschreibung/distributed_system_application_inside.png Graphic
  file (type png)
@@ -2113,7 +2113,7 @@ File: img/Problembeschreibung/distributed_system_application_inside.png Graphic
 Package pdftex.def Info: img/Problembeschreibung/distributed_system_application
 _inside.png  used on input line 69.
 (pdftex.def)             Requested size: 184.45068pt x 60.62878pt.
-<img/Problembeschreibung/distributed_system_network.png, id=533, 473.77pt x 112
+<img/Problembeschreibung/distributed_system_network.png, id=538, 473.77pt x 112
 .42pt>
 File: img/Problembeschreibung/distributed_system_network.png Graphic file (type
  png)
@@ -2125,7 +2125,7 @@ Package pdftex.def Info: img/Problembeschreibung/distributed_system_network.png
 Underfull \vbox (badness 3302) has occurred while \output is active []
 
  [13]
-<img/Problembeschreibung/problembeschreibung_flamengraph.png, id=541, 723.70375
+<img/Problembeschreibung/problembeschreibung_flamengraph.png, id=546, 723.70375
 pt x 440.64626pt>
 File: img/Problembeschreibung/problembeschreibung_flamengraph.png Graphic file 
 (type png)
@@ -2152,13 +2152,13 @@ mbeschreibung/distributed_system_network.png>]
 LaTeX Warning: Command \" invalid in math mode on input line 107.
 
 [15 <./img/Problembeschreibung/problembeschreibung_flamengraph.png>]
-<img/Problembeschreibung/flamegraph_3D.png, id=567, 1208.515pt x 566.115pt>
+<img/Problembeschreibung/flamegraph_3D.png, id=572, 1208.515pt x 566.115pt>
 File: img/Problembeschreibung/flamegraph_3D.png Graphic file (type png)
 <use img/Problembeschreibung/flamegraph_3D.png>
 Package pdftex.def Info: img/Problembeschreibung/flamegraph_3D.png  used on inp
 ut line 133.
 (pdftex.def)             Requested size: 362.5573pt x 169.8358pt.
-<img/Problembeschreibung/flamegraph_3D_closing.png, id=568, 554.07pt x 272.0162
+<img/Problembeschreibung/flamegraph_3D_closing.png, id=573, 554.07pt x 272.0162
 5pt>
 File: img/Problembeschreibung/flamegraph_3D_closing.png Graphic file (type png)
 
@@ -2178,20 +2178,20 @@ en, somit soll auch die Tracing-
  []
 
 [21]
-<img/Design/Span.png, id=631, 127.47626pt x 125.46875pt>
+<img/Design/Span.png, id=636, 127.47626pt x 125.46875pt>
 File: img/Design/Span.png Graphic file (type png)
 <use img/Design/Span.png>
 Package pdftex.def Info: img/Design/Span.png  used on input line 70.
 (pdftex.def)             Requested size: 89.23276pt x 87.82751pt.
  [22]
-<img/Design/Eventzeitspannen.png, id=638, 523.9575pt x 192.72pt>
+<img/Design/Eventzeitspannen.png, id=643, 523.9575pt x 192.72pt>
 File: img/Design/Eventzeitspannen.png Graphic file (type png)
 <use img/Design/Eventzeitspannen.png>
 Package pdftex.def Info: img/Design/Eventzeitspannen.png  used on input line 79
 .
 (pdftex.def)             Requested size: 366.76775pt x 134.90306pt.
  [23 <./img/Design/Span.png> <./img/Design/Eventzeitspannen.png>]
-<img/Design/SpanThreadKontext.png, id=646, 492.84125pt x 244.915pt>
+<img/Design/SpanThreadKontext.png, id=651, 492.84125pt x 244.915pt>
 File: img/Design/SpanThreadKontext.png Graphic file (type png)
 <use img/Design/SpanThreadKontext.png>
 Package pdftex.def Info: img/Design/SpanThreadKontext.png  used on input line 9
@@ -2199,14 +2199,14 @@ Package pdftex.def Info: img/Design/SpanThreadKontext.png  used on input line 9
 (pdftex.def)             Requested size: 246.42001pt x 122.45718pt.
 
 [24 <./img/Design/SpanThreadKontext.png>]
-<img/Design/SpanMultipleThreadKontext.png, id=654, 492.84125pt x 242.9075pt>
+<img/Design/SpanMultipleThreadKontext.png, id=659, 492.84125pt x 242.9075pt>
 File: img/Design/SpanMultipleThreadKontext.png Graphic file (type png)
 <use img/Design/SpanMultipleThreadKontext.png>
 Package pdftex.def Info: img/Design/SpanMultipleThreadKontext.png  used on inpu
 t line 104.
 (pdftex.def)             Requested size: 246.42001pt x 121.45345pt.
  [25 <./img/Design/SpanMultipleThreadKontext.png>]
-<img/Design/Traktor-Registry.png, id=662, 719.68875pt x 538.01pt>
+<img/Design/Traktor-Registry.png, id=667, 719.68875pt x 538.01pt>
 File: img/Design/Traktor-Registry.png Graphic file (type png)
 <use img/Design/Traktor-Registry.png>
 Package pdftex.def Info: img/Design/Traktor-Registry.png  used on input line 12
@@ -2218,7 +2218,7 @@ Overfull \hbox (49.53842pt too wide) in paragraph at lines 125--126
  []
 
 [26 <./img/Design/Traktor-Registry.png>]
-<img/Design/Nachrichteninterceptor.png, id=670, 236.885pt x 433.62pt>
+<img/Design/Nachrichteninterceptor.png, id=675, 236.885pt x 433.62pt>
 File: img/Design/Nachrichteninterceptor.png Graphic file (type png)
 <use img/Design/Nachrichteninterceptor.png>
 Package pdftex.def Info: img/Design/Nachrichteninterceptor.png  used on input l
@@ -2231,13 +2231,13 @@ Overfull \hbox (1.28354pt too wide) in paragraph at lines 154--155
  []
 
 [28]
-<img/Design/FrameGalerieObereEbene.png, id=681, 472.76625pt x 141.52875pt>
+<img/Design/FrameGalerieObereEbene.png, id=686, 472.76625pt x 141.52875pt>
 File: img/Design/FrameGalerieObereEbene.png Graphic file (type png)
 <use img/Design/FrameGalerieObereEbene.png>
 Package pdftex.def Info: img/Design/FrameGalerieObereEbene.png  used on input l
 ine 165.
 (pdftex.def)             Requested size: 378.2135pt x 113.22314pt.
-<img/Design/FrameGalerieMittlereEbene.png, id=683, 392.46625pt x 322.20375pt>
+<img/Design/FrameGalerieMittlereEbene.png, id=688, 392.46625pt x 322.20375pt>
 File: img/Design/FrameGalerieMittlereEbene.png Graphic file (type png)
 <use img/Design/FrameGalerieMittlereEbene.png>
 Package pdftex.def Info: img/Design/FrameGalerieMittlereEbene.png  used on inpu
@@ -2245,13 +2245,13 @@ t line 174.
 (pdftex.def)             Requested size: 313.9734pt x 257.76334pt.
  [29 <./img/Design/FrameGalerieObereEbene.png> <./img/Design/FrameGalerieMittle
 reEbene.png>]
-<img/Design/FrameGalerieUntereEbene2.png, id=692, 482.80376pt x 87.32625pt>
+<img/Design/FrameGalerieUntereEbene2.png, id=697, 482.80376pt x 87.32625pt>
 File: img/Design/FrameGalerieUntereEbene2.png Graphic file (type png)
 <use img/Design/FrameGalerieUntereEbene2.png>
 Package pdftex.def Info: img/Design/FrameGalerieUntereEbene2.png  used on input
  line 185.
 (pdftex.def)             Requested size: 386.24353pt x 69.86108pt.
-<img/Design/FrameGalerieUntereEbene1.png, id=693, 482.80376pt x 394.47375pt>
+<img/Design/FrameGalerieUntereEbene1.png, id=698, 482.80376pt x 394.47375pt>
 File: img/Design/FrameGalerieUntereEbene1.png Graphic file (type png)
 <use img/Design/FrameGalerieUntereEbene1.png>
 Package pdftex.def Info: img/Design/FrameGalerieUntereEbene1.png  used on input
@@ -2264,7 +2264,7 @@ Overfull \hbox (11.58435pt too wide) in paragraph at lines 201--202
 s rechteck-ige Flächen dargestellt
  []
 
-<img/Design/3D-Flammengraph-Konzept.png, id=701, 1348.03625pt x 423.5825pt>
+<img/Design/3D-Flammengraph-Konzept.png, id=706, 1348.03625pt x 423.5825pt>
 File: img/Design/3D-Flammengraph-Konzept.png Graphic file (type png)
 <use img/Design/3D-Flammengraph-Konzept.png>
 Package pdftex.def Info: img/Design/3D-Flammengraph-Konzept.png  used on input 
@@ -2276,16 +2276,31 @@ Overfull \hbox (12.56679pt too wide) in paragraph at lines 205--207
  []
 
 [31 <./img/Design/3D-Flammengraph-Konzept.png>]
-<img/Design/3D-Flammengraph-Vergleich.png, id=708, 1034.86626pt x 343.2825pt>
+<img/Design/3D-Flammengraph-Vergleich.png, id=713, 1034.86626pt x 343.2825pt>
 File: img/Design/3D-Flammengraph-Vergleich.png Graphic file (type png)
 <use img/Design/3D-Flammengraph-Vergleich.png>
 Package pdftex.def Info: img/Design/3D-Flammengraph-Vergleich.png  used on inpu
 t line 215.
 (pdftex.def)             Requested size: 413.93916pt x 137.31056pt.
+
+Overfull \hbox (5.47897pt too wide) in paragraph at lines 230--231
+[]\T1/lmr/bx/n/10.95 TE\T1/lmr/m/n/10.95 .4 Das Ansprechen der En-twick-lung-su
+mge-bung soll durch einen Kom-man-dozeilen
+ []
+
 ) (./implementierung.tex
-[32 <./img/Design/3D-Flammengraph-Vergleich.png>]
+Overfull \hbox (6.97194pt too wide) in paragraph at lines 233--9
+\T1/lmr/m/n/10.95 fasst sowohl die lokale Kon-textver-wal-tung, als auch die Ko
+n-textpropagierung über Prozess-
+ []
+
+[32 <./img/Design/3D-Flammengraph-Vergleich.png>] [33]
 chapter 5.
-[33
+
+LaTeX Warning: Reference `section:Traktor Agent' on page 1 undefined on input l
+ine 12.
+
+[34
 
 ]
 
@@ -2298,7 +2313,7 @@ Overfull \hbox (10.95pt too wide) in paragraph at lines 30--48
 []$[]$ 
  []
 
-[34]
+[35]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 63.
@@ -2309,31 +2324,31 @@ Overfull \hbox (10.95pt too wide) in paragraph at lines 59--66
 []$[]$ 
  []
 
-[35] [36]
-<img/Implementierung/TraktorKlassendiagramm.png, id=763, 1250.6725pt x 904.3787
+[36] [37] [38]
+<img/Implementierung/TraktorKlassendiagramm.png, id=778, 1250.6725pt x 904.3787
 5pt>
 File: img/Implementierung/TraktorKlassendiagramm.png Graphic file (type png)
 <use img/Implementierung/TraktorKlassendiagramm.png>
 Package pdftex.def Info: img/Implementierung/TraktorKlassendiagramm.png  used o
-n input line 91.
+n input line 106.
 (pdftex.def)             Requested size: 500.26015pt x 361.7451pt.
- [37 <./img/Implementierung/TraktorKlassendiagramm.png>])
-(./evaluierung.tex [38
+ [39 <./img/Implementierung/TraktorKlassendiagramm.png>])
+(./evaluierung.tex [40
 
 
 ]
 chapter 6.
-) (./fazit.tex [39
+) (./fazit.tex [41
 
 ]
 chapter 7.
-) [40
+) [42
 
-] (./litverz.tex (./thesis.gls) (./thesis.acr [41
+] (./litverz.tex (./thesis.gls) (./thesis.acr [43
 
 
 
-]) [42
+]) [44
 
 
 ]
@@ -2344,7 +2359,7 @@ Overfull \hbox (0.99678pt too wide) in paragraph at lines 16--16
 : Au-tomat-ing Root-
  []
 
-[43
+[45
 
 ]
 Overfull \hbox (0.11018pt too wide) in paragraph at lines 16--16
@@ -2373,20 +2388,23 @@ ew fig-ure\T1/lmr/m/n/10.95 . 2019. \T1/lmr/m/sc/10.95 url\T1/lmr/m/n/10.95 : [
 ][]$https : / / opentracing .
  []
 
-[44]
+[46]
 Overfull \hbox (48.11298pt too wide) in paragraph at lines 16--16
 []\T1/lmr/m/n/10.95 William Stearns. \T1/lmr/m/it/10.95 Ngrep and reg-u-lar ex-
 pres-sions to the res-cue\T1/lmr/m/n/10.95 . http://www.stearns.org/.
  []
 
-) [45]
+) [47]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4A01F70DCF511967E2B1430B6E9711AF;3763.
+(rerunfilecheck)             Checksum: 8F80DD88E36F7EFCBF17B96A37008EF2;3838.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2401,15 +2419,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--216
 
  ) 
 Here is how much of TeX's memory you used:
- 38129 strings out of 492982
- 700356 string characters out of 6134896
- 1281644 words of memory out of 5000000
- 40924 multiletter control sequences out of 15000+600000
+ 38167 strings out of 492982
+ 701095 string characters out of 6134896
+ 1282040 words of memory out of 5000000
+ 40958 multiletter control sequences out of 15000+600000
  619025 words of font info for 62 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  57i,9n,77p,10490b,2780s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{glo:lfLabel} has been referenced but does not exi
-st, replaced by a fixed one
+pdfTeX warning (dest): name{glo:udpLabel} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:lfLabel} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{glo:cncfLabel} has been referenced but does not exi
 st, replaced by a fixed one
@@ -2426,10 +2447,10 @@ lic/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (53 pages, 795966 bytes).
+Output written on thesis.pdf (55 pages, 801529 bytes).
 PDF statistics:
- 983 PDF objects out of 1000 (max. 8388607)
- 856 compressed objects within 9 object streams
- 219 named destinations out of 1000 (max. 500000)
- 593 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1000 PDF objects out of 1000 (max. 8388607)
+ 871 compressed objects within 9 object streams
+ 223 named destinations out of 1000 (max. 500000)
+ 601 words of extra memory for PDF output out of 10000 (max. 10000000)
 

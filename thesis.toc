@@ -85,56 +85,58 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.4.2}Dreidimensionaler Flammengraph}{31}{subsection.4.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Implementierung}{33}{chapter.5}
+\contentsline {section}{\numberline {4.5}Trakorentwicklungsumgebung}{32}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Instrumentalisierungsbibliothek: Traktor}{33}{section.5.1}
+\contentsline {chapter}{\numberline {5}Implementierung}{34}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Tracer}{34}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.1}Instrumentalisierungsbibliothek: Traktor}{34}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Span}{35}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.1}Tracer}{35}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}SpanBuilder}{36}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.2}Span}{36}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.4}SpanContext}{36}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.3}SpanBuilder}{37}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.5}Scope}{36}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.4}SpanContext}{37}{subsection.5.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.6}ScopeManager}{36}{subsection.5.1.6}
+\contentsline {subsection}{\numberline {5.1.5}Scope}{37}{subsection.5.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.7}Reporter}{36}{subsection.5.1.7}
+\contentsline {subsection}{\numberline {5.1.6}ScopeManager}{38}{subsection.5.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Traktor Agent}{38}{section.5.2}
+\contentsline {subsection}{\numberline {5.1.7}Reporter}{38}{subsection.5.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Traktor Registry}{38}{section.5.3}
+\contentsline {section}{\numberline {5.2}Traktor Reporter}{40}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Unity Rendering System}{38}{section.5.4}
+\contentsline {section}{\numberline {5.3}Traktor Registry}{40}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5} Webserver Entwicklungsumgebung }{38}{section.5.5}
+\contentsline {section}{\numberline {5.4}Unity Rendering System}{40}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Evaluierung}{39}{chapter.6}
+\contentsline {section}{\numberline {5.5} Webserver Entwicklungsumgebung }{40}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Genauigkeit der Eventgenerierung}{39}{section.6.1}
+\contentsline {chapter}{\numberline {6}Evaluierung}{41}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}Uhren und Zeit}{39}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.1}Genauigkeit der Eventgenerierung}{41}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Darstellung der Events}{39}{section.6.2}
+\contentsline {subsection}{\numberline {6.1.1}Uhren und Zeit}{41}{subsection.6.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Vergleich mit Jaeger}{39}{section.6.3}
+\contentsline {section}{\numberline {6.2}Darstellung der Events}{41}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}Datenmodelle}{39}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.3}Vergleich mit Jaeger}{41}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Bereitstellung}{39}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.1}Datenmodelle}{41}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Ergebnisse}{39}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.2}Bereitstellung}{41}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Fazit}{40}{chapter.7}
+\contentsline {subsection}{\numberline {6.3.3}Ergebnisse}{41}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Ausblick}{40}{section.7.1}
+\contentsline {chapter}{\numberline {7}Fazit}{42}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}ZitatTest}{40}{section.7.2}
+\contentsline {section}{\numberline {7.1}Ausblick}{42}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Glossar}{41}{section*.25}
+\contentsline {section}{\numberline {7.2}ZitatTest}{42}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{42}{section*.27}
+\contentsline {chapter}{Glossar}{43}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{43}{chapter*.29}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{44}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{45}{chapter*.29}

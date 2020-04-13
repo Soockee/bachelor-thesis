@@ -25,7 +25,7 @@ Die Traktor Instrumentalisierungsbibliothek beinhaltet zwei wichtie Einheiten. D
 \label{subsection:Tracer}
 Der Tracer ist die zentrale Verwaltungseinheit der Instrumentalisierung. Dieser verwaltet die Verbindung der Anwendungsinstrumentalisierung zu dem Agenten und der Registry. Der Tracer kümmert sich um das Generieren von Spans und die Herstellung von Kausalzusammenhängen zwischen den Spans. Ausserdem stellt der Tracer die Funktionalitäten zur Kontextpropagierung über die Registry bereit. Die Spans sind Darstellungen von ausgeführter Arbeit in einer instrumentalisierten Anwendung. 
 
-Die Tracer API erweitert die OpenTracing API um vier Funktionen, die notwendig sind, um sich mit der Tracinginfrastuktur zu verbinden. Die \emph{Configure} Funktion sorgt für einen Verbindungsaufbau, abhängig von den übergebenen Parametern. Ein vollständiger Verbindungsaufbau ist nötig, um eine Kontextpropagierung zu ermögliche. Ausserdem wird der Udp Klient initzialisiert, damit beendete Spans reportet werden können. Der Udp klient hat einen Port zu belegen, der angegeben werden muss. Die IP-Adressen der Services sind dem Tracer bekannt zu geben. Auch der Port auf der die Anwendung lauscht, muss übergeben werden. Die Configure Funktion verwendet die \emph{Register} Funktion zur Erstellung einer \textbf{WebSocketClient} Instanz. Die Websocketverbindung wird über die Lebensdauer des Tracer offen gehalten. Über diesen Kommunikationskanal werden die Kontextinformationen übermittelt. \cref{listing:Tracer Verbindungsaufbau} zeigt eine Beispielhafte Konfigurierung. Dabei wird eine Tracerinstanz instanziiert und mit den Adressen der Traktorservices konfiguriert.
+Die Tracer API erweitert die OpenTracing API um vier Funktionen, die notwendig sind, um sich mit der Tracinginfrastuktur zu verbinden. Die \emph{Configure} Funktion sorgt für einen Verbindungsaufbau, abhängig von den übergebenen Parametern. Ein vollständiger Verbindungsaufbau ist nötig, um eine Kontextpropagierung zu ermögliche. Ausserdem wird der \gls{udpLabel} Klient initzialisiert, damit beendete Spans reportet werden können. Der UDP-Klient hat einen Port zu belegen, der angegeben werden muss. Die IP-Adressen der Services sind dem Tracer bekannt zu geben. Auch der Port auf der die Anwendung lauscht, muss übergeben werden. Die Configure Funktion verwendet die \emph{Register} Funktion zur Erstellung einer \textbf{WebSocketClient} Instanz. Die Websocketverbindung wird über die Lebensdauer des Tracer offen gehalten. Über diesen Kommunikationskanal werden die Kontextinformationen übermittelt. \cref{listing:Tracer Verbindungsaufbau} zeigt eine Beispielhafte Konfigurierung. Dabei wird eine Tracerinstanz instanziiert und mit den Adressen der Traktorservices konfiguriert.
 
 \begin{minipage}[]{\textwidth}
 	\begin{lstlisting}[frame=trBL]
@@ -73,17 +73,32 @@ Schlussendlich kennt ein Span seinen Tracer. Dies ist erforderlich, da beim fert
 \subsection{SpanBuilder}
 \label{subsection:SpanBuilder}
 
+Der SpanBuilder ist die Bindegliedentität zwischen dem Tracer und der Spangenerierung. Der Anwender der Instrumentalisierungsbibliothek kann durch die \emph{BuildSpan} Funktion des Tracer die Spangenerierung einleiten. Dabei wird eine SpanBuilder Instanz erstellt, die die übergebenen Parameter zur Spangenerierung nutzt. Der SpanBuilder verlangt bei der Initialisierung nach einem Operationsnamen und der Referenz des aufrufenden Tracers. Diese werden als Felder in der SpanBuilder Instanz gespeichert. Durch die Funktionen \emph{AddReference} und \emph{AsChildOf} kann das Feld \emph{references} bearbeitet werden. Dabei ist AsChildOf eine spezialisierte Form der AddReference Funktion. Die AddReference Funktion erwartet einen Referenztypen und einen SpanContext als Paramenter. Diese werden dann für den zu bauenden Span genutzt. 
+
+Eine weitere Grundfunktion ist die \emph{Start} Funktion. Diese beinhaltet die nötige Anwendungslogik, für die Traceidentifikationsnummergenerierung. Auch die Spanidentifikationsnummer wird generiert. Anschließend wird der Span gebaut und mit den gesammelten Daten initialisiert.
+
+Auch von der Start Funktion gibt es Spezialisierungen. Die überladene \emph{StartActive} Funktion kann Parameterlos oder mit dem Boolean \emph{finishSpanOnDispose} aufgerufen werden. Der Boolean bestimmt, wie mit einem Span umgegangen wird, nachdem die entsprechende Finish Funktion aufgerufen worden ist. StartActive setzt den gebauten Span auf den Zustand \textbf{Aktiv}. Das bedeutet, dass der Scopemanager diesen verfolgt und gegebenfalls den vorherig aktiven Span zwischenspeichert.
+
 \subsection{SpanContext}
 \label{subsection:SpanContext}
+
+Die SpanContext-Klasse beinhaltet eine TraceId, eine SpanId und einen Rerenztypen als Felder. Diese werden bei der Initialisierung gesetzt. Die SpanContext-Klasse ist ein reine Datenkapselung. Semantisch sind die in der SpanContext enthaltenen Daten jene, die in einem BinaryCarrier, codiert als Bytearray, über die Leitung gesendet werden.
 
 \subsection{Scope}
 \label{subsection:Scope}
 
+Ein Scope ist lokaler Kontext, welcher von dem ScopeManager verwaltet wird. In einem Scope werden Spans verwaltet. Dadurch wird das in \cref{subsection:Tracingcontext innerhalb eines Systems} beschriebene Problem der Kontextverfolgbarkeit innerhalb eines Systems gelöst. Ein Scope wird in einem Prozess geführt. Innerhalb des Scopes wird bei der aktiven Spans bei seiner Ersetzung gespeichert. Dadurch ist bei einer Beendigung des aktiven Spans der vorherige Span wiederherstellbar. Traktor nutzt die CSharp Implementierung des OpenTracing-Projekts.
+
 \subsection{ScopeManager}
 \label{subsection:SpanManager}
+Ein ScopeManager verwaltet Scopes. Bei einem Kontextwechsel, zum Beispiel bei einer Multi-Thread Implementierung, werden die Scopes durch den Manager verfolgt. Ein Scope ist nur innerhalb seines Prozesses relevant und beinhaltet einen aktiven Span. Über den Spanmanager lässt sich der Span, welcher durch einen aktiven Scope umfasst wird, ermitteln. Der Tracer ist dadurch jederzeit in der Lage, den aktiven Span und seinen Kontext zu nutzen. Wie auch der Scope, wird die ScopeManager-Implementierung des OpenTracing-Projekts genutzt. 
 
 \subsection{Reporter}
 \label{subsection:Reporter}
+Die Reporter-Klasse kapselt die UDP-Verbindung des Tracers zu dem Reporterservice. Dabei wird die Netzwerkddresse, sowie der Port gespeichert. Bei der Initialisierung des Reporters, wird die Verbindung mit den gegebenen Parametern hergestellt.
+
+Die Reporter-Klase umfasst drei Funktionen. Die Funktion \emph{Connect} stellt mit gegebenen Parametern die Verbindung zu dem UDP-Service her. Der UDP-Klient wird als Feld gespeichert und kann zur weiteren Datenübertragung genutzt werden. Die Funktion \emph{Report} sendet kodierte Form des Spans zu dem Reporterservice. Die Kodierung wird durch die Funktion \emph{BuildMessage} implementiert. Traktor nutzt eine UTF-8 Kodierung für den Nachrichtenaustausch.
+
 \newpage
 \begin{landscape}
 	\begin{figure}
@@ -94,8 +109,10 @@ Schlussendlich kennt ein Span seinen Tracer. Dies ist erforderlich, da beim fert
 	\end{figure}
 \end{landscape}
 
-\section{Traktor Agent}
-\label{section:Traktor Agent}
+\section{Traktor Reporter}
+\label{section:Traktor Reporter}
+
+Der Traktorreporter ist ein Python UDP-Endpunkt.
 \section{Traktor Registry}
 \label{section:Traktor Registry}
 \section{Unity Rendering System}

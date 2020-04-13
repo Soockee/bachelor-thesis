@@ -22,7 +22,7 @@ Aus den in \cref{section:Anforderungsanalyse} beschriebenen Anforderungen folger
 
 \textbf{Benutzbarkeit} \space\space\space Die Benutzbarkeit des Tracingsystems soll durch die Verwendung von Standards gewährleistet sein. Die von \emph{Opentracing} veröffentlichte \gls{apiLabel} soll der Instrumentalisierungsbibliothek eine vertraute und bewährte Anwendererfahrung liefern. 
 
-\textbf{Portabilität} \space\space\space Ein weiteres Designziel soll eine gegebene \textbf{Portabilität} sein. Die Umgebung für die das Tracingsystem entwicklet wird, ist eine Mischung aus Platformabhängigen und Platformunabhängigen Komponenten. Durch den verminderten Mehraufwand der bei platformunabhängigen Komponeten entsteht, wird eine verbesserte Nutzerfreundlichkeit gewährleistet. Vorallem bei der Integration in bestehende Systeme wird dies bemerkbar, da Bauprozesse von Projekten platformabhängig sind. Der platformabhängige Bauprozess soll im Falle des verteilten rendering System nicht beeinflusst werden. Die 
+\textbf{Portabilität} \space\space\space Ein weiteres Designziel soll eine gegebene \textbf{Portabilität} sein. Die Umgebung für die das Tracingsystem entwickelt wird, ist eine Mischung aus Platformabhängigen und Platformunabhängigen Komponenten. Durch den verminderten Mehraufwand der bei platformunabhängigen Komponeten entsteht, wird eine verbesserte Nutzerfreundlichkeit gewährleistet. Vorallem bei der Integration in bestehende Systeme wird dies bemerkbar, da Bauprozesse von Projekten platformabhängig sind. Der platformabhängige Bauprozess soll im Falle des verteilten rendering System nicht beeinflusst werden. Die 
 
 \textbf{Datenverfügbarkeit} \space\space\space Die Datenverfügbarkeit soll zeitnah stattfinden. Die von der Tracinginfrastruktur generierten Tracingdaten sollen zur Laufzeit darsgestellt werden. 
 
@@ -217,4 +217,18 @@ Diese Visualisierungsform soll ein Vergleich zwischen Traces ermöglichen. Die T
 	\label{fig:3D-Flammengraph-Vergleich}
 \end{figure}
 
+\section{Trakorentwicklungsumgebung}
+\label{section:Trakorentwicklungsumgebung}
+In diesem Kapitel wird die Traktorentwicklungsumgebung spezifiziert. Die Umgebung soll die verschiedenen Anwendungsfälle der Traktorbibliothek abdecken. Eine Entwicklungsumgebung ist dahin gehend sinnvoll, dass der Anwendungsfall des verteilten rendering Systems komplexe abhängigkeiten aufweist, bei der eine effiziente Entwicklung, z.B. durch die Platformabhängigen Plugins oder der Unityumgebung, beeinträchtigt wird.
+
+Die Traktorentwicklungsumgebung soll folgende Eigenschaften aufweisen:
+
+\begin{itemize}
+	\item \textbf{TE}.1 Die Entwicklungsumgebung soll aus mehreren Webservern bestehen
+	\item  \textbf{TE}.2 Die Infrastruktur soll auf genau einem Host-System ein verteiltes System abbilden.
+	\item  \textbf{TE}.3 Die Komponenten der Entwicklungsumgebung soll mit der Traktor-API instrumentalisiert sein.
+	\item  \textbf{TE}.4 Das Ansprechen der Entwicklungsumgebung soll durch einen Kommandozeilen HTTP Client ansprechbar und bedienbar sein.
+\end{itemize}
+
+Diese Spezifikation ermöglicht das Testen von Funktionalitäten der Traktor Tracingbibliothek. Dabei sollen die (\lowroman{1}) Eventgenerierungfunktionalitäten ausgeführt werden. Ausserdem soll durch durch die Instrumentalisierung von zwei miteinander kommunizierenden Komponenten (\lowroman{2}) die Kontextpropagierung durchgeführt werden. Das umfasst sowohl die lokale Kontextverwaltung, als auch die Kontextpropagierung über Prozessgrenzen hinaus. Zudem sollen die leichtgewichtigen Services, also den Reporter und die Registry, getestet werden. Dabei ist die (\lowroman{3}) Implementierung des Websocketprotokolls innerhalb der Registry, als auch der (\lowroman{4}) Websocketclient des Tracers zu untersuchen. Mit dieser Spezifikation wird ein Untersuchungssystem beschrieben, mit der teilweise die Designziele überprüft werden können. 
 % ----------------------------------------------------------------------------

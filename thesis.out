@@ -30,30 +30,31 @@
 \BOOKMARK [1][]{section.4.4}{Visualisierung}{chapter.4}% 30
 \BOOKMARK [2][]{subsection.4.4.1}{Frame Galerie}{section.4.4}% 31
 \BOOKMARK [2][]{subsection.4.4.2}{Dreidimensionaler Flammengraph}{section.4.4}% 32
-\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 33
-\BOOKMARK [1][]{section.5.1}{Instrumentalisierungsbibliothek: Traktor}{chapter.5}% 34
-\BOOKMARK [2][]{subsection.5.1.1}{Tracer}{section.5.1}% 35
-\BOOKMARK [2][]{subsection.5.1.2}{Span}{section.5.1}% 36
-\BOOKMARK [2][]{subsection.5.1.3}{SpanBuilder}{section.5.1}% 37
-\BOOKMARK [2][]{subsection.5.1.4}{SpanContext}{section.5.1}% 38
-\BOOKMARK [2][]{subsection.5.1.5}{Scope}{section.5.1}% 39
-\BOOKMARK [2][]{subsection.5.1.6}{ScopeManager}{section.5.1}% 40
-\BOOKMARK [2][]{subsection.5.1.7}{Reporter}{section.5.1}% 41
-\BOOKMARK [1][]{section.5.2}{Traktor Agent}{chapter.5}% 42
-\BOOKMARK [1][]{section.5.3}{Traktor Registry}{chapter.5}% 43
-\BOOKMARK [1][]{section.5.4}{Unity Rendering System}{chapter.5}% 44
-\BOOKMARK [1][]{section.5.5}{ Webserver Entwicklungsumgebung }{chapter.5}% 45
-\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 46
-\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 47
-\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 48
-\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 49
-\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 50
-\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 51
-\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 52
-\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 53
-\BOOKMARK [0][]{chapter.7}{Fazit}{}% 54
-\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 55
-\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 56
-\BOOKMARK [0][]{section*.25}{Glossar}{}% 57
-\BOOKMARK [0][]{section*.27}{Abk\374rzungsverzeichnis}{}% 58
-\BOOKMARK [0][]{chapter*.29}{Bibliography}{}% 59
+\BOOKMARK [1][]{section.4.5}{Trakorentwicklungsumgebung}{chapter.4}% 33
+\BOOKMARK [0][]{chapter.5}{Implementierung}{}% 34
+\BOOKMARK [1][]{section.5.1}{Instrumentalisierungsbibliothek: Traktor}{chapter.5}% 35
+\BOOKMARK [2][]{subsection.5.1.1}{Tracer}{section.5.1}% 36
+\BOOKMARK [2][]{subsection.5.1.2}{Span}{section.5.1}% 37
+\BOOKMARK [2][]{subsection.5.1.3}{SpanBuilder}{section.5.1}% 38
+\BOOKMARK [2][]{subsection.5.1.4}{SpanContext}{section.5.1}% 39
+\BOOKMARK [2][]{subsection.5.1.5}{Scope}{section.5.1}% 40
+\BOOKMARK [2][]{subsection.5.1.6}{ScopeManager}{section.5.1}% 41
+\BOOKMARK [2][]{subsection.5.1.7}{Reporter}{section.5.1}% 42
+\BOOKMARK [1][]{section.5.2}{Traktor Reporter}{chapter.5}% 43
+\BOOKMARK [1][]{section.5.3}{Traktor Registry}{chapter.5}% 44
+\BOOKMARK [1][]{section.5.4}{Unity Rendering System}{chapter.5}% 45
+\BOOKMARK [1][]{section.5.5}{ Webserver Entwicklungsumgebung }{chapter.5}% 46
+\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 47
+\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 48
+\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 49
+\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 50
+\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 51
+\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 52
+\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 53
+\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 54
+\BOOKMARK [0][]{chapter.7}{Fazit}{}% 55
+\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 56
+\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 57
+\BOOKMARK [0][]{section*.25}{Glossar}{}% 58
+\BOOKMARK [0][]{section*.27}{Abk\374rzungsverzeichnis}{}% 59
+\BOOKMARK [0][]{chapter*.29}{Bibliography}{}% 60
