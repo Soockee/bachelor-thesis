@@ -1,20 +1,20 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
-[0] Config.pm:305> INFO - Logfile is 'thesis.blg'
-[34] biber:313> INFO - === So Apr 12, 2020, 19:32:29
-[55] Biber.pm:371> INFO - Reading 'thesis.bcf'
-[124] Biber.pm:857> INFO - Found 27 citekeys in bib section 0
-[140] Biber.pm:3981> INFO - Processing section 0
-[152] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/library.bib' for section 0
-[154] bibtex.pm:1468> INFO - LaTeX decoding ...
-[192] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/library.bib'
-[239] Utils.pm:169> WARN - month field 'jul' in entry 'lamport78' is not an integer - this will probably not sort properly.
-[248] Utils.pm:169> WARN - month field 'aug' in entry 'BrendanGregg2011' is not an integer - this will probably not sort properly.
-[280] Utils.pm:169> WARN - month field 'sep' in entry 'mantime' is not an integer - this will probably not sort properly.
-[412] Utils.pm:169> WARN - BibTeX subsystem: /tmp/3yqBHdqWM5/library.bib_8777.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[464] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[464] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[464] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[464] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[501] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[514] bbl.pm:720> INFO - Output to thesis.bbl
-[514] Biber.pm:110> INFO - WARNINGS: 4
+[1] Config.pm:305> INFO - Logfile is 'thesis.blg'
+[36] biber:313> INFO - === Di Apr 14, 2020, 23:50:28
+[59] Biber.pm:371> INFO - Reading 'thesis.bcf'
+[158] Biber.pm:857> INFO - Found 28 citekeys in bib section 0
+[180] Biber.pm:3981> INFO - Processing section 0
+[198] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/library.bib' for section 0
+[200] bibtex.pm:1468> INFO - LaTeX decoding ...
+[256] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/library.bib'
+[321] Utils.pm:169> WARN - month field 'jul' in entry 'lamport78' is not an integer - this will probably not sort properly.
+[331] Utils.pm:169> WARN - month field 'aug' in entry 'BrendanGregg2011' is not an integer - this will probably not sort properly.
+[374] Utils.pm:169> WARN - month field 'sep' in entry 'mantime' is not an integer - this will probably not sort properly.
+[552] Utils.pm:169> WARN - BibTeX subsystem: /tmp/J17rKv9MZQ/library.bib_12527.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[615] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[615] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[615] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[615] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[669] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[683] bbl.pm:720> INFO - Output to thesis.bbl
+[684] Biber.pm:110> INFO - WARNINGS: 4

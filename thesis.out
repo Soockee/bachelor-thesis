@@ -40,21 +40,22 @@
 \BOOKMARK [2][]{subsection.5.1.5}{Scope}{section.5.1}% 40
 \BOOKMARK [2][]{subsection.5.1.6}{ScopeManager}{section.5.1}% 41
 \BOOKMARK [2][]{subsection.5.1.7}{Reporter}{section.5.1}% 42
-\BOOKMARK [1][]{section.5.2}{Traktor Reporter}{chapter.5}% 43
-\BOOKMARK [1][]{section.5.3}{Traktor Registry}{chapter.5}% 44
-\BOOKMARK [1][]{section.5.4}{Unity Rendering System}{chapter.5}% 45
-\BOOKMARK [1][]{section.5.5}{ Webserver Entwicklungsumgebung }{chapter.5}% 46
-\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 47
-\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 48
-\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 49
-\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 50
-\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 51
-\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 52
-\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 53
-\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 54
-\BOOKMARK [0][]{chapter.7}{Fazit}{}% 55
-\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 56
-\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 57
-\BOOKMARK [0][]{section*.25}{Glossar}{}% 58
-\BOOKMARK [0][]{section*.27}{Abk\374rzungsverzeichnis}{}% 59
-\BOOKMARK [0][]{chapter*.29}{Bibliography}{}% 60
+\BOOKMARK [2][]{subsection.5.1.8}{UML-Klassendiagramm der Bibliothek}{section.5.1}% 43
+\BOOKMARK [1][]{section.5.2}{Traktor Agent}{chapter.5}% 44
+\BOOKMARK [1][]{section.5.3}{Traktor Registry}{chapter.5}% 45
+\BOOKMARK [1][]{section.5.4}{Unity Rendering System}{chapter.5}% 46
+\BOOKMARK [1][]{section.5.5}{ Webserver Entwicklungsumgebung }{chapter.5}% 47
+\BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 48
+\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 49
+\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 50
+\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 51
+\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 52
+\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 53
+\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 54
+\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 55
+\BOOKMARK [0][]{chapter.7}{Fazit}{}% 56
+\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 57
+\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 58
+\BOOKMARK [0][]{section*.25}{Glossar}{}% 59
+\BOOKMARK [0][]{section*.27}{Abk\374rzungsverzeichnis}{}% 60
+\BOOKMARK [0][]{chapter*.29}{Bibliography}{}% 61

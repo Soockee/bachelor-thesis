@@ -409,6 +409,45 @@
       \field{pages}{423}
       \range{pages}{1}
     \endentry
+    \entry{10.5555/861332}{book}{}
+      \name{author}{3}{}{%
+        {{hash=bb89b7cdaca604acd67f90b17383b583}{%
+           family={Hejlsberg},
+           familyi={H\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5ac29df759655d92d1b059bf48342ca4}{%
+           family={Wiltamuth},
+           familyi={W\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=85956d59597c66457ba8a052f905f543}{%
+           family={Golde},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{4f1ada9a48020e2cb363ca7b47310c35}
+      \strng{fullhash}{4f1ada9a48020e2cb363ca7b47310c35}
+      \strng{bibnamehash}{4f1ada9a48020e2cb363ca7b47310c35}
+      \strng{authorbibnamehash}{4f1ada9a48020e2cb363ca7b47310c35}
+      \strng{authornamehash}{4f1ada9a48020e2cb363ca7b47310c35}
+      \strng{authorfullhash}{4f1ada9a48020e2cb363ca7b47310c35}
+      \field{labelalpha}{HWG03}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0321154916}
+      \field{title}{{C{\#} Language Specification}}
+      \field{year}{2003}
+    \endentry
     \entry{Kaldor2017}{article}{}
       \name{author}{13}{}{%
         {{hash=105a110592388793215833f35213a13e}{%

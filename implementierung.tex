@@ -79,10 +79,37 @@ Eine weitere Grundfunktion ist die \emph{Start} Funktion. Diese beinhaltet die n
 
 Auch von der Start Funktion gibt es Spezialisierungen. Die überladene \emph{StartActive} Funktion kann Parameterlos oder mit dem Boolean \emph{finishSpanOnDispose} aufgerufen werden. Der Boolean bestimmt, wie mit einem Span umgegangen wird, nachdem die entsprechende Finish Funktion aufgerufen worden ist. StartActive setzt den gebauten Span auf den Zustand \textbf{Aktiv}. Das bedeutet, dass der Scopemanager diesen verfolgt und gegebenfalls den vorherig aktiven Span zwischenspeichert.
 
+Eine beispielhafte Nutzung des Spanbuilders sieht folgendermaßen aus:
+
+\begin{minipage}[]{\textwidth}
+	\begin{lstlisting}[frame=trBL]
+	var operationname = "example_function";
+	var spanBuilder = tracer.BuildSpan(operationname);
+	var span = spanBuilder.Start();
+	\end{lstlisting}
+	\captionof{lstlisting}{Beispielhafte Anwendung des SpanBuilder}
+	\label{listing:SpanBuiler}
+\end{minipage} 
+
+Ein Operationsname wird definiert und als Paramenter für die BuildSpan-Funktion genutzt. Anschließend wird durch die Start-Funktion der SpanBuilder-Instanz ein Span auf den Zustand Aktiv gesetzt.
+
+
 \subsection{SpanContext}
 \label{subsection:SpanContext}
 
 Die SpanContext-Klasse beinhaltet eine TraceId, eine SpanId und einen Rerenztypen als Felder. Diese werden bei der Initialisierung gesetzt. Die SpanContext-Klasse ist ein reine Datenkapselung. Semantisch sind die in der SpanContext enthaltenen Daten jene, die in einem BinaryCarrier, codiert als Bytearray, über die Leitung gesendet werden.
+
+Ein Auszug eines Spankontexts aus dem Entwicklungssystem zeigt den Aufbau. Der Auszug stammt aus dem Registryservice. In dem Service wird der Nachricht auf die Konsole ausgebenen, sobald eine Propagiererung ausgelöst worden ist.
+
+\begin{minipage}[]{\textwidth}
+	\begin{lstlisting}[frame=trBL]
+	traktor-registry_1 | Client-Message: WIoJiNwldhLM;ZtDdH4lQ1a1b;child_of
+	\end{lstlisting}
+	\captionof{lstlisting}{Ein über die Registry propagierter Spankontext}
+	\label{listing:SpanContext-Registry}
+\end{minipage} 
+
+Der Spankontext beinhaltet drei Daten. Eine TraceId, eine SpanId und einem Relationstyp.
 
 \subsection{Scope}
 \label{subsection:Scope}
@@ -95,9 +122,20 @@ Ein ScopeManager verwaltet Scopes. Bei einem Kontextwechsel, zum Beispiel bei ei
 
 \subsection{Reporter}
 \label{subsection:Reporter}
-Die Reporter-Klasse kapselt die UDP-Verbindung des Tracers zu dem Reporterservice. Dabei wird die Netzwerkddresse, sowie der Port gespeichert. Bei der Initialisierung des Reporters, wird die Verbindung mit den gegebenen Parametern hergestellt.
+Die Reporter-Klasse kapselt die UDP-Verbindung des Tracers zu dem Agentenrservice. Dabei wird die Netzwerkddresse, sowie der Port gespeichert. Bei der Initialisierung des Reporters, wird die Verbindung mit den gegebenen Parametern hergestellt.
 
-Die Reporter-Klase umfasst drei Funktionen. Die Funktion \emph{Connect} stellt mit gegebenen Parametern die Verbindung zu dem UDP-Service her. Der UDP-Klient wird als Feld gespeichert und kann zur weiteren Datenübertragung genutzt werden. Die Funktion \emph{Report} sendet kodierte Form des Spans zu dem Reporterservice. Die Kodierung wird durch die Funktion \emph{BuildMessage} implementiert. Traktor nutzt eine UTF-8 Kodierung für den Nachrichtenaustausch.
+Die Reporter-Klase umfasst drei Funktionen. Die Funktion \emph{Connect} stellt mit gegebenen Parametern die Verbindung zu dem UDP-Service her. Der UDP-Klient wird als Feld gespeichert und kann zur weiteren Datenübertragung genutzt werden. Die Funktion \emph{Report} sendet kodierte Form des Spans zu dem Agentenservice. Die Kodierung wird durch die Funktion \emph{BuildMessage} implementiert. Traktor nutzt eine UTF-8 Kodierung für den Nachrichtenaustausch.
+
+\subsection{UML-Klassendiagramm der Bibliothek}
+\label{subsection:UML-Klassendiagramm der Bibliothek}
+
+Die Instrumentalisierungsbibliothek ist in der Programmiersprache CSharp implementiert. Die Programmiersprache eignet sich für die Entwicklung von Systemkomponenten, die in einer verteilten System zum Einsatz kommen, wie aus der Spezifikation der Programmiersprache entnommen werden kann: 
+
+\begin{quote}
+	C\# ist gedacht als simple, moderne,  universal einsetzbare, objektorientierte Programmiersprache. [...] Die Sprache ist für die Entwicklung von Softwarekomponenten gedacht, die in einer verteilten Umgebung bereitgestellt werden.\footpartcite[S. xx]{10.5555/861332}
+\end{quote}
+
+Das Klassendiagramm, gezeigt in \cref{fig:TraktorKlassendiagramm}, stellt einen Überblick über die vorherig beschriebenen relevanten Entitäten der Bibliothek dar.
 
 \newpage
 \begin{landscape}
@@ -109,12 +147,33 @@ Die Reporter-Klase umfasst drei Funktionen. Die Funktion \emph{Connect} stellt m
 	\end{figure}
 \end{landscape}
 
-\section{Traktor Reporter}
-\label{section:Traktor Reporter}
+\section{Traktor Agent}
+\label{section:Traktor Agent}
 
-Der Traktorreporter ist ein Python UDP-Endpunkt.
+Der Traktoragent ist ein Service, welcher ein UDP-Endpunkt bereit stellt. Der Service gibt alle erhaltenen Nachrichten auf seiner Konsole aus. Zwei Umgebungsvariablen werden genutzt, um den UDP-Endpunkt zu initialisieren. Die \textbf{UDP\_IP} ist der \emph{Localhost}, da der Service auf einer eigenständigen Komponeten bereitgestellt wird. Dies ist durch den Spezifikikationspunkt \textbf{TE}.2  gegeben. Der belegete Port wird durch die Umgebungsvariable \textbf{UDP\_PORT} konfiguriert. 
+
+Ein reporteter Span kann folgendermaßen aussehen:
+
+\begin{minipage}[]{\textwidth}
+	\begin{lstlisting}[frame=trBL]
+	traktor-agent_1| recieved message: 
+		 b'Process Context;
+		 04/14/2020 10:10:06.1791 PM;
+		 WIoJiNwldhLM;ZtDdH4lQ1a1b;
+		 child_of;
+		 04/14/2020 10:10:06.4158 PM'
+	traktor-agent_1| from:  ('172.22.0.5', 13338)
+	\end{lstlisting}
+	\captionof{lstlisting}{Ein reportetet Span. Der gezeigte Span ist in der Webserver Entwicklungsumgebung generiert worden}
+	\label{listing:Reporteter-Span}
+\end{minipage} 
+
+Der Service \emph{traktor-agent\_1} erhält von der Netzwerkaddresse 172.22.0.5:13338 die dargestellte Nachricht eines Spans mit dem Operationsnamen \emph{Process Context}. Der Startzeitstempel und der Endzeitstempel sind Teil des reporteten Spans. Auch der Spankontext ist dargestellt.
+
 \section{Traktor Registry}
 \label{section:Traktor Registry}
+
+
 \section{Unity Rendering System}
 \label{section:Unity Rendering System}
 \section{ Webserver Entwicklungsumgebung }
