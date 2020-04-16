@@ -16,7 +16,9 @@
 Verteilte Systeme dienen als Anwendungsfeld für die Instrumentalisierungsbibliothek. Auch das in dieser Arbeit vorgestellte Testbett, sowie das verteilte rendering System, in welches Traktor zum Einsatz kommt, sind solche verteilten Systeme. Dafür ist es wichtig, verschiedene Eigenschaften und Konzepte von verteilten Systemen zu definieren. Diese Eigenschaften und Konzepte nehmen einen entscheidenden Faktor bei der Ermittlung, Analyse und Umsetzung von Anforderungen der Instrumentalisierungsbibliothek ein. Dementsprechenend wird zunächt der Begriff des verteilten Systems definiert:
 
 \begin{quote}
+	\cbstart
 	Ein verteiltes System ist eine Kollektion unabhängiger Computer, die den Benutzern als ein Einzelcomputer erscheinen\footpartcite{10.5555/1202502} 
+	\cbend
 \end{quote}
 
 \subsection{Eigenschaften eines verteilten Systems}
@@ -87,7 +89,9 @@ Die \cref{fig:Partial_Ordering_Concurrent_explained_1} stellt eine Situation dar
 
 Drei Bedingungen müssen nach Lamport erfüllt sein, damit eine Beziehung zwischen Events partiell geordnet ist. 
 \begin{quote}
+	\cbstart
 	\glqq (1) Wenn \emph{a} und \emph{b} Events im selben Prozess sind und \emph{a} vor \emph{b} stattfindet, dann \emph{a} $\rightarrow$ \emph{b}. (2) Wenn \emph{a} das Senden einer Nachricht eines Prozesses ist und \emph{b} das Empfangen einer Nachricht eines anderen Prozesses ist, dann \emph{a} $\rightarrow$ \emph{b}. (3) Wenn \emph{a} $\rightarrow$ \emph{b} und \emph{b} $\rightarrow$ \emph{c}, dann \emph{a} $\rightarrow$ \emph{c}.\grqq \:\footpartcite[S. 559]{lamport78}
+	\cbend
 \end{quote}
 
 \begin{figure}[!ht]
@@ -119,7 +123,9 @@ Die gezeigte Kausalordnung von Events stellt das Fundament zur Erhebung von Trac
 Der Begriff des Verteilte Systems wurden bereits nach Tanenbaum definiert. Allerdings lohnt es sich eine alternative Definition zu betrachten, die eine andere Perspektive ermöglicht. 
 
 \begin{quote}
+	\cbstart
 	Ein verteiltes System ist ein System, mit dem ich nicht arbeiten kann, weil irgendein Rechner abgestürzt ist, von dem ich nicht einmal weiß, dass es ihn überhaupt gibt.\footpartcite{lamport87}
+	\cbend
 \end{quote}
 
 

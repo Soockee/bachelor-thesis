@@ -20,6 +20,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {5.5}{\ignorespaces Ein reportetet Span. Der gezeigte Span ist in der Webserver Entwicklungsumgebung generiert worden\relax }}{41}{lstlisting.5.5}
 \defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {5.6}{\ignorespaces Er\IeC {\"o}ffnende Nachricht eines Websocket Handshake\relax }}{42}{lstlisting.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {5.7}{\ignorespaces Serverantwort eines Websocket Handshake\relax }}{42}{lstlisting.5.7}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

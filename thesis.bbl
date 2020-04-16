@@ -334,6 +334,51 @@
       \verb http://www.brendangregg.com/blog/2015-08-11/flame-graph-search.html
       \endverb
     \endentry
+    \entry{fette2011websocket}{report}{}
+      \name{author}{2}{}{%
+        {{hash=1057c0ce811151df0862cf5b26064896}{%
+           family={Fette},
+           familyi={F\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{hash=2f848d58c5d28e172fbc9ab51a059f6e}{%
+           family={Melnikov},
+           familyi={M\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {RFC Editor}%
+      }
+      \list{publisher}{1}{%
+        {RFC Editor}%
+      }
+      \strng{namehash}{a384119ffa0f3414225b956a30c34bd9}
+      \strng{fullhash}{a384119ffa0f3414225b956a30c34bd9}
+      \strng{bibnamehash}{a384119ffa0f3414225b956a30c34bd9}
+      \strng{authorbibnamehash}{a384119ffa0f3414225b956a30c34bd9}
+      \strng{authornamehash}{a384119ffa0f3414225b956a30c34bd9}
+      \strng{authorfullhash}{a384119ffa0f3414225b956a30c34bd9}
+      \field{labelalpha}{FM11}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{$\backslash$url{\{}http://www.rfc-editor.org/rfc/rfc6455.txt{\}}}
+      \field{howpublished}{Internet Requests for Comments}
+      \field{issn}{2070-1721}
+      \field{number}{6455}
+      \field{title}{{The WebSocket Protocol}}
+      \field{type}{RFC}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb http://www.rfc-editor.org/rfc/rfc6455.txt
+      \endverb
+      \verb{url}
+      \verb http://www.rfc-editor.org/rfc/rfc6455.txt
+      \endverb
+      \keyw{socket.io websockets}
+    \endentry
     \entry{Stocia2007}{article}{}
       \name{author}{5}{}{%
         {{hash=017e9afc5894252aa67649ed7d3e642c}{%
