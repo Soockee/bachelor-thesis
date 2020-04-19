@@ -8,11 +8,45 @@
 % ----------------------------------------------------------------------------
 
 \chapter{Evaluierung}
-\section{Genauigkeit der Eventgenerierung}
-\subsection{Uhren und Zeit}
-\section{Darstellung der Events}
-\section{Vergleich mit Jaeger}
-\subsection{Datenmodelle}
-\subsection{Bereitstellung}
-\subsection{Ergebnisse}
+\label{chapter:Evaluierung}
+In diesem Kapitel werden die Prozesse beschrieben, die durchgeführt wurden, um die Implementierung und die erhaltenen Ergebnisse zu evaluieren. In \cref{section:Anforderungserfüllung} wird die Traktorimplementierung auf ihre Einhaltung der Anforderungen  untersucht. In \cref{section:Umsetzung der Designziele} werden die Designziele herangezogen und auf ihre Gegebenheit in der Tracingbibliothek überprüft. Das Open-Source Projekt \textbf{Jaeger} wird als Vergleichswerkzeug in den Folgenden Abschnitten herangezogen. Jaeger ist eine auf der OpenTracing API basierenden \emph{state-of-the-art} Distributed Tracing Implementierung. Sie setzt die aktuellsten Erkenntnisse der Distributed Tracing Gemeinschaft um. Dabei wird in \cref{section:Bereitstellung der Testumgebung} die Bereitstellung der Testumgebung, in Hinsicht auf beide Werkzeuge, diskutiert. Die Bereitstellungsunterschiede beider Werkzeuge werden aufgezeigt. In \cref{section:Ergebnissvergleich} werden die Ergebnisse der Spangenerierung verglichen. Es wird auf die Ausdruckskraft des Traktor-Datenmodelles im Vergleich zu Jaeger eingegangen. Zuletzt werden die präsentierten Visualisierungansätze diskutiert. Es wird ein Vergleich zu den Visualisierungsmöglichkeiten der Jaeger UI durchgeführt.
+
+\section{Anforderungserfüllung}
+\label{section:Anforderungserfüllung}
+\section{Umsetzung der Designziele}
+\label{section:Umsetzung der Designziele}
+\section{Bereitstellung der Testumgebung}
+\label{section:Bereitstellung der Testumgebung}
+\begin{itemize}
+	\item Durch Docker-Compose wird eine verteiltes System auf einem Lokalen Rechner aufgebaut.
+	\item gibt es architektonische unterschiede? Services etc. 
+	\item Konfigurationsunterschiede
+	\item Ist traktor einfacher zu deployen? Wahrschienlich nicht da jaeger ein all in one image hat. Könnte aber auch umgesetzt werden
+\end{itemize}
+\section{Ergebnissvergleich}
+\label{section:Ergebnissvergleich}
+
+
+\begin{itemize}
+	\item Bezug zur Problemstellung schaffen
+	\item inwiefern hält sich jaeger an die Happens before relationship?
+	\item wie setzt jaeger diese um?
+	\item setzt es sie um?
+	\item setzt traktor sie um? Wenn ja wie?
+	\item Wie regelt Jaeger die Zeitresolution?
+	\item  
+\end{itemize}
+\section{Visualisierungvergleich von Traktor und Jaeger}
+\label{section:Visualisierungvergleich von Traktor und Jaeger}
+\begin{itemize}
+	\item jaeger bietet verschiedene visualisierungsmöglichkeiten
+	\begin{itemize}
+		\item z.B. DAG
+		\item Tracediagramm
+		\item Service-Orientierter Ansatz?
+		\item Tracecompare
+	\end{itemize}
+	\item Welche Vorteile bringen meine Visualisierungsansatze?
+	
+\end{itemize}
 % ----------------------------------------------------------------------------

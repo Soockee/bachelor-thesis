@@ -48,16 +48,14 @@
 \BOOKMARK [1][]{section.5.4}{Unity Rendering System}{chapter.5}% 48
 \BOOKMARK [1][]{section.5.5}{ Webserver Entwicklungsumgebung }{chapter.5}% 49
 \BOOKMARK [0][]{chapter.6}{Evaluierung}{}% 50
-\BOOKMARK [1][]{section.6.1}{Genauigkeit der Eventgenerierung}{chapter.6}% 51
-\BOOKMARK [2][]{subsection.6.1.1}{Uhren und Zeit}{section.6.1}% 52
-\BOOKMARK [1][]{section.6.2}{Darstellung der Events}{chapter.6}% 53
-\BOOKMARK [1][]{section.6.3}{Vergleich mit Jaeger}{chapter.6}% 54
-\BOOKMARK [2][]{subsection.6.3.1}{Datenmodelle}{section.6.3}% 55
-\BOOKMARK [2][]{subsection.6.3.2}{Bereitstellung}{section.6.3}% 56
-\BOOKMARK [2][]{subsection.6.3.3}{Ergebnisse}{section.6.3}% 57
-\BOOKMARK [0][]{chapter.7}{Fazit}{}% 58
-\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 59
-\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 60
-\BOOKMARK [0][]{section*.25}{Glossar}{}% 61
-\BOOKMARK [0][]{section*.27}{Abk\374rzungsverzeichnis}{}% 62
-\BOOKMARK [0][]{chapter*.29}{Bibliography}{}% 63
+\BOOKMARK [1][]{section.6.1}{Anforderungserf\374llung}{chapter.6}% 51
+\BOOKMARK [1][]{section.6.2}{Umsetzung der Designziele}{chapter.6}% 52
+\BOOKMARK [1][]{section.6.3}{Bereitstellung der Testumgebung}{chapter.6}% 53
+\BOOKMARK [1][]{section.6.4}{Ergebnissvergleich}{chapter.6}% 54
+\BOOKMARK [1][]{section.6.5}{Visualisierungvergleich von Traktor und Jaeger}{chapter.6}% 55
+\BOOKMARK [0][]{chapter.7}{Fazit}{}% 56
+\BOOKMARK [1][]{section.7.1}{Ausblick}{chapter.7}% 57
+\BOOKMARK [1][]{section.7.2}{ZitatTest}{chapter.7}% 58
+\BOOKMARK [0][]{section*.27}{Glossar}{}% 59
+\BOOKMARK [0][]{section*.29}{Abk\374rzungsverzeichnis}{}% 60
+\BOOKMARK [0][]{chapter*.31}{Bibliography}{}% 61

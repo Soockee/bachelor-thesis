@@ -1,20 +1,20 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [1] Config.pm:305> INFO - Logfile is 'thesis.blg'
-[37] biber:313> INFO - === Fr Apr 17, 2020, 00:42:47
+[37] biber:313> INFO - === Fr Apr 17, 2020, 18:14:09
 [60] Biber.pm:371> INFO - Reading 'thesis.bcf'
 [134] Biber.pm:857> INFO - Found 29 citekeys in bib section 0
 [152] Biber.pm:3981> INFO - Processing section 0
 [164] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/library.bib' for section 0
 [167] bibtex.pm:1468> INFO - LaTeX decoding ...
 [212] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/library.bib'
-[268] Utils.pm:169> WARN - month field 'jul' in entry 'lamport78' is not an integer - this will probably not sort properly.
-[277] Utils.pm:169> WARN - month field 'aug' in entry 'BrendanGregg2011' is not an integer - this will probably not sort properly.
+[267] Utils.pm:169> WARN - month field 'jul' in entry 'lamport78' is not an integer - this will probably not sort properly.
+[276] Utils.pm:169> WARN - month field 'aug' in entry 'BrendanGregg2011' is not an integer - this will probably not sort properly.
 [311] Utils.pm:169> WARN - month field 'sep' in entry 'mantime' is not an integer - this will probably not sort properly.
-[467] Utils.pm:169> WARN - BibTeX subsystem: /tmp/GPeg5AahYc/library.bib_15630.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[523] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[523] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[524] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[524] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[566] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[580] bbl.pm:720> INFO - Output to thesis.bbl
-[580] Biber.pm:110> INFO - WARNINGS: 4
+[464] Utils.pm:169> WARN - BibTeX subsystem: /tmp/j_J6mpwI8b/library.bib_17648.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[522] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[522] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[522] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[522] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[564] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[579] bbl.pm:720> INFO - Output to thesis.bbl
+[579] Biber.pm:110> INFO - WARNINGS: 4
