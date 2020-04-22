@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  22 APR 2020 19:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  23 APR 2020 00:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2316,26 +2316,21 @@ Overfull \hbox (11.58435pt too wide) in paragraph at lines 221--222
 s rechteck-ige Flächen dargestellt
  []
 
-<img/Design/3D-Flammengraph-Konzept.png, id=773, 1348.03625pt x 423.5825pt>
+<img/Design/3D-Flammengraph-Konzept.png, id=773, 1262.7175pt x 422.57875pt>
 File: img/Design/3D-Flammengraph-Konzept.png Graphic file (type png)
 <use img/Design/3D-Flammengraph-Konzept.png>
 Package pdftex.def Info: img/Design/3D-Flammengraph-Konzept.png  used on input 
 line 226.
-(pdftex.def)             Requested size: 485.29268pt x 152.48958pt.
-
-Overfull \hbox (12.56679pt too wide) in paragraph at lines 225--227
- []|  [] 
- []
-
+(pdftex.def)             Requested size: 454.57796pt x 152.12822pt.
 [33
 
  <./img/Design/3D-Flammengraph-Konzept.png>]
-<img/Design/3D-Flammengraph-Vergleich.png, id=780, 1034.86626pt x 343.2825pt>
+<img/Design/3D-Flammengraph-Vergleich.png, id=780, 1034.86626pt x 342.27875pt>
 File: img/Design/3D-Flammengraph-Vergleich.png Graphic file (type png)
 <use img/Design/3D-Flammengraph-Vergleich.png>
 Package pdftex.def Info: img/Design/3D-Flammengraph-Vergleich.png  used on inpu
 t line 235.
-(pdftex.def)             Requested size: 413.93916pt x 137.31056pt.
+(pdftex.def)             Requested size: 413.93916pt x 136.90906pt.
 
 Overfull \hbox (5.81467pt too wide) in paragraph at lines 249--250
 []\T1/lmr/bx/n/10.95 TE\T1/lmr/m/n/10.95 .3 Die Webserver-Komponenten der En-tw
@@ -2691,7 +2686,7 @@ exmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb>
-Output written on thesis.pdf (68 pages, 943502 bytes).
+Output written on thesis.pdf (68 pages, 959668 bytes).
 PDF statistics:
  1310 PDF objects out of 1440 (max. 8388607)
  1155 compressed objects within 12 object streams
