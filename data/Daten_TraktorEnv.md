@@ -34,14 +34,13 @@ Caller:
 |---|---|---|---|---|---|
 | Process Context | 04/22/2020 05:51:33.7606 PM | 04/22/2020 05:51:33.9601 PM | Root | +5cMOCWFmniU | m474IAC2AiiM |
 
+Server:
 
-| Default aligned | Left aligned | Center aligned  | Right aligned  |
-|-----------------|:-------------|:---------------:|---------------:|
-| First body part | Second cell  | Third cell      | fourth cell    |
-| Second line     | foo          | **strong**      | baz            |
-| Third line      | quux         | baz             | bar            |
-|-----------------+--------------+-----------------+----------------|
-| Second body     |              |                 |                |
-| 2nd line        |              |                 |                |
-|-----------------+--------------+-----------------+----------------|
-| Third body      |              |                 | Foo            |
+| Operation Name | Anfangszeit | Endzeit | Beziehungstyp | TraceID | SpanID |
+|---|---|---|---|---|---|
+| Server: Process Context | 04/22/2020 05:51:33.8682 PM | 04/22/2020 05:51:33.9561 PM | {m474IAC2AiiM:child_of} | +5cMOCWFmniU | D2n7aJSEaeH2 |
+| CalculateFiboncacci | 04/22/2020 05:51:33.9232 PM | 04/22/2020 05:51:33.9292 PM | {D2n7aJSEaeH2:child_of} | +5cMOCWFmniU | SJJowlQi85Dg |
+| CalculateFiboncacci | 04/22/2020 05:51:33.9290 PM | 04/22/2020 05:51:33.9290 PM | {SJJowlQi85Dg:child_of} | +5cMOCWFmniU | CgMHhsbHBfK0 |
+| CalculateFiboncacci | 04/22/2020 05:51:33.9233 PM | 04/22/2020 05:51:33.9279 PM | {SJJowlQi85Dg:child_of} | +5cMOCWFmniU | 2fNnwdzqVplI |
+| CalculateFiboncacci | 04/22/2020 05:51:33.9278 PM | 04/22/2020 05:51:33.9278 PM | {2fNnwdzqVplI:child_of} | +5cMOCWFmniU | Cb/6unIE7U6O |
+| CalculateFiboncacci | 04/22/2020 05:51:33.9233 PM | 04/22/2020 05:51:33.9236 PM | {2fNnwdzqVplI:child_of} | +5cMOCWFmniU | YuIv9mrNNuWH |
