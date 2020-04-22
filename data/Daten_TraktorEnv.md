@@ -29,7 +29,6 @@ Zeiten:
 04/22/2020 05:51:33.7606 PM;+5cMOCWFmniU;m474IAC2AiiM;child_of;04/22/2020 05:51:33.9601 PM
 
 Caller:
-Operation Name | Anfangszeit | Endzeit | Beziehungstyp | TraceID | SpanID
-------------------------------------------------------
-Process Context | 04/22/2020 05:51:33.7606 PM | 04/22/2020 05:51:33.9601 PM | Root | +5cMOCWFmniU | m474IAC2AiiM
-------------------------------------------------------
+| Operation Name | Anfangszeit | Endzeit | Beziehungstyp | TraceID | SpanID |
+| --|---|---|---|---|---|
+| Process Context | 04/22/2020 05:51:33.7606 PM | 04/22/2020 05:51:33.9601 PM | Root | +5cMOCWFmniU | m474IAC2AiiM |
