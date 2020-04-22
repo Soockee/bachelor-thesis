@@ -9,11 +9,11 @@
 
 \chapter{Problembeschreibung}
 \label{chapter:Problembeschreibung}
-In diesem Kapitel wird die Problematik, um das Generieren und Ordnen von Events in einem verteilten System mit asynchroner Kommunikation, beschrieben. Dabei betrachten man die Relevanz der Problemstellung. Ausserdem werden Fragen aufgestellt, die diese Problemstellung umfassen. Anschließend wird eine Anforderungsanalyse durchgeführt.
+In diesem Kapitel wird die Problematik, um das Generieren und Ordnen von Events in einem verteilten System mit asynchroner Kommunikation, beschrieben. Dabei betrachtet man die Relevanz der Problemstellung. Ausserdem werden Fragen aufgestellt, die diese Problemstellung umfassen. Anschließend wird eine Anforderungsanalyse durchgeführt.
 
 \section{Anwendungsüberwachung}
 \label{section:Tracing von Anwendungen}
-Viele Bereiche der Wirtschschaft, der Wisschenschaft und grundsätzlich des alltäglichen Lebens sind Software unterstützt. Trends wie beispielsweise \gls{iotLabel}, Hausautomatisierung, Mobile Geräte, etc. sind Anwendungsbeispiele. Diese sind aus ihrer Natur heraus stark verteilte Anwendungen. Aber auch potentiell neue Anwendungsbereiche, wie zum Beispiel verteiltes \gls{renderingGlossar}, benötigen detailierte Einsicht in die internen Vorgänge der Anwendung. 
+Viele Bereiche der Wirtschschaft, der Wissenschaft und grundsätzlich des alltäglichen Lebens sind durch Software unterstützt. Trends wie beispielsweise \gls{iotLabel}, Hausautomatisierung, Mobile Geräte, etc. sind Anwendungsbeispiele. Diese sind aus ihrer Natur heraus stark verteilte Anwendungen. Aber auch potentiell neue Anwendungsbereiche, wie zum Beispiel verteiltes \gls{renderingGlossar}, benötigen detaillierte Einsicht in die internen Vorgänge der Anwendung. 
 
 Dabei spielen zwei Eigenschaften in der Überwachung der Anwendung eine zentrale Rolle. 
 Zum einen ist das die (\lowroman{1}) \emph{Performance} und zum anderen die (\lowroman{2}) \emph{Korrektheit}.
@@ -33,16 +33,16 @@ Ein beispielhafter Gesamtpfad, der durch die verteilte Renderinganwendung genomm
 \cref{fig:Anwendungsueberwachung_Gesamtsystem} verdeutlicht diesen Pfad von kausal relatierenden Events.
 Dabei ist jede Komponente des Pfades ein generiertes Event.
 Zu sehen ist, dass das (1) Senden der Benutzereingabe vor dem (2) Übermitteln der Benutzereingabe stattfinden.
-Anschließend wird die Eingabe (3) Empfangen.
+Anschließend wird die Eingabe (3) empfangen.
 Auch die (4) Verarbeitung im verteilten System, das für den Benutzer, wie in \cref{subsection:Eigenschaften eines verteilten Systems} definiert, nicht als solches kenntlich sein muss, generiert in diesem Beispiel ein Event.
 Die Antwort wird (5) gesendet und die (6) Übermittlung wird durchgeführt.
 Zuletzt wird die Antwort (7) empfangen. Das Empfangen schließt den Pfad ab. Die Gesamtdauer des Pfades wird als Latenz eines Frames bezeichnet.
-Daraus kann eine Durschschnittslatenz über eine Zeitspanne berechnet werden, welches als Performanceindikator dient. Die Zeitspanne zwischen den einzelnen Events können verglichen werden. Dabei ist es möglich sog. \emph{Bottlenecks} zu identifizieren. Bottlnecks sind Vorgänge, die einen großteil der Gesamtdauer ausmachen. Sind werden durch die Zeitspanne zwischen zwei Events, die auf dem \emph{kritischen Pfad} liegen, bestimmt. Diese Art der Anwendungsüberwachung soll die Möglichkeit bieten, Bottlenecks zu identifizieren. Wie in \cref{subsection:Ordnung von Events} beschrieben, verlangt eine Messung der Zeit über verschiedene physikalisch Entitäten entweder eine globale physikalische Uhr oder jeweils eine physikalische Uhr in jeder Entität, die über alle Entitäten synchrone sind beziehungsweise, synchronisiert werden. Dabei stellt sich die Frage \textbf{F1}:
+Daraus kann eine Durschschnittslatenz über eine Zeitspanne berechnet werden, welches als Performanceindikator dient. Die Zeitspanne zwischen den einzelnen Events können verglichen werden. Dabei ist es möglich sog. \emph{Bottlenecks} zu identifizieren. Bottlnecks sind Vorgänge, die einen Großteil der Gesamtdauer ausmachen. Sie werden durch die Zeitspanne zwischen zwei Events, die auf dem \emph{kritischen Pfad} liegen, bestimmt. Diese Art der Anwendungsüberwachung soll die Möglichkeit bieten, Bottlenecks zu identifizieren. Wie in \cref{subsection:Ordnung von Events} beschrieben, verlangt eine Messung der Zeit über verschiedene physikalisch Entitäten entweder eine globale physikalische Uhr oder jeweils eine physikalische Uhr in jeder Entität, die über alle Entitäten synchrone sind beziehungsweise synchronisiert werden. Dabei stellt sich die Frage \textbf{F1}:
 
 \begin{quote}
 	\cbstart
 		\textbf{F1:}\\
-		Inwiefern lässt sich eine Zeitmessung von Eventzeitspannen konzipieren
+		Inwiefern lässt sich eine Zeitmessung von Eventzeitspannen konzipieren?
 	\cbend
 \end{quote}
 
@@ -51,7 +51,7 @@ Daraus kann eine Durschschnittslatenz über eine Zeitspanne berechnet werden, we
 \begin{quote}
 	\cbstart
 	\textbf{F2:}\\
-	Welche Visualisierungsformen können genutzt werden, um kausal zusammenhängende Events derart darzugestellen, sodass anhand der Visualisierung feststellbar ist, ob das Verhalten der Anwendung starke Ausreißer, die auf Fehlimplmenentierung deuten könnten, aufweist
+	Welche Visualisierungsformen können genutzt werden, um kausal zusammenhängende Events derart darzustellen, sodass anhand der Visualisierung feststellbar ist, ob das Verhalten der Anwendung starke Ausreißer, die auf Fehlimplmenentierung deuten könnten, aufweist
 	\cbend
 \end{quote}
 
@@ -78,7 +78,7 @@ Daraus kann eine Durschschnittslatenz über eine Zeitspanne berechnet werden, we
 	\caption[Anwendungsinstrumentalisierung und Netzwerkkommunikation über TCP/IP in verteilten Systemen]{}
 \end{figure} 
 
-Man definieren ein minimales verteiltes System, welches das verteilte rendering System vereinfacht darstellt. Dieses besteht aus zwei Komponenten. \cref{fig:distributed_system_application_minimal} bildet ein solches System ab. Die Knoten beinhalten zwei für das Generieren und Ordnen von Events interessante Aspekte. Dies ist zum einen die in \cref{fig:distributed_system_application_inside} dargestellte verteilte Anwendung mit ihrem instrumentalisiertem Code und zum anderen das in \cref{fig:distributed_system_network} dargestellte Netzwerk, über welches Nachrichten ausgetauscht werden. 
+Man definieren ein minimales verteiltes System, welches das verteilte Rendering-System vereinfacht darstellt. Dieses besteht aus zwei Komponenten. \cref{fig:distributed_system_application_minimal} bildet ein solches System ab. Die Knoten beinhalten zwei für das Generieren und Ordnen von Events interessante Aspekte. Dies ist zum einen die in \cref{fig:distributed_system_application_inside} dargestellte verteilte Anwendung mit ihrem instrumentalisiertem Code und zum anderen das in \cref{fig:distributed_system_network} dargestellte Netzwerk, über welches Nachrichten ausgetauscht werden. 
 
  \begin{figure}[!ht]
 	\centering
@@ -94,17 +94,17 @@ Die Komponenten des Systems besitzen jeweils einen Linux Kernel. Der Kernel biet
 	\footpartcite{BrendanGreggPerf}
 	\cbend
 \end{quote}
-Von dem Szenario ausgehend, dass man Events innerhalb des Minimalbeispiels analysieren möchte, eignen sich Flammengraphen.
- Der in \cref{fig:problembeschreibung_flamengraph} gezeigte Flammengraphe stellt perf\_events dar, die während einer TCP Kommunikation erhoben worden sind.  Dabei ist die Länge der Balken, die Zeit, die das Event, relativ zur Gesamtzeit der Messung, insgesamt eingenommen hat. Die Profilingdaten weisen keine kausalität auf. Die erhobenen perf\_event Daten sind Stichproben. Man geht in diesem Beispiel allerdings davon aus, das alle Events aufgenommen worden sind. Diese Darstellung erlaubt es, die Events \emph{eines} Systems genau zu beschreiben. Nun kommt das zweite System hinzu, mit dem die Kommunikation stattgefunden hat. Auch hier sei gegeben, dass das zweite System Daten generiert hat, welche zu einer ähnlich aufgebaute Visualisierung führt. Die beiden Flammengraphen werden miteinandener verbunden. Dies führt zu einer dreidimensionalen Darstellung von Flammengraphen, gezeigt in \cref{fig:flamegraph_3D}. Wie in einer TCP-Verbindung üblich, wird eine Kommunikationskanal aufgebaut. Über den Kanal können Nachrichten ausgetauscht werden. Anschließend wird die Verbindung mit einem Vier-Wege-Handschlag beendet. Die obersten Blöcke und ihre systemübergreifenden Verbindungslinien, dargetellt durch die gestrichelten Linien mit Pfeilrichtung, stellen die Terminierung der TCP-Verbindung dar.
+Von dem Szenario ausgehend, dass man Events innerhalb des Minimalbeispiels analysieren möchte, eignen sich Flammengraphen\footpartcite{FlameGraphs}.
+ Der in \cref{fig:problembeschreibung_flamengraph} gezeigte Flammengraphe stellt perf\_events dar, die während einer TCP Kommunikation erhoben worden sind.  Dabei ist die Länge der Balken, die Zeit, die das Event, relativ zur Gesamtzeit der Messung, insgesamt eingenommen hat. Die Profilingdaten weisen keine Kausalität auf. Die erhobenen perf\_event Daten sind Stichproben. Man geht in diesem Beispiel allerdings davon aus, das alle Events aufgenommen worden sind. Diese Darstellung erlaubt es, die Events \emph{eines} Systems genau zu beschreiben. Nun kommt das zweite System hinzu, mit dem die Kommunikation stattgefunden hat. Auch hier sei gegeben, dass das zweite System Daten generiert hat, welche zu einer ähnlich aufgebaute Visualisierung führt. Die beiden Flammengraphen werden miteinander verbunden. Dies führt zu einer dreidimensionalen Darstellung von Flammengraphen, gezeigt in \cref{fig:flamegraph_3D}. Wie in einer TCP-Verbindung üblich, wird eine Kommunikationskanal aufgebaut. Über den Kanal können Nachrichten ausgetauscht werden. Anschließend wird die Verbindung mit einem Vier-Wege-Handschlag beendet. Die obersten Blöcke und ihre systemübergreifenden Verbindungslinien, dargestellt durch die gestrichelten Linien mit Pfeilrichtung, stellen die Terminierung der TCP-Verbindung dar.
  
  Der Terminierungsprozess wird genauer betrachtet. \cref{fig:flamegraph_3D_closing} zeigt vier Events. \textbf{A} ist die \emph{FIN} Markierung des Initiators. Sie leitet die Terminierung ein. \textbf{C} stellt das Empfangen und Beantworten mittels \emph{ACK} und \emph{FIN} dar. \\
- \textbf{B} ist der Terminierungsmoment des Initatorsystems. Dieser findet nach dem Zeitpunkt des Eintreffens von \emph{FIN} des Empfänger statt. Dieser Zeitpunkt ist das Senden des letzten \emph{ACK} des Initators, addiert mit einer Konstante \emph{Timeout}.  Event \textbf{B} ist also definiert als:
+ \textbf{B} ist der Terminierungsmoment des Initatorsystems. Dieser findet nach dem Zeitpunkt des Eintreffens von \emph{FIN} des Empfänger statt. Dieser Zeitpunkt ist das Senden des letzten \emph{ACK} des Initiators, addiert mit einer Konstante \emph{Timeout}.  Event \textbf{B} ist also definiert als:
  
 \[
 	\text{B}: \; Ack_{init} + Timeout  
 \]
 
- \textbf{D} ist der Terminierungsmoment des Empfängersystems. Dieser Zeitpunkt ist das Erhalten der letzten, vom Initiatorsystem gesendeten, \emph{ACK} Makierung. Die unbekannte Variable \emph{Übertragungszeit} nimmt Einfluss auf den Zeitpunkt. Event \textbf{D} ist also definiert als:
+ \textbf{D} ist der Terminierungsmoment des Empfängersystems. Dieser Zeitpunkt ist das Erhalten der letzten, vom Initiatorsystem gesendeten, \emph{ACK} Markierung. Die unbekannte Variable \emph{Übertragungszeit} nimmt Einfluss auf den Zeitpunkt. Event \textbf{D} ist also definiert als:
  \[
  \text{D}: \; Ack_{init} + Übertragungszeit 
  \]
@@ -150,9 +150,9 @@ Aus dieser Darstellung folgert Fragestellungen F3:
 \section{Anforderungsanalyse}
 \label{section:Anforderungsanalyse}
 
-Das Systems, für das die Instrumentalisierungsbilbiothek entwickelt wird, ist ein System für verteiltes Rendering. Die Instrumentalisierungsbilbiothek muss notwendige Funktionalitäten spezifizieren, die es ermöglichen ein Modell aus kausal abhängigen Events darzustellen. Zur Erstellung des Modells muss sich mit den Funktionalitäten der \textbf{Eventgenerierung}, der \textbf{Eventrelation}, der \textbf{Synchronisation von Eventgeneratoren}, der \textbf{Eventübermittlnug} und der \textbf{Ordnung von Events} beschäftigt werden. Im Fokus der Interpretation des Modells soll die \textbf{end-zu-end Latenz}, sowie die \textbf{Generierungszeit eines Frames} stehen. Rahmenbedingungen wie die eingeschränkte \textbf{Nachrichtenmodifikation} sind zu berücksichtigen.
+Das Systems, für das die Instrumentalisierungsbibliothek entwickelt wird, ist ein System für verteiltes Rendering. Die Instrumentalisierungsbibliothek muss notwendige Funktionalitäten spezifizieren, die es ermöglichen ein Modell aus kausal abhängigen Events darzustellen. Zur Erstellung des Modells muss sich mit den Funktionalitäten der \textbf{Eventgenerierung}, der \textbf{Eventrelation}, der \textbf{Synchronisation von Eventgeneratoren}, der \textbf{Eventübermittlung} und der \textbf{Ordnung von Events} beschäftigt werden. Im Fokus der Interpretation des Modells soll die \textbf{end-zu-End Latenz}, sowie die \textbf{Generierungszeit eines Frames} stehen. Rahmenbedingungen wie die eingeschränkte \textbf{Nachrichtenmodifikation} sind zu berücksichtigen.
 
-Semantisch relevante Ereignisse sind zu definieren. Eine Funktionalität muss geschaffen werden, die es erlaubt, diese Ereginisse als ein Event abzubilden. Die Generierungfunktionalität muss dafür sorgen, dass die Events einem spezifizierten Aufbau aufweisen, um weiterverarbeitet und ausgewertet werden zu können. Die Nutzung einer standarisierten und erprobten \gls{apiLabel} ist wünschenswert.
+Semantisch relevante Ereignisse sind zu definieren. Eine Funktionalität muss geschaffen werden, die es erlaubt, diese Ereignisse als ein Event abzubilden. Die Generierungsfunktionalität muss dafür sorgen, dass die Events einen spezifizierten Aufbau aufweisen, um weiterverarbeitet und ausgewertet werden zu können. Die Nutzung einer standardisierten und erprobten \gls{apiLabel} ist wünschenswert.
  
 \subsection{Funktionalitäten}
 
@@ -164,27 +164,27 @@ Events müssen in einem für die Anwendung semantisch relevanten Bereich generie
 \label{subsubsection:Eventkorrelation}
 Es muss ein Modell für Events konzipiert werden. Das Modell muss in der Lage sein, Relationen abbilden zu können. Diese Relationen sollen die kausalen Zusammenhänge der Events darstellen. 
 
-\subsubsection{Synchronistion von Eventgeneratoren}
-\label{subsubsection:Synchronistion von Eventgeneratoren}
-Eventgeneratoren sind oftmals auf verschiedenen Komponenten des verteilten Systems angesiedelt. Wie kann also ein Konzept aussehen, dass dafür sorgt, dass Events geordnet werden können.
+\subsubsection{Synchronisation von Eventgeneratoren}
+\label{subsubsection:Synchronisation von Eventgeneratoren}
+Eventgeneratoren sind oftmals auf verschiedenen Komponenten des verteilten Systems angesiedelt. Dabei ist es zu untersuchen, wie ein solches Konzept aussehen kann, dass dafür sorgt, dass Events geordnet werden können.
 
 \subsubsection{Eventübermittlung}
 \label{subsubsection:Eventübermittlung}
-Damit ein Kausalpfad erstellt werden kann, müssen die Events, die in einem anderen System generiert werden und zum kausalpfad gehören, in einer Form zusammengeführt werden können.
+Damit ein Kausalpfad erstellt werden kann, müssen die Events, die in einem anderen System generiert werden und zum Kausalpfad gehören, in einer Form zusammengeführt werden können.
 
 \subsubsection{Eventkontext}
 \label{subsubsection:Eventkontext}
-Das erste generiert Event bildet den Startpunkt eines neuen Traces dar. Mehrere Anfragen können zur gleichen von dem in \cref{fig:distributed_system_application_minimal} beschriebenen System angenommen werden. Dadurch ist gegeben, dass mehrere Traces parallel existieren. Um diese eindeutig zu machen muss ein Tracekontext definiert werden, der es erlaubt, Traces eindeutig, über Prozessgrenzen hinaus, zu identifizieren und Events diesem zuzuordnen.
+Das erste generierte Event bildet den Startpunkt eines neuen Traces. Mehrere Anfragen können zur gleichen Zeit von dem in \cref{fig:distributed_system_application_minimal} beschriebenen System angenommen werden. Dadurch ist gegeben, dass mehrere Traces parallel existieren. Um diese eindeutig zu machen muss ein Tracekontext definiert werden, der es erlaubt, Traces eindeutig, über Prozessgrenzen hinaus, zu identifizieren und Events diesen zuzuordnen.
 
 \subsection{Rahmenbedingen}
 \label{subsection:Rahmenbedingen}
-\subsubsection{end-zu-end Latenz}
+\subsubsection{End-zu-End Latenz}
 \label{subsubsection:end-zu-end Latenz}
-Die durchschnittliche Antwortzeit des verteilten rendering Systems ist im Durchschnitt 100ms. Die durchschnittliche Generierungszeit eines Frames beträgt 16ms. Die Instrumentalisierung des Quellcodes fügt zusätzliche Programmlogik hinzu, weshalb eine erhöhte Verarbeitungszeit entsteht. Diese Verarbeitungszeit soll das verteilte rendering System möglichst geringfügig belasten. Vorallem die Generierungszeit der Frames muss unverändert sein.
+Es sind Latenzgrenzwerte definiert. Die Zeitspannen, wie zum Beispiel die Generierungszeit eines Events oder der End-zu-End Antwortzeit, sind zu messen. Die Generierungszeit eines Frames soll 16ms nicht überschreiten, damit dem Anwender eine flüssige Darstellung geboten werden kann. Die Instrumentalisierung des Quellcodes fügt zusätzliche Programmlogik hinzu, weshalb eine erhöhte Verarbeitungszeit entsteht. Diese Verarbeitungszeit soll das verteilte rendering System möglichst geringfügig belasten. Vorallem die Generierungszeit der Frames muss unverändert sein.
 
 \subsubsection{Generierungszeit eines Frames}
 \label{subsubsection:Generierungszeit eines Frames}
-Die Renderinggeschwindigkeit wird anhand der Zeit gemessen, also wieviele \emph{ms} gebraucht werden, um ein Bild zu generieren. gemessen Der Generierungsprozess eines \emph{Frames} umfasst vier Ebenen. Diese Ebenen sind die Applikationsebene, die Geometrieprozessierung, die Rasterung und die Pixelprozessierung. Die Verarbeitung wird, abhängig von der bearbeitet Ebene, von der \gls{cpuLabel} oder der \gls{gpuLabel} durchgeführt. Es ist wünschenswert GPU und CPU Aktivitäten überwachen zu können.
+Die Renderinggeschwindigkeit wird anhand der Zeit gemessen, also wieviele \emph{ms} gebraucht werden, um ein Bild zu generieren. Der Generierungsprozess eines \emph{Frames} umfasst vier Ebenen. Diese Ebenen sind die Applikationsebene, die Geometrieprozessierung, die Rasterung und die Pixelprozessierung. Die Verarbeitung wird, abhängig von der bearbeitet Ebene, von der \gls{cpuLabel} oder der \gls{gpuLabel} durchgeführt. Es ist wünschenswert \gls{gpuLabel} und \gls{cpuLabel} Aktivitäten überwachen zu können.
 
 \subsubsection{Nachrichtenmodifikation}
 \label{subsubsection:Nachrichtenmodifikation}
@@ -192,9 +192,9 @@ Die Renderinggeschwindigkeit wird anhand der Zeit gemessen, also wieviele \emph{
 Die Generierung von Events kann von zwei Perspektiven aus betrachtet werden.
 Zum einen die \emph{Blackbox} Perspektive und zum anderen die \emph{Whitebox} Perspektive.
 
-Bei dem Blackboxansatz, wird die Generierung angestoßen, sobald Schnittstellen angesprochen werden. Dabei werden betriebssystemspezifische Funktionalitäten genutzt, um diese Betriebssystemereignisse zu erkennen. Diese Ereginisse können erkannt, aufgearbeitet und als Events gespeichert werden. Betriebssystemspezifische Ereignisse sind vorallem ausgehende und eingehende Nachrichten, die von den Netzwerkschnittstellen verarbeitet werden. \cref{fig:distributed_system_network} zeigt eine auf dem TCP/IP Stack basierende Nachricht. Die Daten der Senderadresse, der Empfängeradresse und einem Zeitstempel könnten genutzt werden. Allerdings ist das Fehlen von Applikationsinformationen ein entscheidendes Problem. Das Ziel des Blackboxansatz ist die minimale Vorraussetzung von \emph{a priori} Informationenen über Kommunikationswege, über den Aufbau von Applikationsnachrichten, die Semantik der Anwendung und den Aufbau des verteilten Systems.\footpartcite{Aguilera2003}. Allerdings sind diese Daten äußert wichtig, um ein tiefgreifendes Verstädnis des verteilten Systems zu gewinnen. 
+Bei dem Blackboxansatz, wird die Generierung angestoßen, sobald Schnittstellen angesprochen werden. Dabei werden betriebssystemspezifische Funktionalitäten genutzt, um diese Betriebssystemereignisse zu erkennen. Diese Ereignisse können erkannt, aufgearbeitet und als Events gespeichert werden. Betriebssystemspezifische Ereignisse sind vor allem ausgehende und eingehende Nachrichten, die von den Netzwerkschnittstellen verarbeitet werden. \cref{fig:distributed_system_network} zeigt eine auf dem TCP/IP Stack basierende Nachricht. Die Daten der Senderaddresse, der Empfängeradresse und einem Zeitstempel könnten genutzt werden. Allerdings ist das Fehlen von Applikationsinformationen ein entscheidendes Problem. Das Ziel des Blackboxansatz ist die minimale Voraussetzung von \emph{a priori} Informationen über Kommunikationswege, über den Aufbau von Applikationsnachrichten, die Semantik der Anwendung und den Aufbau des verteilten Systems.\footpartcite{Aguilera2003}. Allerdings sind diese Daten äußert wichtig, um ein tiefgreifendes Verständnis des verteilten Systems zu gewinnen. 
 
-Der Whiteboxansatz nutzt Instrumentalisierung des Quellcodes, um die Eventgeneriernug anzustoßen. Dabei wird vorausgesetzt, dass die Semantik der Anwendung, Informationen über den Aufbau von Nachrichten, den Aufbau des Systems und die Kommunikationswege zwischen Komponenten bekannt sind. Bei der Notwendigkeit einer Modifizierung von Nachrichten weist dieser Ansatz jedoch auch schwächen auf. Im Anwendungsfall des verteilten rendering Systems fehlt die Möglichkeit, Nachrichten, innerhalb der Anwendung, um Tracingdaten zu erweitern.
+Der Whiteboxansatz nutzt Instrumentalisierung des Quellcodes, um die Eventgenerierung anzustoßen. Dabei wird vorausgesetzt, dass die Semantik der Anwendung, Informationen über den Aufbau von Nachrichten, den Aufbau des Systems und die Kommunikationswege zwischen Komponenten bekannt sind. Bei der Notwendigkeit einer Modifizierung von Nachrichten weist dieser Ansatz jedoch auch Schwächen auf. Im Anwendungsfall des verteilten Rendering-Systems fehlt die Möglichkeit Nachrichten innerhalb der Anwendung um Tracingdaten zu erweitern.
 
 
 % ----------------------------------------------------------------------------
