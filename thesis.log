@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  23 APR 2020 00:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.19)  26 APR 2020 01:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2080,7 +2080,7 @@ Overfull \hbox (12.31108pt too wide) in paragraph at lines 42--43
 dung ist, im Zusam-men-spiel mit dem Nachricht-
  []
 
-<img/Themenueberblick/PartialOrdering_Concurrent.png, id=499, 472.76625pt x 439
+<img/Themenueberblick/PartialOrdering_Concurrent.png, id=503, 472.76625pt x 439
 .6425pt>
 File: img/Themenueberblick/PartialOrdering_Concurrent.png Graphic file (type pn
 g)
@@ -2088,7 +2088,7 @@ g)
 Package pdftex.def Info: img/Themenueberblick/PartialOrdering_Concurrent.png  u
 sed on input line 74.
 (pdftex.def)             Requested size: 163.9579pt x 152.47511pt.
-<img/Themenueberblick/PartialOrdering_Concurrent_Explained.png, id=501, 472.766
+<img/Themenueberblick/PartialOrdering_Concurrent_Explained.png, id=505, 472.766
 25pt x 439.6425pt>
 File: img/Themenueberblick/PartialOrdering_Concurrent_Explained.png Graphic fil
 e (type png)
@@ -2097,7 +2097,7 @@ Package pdftex.def Info: img/Themenueberblick/PartialOrdering_Concurrent_Explai
 ned.png  used on input line 79.
 (pdftex.def)             Requested size: 163.9579pt x 152.47511pt.
 [6]
-<img/Themenueberblick/PartialOrdering_ChildO.png, id=516, 472.76625pt x 439.642
+<img/Themenueberblick/PartialOrdering_ChildO.png, id=520, 472.76625pt x 439.642
 5pt>
 File: img/Themenueberblick/PartialOrdering_ChildO.png Graphic file (type png)
 <use img/Themenueberblick/PartialOrdering_ChildO.png>
@@ -2108,7 +2108,7 @@ on input line 99.
 lick/PartialOrdering_Concurrent_Explained.png>] [8 <./img/Themenueberblick/Part
 ialOrdering_ChildO.png>] [9] [10]) (./problembeschreibung.tex [11]
 chapter 3.
-<img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png, id=568, 533.9
+<img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png, id=572, 533.9
 95pt x 102.3825pt>
 File: img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png Graphic f
 ile (type png)
@@ -2119,7 +2119,7 @@ ystem.png  used on input line 23.
 [12
 
  <./img/Problembeschreibung/Anwendungsueberwachung_Gesamtsystem.png>]
-<img/Problembeschreibung/distributed_system_application_minimal.png, id=580, 31
+<img/Problembeschreibung/distributed_system_application_minimal.png, id=584, 31
 3.17pt x 102.3825pt>
 File: img/Problembeschreibung/distributed_system_application_minimal.png Graphi
 c file (type png)
@@ -2127,7 +2127,7 @@ c file (type png)
 Package pdftex.def Info: img/Problembeschreibung/distributed_system_application
 _minimal.png  used on input line 62.
 (pdftex.def)             Requested size: 156.58461pt x 51.19112pt.
-<img/Problembeschreibung/distributed_system_application_inside.png, id=581, 433
+<img/Problembeschreibung/distributed_system_application_inside.png, id=585, 433
 .62pt x 142.5325pt>
 File: img/Problembeschreibung/distributed_system_application_inside.png Graphic
  file (type png)
@@ -2135,7 +2135,7 @@ File: img/Problembeschreibung/distributed_system_application_inside.png Graphic
 Package pdftex.def Info: img/Problembeschreibung/distributed_system_application
 _inside.png  used on input line 69.
 (pdftex.def)             Requested size: 184.45068pt x 60.62878pt.
-<img/Problembeschreibung/distributed_system_network.png, id=582, 473.77pt x 112
+<img/Problembeschreibung/distributed_system_network.png, id=586, 473.77pt x 112
 .42pt>
 File: img/Problembeschreibung/distributed_system_network.png Graphic file (type
  png)
@@ -2145,7 +2145,7 @@ Package pdftex.def Info: img/Problembeschreibung/distributed_system_network.png
 (pdftex.def)             Requested size: 204.94661pt x 48.63127pt.
 
 [13]
-<img/Problembeschreibung/problembeschreibung_flamengraph.png, id=590, 723.70375
+<img/Problembeschreibung/problembeschreibung_flamengraph.png, id=594, 723.70375
 pt x 440.64626pt>
 File: img/Problembeschreibung/problembeschreibung_flamengraph.png Graphic file 
 (type png)
@@ -2172,13 +2172,13 @@ Overfull \hbox (4.2933pt too wide) in paragraph at lines 97--99
 LaTeX Warning: Command \" invalid in math mode on input line 109.
 
 [15]
-<img/Problembeschreibung/flamegraph_3D.png, id=620, 1208.515pt x 566.115pt>
+<img/Problembeschreibung/flamegraph_3D.png, id=624, 1208.515pt x 566.115pt>
 File: img/Problembeschreibung/flamegraph_3D.png Graphic file (type png)
 <use img/Problembeschreibung/flamegraph_3D.png>
 Package pdftex.def Info: img/Problembeschreibung/flamegraph_3D.png  used on inp
 ut line 138.
 (pdftex.def)             Requested size: 362.5573pt x 169.8358pt.
-<img/Problembeschreibung/flamegraph_3D_closing.png, id=621, 554.07pt x 272.0162
+<img/Problembeschreibung/flamegraph_3D_closing.png, id=625, 554.07pt x 272.0162
 5pt>
 File: img/Problembeschreibung/flamegraph_3D_closing.png Graphic file (type png)
 
@@ -2211,7 +2211,7 @@ en, somit soll auch die Tracing-
  []
 
 [21]
-<img/Design/Span.png, id=689, 127.47626pt x 125.46875pt>
+<img/Design/Span.png, id=693, 127.47626pt x 125.46875pt>
 File: img/Design/Span.png Graphic file (type png)
 <use img/Design/Span.png>
 Package pdftex.def Info: img/Design/Span.png  used on input line 72.
@@ -2221,13 +2221,13 @@ Package pdftex.def Info: img/Design/Span.png  used on input line 72.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 79.
 
-<img/Design/SpanBeziehungstypenA.png, id=695, 367.3725pt x 154.5775pt>
+<img/Design/SpanBeziehungstypenA.png, id=699, 367.3725pt x 154.5775pt>
 File: img/Design/SpanBeziehungstypenA.png Graphic file (type png)
 <use img/Design/SpanBeziehungstypenA.png>
 Package pdftex.def Info: img/Design/SpanBeziehungstypenA.png  used on input lin
 e 82.
 (pdftex.def)             Requested size: 163.9579pt x 68.98842pt.
-<img/Design/SpanBeziehungstypenB.png, id=696, 367.3725pt x 154.5775pt>
+<img/Design/SpanBeziehungstypenB.png, id=700, 367.3725pt x 154.5775pt>
 File: img/Design/SpanBeziehungstypenB.png Graphic file (type png)
 <use img/Design/SpanBeziehungstypenB.png>
 Package pdftex.def Info: img/Design/SpanBeziehungstypenB.png  used on input lin
@@ -2235,28 +2235,28 @@ e 87.
 (pdftex.def)             Requested size: 163.9579pt x 68.98842pt.
 [23 <./img/Design/Span.png> <./img/Design/SpanBeziehungstypenA.png> <./img/Desi
 gn/SpanBeziehungstypenB.png>]
-<img/Design/Eventzeitspannen.png, id=707, 523.9575pt x 192.72pt>
+<img/Design/Eventzeitspannen.png, id=711, 523.9575pt x 192.72pt>
 File: img/Design/Eventzeitspannen.png Graphic file (type png)
 <use img/Design/Eventzeitspannen.png>
 Package pdftex.def Info: img/Design/Eventzeitspannen.png  used on input line 99
 .
 (pdftex.def)             Requested size: 366.76775pt x 134.90306pt.
  [24 <./img/Design/Eventzeitspannen.png>]
-<img/Design/SpanThreadKontext.png, id=713, 492.84125pt x 244.915pt>
+<img/Design/SpanThreadKontext.png, id=717, 492.84125pt x 244.915pt>
 File: img/Design/SpanThreadKontext.png Graphic file (type png)
 <use img/Design/SpanThreadKontext.png>
 Package pdftex.def Info: img/Design/SpanThreadKontext.png  used on input line 1
 11.
 (pdftex.def)             Requested size: 246.42001pt x 122.45718pt.
  [25 <./img/Design/SpanThreadKontext.png>]
-<img/Design/SpanMultipleThreadKontext.png, id=721, 492.84125pt x 242.9075pt>
+<img/Design/SpanMultipleThreadKontext.png, id=725, 492.84125pt x 242.9075pt>
 File: img/Design/SpanMultipleThreadKontext.png Graphic file (type png)
 <use img/Design/SpanMultipleThreadKontext.png>
 Package pdftex.def Info: img/Design/SpanMultipleThreadKontext.png  used on inpu
 t line 124.
 (pdftex.def)             Requested size: 246.42001pt x 121.45345pt.
  [26 <./img/Design/SpanMultipleThreadKontext.png>]
-<img/Design/Traktor-Registry.png, id=729, 719.68875pt x 538.01pt>
+<img/Design/Traktor-Registry.png, id=733, 719.68875pt x 538.01pt>
 File: img/Design/Traktor-Registry.png Graphic file (type png)
 <use img/Design/Traktor-Registry.png>
 Package pdftex.def Info: img/Design/Traktor-Registry.png  used on input line 14
@@ -2268,7 +2268,7 @@ Overfull \hbox (49.53842pt too wide) in paragraph at lines 145--146
  []
 
 [27 <./img/Design/Traktor-Registry.png>]
-<img/Design/Nachrichteninterceptor.png, id=737, 236.885pt x 433.62pt>
+<img/Design/Nachrichteninterceptor.png, id=741, 236.885pt x 433.62pt>
 File: img/Design/Nachrichteninterceptor.png Graphic file (type png)
 <use img/Design/Nachrichteninterceptor.png>
 Package pdftex.def Info: img/Design/Nachrichteninterceptor.png  used on input l
@@ -2284,25 +2284,25 @@ Overfull \hbox (6.27173pt too wide) in paragraph at lines 174--175
  []
 
 [29]
-<img/Design/FrameGalerieObereEbene.png, id=750, 472.76625pt x 141.52875pt>
+<img/Design/FrameGalerieObereEbene.png, id=754, 472.76625pt x 141.52875pt>
 File: img/Design/FrameGalerieObereEbene.png Graphic file (type png)
 <use img/Design/FrameGalerieObereEbene.png>
 Package pdftex.def Info: img/Design/FrameGalerieObereEbene.png  used on input l
 ine 185.
 (pdftex.def)             Requested size: 378.2135pt x 113.22314pt.
-<img/Design/FrameGalerieMittlereEbene.png, id=752, 392.46625pt x 322.20375pt>
+<img/Design/FrameGalerieMittlereEbene.png, id=756, 392.46625pt x 322.20375pt>
 File: img/Design/FrameGalerieMittlereEbene.png Graphic file (type png)
 <use img/Design/FrameGalerieMittlereEbene.png>
 Package pdftex.def Info: img/Design/FrameGalerieMittlereEbene.png  used on inpu
 t line 194.
 (pdftex.def)             Requested size: 313.9734pt x 257.76334pt.
-<img/Design/FrameGalerieUntereEbene2.png, id=754, 482.80376pt x 87.32625pt>
+<img/Design/FrameGalerieUntereEbene2.png, id=758, 482.80376pt x 87.32625pt>
 File: img/Design/FrameGalerieUntereEbene2.png Graphic file (type png)
 <use img/Design/FrameGalerieUntereEbene2.png>
 Package pdftex.def Info: img/Design/FrameGalerieUntereEbene2.png  used on input
  line 205.
 (pdftex.def)             Requested size: 386.24353pt x 69.86108pt.
-<img/Design/FrameGalerieUntereEbene1.png, id=755, 482.80376pt x 394.47375pt>
+<img/Design/FrameGalerieUntereEbene1.png, id=759, 482.80376pt x 394.47375pt>
 File: img/Design/FrameGalerieUntereEbene1.png Graphic file (type png)
 <use img/Design/FrameGalerieUntereEbene1.png>
 Package pdftex.def Info: img/Design/FrameGalerieUntereEbene1.png  used on input
@@ -2316,7 +2316,7 @@ Overfull \hbox (11.58435pt too wide) in paragraph at lines 221--222
 s rechteck-ige Flächen dargestellt
  []
 
-<img/Design/3D-Flammengraph-Konzept.png, id=773, 1262.7175pt x 422.57875pt>
+<img/Design/3D-Flammengraph-Konzept.png, id=777, 1262.7175pt x 422.57875pt>
 File: img/Design/3D-Flammengraph-Konzept.png Graphic file (type png)
 <use img/Design/3D-Flammengraph-Konzept.png>
 Package pdftex.def Info: img/Design/3D-Flammengraph-Konzept.png  used on input 
@@ -2325,7 +2325,7 @@ line 226.
 [33
 
  <./img/Design/3D-Flammengraph-Konzept.png>]
-<img/Design/3D-Flammengraph-Vergleich.png, id=780, 1034.86626pt x 342.27875pt>
+<img/Design/3D-Flammengraph-Vergleich.png, id=784, 1034.86626pt x 342.27875pt>
 File: img/Design/3D-Flammengraph-Vergleich.png Graphic file (type png)
 <use img/Design/3D-Flammengraph-Vergleich.png>
 Package pdftex.def Info: img/Design/3D-Flammengraph-Vergleich.png  used on inpu
@@ -2398,7 +2398,7 @@ Overfull \hbox (10.95pt too wide) in paragraph at lines 102--109
  []
 
 [40] [41]
-<img/Implementierung/TraktorKlassendiagramm.png, id=875, 1250.6725pt x 904.3787
+<img/Implementierung/TraktorKlassendiagramm.png, id=879, 1250.6725pt x 904.3787
 5pt>
 File: img/Implementierung/TraktorKlassendiagramm.png Graphic file (type png)
 <use img/Implementierung/TraktorKlassendiagramm.png>
@@ -2471,7 +2471,7 @@ Overfull \hbox (8.0061pt too wide) in paragraph at lines 242--244
 eÿung der Web-sock-etverbindung,
  []
 
-<img/Implementierung/WebsocketClosingFrame.png, id=919, 329.23pt x 141.52875pt>
+<img/Implementierung/WebsocketClosingFrame.png, id=923, 329.23pt x 141.52875pt>
 
 File: img/Implementierung/WebsocketClosingFrame.png Graphic file (type png)
 <use img/Implementierung/WebsocketClosingFrame.png>
@@ -2554,7 +2554,7 @@ Overfull \hbox (10.95pt too wide) in paragraph at lines 418--434
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 437.
 
-<img/Implementierung/TraktorEnv-ApplicationArchitecture.png, id=1007, 1195.4662
+<img/Implementierung/TraktorEnv-ApplicationArchitecture.png, id=1011, 1195.4662
 5pt x 671.50874pt>
 File: img/Implementierung/TraktorEnv-ApplicationArchitecture.png Graphic file (
 type png)
@@ -2567,15 +2567,41 @@ itecture.png>]
 chapter 6.
 [52
 
-] [53]) (./fazit.tex [54]
+]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 42.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 26--45
+[]$[]$ 
+ []
+
+[53]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 97.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (207.28888pt too wide) in paragraph at lines 79--100
+[]\T1/lmr/m/n/10.95 Die Ro-h-daten se-hen fol-gen-der-maÿen aus: $[]$ 
+ []
+
+
+Underfull \vbox (badness 1540) has occurred while \output is active []
+
+ [54]
+[55]) (./fazit.tex [56]
 chapter 7.
-) [55
+) [57
 
-] (./litverz.tex (./thesis.gls) (./thesis.acr [56
+] (./litverz.tex (./thesis.gls) (./thesis.acr [58
 
 
 
-]) [57
+]) [59
 
 
 ]
@@ -2586,7 +2612,7 @@ Overfull \hbox (0.99678pt too wide) in paragraph at lines 16--16
 : Au-tomat-ing Root-
  []
 
-[58
+[60
 
 ]
 Overfull \hbox (0.11018pt too wide) in paragraph at lines 16--16
@@ -2621,20 +2647,20 @@ ew fig-ure\T1/lmr/m/n/10.95 . 2019. \T1/lmr/m/sc/10.95 url\T1/lmr/m/n/10.95 : [
 ][]$https : / / opentracing .
  []
 
-[59]
+[61]
 Overfull \hbox (48.11298pt too wide) in paragraph at lines 16--16
 []\T1/lmr/m/n/10.95 William Stearns. \T1/lmr/m/it/10.95 Ngrep and reg-u-lar ex-
 pres-sions to the res-cue\T1/lmr/m/n/10.95 . http://www.stearns.org/.
  []
 
-) [60]
+) [62]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 312293C6087FC8F01AEFAAB2E46C6F75;3964.
+(rerunfilecheck)             Checksum: 0B379A1094C7B5E13772E8C21AD21B40;3964.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2643,23 +2669,26 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
 
-Overfull \hbox (88.48776pt too wide) in paragraph at lines 66--216
+Overfull \hbox (103.08777pt too wide) in paragraph at lines 66--216
 \T1/lmr/m/n/10.95 spsp  spsp spsp  spsp spsp                                   
                                                                                
-                                          
+                                                
  []
 
  ) 
 Here is how much of TeX's memory you used:
- 38509 strings out of 492982
- 708101 string characters out of 6134896
- 1313017 words of memory out of 5000000
- 41147 multiletter control sequences out of 15000+600000
+ 38577 strings out of 492982
+ 709455 string characters out of 6134896
+ 1316031 words of memory out of 5000000
+ 41181 multiletter control sequences out of 15000+600000
  626284 words of font info for 64 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  57i,9n,77p,10490b,2059s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{glo:guidLabel} has been referenced but does not e
-xist, replaced by a fixed one
+pdfTeX warning (dest): name{glo:tddGlossar} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:guidLabel} has been referenced but does not exi
+st, replaced by a fixed one
 
 pdfTeX warning (dest): name{glo:rfcLabel} has been referenced but does not exis
 t, replaced by a fixed one
@@ -2686,10 +2715,10 @@ exmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy1
 0.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb>
-Output written on thesis.pdf (68 pages, 959668 bytes).
+Output written on thesis.pdf (70 pages, 967807 bytes).
 PDF statistics:
- 1310 PDF objects out of 1440 (max. 8388607)
- 1155 compressed objects within 12 object streams
- 371 named destinations out of 1000 (max. 500000)
+ 1363 PDF objects out of 1440 (max. 8388607)
+ 1205 compressed objects within 13 object streams
+ 405 named destinations out of 1000 (max. 500000)
  629 words of extra memory for PDF output out of 10000 (max. 10000000)
 

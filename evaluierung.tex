@@ -11,28 +11,47 @@
 \label{chapter:Evaluierung}
 In diesem Kapitel werden die Prozesse beschrieben, die durchgeführt wurden, um die Implementierung und die erhaltenen Ergebnisse zu evaluieren. In \cref{section:Anforderungserfüllung} wird die Traktorimplementierung auf ihre Einhaltung der Anforderungen  untersucht. In \cref{section:Umsetzung der Designziele} werden die Designziele herangezogen und auf ihre Gegebenheit in der Tracingbibliothek überprüft. Das Open-Source Projekt \textbf{Jaeger} wird als Vergleichswerkzeug in den Folgenden Abschnitten herangezogen. Jaeger ist eine auf der OpenTracing API basierenden \emph{state-of-the-art} Distributed Tracing Implementierung. Sie setzt die aktuellsten Erkenntnisse der Distributed Tracing Gemeinschaft um. Dabei wird in \cref{section:Bereitstellung der Testumgebung} die Bereitstellung der Testumgebung, in Hinsicht auf beide Werkzeuge, diskutiert. Die Bereitstellungsunterschiede beider Werkzeuge werden aufgezeigt. In \cref{section:Ergebnissvergleich} werden die Ergebnisse der Spangenerierung verglichen. Es wird auf die Ausdruckskraft des Traktor-Datenmodells im Vergleich zu Jaeger eingegangen. Zuletzt werden die präsentierten Visualisierungansätze diskutiert. Es wird ein Vergleich zu den Visualisierungsmöglichkeiten der Jaeger UI durchgeführt.
 
+\section{Bereitstellung der Testumgebung}
+\label{section:Bereitstellung der Testumgebung}
+
 \section{Anforderungserfüllung}
 \label{section:Anforderungserfüllung}
 
-Es ist eine Analyse durchzuführen, bei der die erhobenen Daten interpretiert werden. Die daraus gewonnenen Informationen sollen die End-zu-End Latenz einer Anfrage durch ein verteiltes System und die Generierungszeit eines Frames, welches durch die Unity Anwendung generiert wurde, darstellen.
-\begin{itemize}
-	\item Funktionalitäten
-		\begin{itemize}
-			\item Eventgenerierung
-			\item Eventrelation
-			\item Synchronisation von Eventgeneratoren
-			\item Eventübermittlung
-			\item Ordnung von Events
-		\end{itemize}
-	\item End-zu-End Latenz
-	\item Generierungszeit eines Frames
-	\item Nachrichtenmodifikation
-\end{itemize}
+Es ist eine Analyse durchzuführen, bei der die erhobenen Daten interpretiert werden. Die daraus gewonnenen Informationen sollen die End-zu-End Latenz einer Anfrage durch ein verteiltes System und die Generierungszeit eines Frames, welches durch die Unity Anwendung generiert wurde, darstellen. 
+
+Die Implementierungsphase erfolgte nach dem Softwareentwicklungskonzept des \gls{tddGlossar}. Test-driven development ist ein Software Entwicklungskonzept, dass darauf basiert, kurze Iterationsphase, durch die Implementierung von Tests und anschließender Funktionalitätsumsetzung, durchzuführen. Die Tests sollen den Anforderungen entsprechen, die an die Funktion gestellt werden. Die Mitentwicklung der Testbasis ermöglicht eine sich stetig verbessernde Rückmeldung der Codequalität. Auch eine anschließende Projektbereitstellungsautomatisierung wird damit erleichtert. Es wird also verhindert, dass sich technisch Schulden anhäufen.
+
+Die Anforderungen der Funktionalitäten ist anhand der Implementierungen und der Tests gegeben. Ein Beispieltest vermittelt den Aufbau der Tests.
+
+\begin{minipage}[]{\textwidth}
+	\begin{lstlisting}[frame=trBL]
+	[TestMethod]
+	public void StartActive()
+	{
+	string expectedOperationName = "Testoperation";
+	Tracer tracer = new Tracer();
+	ISpanBuilder builder = tracer.BuildSpan(expectedOperationName);
+	IScope scope = builder.StartActive();
+	string[] actualSpanFields = scope.Span.ToString().Split(";");
+	
+	Assert.AreEqual(scope.Span, tracer.ActiveSpan);
+	Assert.AreEqual(scope.Span, tracer.ScopeManager.Active.Span);
+	Assert.AreEqual(tracer.ActiveSpan, tracer.ScopeManager.Active.Span);
+	}
+	\end{lstlisting}
+	\captionof{lstlisting}{Unit-Test der Spanbuilder Klasse}
+	\label{listing:Unit-Test der Spanbuilder Klasse}
+\end{minipage}
+
+Der StartActive Test, testet die Funktion \emph{StartActive} der SpanBuilder Klasse. Dabei wird eine Operationsname ein Scope initialisiert, der einen Span beinhaltet. Der Span wird aktiviert und mit dem Span verglichen, der in dem Scopemanager verwaltet wird. Bei übereinstimmenden Werten der Felder, ist der Test bestanden und die Funktion entspricht den Anforderungen, die an diese gestellt werden.
+
+Die Anforderung der End-zu-End Latenz und die Anforderung an der Bestimmung der Generierungszeit eines Frames werden durch das Datenmodell erfüllt. Durch die Führung von \emph{Datetime} Objekten innerhalb der Spans, lassen sich Zeitspannen bestimmen, die ein Event einnimmt. Die Differenz aus Endzeit und Startzeit ergibt die Zeitspanne der Framegenerierung, da der Prozess der Framegenierung durch einen Span darstellbar ist. Die End-zu-End Latenz ergibt sich aus dem hierarchisch am höchsten angeordneten Span eines Traces und den darüber hinaus, falls vorhanden, folgenden Spans, die den Beziehungstypen \emph{follows-from} besitzen. Die Differenz der Startzeit des ersten Spans und der Endzeit des letzten Spans ergibt die End-zu-End Latenz, die durch die Anfrage entsteht.
+
+Die Rahmenbedingung der eingeschränkten Nachrichtenmodifikation ist durch die Umsetzung des Konzept der Kontextpropagierung mittels dem Registry Service eingehalten. Die Kommunikationswege der Anwendungen werden dadurch nicht beansprucht.
+
 
 \section{Umsetzung der Designziele}
 \label{section:Umsetzung der Designziele}
-\section{Bereitstellung der Testumgebung}
-\label{section:Bereitstellung der Testumgebung}
 \begin{itemize}
 	\item Durch Docker-Compose wird eine verteiltes System auf einem Lokalen Rechner aufgebaut.
 	\item gibt es architektonische unterschiede? Services etc. 
@@ -41,7 +60,31 @@ Es ist eine Analyse durchzuführen, bei der die erhobenen Daten interpretiert we
 \end{itemize}
 \section{Ergebnissvergleich}
 \label{section:Ergebnissvergleich}
+Die Dateninterpretation wird auf Basis eines Datensatzes durchgeführt, welche aus der Traktorentwicklungsumgebung erhoben worden sind. 
 
+Die Rohdaten sehen folgendermaßen aus:
+\begin{minipage}[]{\textwidth}
+	\begin{lstlisting}[frame=trBL]
+	recieved message:  b'Server: Process Context;04/22/2020 09:29:00.1081 PM;S17JnBOXEmes;rtXWWLvE9XDg;child_of;04/22/2020 09:29:00.1097 PM{pi1a+hw7UuZN:child_of}'
+	from:  ('172.22.0.5', 13337)
+	recieved message:  b'CalculateFiboncacci;04/22/2020 09:29:00.1083 PM;S17JnBOXEmes;8glMa3Uu+jy2;child_of;04/22/2020 09:29:00.1084 PM{75buv+V8lmUn:child_of}'
+	from:  ('172.22.0.5', 13337)
+	recieved message:  b'CalculateFiboncacci;04/22/2020 09:29:00.1086 PM;S17JnBOXEmes;8V4vMLWZ2Ax/;child_of;04/22/2020 09:29:00.1086 PM{75buv+V8lmUn:child_of}'
+	from:  ('172.22.0.5', 13337)
+	recieved message:  b'CalculateFiboncacci;04/22/2020 09:29:00.1083 PM;S17JnBOXEmes;75buv+V8lmUn;child_of;04/22/2020 09:29:00.1087 PM{wngEpk/UsI3i:child_of}'
+	from:  ('172.22.0.5', 13337)
+	recieved message:  b'CalculateFiboncacci;04/22/2020 09:29:00.1089 PM;S17JnBOXEmes;wJ5dqhRUsV8h;child_of;04/22/2020 09:29:00.1089 PM{wngEpk/UsI3i:child_of}'
+	from:  ('172.22.0.5', 13337)
+	recieved message:  b'CalculateFiboncacci;04/22/2020 09:29:00.1083 PM;S17JnBOXEmes;wngEpk/UsI3i;child_of;04/22/2020 09:29:00.1090 PM{rtXWWLvE9XDg:child_of}'
+	from:  ('172.22.0.5', 13337)
+	recieved message:  b'Process Context;04/22/2020 09:29:00.0948 PM;S17JnBOXEmes;pi1a+hw7UuZN;child_of;04/22/2020 09:29:00.1188 PM'
+	from:  ('172.22.0.4', 13338)
+	\end{lstlisting}
+	\captionof{lstlisting}{Tracerrohdaten aus der Traktorentwicklungsumgebung}
+	\label{listing:Tracerrohdaten aus der Traktorentwicklungsumgebung}
+\end{minipage}
+
+Diese Rohdaten sind in dem Agenten eingetroffen, nachdem sie von den beiden Tracer reportet worden sind. Anhand der Abbildung \cref{fig:TraktorEnv-ApplicationArchitecture} und den erhobenen Daten, werden die 
 
 \begin{itemize}
 	\item Bezug zur Problemstellung schaffen
