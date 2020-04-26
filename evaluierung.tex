@@ -11,9 +11,6 @@
 \label{chapter:Evaluierung}
 In diesem Kapitel werden die Prozesse beschrieben, die durchgeführt wurden, um die Implementierung und die erhaltenen Ergebnisse zu evaluieren. In \cref{section:Anforderungserfüllung} wird die Traktorimplementierung auf ihre Einhaltung der Anforderungen  untersucht. In \cref{section:Umsetzung der Designziele} werden die Designziele herangezogen und auf ihre Gegebenheit in der Tracingbibliothek überprüft. Das Open-Source Projekt \textbf{Jaeger} wird als Vergleichswerkzeug in den Folgenden Abschnitten herangezogen. Jaeger ist eine auf der OpenTracing API basierenden \emph{state-of-the-art} Distributed Tracing Implementierung. Sie setzt die aktuellsten Erkenntnisse der Distributed Tracing Gemeinschaft um. Dabei wird in \cref{section:Bereitstellung der Testumgebung} die Bereitstellung der Testumgebung, in Hinsicht auf beide Werkzeuge, diskutiert. Die Bereitstellungsunterschiede beider Werkzeuge werden aufgezeigt. In \cref{section:Ergebnissvergleich} werden die Ergebnisse der Spangenerierung verglichen. Es wird auf die Ausdruckskraft des Traktor-Datenmodells im Vergleich zu Jaeger eingegangen. Zuletzt werden die präsentierten Visualisierungansätze diskutiert. Es wird ein Vergleich zu den Visualisierungsmöglichkeiten der Jaeger UI durchgeführt.
 
-\section{Bereitstellung der Testumgebung}
-\label{section:Bereitstellung der Testumgebung}
-
 \section{Anforderungserfüllung}
 \label{section:Anforderungserfüllung}
 
@@ -58,11 +55,16 @@ Die Rahmenbedingung der eingeschränkten Nachrichtenmodifikation ist durch die U
 	\item Konfigurationsunterschiede
 	\item Ist traktor einfacher zu deployen? Wahrschienlich nicht da jaeger ein all in one image hat. Könnte aber auch umgesetzt werden
 \end{itemize}
+
+\section{Bereitstellung der Testumgebung}
+\label{section:Bereitstellung der Testumgebung}
+
 \section{Ergebnissvergleich}
 \label{section:Ergebnissvergleich}
 Die Dateninterpretation wird auf Basis eines Datensatzes durchgeführt, welche aus der Traktorentwicklungsumgebung erhoben worden sind. 
 
 Die Rohdaten sehen folgendermaßen aus:
+
 \begin{minipage}[]{\textwidth}
 	\begin{lstlisting}[frame=trBL]
 	recieved message:  b'Server: Process Context;04/22/2020 09:29:00.1081 PM;S17JnBOXEmes;rtXWWLvE9XDg;child_of;04/22/2020 09:29:00.1097 PM{pi1a+hw7UuZN:child_of}'
@@ -84,7 +86,7 @@ Die Rohdaten sehen folgendermaßen aus:
 	\label{listing:Tracerrohdaten aus der Traktorentwicklungsumgebung}
 \end{minipage}
 
-Diese Rohdaten sind in dem Agenten eingetroffen, nachdem sie von den beiden Tracer reportet worden sind. Anhand der Abbildung \cref{fig:TraktorEnv-ApplicationArchitecture} und den erhobenen Daten, werden die 
+Diese Rohdaten sind in dem Agenten eingetroffen, nachdem sie von den beiden Tracer reportet worden sind. Anhand der \cref{fig:TraktorEnv-ApplicationArchitecture} .........
 
 \begin{itemize}
 	\item Bezug zur Problemstellung schaffen
