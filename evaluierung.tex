@@ -49,6 +49,9 @@ Die Rahmenbedingung der eingeschränkten Nachrichtenmodifikation ist durch die U
 
 \section{Umsetzung der Designziele}
 \label{section:Umsetzung der Designziele}
+
+Die Umsetzung der Designziele nahm Einfluss auf diverse Architekturentscheidungen. Eines dieser Entscheidungen ist die Wahl der Entwicklungssprachen. Die Tracingbibliothek ist in der Sprache C\# implementiert. Besonders das Designziel der \textbf{Protabilität} unter Rücksichtnahme der verteilten Rendering-Anwendung, die in C\# und C++ implementiert ist. C\# ist ein sogenannter \emph{managed code}. Managed code bedeutet, dass die Ausführung des Programmcodes in einer verwaltet Umgebung durchgeführt wird. Die \gls{clrGlossar} ist eine solche verwaltete Umgebung. Unity unterstützt die Ausführung von managed code, ohne großen Aufwand und einer dementsprechend guten Portabilität, durch zum Beispiel, dass Einbinden von C\# Bibliotheken über dem den Packetmanager Nuget. Die Traktorbibliothek wird bei automatisiert über Nuget veröffentlicht. Die Einbindung der Bibliothek ist demzufolge einfach und das Aktualisieren entsprechend schnell. Für den Traktor Agenten wird die Programmiersprache Python verwendet. Diese bietet ähnliche Flexiblität. Python ist eine interpretierte Sprache, wodurch sie auf jedem System ausgeführt werden kann, solange der Interpreter verfügbar ist.
+Das Designziel der \textbf{Verarbeitungskosten} wurde nur teilweise umgesetzt. Da Konzept der Traktorregistry und Implementierung der asynchronen Kontextpropagierung erhöht den Overhead der Anwendung. Das Alternativkonzept des Interceptors ist vielversprechender. Dieser verzichtet auf einen Service zur Kontextpropagierung und setzt auf Nachrichtenmodifikation über die Manipulation der Anwendungsnachrichten mit Betriebssystemfunktionalitäten.
 \begin{itemize}
 	\item Durch Docker-Compose wird eine verteiltes System auf einem Lokalen Rechner aufgebaut.
 	\item gibt es architektonische unterschiede? Services etc. 
