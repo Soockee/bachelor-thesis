@@ -51,16 +51,20 @@ Die Rahmenbedingung der eingeschränkten Nachrichtenmodifikation ist durch die U
 \label{section:Umsetzung der Designziele}
 
 Die Umsetzung der Designziele nahm Einfluss auf diverse Architekturentscheidungen. Eines dieser Entscheidungen ist die Wahl der Entwicklungssprachen. Die Tracingbibliothek ist in der Sprache C\# implementiert. Besonders das Designziel der \textbf{Protabilität} unter Rücksichtnahme der verteilten Rendering-Anwendung, die in C\# und C++ implementiert ist. C\# ist ein sogenannter \emph{managed code}. Managed code bedeutet, dass die Ausführung des Programmcodes in einer verwaltet Umgebung durchgeführt wird. Die \gls{clrGlossar} ist eine solche verwaltete Umgebung. Unity unterstützt die Ausführung von managed code, ohne großen Aufwand und einer dementsprechend guten Portabilität, durch zum Beispiel, dass Einbinden von C\# Bibliotheken über dem den Packetmanager Nuget. Die Traktorbibliothek wird bei automatisiert über Nuget veröffentlicht. Die Einbindung der Bibliothek ist demzufolge einfach und das Aktualisieren entsprechend schnell. Für den Traktor Agenten wird die Programmiersprache Python verwendet. Diese bietet ähnliche Flexiblität. Python ist eine interpretierte Sprache, wodurch sie auf jedem System ausgeführt werden kann, solange der Interpreter verfügbar ist.
-Das Designziel der \textbf{Verarbeitungskosten} wurde nur teilweise umgesetzt. Da Konzept der Traktorregistry und Implementierung der asynchronen Kontextpropagierung erhöht den Overhead der Anwendung. Das Alternativkonzept des Interceptors ist vielversprechender. Dieser verzichtet auf einen Service zur Kontextpropagierung und setzt auf Nachrichtenmodifikation über die Manipulation der Anwendungsnachrichten mit Betriebssystemfunktionalitäten.
-\begin{itemize}
-	\item Durch Docker-Compose wird eine verteiltes System auf einem Lokalen Rechner aufgebaut.
-	\item gibt es architektonische unterschiede? Services etc. 
-	\item Konfigurationsunterschiede
-	\item Ist traktor einfacher zu deployen? Wahrschienlich nicht da jaeger ein all in one image hat. Könnte aber auch umgesetzt werden
-\end{itemize}
+Das Designziel der \textbf{Verarbeitungskosten} wurde nur teilweise umgesetzt. Da Konzept der Traktorregistry und Implementierung der asynchronen Kontextpropagierung erhöht den Overhead der Anwendung. Das Alternativkonzept des Interceptors ist vielversprechender. Dieser verzichtet auf einen Service zur Kontextpropagierung und setzt auf Nachrichtenmodifikation über die Manipulation der Anwendungsnachrichten mit Betriebssystemfunktionalitäten. Das Designziel der \textbf{Benutzbarkeit} ist durch die vorbildnahme der OpenTracing API gegeben. Es wurden nur geringfügig Funktionalitäten hinzugefügt, damit das Konzept der Registry umgesetzt werden konnte. Die Ausdrucksweise zur Generierung von Traces ist gleich und entsprechend bewährt.
 
-\section{Bereitstellung der Testumgebung}
-\label{section:Bereitstellung der Testumgebung}
+
+
+\section{Bereitstellung der Traktorentwicklungsumgebung}
+\label{section:Bereitstellung der Traktorentwicklungsumgebung}
+
+In diesem Kapitel werden die Prototypen einer verteilten Umgebung bereitgestellt. Die Bereitstellung ist ein zentraler Aspekt zur Erfüllung der Spezifikation der Traktorentwicklungsumgebung. Die Architektur hat nach \textbf{TE}.1 und \textbf{TE}.2 ein verteiltes System abzubilden. \textbf{TE}.1 ist durch die Architektur erfüllt. Es sind zwei Webserver implementiert, die miteinander kommunizieren und es ermöglichen, die Funktionalitäten der Instrumentalisierungsbibliothek zu nutzen und ihre Ergebnisse darzustellen.\textbf{TE}.2 spezifiziert, dass die Traktorentwicklungsumgebung auf einem Hostsystem läuft. Dabei soll trotzdem eine Verteiltheit gegeben sein. Dies ist durch die Anwendungskapselung mittels \emph{Container} gewährleistet. Ein Container beinhaltet eine Anwendungen, die benötigten Abhängigkeiten der Anwendung, wie zum Beispiel Bibliotheken und Konfigurationsdateien. Die Sammlung der Container kommunizieren über Netzwerke miteinander. Die Infrastruktur wird mit \emph{Docker} umgesetzt. In dem Kontext der Softwarebereitstellung, ist Docker eine Sammlung von Open-Source Werkzeugen, die eine leichtgewichtige Betriebssystemevirtualisierung ermöglichen. Durch eine Konfigurationsdatei wird eine Infrastruktur definiert. Dabei werden die Services und das Netzwerk erstellt und anschließend auf dem Hostsystem zugänglich gemacht. Die Docker Konfigurationsdatei beschreibt den in \cref{fig:Docker-Compose-Vis} dargestellten Infrastrukturaufbau. Auf dem Hostssystem werden vier Container erstellt, die sich in dem traktor-network befinden. Die Container sind vorher über eine \emph{Dockerfile}, also einer Datei, die den Bauprozess eines Containers beschreibt, zu bauen. Die Dockerfile wird als Pfad in der Variable build beschrieben. Damit die Container auch von ausserhalb des traktor-network ansprechbar sind, wird ein \emph{Portmapping} vorgenommen. Das Portmapping stellt eine Verbindung von Hostport zu Containerport her. Dadurch wird ein Kanal geschaffen, über den zum Beispiel der HTTP Klient eine Anfrage an das verteilte System stellen kann. Die \emph{network}-Variable weist einem Container ein Netzwerk zu, in dem es sich befinden soll. Über die \emph{enviroment}-Variable werden Umgebungsvariablen innerhalb des Containers gesetzt, auf die die Anwendung zugreifen kann. Dies ist eine Vorgehensweise, mit dem man Containerkonfiguration vornimmt. Die \emph{depens\_on}-Variable stellt sicher, dass die spezifizierten Container vorher erstellt werden. Die \emph{cap\_add}-Variable ist für den Interceptor notwendig. Container sind im Normalfall isolierte Prozesse, die auf das Hostsystem nur eingeschränkt zugreifen können. Durch die cap\_add-Variable wird dem Container zusätzliche Rechte gegeben. In diesem Fall das Recht, auf die Netzwerkschnittstellen zugreifen zu können.
+\begin{figure}[]
+	\centering
+	\includegraphics[scale=0.5]{img/Evaluation/Docker-Compose-Vis.png}
+	\caption[Visualisierung der Docker Infrastruktur]{Darstellung der Docker Infrastruktur}
+	\label{fig:Docker-Compose-Vis}
+\end{figure}
 
 \section{Ergebnissvergleich}
 \label{section:Ergebnissvergleich}
@@ -89,19 +93,71 @@ Die Rohdaten sehen folgendermaßen aus:
 	\label{listing:Tracerrohdaten aus der Traktorentwicklungsumgebung}
 \end{minipage}
 
-Diese Rohdaten sind in dem Agenten eingetroffen, nachdem sie von den beiden Tracer reportet worden sind. Anhand der \cref{fig:TraktorEnv-ApplicationArchitecture} .........
+Diese Rohdaten sind in dem Agenten eingetroffen, nachdem sie von den beiden Tracer reportet worden sind. Anhand der \cref{fig:TraktorEnv-ApplicationArchitecture} lassen sich sieben Spans erkennen, die zu einem Trace gehören. Es sind zwei komponenten der Traktorentwicklungsumgebung instrumentalisiert. Zum einen ist das der Fibonacci-Caller und zum anderen der Fibonacci-Server. Der Caller nimmt die HTTP-Anfrage eines HTTP Klienten an und stellt wiederum selbst eine Anfrage mit dem Klientendaten an den Server. Der Span mit dem Operationsnamen \emph{Process Context} ist der zuletzt reportet Span. Gleichzeitig ist es der erste generierte Span. Dieser Span gehört zum Fibonacci-Caller Service. Dieser generiert den Span mit dem Operationsnamen \emph{Server: Process Context}. Anschließend werden fünf weitere Spans erzeugt, die das Event der Berechnung der Fibonacci Zahl umfassen. Die Funktion zur Berechnung der Fibonacci Zahl ist rekursiv implementiert. Demzufolge ist der Operationsname \emph{CalculateFibonacci} gleich. Die gemessenen Zeiten der Spans werden nun genauer betrachtet. Der Hauptaugenmerk soll auf den Millisekunden liegen, da nur in diesem Zeitbereich Änderungen sichtbar sind.
 
-\begin{itemize}
-	\item Bezug zur Problemstellung schaffen
-	\item inwiefern hält sich jaeger an die Happens before relationship?
-	\item wie setzt jaeger diese um?
-	\item setzt es sie um?
-	\item setzt traktor sie um? Wenn ja wie?
-	\item Wie regelt Jaeger die Zeitresolution?
-	\item  
-\end{itemize}
+
+\begin{table}[]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		Operationsname          & Anfangszeit & Endzeit & Dauer  & Referenz:Beziehungstyp              & SpanID           \\ \hline
+		Process Context         & .0948       & .1188   & 240 ms & Root                       & o86QWz3AWK0W     \\ \hline
+		Server: Process Context & .1081       & 0.1097  & 1.6 ms   & \{pi1a+hw7UuZN:child\_of\} & rtXWWLvE9XDg+jy2 \\ \hline
+		CalculateFiboncacci     & .1083       & 0.1090  & 0.7 ms  & \{rtXWWLvE9XDg:child\_of\} & wngEpk/UsI3i     \\ \hline
+		CalculateFiboncacci     & .1083       & 0.1087  & 0.4 ms  & \{wngEpk/UsI3i:child\_of\} & 75buv+V8lmUn     \\ \hline
+		CalculateFiboncacci     & .1083       & 0.1084  & 0.1 ms  & \{75buv+V8lmUn:child\_of\} & 8glMa3Uu+jy2     \\ \hline
+		CalculateFiboncacci     & .1086       & 0.1086  & 0 ms    & \{75buv+V8lmUn:child\_of\} & 8V4vMLWZ2Ax/     \\ \hline
+		CalculateFiboncacci     & .1089       & 0.1089  & 0 ms  & \{wngEpk/UsI3i:child\_of\} & wJ5dqhRUsV8h     \\ \hline
+	\end{tabular}	
+	}
+	\caption{Spandaten der Traktorenviroment instrumentalisiert durch Traktor}
+	\label{tab:Spandaten_Traktor}
+\end{table}
+
+\begin{table}[]
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		Operationsname          & Dauer 	\\ \hline
+		Process Context         & 208.99ms  \\ \hline
+		Server: Process Context & 0.8ms 	\\ \hline
+		CalculateFiboncacci     & 0.2ms 	\\ \hline
+		CalculateFiboncacci     & 0.19ms 	\\ \hline
+		CalculateFiboncacci     & 0ms		\\ \hline
+		CalculateFiboncacci     & 0m		\\ \hline
+		CalculateFiboncacci     & 0ms		\\ \hline
+	\end{tabular}
+	\caption{Spandaten der Traktorenviroment instrumentalisiert durch Jaeger}
+	\label{tab:Spandaten_Jaeger}
+\end{table}
+Die \cref{tab:Spandaten_Traktor} zeigt eine geordente Liste von Spans die zu einem Trace, generiert in der Traktorentwicklungsumgebung, gehören. Die Hierarchie ist durch die Spanreferenz gegeben. Die Dauer ergibt sich aus der Differenz der Anfangs- und Endzeit. Die \cref{tab:Spandaten_Jaeger} zeigt eine Sammlung von Spans, die einen identischen Prozessablauf darstellen. Die Daten sind aus dem \emph{Jaeger User Interface} entnommen, die den Trace darstellen. Der Trace ist in \cref{labellist}
+Der Zeitunterschied der beiden Traces liegt bei 30ms. Es ist zu erkennen, das die Datenerhebung der Traktorinfrastruktur deutlich langsamer ist. Anhand dieser beiden Messungen ist die Traktorinfrastruktur 15\% langsamer, als die Jaegerinfrastruktur.
+
+Auch zu erkennen sind die verschiedenen Messungsverfahren. Die Jaegerinstrumentalisierung verwendet die Startzeit des Root-Traces als Nullpunkt. Spans messen ihre Dauer von diesem Nullpunkt aus. Die Traktorinstrumentalisierung misst die Anfangszeit und Endzeit jedes Spans. Die Differenz ergibt die Dauer eines Spans.
+
+Grundsätzlich ist durch die Darstellungsmodell der Spans eine Happens-Before Relation darstellbar. Die Ergebnisse zeigen diese Relationsdarstellung, von der Position ausgehen, dass die gemessenen Zeiten akkurat sind.  Die Traktorimplementierung implementiert keine Uhrsynchronisation. Aus diesem Grund ist eine Happens-Before Relation, wie in \cref{section:Problemstellung} beschrieben, nicht gegeben. Die Umsetzung einer Uhrsynchronisation, durch beispielsweise einem zusätzlichem Service, könnte eine korrekte Bildung von Happens-Before Relationen schaffen. Die Implementierung der Traktorbibliothek nutzt derzeit die jeweiligen Uhren der Komponenten des Systems, ohne eine Anpassung der gemessenen Zeiten oder einer globalen Uhr.
+
 \section{Visualisierungvergleich von Traktor und Jaeger}
 \label{section:Visualisierungvergleich von Traktor und Jaeger}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.4]{img/Evaluation/Eval_TraktorEnv.png}
+	\caption[Visualisierung eines Traktor-Trace]{Visualisierung eines Traktor-Trace}
+	\label{fig:Eval_TraktorEnv}
+\end{figure}
+
+
+\begin{landscape}
+	\begin{figure}
+	%	\centering
+		\hspace*{-130pt}
+		\includegraphics[scale=0.55]{img/Evaluation/Trace_Dist.png}
+		\caption[Visualisierung eines Jaeger Traces durch Jaeger UI]{Visualisierung eines Jaeger Traces durch Jaeger UI}
+		\label{fig:Trace_Dist}
+	\end{figure}
+\end{landscape}
+
 \begin{itemize}
 	\item jaeger bietet verschiedene visualisierungsmöglichkeiten
 	\begin{itemize}
@@ -111,6 +167,5 @@ Diese Rohdaten sind in dem Agenten eingetroffen, nachdem sie von den beiden Trac
 		\item Tracecompare
 	\end{itemize}
 	\item Welche Vorteile bringen meine Visualisierungsansatze?
-	
 \end{itemize}
 % ----------------------------------------------------------------------------
