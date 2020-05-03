@@ -19,33 +19,14 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{FlameGraphs}{misc}{}
-      \field{sortinit}{F}
-      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
-      \field{labeltitlesource}{title}
-      \field{title}{{Flame Graphs}}
-      \field{urlday}{20}
-      \field{urlmonth}{4}
-      \field{urlyear}{2020}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://www.brendangregg.com/flamegraphs.html
-      \endverb
-      \verb{url}
-      \verb http://www.brendangregg.com/flamegraphs.html
-      \endverb
-    \endentry
     \entry{mantime}{manual}{}
-      \list{location}{1}{%
-        {perf}%
-      }
       \field{labelalpha}{20}
       \field{sortinit}{2}
       \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labeltitlesource}{title}
       \field{edition}{5.06}
       \field{month}{9}
-      \field{title}{{perf(1) Linux User's Manual}}
+      \field{title}{{time(7) Linux User's Manual}}
       \field{year}{2020}
     \endentry
     \entry{10.5555/2387880.2387910}{inproceedings}{}
@@ -291,6 +272,36 @@
       \verb https://books.google.de/books?id=81UrjwEACAAJ
       \endverb
     \endentry
+    \entry{FlameGraphs}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=15eccfdd54e37eba270bda31c8f9febe}{%
+           family={{Brendan D. Gregg}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{fullhash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{bibnamehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{authorbibnamehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{authornamehash}{15eccfdd54e37eba270bda31c8f9febe}
+      \strng{authorfullhash}{15eccfdd54e37eba270bda31c8f9febe}
+      \field{labelalpha}{Bre}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Flame Graphs}}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.brendangregg.com/flamegraphs.html
+      \endverb
+      \verb{url}
+      \verb http://www.brendangregg.com/flamegraphs.html
+      \endverb
+    \endentry
     \entry{BrendanGreggPerf}{misc}{}
       \name{author}{1}{}{%
         {{hash=15eccfdd54e37eba270bda31c8f9febe}{%
@@ -306,6 +317,7 @@
       \field{labelalpha}{Bre}
       \field{sortinit}{B}
       \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extraalpha}{2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{perf example and perf{\_}events definition}

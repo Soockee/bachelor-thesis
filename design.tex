@@ -175,10 +175,10 @@ In diesem Kapitel sollen Darstellungsformen von Tracingdaten präsentiert werden
 
 
 \subsection{Frame Galerie}
-
+\label{subsection:Frame Galerie}
 Das verteilte Rendering-System generiert Frames. Die Instrumentalisierung des System hat den Zweck einzelne Frames untersuchen zu können. Eine abstrakte Darstellung der Tracingdaten zur Untersuchung der Frames bietet sich daher an. Bereits existierende Tracingdarstellungen, bietet eine sehr eingeschränkte und spezifizierte Ansicht der Daten. Das Konzept der Frame Galerie soll die Daten interpretieren und für den Anwender eine Abstraktion der Tracingdaten bereitstellen. 
 
-Das Visualisierungskonzept ist durch drei Ebenen gekennzeichnet. Jede Ebene liefert einen gewissen Grad von Informationen. Dabei bietet die oberste Ebene, dargestellt in \cref{fig:FrameGalerieObereEbene}, eine Übersicht über alle Frames. Grenzwertüberschreitungen könne beispielsweise ein Indiz für fehlerhafte Frames sein, die es weiter zu untersuchen gilt. Da nur ein 
+Das Visualisierungskonzept ist durch drei Ebenen gekennzeichnet. Jede Ebene liefert einen gewissen Grad von Informationen. Dabei bietet die oberste Ebene, dargestellt in \cref{fig:FrameGalerieObereEbene}, eine Übersicht über alle Frames. Grenzwertüberschreitungen könne beispielsweise ein Indiz für fehlerhafte Frames sein, die es weiter zu untersuchen gilt.
 
 \begin{figure}[!ht]
 	\centering
@@ -187,23 +187,27 @@ Das Visualisierungskonzept ist durch drei Ebenen gekennzeichnet. Jede Ebene lief
 	\label{fig:FrameGalerieObereEbene}
 \end{figure}
 
-Da das verteilte Rendering-System konzeptionell in der Lage sein soll, Frames aus Teilframes zusammenzustellen, ist es sinnvoll, den Generierungsprozess der fertigestellten Frames nachvollziehen zu können. Dieser Visualisierungsansatz ist nur dann sinnvoll, sobald die Architektur mehrere Renderer und Aggregatoren umfasst. Aggregatoren wären Systemkomponenten, die die Teilframes sammelt und zusammenführt. Die mittlere Ebene, dargestellt in \cref{fig:FrameGalerieMittlereEbene},  veranschaulicht den Ursprung durch ein Stammbaum. Es müssen nicht alle Teilframes, aufgrund ihres zeitlichen Auftretens in der Generierungsphase, bei der Zusammenstellung verwendet werden. Zusätzlich sind die Generierungszeiten aus den Tracingdaten hergeleitet und an die jeweiligen Frames geheftet. Bei einem Grenzwertübertritt werden diese farblich hervorgehoben.
+Da das verteilte Rendering-System konzeptionell in der Lage sein soll, Frames aus Teilframes zusammenzustellen, ist es sinnvoll, den Generierungsprozess der fertiggestellten Frames nachvollziehen zu können. Dieser Visualisierungsansatz ist nur dann sinnvoll, sobald die Architektur mehrere Renderer und Aggregatoren umfasst. Aggregatoren wäre eine Systemkomponente, die Teilframes sammelt und zusammenführt. Da das aktuelle verteilte Rendering-System dieses Konzept noch nicht umgesetzt hat, ist würde die mittlere Ebene die Frames mit den Generierungszeiten eines Renderer abbilden. Diese Visualisierung ist in \cref{FrameGalerieMittlereEbene2} gezeigt. Das Konzept der mittlere Ebene, dargestellt in \cref{fig:FrameGalerieMittlereEbene}, entfaltet sein Potenzial, sobald mehrere Systemkomponenten miteinander agieren. Die mittlere Ebene mit Aggregator und mehreren Renderern veranschaulicht den Ursprung eines Frames durch ein Stammbaum. Es müssen nicht alle Teilframes, aufgrund ihres zeitlichen Auftretens in der Generierungsphase, bei der Zusammenstellung verwendet werden. Zusätzlich sind die Generierungszeiten aus den Tracingdaten hergeleitet und an die jeweiligen Frames geheftet. Bei einem Grenzwertübertritt werden diese farblich hervorgehoben.
 
-\begin{figure}[!ht]
+\begin{figure}[]
+	\centering
+	\includegraphics[scale=0.8]{img/Design/FrameGalerieMittlereEbene2.png}
+	\caption[Mittlere Ebene der Frame Galerie ohne Aggregator]{ Skizzierung der mittleren Ebene der Frame Galerie}
+	\label{fig:FrameGalerieMittlereEbene2}
+\end{figure}
+\begin{figure}[]
 	\centering
 	\includegraphics[scale=0.8]{img/Design/FrameGalerieMittlereEbene.png}
-	\caption[Mittlere Ebene der Frame Galerie]{ Skizzierung der mittleren Ebene der Frame Galerie}
+	\caption[Mittlere Ebene der Frame Galerie mit Aggregator und mehreren Renderen]{ Skizzierung der mittleren Ebene der Frame Galerie mit Aggregator und mehreren Renderern}
 	\label{fig:FrameGalerieMittlereEbene}
 \end{figure}
 
-Die unterste Ebene ist Detailansicht der Spans. Hierzu wird die klassische Visualisierungform von Tracingdaten verwendet. Die Servicenamen, die Operationsnamen und die dazugehörigen Verarbeitungszeiten der Spans sind erkenntlich. Zusätzlich können \emph{Breakpoints} gekennzeichnet werden. Durch Visualisierung von beispielsweise gestrichelten Linien, wie in \cref{fig:FrameGalerieUntereEbene1} gezeigt, ist ersichtlich, dass Frames, die ab diesem Zeitpunkt generiert werden, für die Zusammenführung ungenutzt bleiben.
-
-Dem Anwender der Visualisierung ist durch die Ebenenaufteilung möglich, für ihn interessante Aspekte auszuwählen und gegebenenfalls Fehlerquellen weitergehend zu untersuchen.
+Die unterste Ebene ist Detailansicht der Spans. Hierzu wird die klassische Visualisierungform von Tracingdaten verwendet. Die Servicenamen, die Operationsnamen und die dazugehörigen Verarbeitungszeiten der Spans sind erkenntlich. Zusätzlich können \emph{Breakpoints} gekennzeichnet werden. Durch Visualisierung von beispielsweise gestrichelten Linien, wie in \cref{fig:FrameGalerieUntereEbene1} gezeigt, ist ersichtlich, dass Frames, die ab diesem Zeitpunkt generiert werden, für die Zusammenführung ungenutzt bleiben. Dem Anwender der Visualisierung ist durch die Ebenenaufteilung möglich, für ihn interessante Aspekte auszuwählen und gegebenenfalls Fehlerquellen weitergehend zu untersuchen.
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.8]{img/Design/FrameGalerieUntereEbene2.png}
-	\caption[Untere Ebene der Frame Galerie: Beispiel 2]{ Skizzierung der unteren Ebene von Teilframe aus Renderer A}
+	\caption[Untere Ebene der Frame Galerie: Beispiel 2]{ Skizzierung der unteren Ebene eines beispielhaften Teilframes des Renderer A}
 	\label{fig:FrameGalerieUntereEbene1}
 \end{figure}
 \begin{figure}[!ht]
