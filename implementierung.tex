@@ -9,7 +9,7 @@
 \chapter{Implementierung}
 \label{chapter:Implementierung}
 
-In diesem Kapitel werden Implementierungen von Prototypen gezeigt, die im Kapitel \cref{chapter:Design} besprochen sind. In \cref{section:Instrumentalisierungsbibliothek: Traktor} werden die implementierungsdetails der Instrumentalisierungsbilbiothek \textbf{Traktor} vorgestellt. In \cref{section:Traktor Agent} und in \cref{section:Traktor Registry} werden die Traktor Services beschrieben. Anschließend werden zwei Anwendungsfälle gezeigt. Der Anwendungsfall des rendering System in \cref{section:Unity Rendering System} und der Anwendungsfall einer verteilten Webanwendung in \cref{section:Webserver Entwicklungsumgebung}
+In diesem Kapitel werden Implementierungen von Prototypen gezeigt, die im Kapitel \cref{chapter:Design} besprochen sind. In \cref{section:Instrumentalisierungsbibliothek: Traktor} werden die Implementierungsdetails der Instrumentalisierungsbilbiothek \textbf{Traktor} vorgestellt. In \cref{section:Traktor Agent} und in \cref{section:Traktor Registry} werden die Traktor Services beschrieben. Anschließend werden zwei Anwendungsfälle gezeigt. Der Anwendungsfall des Rendering-System in \cref{section:Unity Rendering System} und der Anwendungsfall einer verteilten Webanwendung in \cref{section:Webserver Entwicklungsumgebung}
 
 \section{Instrumentalisierungsbibliothek: Traktor}
 \label{section:Instrumentalisierungsbibliothek: Traktor}
@@ -17,13 +17,13 @@ In diesem Kapitel wird die Implementierung der Instrumentalisierungsbibliothek T
 
 Traktor ist eine Instrumentalisierungsbibliothek, die sich die OpenTracing API als Vorbild nimmt. Die OpenTracing API ist eine herstellerneutrale Instrumentalisierungs-API, die unter der Schirmherschafft der \gls{cncfLabel} steht, welches Teil der gemeinnützig agierenden \gls{lfLabel} ist.
 
-Die zwei zentralen Einheiten der Traktor Instrumentalisierungsbibliothek sind der in \cref{subsection:Tracer} gezeigte \textbf{Tracer} und der in \cref{subsection:Span} \textbf{Spans}. Weitere Klassen, die den in \cref{subsection:Tracingcontext innerhalb eines Systems} beschriebenen Designansatz implementieren, sind der in \cref{subsection:Scope} vorgestellte Scope und der in \cref{subsection:ScopeManager} vorgestellte ScopeManager. Die Kontextpropagierung, die mit einer Websocketverbindung innerhalb des Tracer und der, in \cref{section:Traktor Registry} gezeigten, Traktor Registry, umgesetzt ist, implementiert den in \cref{subsection:Tracingcontext über Systemgrenzen} erläuterten Designansatz. Ein Gesamtüberblick mit allen Relationen der Klassen, wird in \cref{subsection:UML-Klassendiagramm der Bibliothek} gegeben.
+Die zwei zentralen Einheiten der Traktor Instrumentalisierungsbibliothek sind der in \cref{subsection:Tracer} gezeigte \textbf{Tracer} und die in \cref{subsection:Span} gezeigten \textbf{Spans}. Weitere Klassen, die den in \cref{subsection:Tracingcontext innerhalb eines Systems} beschriebenen Designansatz implementieren, sind der in \cref{subsection:Scope} vorgestellte \textbf{Scope} und der in \cref{subsection:ScopeManager} vorgestellte \textbf{ScopeManager}. Die Kontextpropagierung, die mit einer Websocketverbindung innerhalb des Tracer und der, in \cref{section:Traktor Registry} gezeigten,\textbf{ Traktor Registry}, umgesetzt ist, implementiert den in \cref{subsection:Tracingcontext über Systemgrenzen} erläuterten Designansatz. Ein Gesamtüberblick mit allen Relationen der Klassen, wird in \cref{subsection:UML-Klassendiagramm der Bibliothek} gegeben.
 
 \subsection{Tracer}
 \label{subsection:Tracer}
-Der Tracer ist die zentrale Verwaltungseinheit der Instrumentalisierung. Dieser verwaltet die Verbindung der Anwendungsinstrumentalisierung zu dem Agenten und der Registry. Der Tracer kümmert sich um das Generieren von Spans und die Herstellung von Kausalzusammenhängen zwischen den Spans. Ausserdem stellt der Tracer die Funktionalitäten zur Kontextpropagierung über die Registry bereit. Die Spans sind Darstellungen von ausgeführter Arbeit in einer instrumentalisierten Anwendung. 
+Der Tracer ist die zentrale Verwaltungseinheit der Instrumentalisierung. Dieser verwaltet die Verbindung der Anwendungsinstrumentalisierung zu dem Agenten und der Registry. Der Tracer kümmert sich um das Generieren von Spans und die Herstellung von Kausalzusammenhängen zwischen den Spans. Außerdem stellt der Tracer die Funktionalitäten zur Kontextpropagierung über die Registry bereit. Die Spans sind Darstellungen von ausgeführter Arbeit in einer instrumentalisierten Anwendung. 
 
-Die Tracer API erweitert die OpenTracing API um vier Funktionen, die notwendig sind, um sich mit der Tracinginfrastuktur zu verbinden. Die \emph{Configure} Funktion sorgt für einen Verbindungsaufbau, abhängig von den übergebenen Parametern. Ein vollständiger Verbindungsaufbau ist nötig, um eine Kontextpropagierung zu ermögliche. Ausserdem wird der \gls{udpLabel}-Klient initzialisiert, damit beendete Spans reportet werden können. Der \gls{udpLabel}-Klient hat einen Port zu belegen, der angegeben werden muss. Die IP-Adressen der Services sind dem Tracer bekannt zu geben. Auch der Port auf der die Anwendung lauscht, muss übergeben werden. Die Configure Funktion verwendet die \emph{Register} Funktion zur Erstellung einer \textbf{WebSocketClient} Instanz. Die Websocketverbindung wird über die Lebensdauer des Tracer offen gehalten. Über diesen Kommunikationskanal werden die Kontextinformationen übermittelt. \cref{listing:Tracer Verbindungsaufbau} zeigt eine Beispielhafte Konfigurierung. Dabei wird eine Tracerinstanz instanziiert und mit den Adressen der Traktorservices konfiguriert.
+Die Tracer API erweitert die OpenTracing API um vier Funktionen, die notwendig sind, um sich mit der Tracinginfrastuktur zu verbinden. Die \emph{Configure} Funktion sorgt für einen Verbindungsaufbau, abhängig von den übergebenen Parametern. Ein vollständiger Verbindungsaufbau ist nötig, um eine Kontextpropagierung zu ermöglichen. Außerdem wird der \gls{udpLabel}-Klient initialisiert, damit beendete Spans reportet werden können. Der \gls{udpLabel}-Klient hat einen Port zu belegen, der angegeben werden muss. Die IP-Adressen der Services sind dem Tracer bekannt zu geben. Auch der Port auf der die Anwendung lauscht, muss übergeben werden. Die Configure Funktion verwendet die \emph{Register} Funktion zur Erstellung einer \textbf{WebSocketClient} Instanz. Die Websocketverbindung wird über die Lebensdauer des Tracer offen gehalten. Über diesen Kommunikationskanal werden die Kontextinformationen übermittelt. \cref{listing:Tracer Verbindungsaufbau} zeigt eine Beispielhafte Konfigurierung. Dabei wird eine Tracerinstanz instanziiert und mit den Adressen der Traktorservices konfiguriert.
 
 \begin{minipage}[]{\textwidth}
 	\begin{lstlisting}[frame=trBL]
@@ -35,7 +35,7 @@ Die Tracer API erweitert die OpenTracing API um vier Funktionen, die notwendig s
 	var agentPort = 13337;
 	var reporterPort = 13338;
 	
-	Tracer tracer = new Tracer()
+	Tracer tracer = new Tracer();
 	tracer.Configure(registryAddress,registryPort,agentAddress,
 				agentPort,reporterPort);
 	
@@ -44,8 +44,8 @@ Die Tracer API erweitert die OpenTracing API um vier Funktionen, die notwendig s
 	\label{listing:Tracer Verbindungsaufbau}
 \end{minipage} 
 
-Die Kontextdaten werden in einer \emph{Carrier} Instanz gespeichert und über die Leitung gesendet. In der Implementierung gibt es genau einen Carriertyp. Der BinaryCarrier ist ein Datencontainer, der die Kontextinformationen als MemoryStream speichert. Der MemoryStream speichert die Daten im Arbeitsspeicher als Bytearray. Das Format wurde für die Übertragung über eine TCP/IP Verbindung ausgewählt. 
-Die Spangenerierung wird durch eine \emph{SpanBuilder} Instanz geregelt. Der Operationsname wird der SpanBuilder Instanz mitgegeben und für die Generierung des Spans genutzt. Die Kontextpropagierung wird durch die beiden sich ergänzenden asynchronen Funktionen \emph{SendContext} und \emph{ReceiveContext} implementiert. Diese nutzen die \emph{Extract} und \emph{Inject}, um die BinaryCarrier zu erstellen, beziehungsweise die Daten aus dem Carrier zu extrahieren.
+Die Kontextdaten werden in einer \emph{Carrier} Instanz gespeichert und über die Leitung gesendet. In der Implementierung gibt es genau einen Carriertyp. Der BinaryCarrier ist ein Datencontainer, der die Kontextinformationen als MemoryStream speichert. Der MemoryStream speichert die Daten im Arbeitsspeicher als Bytearray. Das Format wurde für die Übertragung über eine \gls{tcpLabel}/\gls{ipLabel} Verbindung ausgewählt, da die Kontextpropagierung über das Websocketprotokoll realisiert wird. Das Websocketprotokoll ist ein auf dem \gls{tcpLabel} basierendes Protokoll.
+Die Spangenerierung wird durch eine \emph{SpanBuilder} Instanz geregelt. Der Operationsname wird der SpanBuilder Instanz mitgegeben und für die Generierung des Spans genutzt. Die Kontextpropagierung wird durch die beiden sich ergänzenden asynchronen Funktionen \emph{SendContext} und \emph{ReceiveContext} implementiert. Dabei werden die Funktionen \emph{Extract} und \emph{Inject} verwendet. Die Inject Funktion erstellt einen BinaryCarrier, der für die Kontextübertragung genutzt wird. Die Extract Funktion extrahiert die Daten aus dem BinaryCarrier.
 
 Der Tracer hält eine \textbf{Scopemanager} Instanz. Der Scopemanager verwaltet die Spans. Über den Scopemanager kann der Tracer den aktuell aktiven Span ermitteln.
 
@@ -62,20 +62,20 @@ Der Span beinhaltet alle relevanten Daten, die für das Repäsentieren eines Eve
 	\label{listing:Tracer Verbindungsaufbau}
 \end{minipage} 
 
-Der Aufbau orientiert sich an dem amerikanischen Zeitformat. \textbf{MM} steht für den Monat, \textbf{dd} für den Tag und \textbf{yyyy} für das Jahr. Interessanter wird es bei dem Tageszeitformat. In einem System, bei dem Zeit eine kritische Rolle spielt, sind kleinste Zeitunterschiede von Bedeutung. \textbf{hh} und \textbf{mm} sind entsprechend die Stunden und Minunten. \textbf{ss.ffff} entspricht den Sekunden und dem Tausendstel einer Sekunde. Die \textbf{Systemuhr Resolution} ist an dieser Stelle erwähnenswert. Die Resolution einer Uhr beschreibt die kleinste Einheit von Zeit, die akkurat von einer Uhr gemessen werden kann. Die Resolution der Systemuhr hängt von dem Betriebsystem ab. In einem Windows 8  Betriebsystem ist die Standardresolution bei 15.6 ms. Das .NET Framework, welches für die Implementierung genutzt wird, behandelt verschiedene genutzte Softwaretimer wiederum eigenständig. Diese kann manuell auf 0.5 reduziert werden. In einem Linux-basierenden Betriebssystem hängt die Resolution von der Software Clock ab. Dabei wird die Zeit in sog. \textbf{Jiffies} gemessen. Die Linux-Kernel version 2.6.0 führt eine jiffiegröße von 0.001 sekunden ein\footpartcite{mantime}. Dementsprechen sind die gemessenen Zeitstempel mit diesen Hintergrundinformationen zu bewerten.
+Der Aufbau orientiert sich an dem amerikanischen Zeitformat. \textbf{MM} steht für den Monat, \textbf{dd} für den Tag und \textbf{yyyy} für das Jahr. Interessanter wird es bei dem Tageszeitformat. In einem System, bei dem Zeit eine kritische Rolle spielt, sind kleinste Zeitunterschiede von Bedeutung. \textbf{hh} und \textbf{mm} sind entsprechend die Stunden und Minunten. \textbf{ss.ffff} entspricht den Sekunden und dem Tausendstel einer Sekunde. \textbf{tt} steht für a.m beziehungsweise p.m., also der entsprechenden Tageshälfte der 2-mal-12-Stunden-Zählung. Die \textbf{Systemuhr Auflösung} ist an dieser Stelle erwähnenswert. Die Auflösung einer Uhr beschreibt die kleinste Einheit von Zeit, die akkurat von einer Uhr gemessen werden kann. Die Auflösung der Systemuhr hängt von dem Betriebssystem ab. In einem Windows 8  Betriebssystem ist die Standardresolution bei 15.6 ms. Das .NET Framework, welches für die Implementierung genutzt wird, behandelt verschiedene genutzte Softwaretimer wiederum eigenständig. Diese kann manuell auf 0.5 reduziert werden. In einem Linux-basierenden Betriebssystem hängt die Auflösung von der Software Clock ab. Dabei wird die Zeit in sog. \textbf{Jiffies} gemessen. Die Linux-Kernel version 2.6.0 führt eine jiffiegröße von 0.001 sekunden ein\footpartcite{mantime}. In dem verwendeten Windows 10 Betriebssystem ist die Standardauflösung der Systemuhr bei 1ms. Diese Auflösung ist für die Zeitmessung zufriedenstellend. Dem entsprechen sind die gemessenen Zeitstempel mit diesen Hintergrundinformationen zu bewerten. Eine höhere Auflösung ist in dem jeweiligen Betriebssystem durch die Verwendung eines \emph{Performance Counters} erzielbar. Unter Windows kann der \emph{QueryPerformanceCounter} genutzt werden, um einen Nanosekunden genauen Zeitstempel zu erhalten. Unter Linux kann die Betriebssystemfunktion \emph{clock\_gettime} genutzt werden, um einen Nanosekunden genauen Zeitstempel zu erhalten.
 
 Ein Span besitzt einen Spankontext und eine Referenzliste. Der Inhalt des Spankontext wird in \cref{subsection:SpanContext} beschrieben. Die Referenzliste beinhaltet alle Spans, die eine \textbf{Happens-Before Relation} zu dem Span aufweisen. Das bedeutet, dass alle Elternspans, beispielsweise aus \emph{Child-Of} und \emph{Follows-From} resultierenden Beziehungen, in dieser Liste referenziert werden.
 
-Schlussendlich kennt ein Span seinen Tracer. Dies ist erforderlich, da beim fertigstellen des Spans die \emph{Finish} Funktion aufgerufen wird. Diese sorgt dafür, dass der Endzeitstempel gesetzt wird. Ausserdem wird die \emph{Report} Funktion der Reporterinstanz, bekannt durch den Tracer, aufgerufen.
+Schlussendlich kennt ein Span seinen Tracer, indem das Spanobjekt eine Referenz zu dem Tracerobjekt hält. Dies ist erforderlich, da beim fertigstellen des Spans die \emph{Finish} Funktion aufgerufen wird. Diese sorgt dafür, dass der Endzeitstempel gesetzt wird. Ausserdem wird die \emph{Report} Funktion der Reporterinstanz, bekannt durch den Tracer, aufgerufen. 
 
 \subsection{SpanBuilder}
 \label{subsection:SpanBuilder}
 
-Der SpanBuilder ist die Bindegliedentität zwischen dem Tracer und der Spangenerierung. Der Anwender der Instrumentalisierungsbibliothek kann durch die \emph{BuildSpan} Funktion des Tracer die Spangenerierung einleiten. Dabei wird eine SpanBuilder Instanz erstellt, die die übergebenen Parameter zur Spangenerierung nutzt. Der SpanBuilder verlang, während der Initialisierung, nach einem Operationsnamen und der Referenz des aufrufenden Tracers. Diese werden als Felder in der SpanBuilder Instanz gespeichert. Durch die Funktionen \emph{AddReference} und \emph{AsChildOf} kann das Feld \emph{references} bearbeitet werden. Dabei ist AsChildOf eine spezialisierte Form der AddReference Funktion. Die AddReference Funktion erwartet einen Referenztypen und einen SpanContext als Paramenter. Diese werden dann für den zu bauenden Span genutzt. 
+Der SpanBuilder ist das Bindeglied zwischen dem Tracer und der Spangenerierung. Der Anwender der Instrumentalisierungsbibliothek kann durch die \emph{BuildSpan} Funktion des Tracer die Spangenerierung einleiten. Dabei wird eine SpanBuilder Instanz erstellt, die die übergebenen Parameter zur Spangenerierung nutzt. Der SpanBuilder verlang, während der Initialisierung, nach einem Operationsnamen und der Referenz des aufrufenden Tracers. Diese werden als Felder in der SpanBuilder Instanz gespeichert. Durch die Funktionen \emph{AddReference} und \emph{AsChildOf} kann das Feld \emph{references} bearbeitet werden. Dabei ist AsChildOf eine spezialisierte Form der AddReference Funktion. Die AddReference Funktion erwartet einen Referenztypen und einen SpanContext als Paramenter. Diese werden dann für den zu bauenden Span genutzt. 
 
 Eine weitere Grundfunktion ist die \emph{Start} Funktion. Diese beinhaltet die nötige Anwendungslogik, für die Traceidentifikationsnummergenerierung. Auch die Spanidentifikationsnummer wird generiert. Anschließend wird der Span gebaut und mit den gesammelten Daten initialisiert.
 
-Ähnlich wie bei der AddReference Funktion, ist die \emph{StartActive} Funktion eine Spezialisierungen der Start Funktion. Die überladene StartActive Funktion kann Parameterlos oder mit dem Boolean \emph{finishSpanOnDispose} aufgerufen werden. Der Boolean bestimmt, wie mit einem Span umgegangen wird, nachdem die entsprechende Finish Funktion aufgerufen worden ist. StartActive setzt den gebauten Span auf den Zustand \textbf{Aktiv}. Das bedeutet, dass der Scopemanager diesen verfolgt und gegebenfalls den vorherig aktiven Span zwischenspeichert.
+Ähnlich wie bei der AddReference Funktion, ist die \emph{StartActive} Funktion eine Spezialisierungen der Start Funktion. Die überladene StartActive Funktion kann parameterlos oder mit dem Boolean \emph{finishSpanOnDispose} aufgerufen werden. Der Boolean bestimmt, wie mit einem Span umgegangen wird, nachdem die entsprechende Finish Funktion aufgerufen worden ist. StartActive setzt den gebauten Span auf den Zustand \textbf{Aktiv}. Das bedeutet, dass der Scopemanager diesen verfolgt und gegebenfalls den vorherig aktiven Span zwischenspeichert.
 
 Eine beispielhafte Nutzung des Spanbuilders sieht folgendermaßen aus:
 
@@ -97,7 +97,7 @@ Ein Operationsname wird definiert und als Paramenter für die BuildSpan Funktion
 
 Die SpanContext Klasse beinhaltet eine TraceId, eine SpanId und einen Rerenztypen als Felder. Diese werden bei der Initialisierung gesetzt. Die SpanContext-Klasse ist ein reine Datenkapselung. Semantisch sind die in der SpanContext enthaltenen Daten jene, die in einem BinaryCarrier, codiert als Bytearray, über die Leitung gesendet werden.
 
-Ein Auszug eines Spankontexts aus dem Entwicklungssystem zeigt den Aufbau. Der Auszug stammt aus dem Registryservice. In dem Service wird der Nachricht auf die Konsole ausgebenen, sobald eine Propagiererung ausgelöst worden ist.
+Ein Auszug eines Spankontexts aus dem Entwicklungssystem zeigt den Aufbau. Der Auszug stammt aus dem Registryservice. In dem Service wird der Nachricht auf die Konsole ausgebenen, sobald eine Propagierung ausgelöst worden ist.
 
 \begin{minipage}[]{\textwidth}
 	\begin{lstlisting}[frame=trBL]
@@ -107,7 +107,7 @@ Ein Auszug eines Spankontexts aus dem Entwicklungssystem zeigt den Aufbau. Der A
 	\label{listing:SpanContext-Registry}
 \end{minipage} 
 
-Der Spankontext beinhaltet drei Daten. Eine TraceId, eine SpanId und einem Relationstyp.
+Der Spankontext beinhaltet drei Daten. Eine TraceId, eine SpanId und einen Relationstyp.
 
 \subsection{Scope}
 \label{subsection:Scope}
@@ -127,7 +127,7 @@ Die Reporter Klasse umfasst drei Funktionen. Die Funktion \emph{Connect} stellt 
 \subsection{UML-Klassendiagramm der Bibliothek}
 \label{subsection:UML-Klassendiagramm der Bibliothek}
 
-Die Instrumentalisierungsbibliothek ist in der Programmiersprache CSharp implementiert. Die Programmiersprache eignet sich für die Entwicklung von Systemkomponenten, die in einer verteilten System zum Einsatz kommen, wie aus der Spezifikation der Programmiersprache entnommen werden kann: 
+Die Instrumentalisierungsbibliothek ist in der Programmiersprache C\# implementiert. Ein Grund dafür ist, dass das verteilte Rendering-System relevante Komponenten in C\# implementiert und in diesen die Bibliothek genutzt werden soll. Die Programmiersprache eignet sich außerdem für die Entwicklung von Systemkomponenten, die in einer verteilten System zum Einsatz kommen, wie aus der Spezifikation der Programmiersprache entnommen werden kann: 
 
 \begin{quote}
 	\cbstart
@@ -150,7 +150,7 @@ Das Klassendiagramm, gezeigt in \cref{fig:TraktorKlassendiagramm}, stellt einen 
 \section{Traktor Agent}
 \label{section:Traktor Agent}
 
-Der Traktoragent ist ein Service, welcher ein \gls{udpLabel}-Endpunkt bereitstellt. Der Service gibt alle erhaltenen Nachrichten auf seiner Konsole aus. Zwei Umgebungsvariablen werden genutzt, um den \gls{udpLabel}-Endpunkt zu initialisieren. Die \textbf{UDP\_IP} ist der \emph{Localhost}, da der Service auf einer eigenständigen Komponeten bereitgestellt wird. Dies ist durch den Spezifikikationspunkt \textbf{TE}.2  gegeben. Der belegete Port wird durch die Umgebungsvariable \textbf{UDP\_PORT} konfiguriert. 
+Der Traktor Agent ist ein Service, welcher einen \gls{udpLabel}-Endpunkt bereitstellt. Der Service gibt alle erhaltenen Nachrichten auf seiner Konsole aus. Zwei Umgebungsvariablen werden genutzt, um den \gls{udpLabel}-Endpunkt zu initialisieren. Die \textbf{UDP\_IP} ist der \emph{Localhost}, da der Service auf einer eigenständigen Komponenten bereitgestellt wird. Dies ist durch den Spezifikikationspunkt \textbf{TE}.2  gegeben. Der belegete Port wird durch die Umgebungsvariable \textbf{UDP\_PORT} konfiguriert. 
 
 Ein reporteter Span kann folgendermaßen aussehen:
 
@@ -168,19 +168,19 @@ Ein reporteter Span kann folgendermaßen aussehen:
 	\label{listing:Reporteter-Span}
 \end{minipage} 
 
-Der Service \emph{traktor-agent\_1} erhält von der Netzwerkaddresse 172.22.0.5:13338 die dargestellte Nachricht eines Spans mit dem Operationsnamen \emph{Process Context}. Der Startzeitstempel und der Endzeitstempel sind Teil des reporteten Spans. Auch der Spankontext ist dargestellt.
+Der Service \emph{traktor-agent\_1} erhält von der Netzwerkadresse 172.22.0.5:13338 die dargestellte Nachricht eines Spans mit dem Operationsnamen \emph{Process Context}. Der Startzeitstempel und der Endzeitstempel sind Teil des reporteten Spans. Auch der Spankontext ist dargestellt.
 
 \section{Traktor Registry}
 \label{section:Traktor Registry}
 
-Die Traktor Registry ist ein Websocket Server. Verbindungsanfragen, initiiert von einer Tracerinstanz, werden als eigenständiger Thread in einer Klientenliste der Registry gespeichert. Die Anwendungslogik der \emph{ClientHandler}-Threads implementiert die Websocket Handshakes. Das Websocketprotokoll wird in \cref{subsection:Websocketprotokoll} beschrieben. Die Kontextpropagierung wird durch den Websocket Server umgesetzt. Die Implementierung wird in \cref{subsection:Klientenverwaltung} vorgestellt.
+Die Traktor Registry ist ein Websocket Server. Verbindungsanfragen, initiiert von einer Tracerinstanz, werden als eigenständiger Thread in einer Klienten-liste der Registry gespeichert. Die Anwendungslogik der \emph{ClientHandler}-Threads implementiert die Websocket Handshakes. Das Websocketprotokoll wird in \cref{subsection:Websocketprotokoll} beschrieben. Die Kontextpropagierung wird durch den Websocket Server umgesetzt. Die Implementierung wird in \cref{subsection:Klientenverwaltung} vorgestellt.
 
 \subsection{Websocketprotokoll}
 \label{subsection:Websocketprotokoll}
 
-Das Websocketprotokoll ermöglicht eine vollduplex Kommunikation zwischen der Registry und dem entsprechenden Websocketklienten eines Tracers. Das Protokoll nutzt dafür eine einzige TCP-Verbindung. Das Websocketprotokoll wird genutzt, um einen geringen \textbf{Overhead} der Kommunikation zu gewährleisten. Dementsprechend wird das Designziel der \textbf{Verarbeitungskosten} berücksichtigt. Das Websocketprotokoll ist durch \gls{rfcLabel} mit der Nummer 6455 spezifiziert.
+Das Websocketprotokoll ermöglicht eine voll-duplex Kommunikation zwischen der Registry und dem entsprechenden Websocketklienten eines Tracers. Das Protokoll nutzt dafür eine einzige TCP-Verbindung. Das Websocketprotokoll wird genutzt, um einen geringen \textbf{Overhead} der Kommunikation zu gewährleisten. Dementsprechend wird das Designziel der \textbf{Verarbeitungskosten} berücksichtigt. Das Websocketprotokoll ist durch \gls{rfcLabel} mit der Nummer 6455 spezifiziert.
 
-Das Websocketprotokoll verlangt einen öffnenden Handshake zur Etablierung der Verbindung. Dieser basiert auf einem HTTP Handshake. Die eröffnende HTTP-Anfrage beinhaltet eine \emph{Upgrade}-Anforderung, der in diesem Moment genutzten HTTP-Verbindung. Der folgende Logausschnitt zeigt eine solche Eröffnungsnachricht:
+Das Websocketprotokoll verlangt einen öffnenden Handshake zur Etablierung der Verbindung. Dieser basiert auf einem HTTP Handshake. Die eröffnende HTTP-Anfrage beinhaltet eine \emph{Upgrade}-Anforderung, der in diesem Moment genutzten HTTP-Verbindung. Der folgende Ausschnitt eines Logs, zeigt eine solche Eröffnungsnachricht:
 
 \begin{minipage}[]{\textwidth}
 	\begin{lstlisting}[frame=trBL]
@@ -195,7 +195,7 @@ Das Websocketprotokoll verlangt einen öffnenden Handshake zur Etablierung der V
 	\label{listing:Eröffnender Websocket Handshake}
 \end{minipage} 
 
-Die HTTP-Nachricht beinhaltet sogenannte \textbf{Header}, die Daten beinhalten, die für den Protokollwechsel von HTTP zu Websocket nötig sind. Der Host-Header identifiziert den Ursprung des Handshakeinitiators. Dieser ist in diesem Falle die IP-Addresse die hinter dem Alias \emph{traktor-registry} steht. Der Port 8090 der Anwendung, von welchem die Anfrage stammt, wird zusätzlich mitgesendet. Der Connection-Header gibt die bervorzugte Verbindungsart an. Diese beschreibt den gewünschten Vorgang eines Upgrades der Verbindung. In Verbindung mit dem Inhalt des Connections-Headers wird ein Upgrade-Header gesendet. Dieser ist ein Vorschlag an den Server ein anderes Protokoll zu nutzen. Entsprechend beinhaltet der Upgrade-Header den Vorschlag das Websocket Protokoll zu verwenden. Die letzen beiden Header Sec-WebSocket-Version und Sec-WebSocket-Key sind websocketspezifische Header.
+Die HTTP-Nachricht beinhaltet sogenannte \textbf{Header}, die Daten beinhalten, die für den Protokollwechsel von HTTP zu Websocket nötig sind. Der Host-Header identifiziert den Ursprung des Handshakeinitiators. Dieser ist in diesem Falle die IP-Addresse die hinter dem Alias \emph{traktor-registry} steht. Der Port 8090 der Anwendung, von welchem die Anfrage stammt, wird zusätzlich mitgesendet. Der Connection-Header gibt die bevorzugte Verbindungsart an. Diese beschreibt den gewünschten Vorgang eines Upgrades der Verbindung. In Verbindung mit dem Inhalt des Connections-Headers wird ein Upgrade-Header gesendet. Dieser ist ein Vorschlag an den Server ein anderes Protokoll zu nutzen. Entsprechend beinhaltet der Upgrade-Header den Vorschlag das Websocket Protokoll zu verwenden. Die letzen beiden Header Sec-WebSocket-Version und Sec-WebSocket-Key sind websocketspezifische Header.
 
 Die Serverantwort sieht ähnlich aus. Diese besteht aus der Request-Line und dem Sec-WebSocket-Accept Header, der eine Bestätigung der zu nutzenden Websocketverbindung darstellt.
 
@@ -210,7 +210,7 @@ Die Serverantwort sieht ähnlich aus. Diese besteht aus der Request-Line und dem
 	\label{listing:Serverantwort eines Websocket Handshake}
 \end{minipage} 
 
-Bei einem erfolgreichen Handshake bleibt die Verbindung kommunikationsbreit, bis der Tracer die Verbindung manuell schließt.
+Bei einem erfolgreichen Handshake bleibt die Verbindung kommunikationsbereit, bis der Tracer die Verbindung manuell schließt.
 
 Die Implementierung des Websocket Servers basiert auf Grundlage eines Guides von Mozilla und wurde entsprechend den Implementierungsanforderungen angepasst und erweitert.\footpartcite{MozillaWebsocket} Nachfolgend wird die Implementierung der Antwort auf einen Websocketverbindungsanfrage gezeigt:
 
@@ -237,10 +237,10 @@ Die Implementierung des Websocket Servers basiert auf Grundlage eines Guides von
 	\label{listing:Implementierung der Serverantwort eines Websocket Handshake}
 \end{minipage}
 
-Der Wert von \emph{Sec-WebSocket-Key} wird extrahiert und von führenden und folgenden Leerzeichen bereinigt. Anschließend wird der Wert mit einer speziellen \gls{guidLabel} konkateniert. Dieser zusammengesetzte String wird schließend mit SHA-1, einem kryptographischen Hash Algorithmus, verschlüsselt. Der verschlüsselte Wert wird daraufhin mit Base64 kodiert, die Serverantwort gebaut und anschließend an den Tracerklienten gesendet.
+Der Wert von \emph{Sec-WebSocket-Key} wird extrahiert und von führenden und folgenden Leerzeichen bereinigt. Anschließend wird der Wert mit einer speziellen \gls{guidLabel} konkateniert. Dieser zusammengesetzte String wird schließend mit SHA-1\footpartcite{fette2011websocket}, einem kryptographischen Hash Algorithmus, verschlüsselt. Der verschlüsselte Wert wird daraufhin mit Base64 kodiert, die Serverantwort gebaut und anschließend an den Tracerklienten gesendet.
 
-Der Websocket Server muss in der Lage sein, auf eine Schließung der Websocketverbindung, reagieren zu können. Dementsprechend muss eine Schließungsnachricht gebaut werden.
-Diese Schließungsnachricht ist eine 2-Byte großer Frame. Die \cref{fig:WebsocketClosingFrame} visualisiert einen Websocketschließungs Frame. Der Frame besteht aus einem FIN-Bit, der auf 1 gesetzt sein muss. RSV1, RSV2 und RSV3 sind reservierte Bits, die auf 0 gesetzt sein müssen. Der Opcode ist ein 4-Bit großer Flag, der dem Dezimalwert 8 entspricht. Dieser steht für die Operation des Schließens des Websockets. Die Maske ist auf 0 gesetzt. Auch sind die Bits der Payload Length auf 0 gesetzt. 
+Der Websocket Server muss in der Lage sein, auf eine Schließung der Websocketverbindung reagieren zu können. Dementsprechend muss eine Schließungsnachricht gebaut werden.
+Diese Schließungsnachricht ist ein 2-Byte großer Frame. Die \cref{fig:WebsocketClosingFrame} visualisiert einen Websocketschließungs-Frame. Der Frame besteht aus einem FIN-Bit, der auf 1 gesetzt sein muss. RSV1, RSV2 und RSV3 sind reservierte Bits, die auf 0 gesetzt sein müssen. Der Opcode ist ein 4-Bit großer Flag, der dem Dezimalwert 8 entspricht. Dieser steht für die Operation des Schließens des Websockets. Die Maske ist auf 0 gesetzt. Auch sind die Bits der Payload Length auf 0 gesetzt. 
 
 \begin{figure}[!ht]
 	\centering
@@ -275,11 +275,15 @@ Da die Nachricht von einem Websocketklienten stammt, ist der \textbf{Mask} bit g
 Dies ist in \gls{rfcLabel} 6455 spezifiziert. 
 Dementsprechend muss die Nachricht umformatiert werden, damit sie weiterverarbeitet werden kann. Die Nachricht wird im Registry-Log ausgegeben und anschließend wird der Kontext an alle Teilnehmenden Tracerklienten versendet. In der Implementierung ist noch keine Addressierung der Kontextnachrichten umgesetzt. Das bedeutet, dass alle teilnehmenden Klienten die Kontextnachricht empfangen, abgesehen von dem Klienten, der die Nachricht versendet hat. Dies kann in Systemen mit mehr als zwei Tracerinstanzen zu Komplikationen mit dem Nachrichtenstrom führen, da abgesehen von dem Zieltracer des Kontext, keine Kontextnachrichten erwartet werden.
 
+\section{Traktor Interceptor}
+\label{section:Traktor Interceptor}
+Der Traktor Interceptor dient als Alternativkonzept zu der Traktor Registry. Der Traktor Interceptor setzt eine Nachrichtenmodifikation um, bei der die Nachrichten, die durch die Betriebssystemnetzwerksinterfaces geleitet werden, abgefangen und erweitert werden. Bei dem Eintreffen der Nachricht in der Empfängerkomponente wird die Nachricht abermals abgefangen und die Metadaten extrahiert. Der Traktor Interceptor wird als Python Script umgesetzt. Auf jeder Komponente des Systems muss dieses Script während der Laufzeit der instrumentalisierten Anwendung ausgeführt werden. Der implementierte Prototyp soll als \emph{Proof of Concept} dienen. Das Abhören der Netzwerkschnittstelle und das Manipulieren der Pakete ist mithilfe der Paketmanipulationsbibliothek Scapy umgesetzt. Das Script beinhaltet eine Schleife, bei der bei eintreffender Websocketnachricht eine Callback Funktion aufgerufen wird. Die Callback Funktion erhält als Parameter die Nachricht. Es wird untersucht, ob die Nachricht den Spezifikationen eine Websocketnachricht entspricht. Anschließend wird die Nachricht in ihre Komponenten zerlegt, wieder zusammengebaut und an ihren Empfänger weitergeleitet. Der Prototyp zeigt, dass eine Paketmanipulation möglich ist.
 
-\section{Unity Rendering System}
+\section{Unity Rendering-System}
 \label{section:Unity Rendering System}
 
-Das verteilte rendering System dient zur Generierung von Frames auf Grundlage von dreidimensionalen geospatial Daten. Dabei wird ein Ansatz verwendet, um die Vorteile einer verteilten Anwendung zu nutzen. Das heißt, dass viele Komponenten des Systems Teilaufgaben bearbeiten. Die Arbeit die von den Komponenten verrichtet wird, ist das Generierung von Teilframes. Die Teilframes werden in einem Kollektor zusammengeführt und anschließend an den anfragenden Klienten gesendet. Die Anwendung verwendet die Unity Engine als Renderer. Die Instrumentalisierung findet innherhalb der Scripts statt, die für den Renderprozess ausgeführt werden. Es wird nur das Event des Renderprozesses eines Frames generiert. Dadurch wird die Zeit aufgezeichnet, die für die Generierung eines Frames benötigt wird. Aufgrund der Struktur des Projekts, lassen sich keine detailierteren Events, wie z.B. das Empfangen der Klientenanfrage oder das Senden des Frames, darstellen. 
+Das verteilte Rendering-System dient zur Generierung von Frames auf Grundlage von dreidimensionalen Geodaten. Dabei wird ein Ansatz verwendet, um die Vorteile einer verteilten Anwendung zu nutzen. Das heißt, dass viele Komponenten des Systems Teilaufgaben bearbeiten. Die Arbeit, die von den Komponenten verrichtet wird, ist das Generierung von Teilframes. Die Teilframes werden in einem Kollektor zusammengeführt und anschließend an den anfragenden Klienten gesendet. Die Anwendung verwendet die Unity Engine als Renderer. Die Instrumentalisierung findet innerhalb der Scripts statt, die für den Renderprozess ausgeführt werden. In dem verteilten Rendering-System ist das Event des Generierens und des Absendens eines Frames von Interesse. Dieses Event wird von der Instrumentalisierungsbibliothek als Traces dargestellt.
+Dadurch wird die Zeit aufgezeichnet, die für die Generierung eines Frames benötigt wird. Aufgrund der Struktur des Projekts, lassen sich keine detaillierteren Events, wie z.B. das Empfangen der Klientenanfrage oder das Senden des Frames, darstellen. 
 
 Die Instrumentalisierung ist durch das Hinzufügen eines Scripts und der Modifikation eines bestehenden realisiert.
 Das hinzugefügte Script \emph{LoggingServerSideRendering} beinhaltet eine Klasse, dessen Objekt als Tracer innerhalb eines Scripts genutzt werden kann.
@@ -287,7 +291,7 @@ Aufgrund der hoch asynchronen und parallelen Natur der Appliktion ist es notwend
 Dazu wurde ein Portbereich bekanntgegeben, in dem ein freier Port ausgewählt wird.
 Jeder parallele Prozess, der einen Tracer nutzt, wartet auf die Beendigung des Konfigurationsprozesses des Tracers.
 Dies hat zur Folge, dass die Prozesse auf den Tracer warten müssen.
-Das widerspricht dem Designziel der Verarbeitungskosten. Dieser Umstand ist jedoch als Kompromis zu sehen. Der Kompromis besteht darin, die Nutzung des Tracers innerhalb der Unity Anwendung möglichst Benutzerfreundlich zu machen, also dem Designziel der Benutzbarkeit zu entsprechen.
+Das widerspricht dem Designziel der Verarbeitungskosten. Dieser Umstand ist jedoch als Kompromiss zu sehen. Der Kompromiss besteht darin, die Nutzung des Tracers innerhalb der Unity Anwendung möglichst benutzerfreundlich zu machen, also dem Designziel der Benutzbarkeit zu entsprechen.
 
 Die Instrumentalisierung befindet sich in der \emph{GBufferSource} Klasse.
 Die Klasse umfasst den Renderingvorgang eines Frames. 
@@ -344,7 +348,7 @@ Für die Verbindung zum Traktor-Agenten werden die entsprechenden Umgebungsvaria
 Für den einzunehmenden Port des Tracers, über den die reporteten Spans zum Agenten gesendet werden, wird der \emph{REPORTER\_PORT} zur Konfiguration genutzt. 
 Der Server ist nach seiner Initialisierung einsatzbereit und erwartet Nachrichten. 
 Sobald eine Nachricht eintrifft, wird die \emph{Proccess} Funktion aufgerufen. 
-Die Process Funktion ist erhält einen HTTP Kontext als Paramenter. 
+Die Process Funktion erhält einen HTTP Kontext als Paramenter. 
 Dieser beinhaltet die Nutzdaten des Anwenders, die mittels HTTP-Klienten gesendet wurden.
 
 Der instrumentalisierte Codeabschnitt des Callers ist folgendermaßen implementiert:
@@ -371,7 +375,7 @@ Der instrumentalisierte Codeabschnitt des Callers ist folgendermaßen implementi
 
 Das \emph{using} Statement dient zum automatischen Schließen, der in ihr genutzten Ressource. 
 Dies ist in diesem Fall das Scope Objekt. 
-Der Tracer baut einen neuen Span mit dem Operationsnamen \emph{Process Context} und makiert in als Aktiv. 
+Der Tracer baut einen neuen Span mit dem Operationsnamen \emph{Process Context} und makiert in als aktiv. 
 Die Nutzdaten werden aus der HTTP-Nachricht extrahiert. 
 Die aktuell als JSON-Objekt vorliegenden Daten, werden deserialisiert. 
 Da der Tracerkontextwechsel bevorsteht, wird der Kontext des Spans an die Registry, mittels \emph{SendContext}, gesendet und auf einen erfolgreichen Abschluss gewartet. 
@@ -413,7 +417,7 @@ Die Nutzdaten werden extrahiert und die zweite instrumentalisierte Funktion \emp
 	\label{listing:Process Funktion des Fibonacci-Server Services}
 \end{minipage}
 
-Die CalculateFibonacci Funktion ist bewusst rekursiv und möglichst ineffizient implementiert. Die Funktion braucht zur Berechnung des $n$te Elements $2 * Fn - 1$ rekursive Aufrufe, wobei $Fn$ die ermittelte Fibonaccizahl ist. Dadurch ist es möglich, einen großen Trace zu erzeugen. Die Funktion nutzt das using-Statement, um beim Beenden des Codeabschnitt den Span automatisch zu reporten. \emph{CalculateFibonacci} ist als Operationsname gegeben.
+Die CalculateFibonacci Funktion ist bewusst rekursiv und möglichst ineffizient implementiert. Die Funktion braucht zur Berechnung des $n$te Elements $(2 * Fn) - 1$ rekursive Aufrufe, wobei $Fn$ die ermittelte Fibonaccizahl ist. Dadurch ist es möglich, einen großen Trace zu erzeugen. Die Funktion nutzt das using-Statement, um beim Beenden des Codeabschnitt den Span automatisch zu reporten. \emph{CalculateFibonacci} ist als Operationsname gegeben.
 
 \begin{minipage}[]{\textwidth}
 	\begin{lstlisting}[frame=trBL]

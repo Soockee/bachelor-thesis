@@ -16,9 +16,12 @@
 \glossaryentry{LF?\glossentry{lfLabel}|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{36}
 \glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{36}
-\glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{39}
-\glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{39}
-\glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{39}
+\glossaryentry{TCP?\glossentry{tcpLabel}|setentrycounter[]{page}\glsnumberformat}{36}
+\glossaryentry{IP?\glossentry{ipLabel}|setentrycounter[]{page}\glsnumberformat}{36}
+\glossaryentry{TCP?\glossentry{tcpLabel}|setentrycounter[]{page}\glsnumberformat}{36}
+\glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{40}
+\glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{40}
+\glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{40}
 \glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{42}
 \glossaryentry{UDP?\glossentry{udpLabel}|setentrycounter[]{page}\glsnumberformat}{42}
 \glossaryentry{RFC?\glossentry{rfcLabel}|setentrycounter[]{page}\glsnumberformat}{43}

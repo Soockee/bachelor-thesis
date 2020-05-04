@@ -12,11 +12,11 @@
 \contentsline {lstlisting}{\numberline {5.6}{\ignorespaces Er\IeC {\"o}ffnende Nachricht eines Websocket Handshake\relax }}{43}{lstlisting.5.6}
 \contentsline {lstlisting}{\numberline {5.7}{\ignorespaces Serverantwort eines Websocket Handshake\relax }}{43}{lstlisting.5.7}
 \contentsline {lstlisting}{\numberline {5.8}{\ignorespaces Implementierung der Serverantwort eines Websocket Handshake\relax }}{44}{lstlisting.5.8}
-\contentsline {lstlisting}{\numberline {5.9}{\ignorespaces Instrumentalisierung der GBufferSource Klasse\relax }}{46}{lstlisting.5.9}
-\contentsline {lstlisting}{\numberline {5.10}{\ignorespaces HTTP-Anfrage an den Traktor-Fibonacci-Caller durch den HTTP-Klient HTTPie\relax }}{47}{lstlisting.5.10}
+\contentsline {lstlisting}{\numberline {5.9}{\ignorespaces Instrumentalisierung der GBufferSource Klasse\relax }}{47}{lstlisting.5.9}
+\contentsline {lstlisting}{\numberline {5.10}{\ignorespaces HTTP-Anfrage an den Traktor-Fibonacci-Caller durch den HTTP-Klient HTTPie\relax }}{48}{lstlisting.5.10}
 \contentsline {lstlisting}{\numberline {5.11}{\ignorespaces Process Funktion des Fibonacci-Caller Services\relax }}{48}{lstlisting.5.11}
 \contentsline {lstlisting}{\numberline {5.12}{\ignorespaces Process Funktion des Fibonacci-Server Services\relax }}{49}{lstlisting.5.12}
-\contentsline {lstlisting}{\numberline {5.13}{\ignorespaces Instrumentalisierte CalculateFibonacci Funktion des Fibonacci-Server Services\relax }}{49}{lstlisting.5.13}
+\contentsline {lstlisting}{\numberline {5.13}{\ignorespaces Instrumentalisierte CalculateFibonacci Funktion des Fibonacci-Server Services\relax }}{50}{lstlisting.5.13}
 \addvspace {10\p@ }
 \contentsline {lstlisting}{\numberline {6.1}{\ignorespaces Unit-Test der Spanbuilder Klasse\relax }}{52}{lstlisting.6.1}
 \contentsline {lstlisting}{\numberline {6.2}{\ignorespaces Tracerrohdaten aus der Traktorentwicklungsumgebung\relax }}{55}{lstlisting.6.2}

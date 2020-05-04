@@ -8,24 +8,33 @@
 % ----------------------------------------------------------------------------
 
 \chapter{Fazit}
-\section{Ausblick}
-\section{ZitatTest}
-\cite{10.1145/2815400.2815415}
-\cite{10.1145/2987550.2987568}
-\cite{10.1145/3190508.3190526}
-\cite{10.5555/1251254.1251272}
-\cite{10.5555/1267680.1267689}
-\cite{10.5555/2387880.2387910}
-\cite{8752866}
-\cite{Beyer2016}
-\cite{Kaldor2017}
-\cite{Narayanan2003}
-\cite{RedHat}
-\cite{SCROCCA2018}
-\cite{Shanbhag2010}
-\cite{Stearns2001}
-\cite{Stocia2007}
-\cite{Watson2017}
-\cite{opentracing}
+\label{chapter:Fazit}
+In dieser Bachelorarbeit wurde die Problemstellung der Eventgenerierung und Ordnung in verteilten Systemen beschrieben, untersucht und eine Infrastruktur präsentiert, die diese Problemstellung zu lösen versucht. 
+
+In \cref{chapter:Problembeschreibung} wurde die Problemstellung der Überwachung von verteilten Systemen beschrieben. Außerdem wurde die Schwierigkeit der Eventgenerierung in Hinblick auf eine korrekte Umsetzung der Relationen aufgezeigt, die in einem verteilten System auftreten. Die Fragestellungen zur Konzipierung der Zeitmessungen von generierten Events \textbf{F1}, die Fragestellung zur Visualisierungsform von kausal zusammenhängenden Events \textbf{F2} und die Die Fragestellungen zur Kontextpropagierung über Systemgrenzen \textbf{F3} sind aufgestellt worden.
+
+In \cref{chapter:Design} wurden Konzepte zur Lösung der Probleme spezifiziert und präsentiert. Darunter wurde das Konzept von \emph{distributed tracing} erläutert. Das Design eines Datenmodells zur Darstellung von Events als Spans, unter der Verwendung einer API-Spezifikation, dienen zur Lösung des aus \textbf{F1} resultierenden Problems der Eventgenerierung und Verwaltung. Es sind neue Ansätze zur Kontextpropagierung präsentiert worden. Diese Ansätze tragen zur Beantwortung der Fragestellung \textbf{F3} bei. Das erste vorgestellte Konzept beinhaltete die \emph{Traktor Registry}. Dieses Konzept führt ein Service in die Architektur ein, welches die Verteilung eines Tracingkontexts verwaltet. Als Alternativkonzept wurde der \emph{Traktor Interceptor} vorgestellt. Der Traktor Interceptor sorgt für eine Nachrichtenmodifikation auf Betriebssystemebene. Die Modifikation findet sowohl bei dem Sender, als auch bei dem Empfänger statt. Neue Visualisierungsansätze sind vorgestellt worden, um die Fragestellung \textbf{F2} zu beantworten. Die Entwicklungsumgebung zur Testung der Funktionalitäten wurde spezifiziert.
+
+In \cref{chapter:Implementierung} wurden die Implementierungsdetails beschrieben. Die Implementierung umfasst die Beschreibung der gesamten Tracinginfrastruktur. Darunter zählt die Instrumentalisierungsbibliothek, der Agent und die Registry. Die Entwicklungsumgebung wurde unter Berücksichtigung der Spezifikation implementiert. Eine Instrumentalisierung des verteilten Rendering-Systems wurde durchgeführt, um die Forschungsfrage zur Darstellung von generierten Events und deren Relationsbildung in einem verteilten Rendering-System zu beantworten.
+
+In \cref{chapter:Evaluierung} wurden die Umsetzung, der in \cref{section:Anforderungsanalyse} beschriebenen Anforderungen, analysiert. Anschließend ist die Umsetzung der in \cref{section:Designziele} spezifizierten Designziele diskutiert worden. Die Bereitstellung der Traktorentwicklungsumgebung und deren Spezifikationsumsetzung ist evaluiert worden. Die Ergebnisse der Traktor Tracinginfrastruktur, sind mit den Ergebnissen von \emph{Jaeger} verglichen worden. Schlussendlich wurde ein Vergleich zwischen den Visualisierungskonzepten von Traktor und Jaeger durchgeführt.
+
+In dieser Arbeit wurde eine Forschungsfrage aufgestellt, die in drei Subfragen resultiert ist. Die Forschungsfrage, ob es möglich sei, Events in einem verteilten System zu generieren und miteinander in Verbindung zu setzen, sodass diese es erlauben, einen Stream von Frames als eine Anordnung von Events, die kausal miteinander verbunden sind, darzustellen, ist in die Generierung und Relationsbildung (\textbf{F1}), in die Darstellung(\textbf{F2}) und in die Kontextpropagierung \textbf{F3} aufgeteilt worden.
+
+In der Fragestellung \textbf{F1} wurde gefragt, inwiefern eine Zeitmessung von Eventzeitspannen konzipiert werden kann. Für die Beantwortung dieser Frage wurde die Spezifikation der Open-Source API \emph{OpenTracing} umgesetzt. Die Umsetzung der Instrumentalisierungsbibliothek zeigt, dass Events in einem verteilten System durch das vorgestellte Datenmodell dargestellt werden konnte. In der Entwicklungsumgebung, konnten Ergebnisse erzielt werden, die mit den Ergebnissen von Jaeger vergleichbar waren. Daraus folgert, dass die Interpretation der gewonnenen Daten der Tracinginfrastruktur zu einem Informationsgewinn beiträgt und damit das instrumentalisierte System und dessen Abläufe verständlicher macht.
+
+In der Fragestellung \textbf{F2} wurde gefragt, welche Visualisierungsformen genutzt werden können, um Verhaltensanomalien, die auf Fehlimplementierung hinweisen könnte, feststellbar zu machen. Für die Beantwortung dieser Frage, wurden zwei Visualisierungskonzepte vorgestellt. Das erste Visualisierungskonzept der \emph{Frame Galerie} sorgt für eine hohe Abstraktion der Tracingdaten. Durch Kennzeichnung von Frames die Grenzwerte übertreten, sind Verhaltensanomalien feststellbar. Dieses Visualisierungskonzept ist auf den Kontext von Rendering und damit Framegenerierung zugeschnitten und beschränkt. Ein Anwendungsbereich außerhalb diese Kontexts, ist unwahrscheinlich. Das zweite Visualisierungskonzept der \emph{Dreidimensionalen Flammengraphen} ist ein weniger abstraktes Konzept. Durch diese Allgemeinhaltung ist ein größerer Anwendungsbereich vorstellbar.
+
+In der Fragestellung \textbf{F3} wurde gefragt, welche Konzepte zur Bildung von Relationen über Prozessgrenzen hinaus vorstellbar sind. Diese Frage wurde damit beantwortet, dass zwei Konzepte zur Kontextpropagierung präsentiert worden sind. Das Konzept der Registry wurde implementiert und die daraus resultierenden Ergebnisse der Tracinginfrastruktur evaluiert.	Dabei ist festgestellt worden, dass das Konzepte zur Kontextpropagierung, mittels Traktor Registry, ein Ansatz mit vielen Nachteilen ist. Die Registry nutzt Websocketverbindungen, um die Nachrichtenkommunikation zu gewährleisten. Das Websocketprotokoll verkompliziert in diesem Zusammenhang die eigentliche Aufgabe der Kontextpropagierung. Zudem zeigt die Einführung einer zentralen Kontextverwaltungseinheit, wie es die Registry ist, dass die Implementierung einer globalen Uhr zur einheitlichen Bestimmung der Zeitstempel oder ein Konzept zur Anpassung der Zeitstempel, abhängig von den Differenzen der Uhren, in einem verteilten System unumgänglich ist. Das Konzept des Interceptors sieht dem entgegen vielversprechender aus. Die Nachteile, wie zum Beispiel die Adressierung der Kontextnachrichten bei mehr als zwei teilnehmenden Tracern, fallen weg. Eine Interceptorprototyp dient als \emph{proof of concept}.
+
+Durch die gegebenen Schlussfolgerungen, ist es möglich zu sagen, dass eine Darstellung von generierten und miteinander in Verbindung gesetzten Events realisiert worden ist.
+
+\section{Limitierungen und Ausblick}
+\label{section:Limitierungen und Ausblick}
+Die hauptsächliche Limitierung der Arbeit ist durch die Architektur des Unity Anwendungsfalls gegeben. Eine detailliertere Untersuchung der Framegenerierung ist aufgrund der Nachrichtengenerierung in einem nativen Plugin und somit dem stark eingeschränkten Zugriff in den Quellcode der einzelnen Schritte der Nachrichtengenerierung unmöglich gewesen. Zudem ist zum Zeitpunkt der Arbeit das verteilte Rendering-System nicht vollständig implementiert. Es ist nicht möglich gewesen, die Tracinginfrastruktur in einen Unity Testsystem  mit mehreren Renderern und Aggregatoren, einzusetzen. Aus diesem Grund ist die Traktor Entwicklungsumgebung als Alternative implementiert worden. Die Traktor Entwicklungsumgebung konnte allerdings keine komplexe und asynchrone Framegenerierung abbilden. 
+
+Die Visualisierung der Rohdaten könnte durch eine Anwendung erstellt werden. Eine automatisierte Generierung und Darstellung der Visualisierung in einer Webanwendung ist wünschenswert. Zudem sollte das Konzept des Interceptors umgesetzt und mit der Registry verglichen werden. Interessant wäre eine Untersuchung des Verhaltens der Tracinginfrastruktur unter hoher Last. Die Registry, als architektonische Schwachstelle, könnte unter hoher Last an ihr Verarbeitungslimit stoßen. Zu klären wäre, ob und wann dieses Limit erreicht wird.
+
+ 
 
 % ----------------------------------------------------------------------------
