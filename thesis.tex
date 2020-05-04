@@ -134,17 +134,24 @@
 \begin{titlepage}
 	\begin{center}
 	\includegraphics[width=0.9\textwidth]{img/mni-logo}\\[5cm]
+	\textsc{\Large Bachelorarbeit}\\[2cm]
 	\textbf{\huge\sffamily Generierung und Ordnung von Events in verteilten Systemen mit asynchroner Kommmunikation}\\[2cm]
-	\textsc{\Large Bachlorthesis}\\Studiengang Informatik\\[2cm]
-	vorgelegt von\\
+	
+	zur Erlangung des akademischen Grades \\
+	Bachelor Of Science (B. Sc.) \\
+	\vspace{10px}
+	im Studiengang Informatik\\
+	\vspace{10px}
+	vorgelegt dem\\
+	Fachbereich Mathematik, Naturwissenschaften und Informatik\\ der Technischen Hochschule Mittelhessen
+	
 	\textbf{Simon Stockhause}\\ [1.5cm] 
-	Mai 2020
+	im Mai 2020
 	\end{center}
-	\vfill
 	\center
 	\begin{tabular}{ll}
-		Referent der Arbeit: & Prof. Dr. Harald Ritz\\ 
-		Korreferent der Arbeit: & M.Sc. Pascal Bormann\\ 
+		Referent: & Prof. Dr. Harald Ritz\\ 
+		Korreferent: & M.Sc. Pascal Bormann\\ 
 	\end{tabular}
 \end{titlepage}
 \cleardoubleemptypage
@@ -153,7 +160,14 @@
 \pagestyle{empty}
 {
 	\renewcommand{\thispagestyle}[1]{}
- Hier Steht Erklärung
+	\underline{\textbf{Eidesstattliche Versicherung}}:\\
+	Hiermit versichere ich, die vorliegende Arbeit selbstständig und unter
+	ausschließlicher Verwendung der angegebenen Literatur und Hilfsmittel erstellt zu
+	haben.
+	
+	Die Arbeit wurde bisher in gleicher oder ähnlicher Form keiner anderen
+	Prüfungsbehörde vorgelegt und auch nicht veröffentlicht.
+	
 }
 \clearpage
 \pagestyle{plain}
@@ -162,10 +176,10 @@
 \pagestyle{empty}
 \begin{quote}
 	\vspace*{4cm}
-
 	\begin{center}
 		\textbf{\Large\sffamily Zusammenfassung}
 	\end{center}
+		Der Trend der serviceorientierten Architekturen schafft das Bedürfnis, die Komplexität von verteilten Systemen fassen zu können. Viele bestehende Werkzeuge nutzen Logs und Metriken, um Schlussfolgerungen aus der Anwendung ziehen zu können. Allerdings bieten diese nur eingeschränkt die Möglichkeit, kausal zusammenhänge Events zu erfassen. In dieser Arbeit werden Konzepte zur Darstellung von Events und deren Ordnung in verteilten Systemen präsentiert. Diese werden in praxisnahen Anwendungen eingesetzt. Es wird gezeigt, inwiefern die erarbeiteten Konzepte die spezifizierten Anforderungen und Ziele erfüllen. Um die Eventgenerierung und ihre anschließende Ordnung zu gewährleisten, wird ein Datenmodell beschrieben. Es werden zwei Prototypen zur Kontextpropagierung vorgestellt. Zudem werden Visualisierungsansätze präsentiert, die die erhobenen Daten in ansprechender Form darstellen können. Die implementierte Kontextpropagierung bieten Erfahrungswerte, die für zukünftige Arbeit genutzt werden kann. Die Visualisierungsformen der Frame Galerie und des dreidimensionalen Flamengraphs bieten neue Perspektiven zur Darstellung von Tracingdaten.
 \end{quote}
 \cleardoubleemptypage
 
@@ -180,26 +194,29 @@
 }
 \clearpage
 \pagestyle{plain}
-\pagestyle{empty}
-{
+% \phantomsection
+
+%\pagestyle{empty}
+%{
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 	\renewcommand{\thispagestyle}[1]{}
 	\listoffigures
-}
+%}
 \clearpage
 \pagestyle{plain}
 
-\pagestyle{empty}
-{
+%\pagestyle{empty}
+%{
+	\addcontentsline{toc}{chapter}{Listings}
 	\renewcommand{\thispagestyle}[1]{}
 	\lstlistoflistings
-}
+%}
 \clearpage
 \pagestyle{plain}
-
+\input{litverz}
 
 \mainmatter 
 \pagestyle{headings}
-
 \pagenumbering{arabic}
 \input{einleitung}
 \input{themenueberblick}
@@ -211,8 +228,7 @@
 \backmatter 
 
 \appendix
-\input{litverz}
-
+\printbibliography
 
 \end{document}
 % ----------------------------------------------------------------------------

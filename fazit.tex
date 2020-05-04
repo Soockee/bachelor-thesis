@@ -19,7 +19,11 @@ In \cref{chapter:Implementierung} wurden die Implementierungsdetails beschrieben
 
 In \cref{chapter:Evaluierung} wurden die Umsetzung, der in \cref{section:Anforderungsanalyse} beschriebenen Anforderungen, analysiert. Anschließend ist die Umsetzung der in \cref{section:Designziele} spezifizierten Designziele diskutiert worden. Die Bereitstellung der Traktorentwicklungsumgebung und deren Spezifikationsumsetzung ist evaluiert worden. Die Ergebnisse der Traktor Tracinginfrastruktur, sind mit den Ergebnissen von \emph{Jaeger} verglichen worden. Schlussendlich wurde ein Vergleich zwischen den Visualisierungskonzepten von Traktor und Jaeger durchgeführt.
 
+\section{Diskussion}
+\label{Diskussion}
+
 In dieser Arbeit wurde eine Forschungsfrage aufgestellt, die in drei Subfragen resultiert ist. Die Forschungsfrage, ob es möglich sei, Events in einem verteilten System zu generieren und miteinander in Verbindung zu setzen, sodass diese es erlauben, einen Stream von Frames als eine Anordnung von Events, die kausal miteinander verbunden sind, darzustellen, ist in die Generierung und Relationsbildung (\textbf{F1}), in die Darstellung(\textbf{F2}) und in die Kontextpropagierung \textbf{F3} aufgeteilt worden.
+
 
 In der Fragestellung \textbf{F1} wurde gefragt, inwiefern eine Zeitmessung von Eventzeitspannen konzipiert werden kann. Für die Beantwortung dieser Frage wurde die Spezifikation der Open-Source API \emph{OpenTracing} umgesetzt. Die Umsetzung der Instrumentalisierungsbibliothek zeigt, dass Events in einem verteilten System durch das vorgestellte Datenmodell dargestellt werden konnte. In der Entwicklungsumgebung, konnten Ergebnisse erzielt werden, die mit den Ergebnissen von Jaeger vergleichbar waren. Daraus folgert, dass die Interpretation der gewonnenen Daten der Tracinginfrastruktur zu einem Informationsgewinn beiträgt und damit das instrumentalisierte System und dessen Abläufe verständlicher macht.
 

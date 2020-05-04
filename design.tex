@@ -88,7 +88,7 @@ Der Spankontext wiederum ist auch ein Datencontainer. Dieser beinhaltet eine \em
 		\caption[Abbildung]{Span D hält eine \emph{Follows-From} Beziehung zu Span C}
 		\label{fig:SpanBeziehungstypenB}
 	\end{subfigure}
-	\caption[Darstellung der zeitlichen Anordnung der Beziehungstypen \emph{Child-Of} und  \emph{Follows-From}]{}
+	\caption[Darstellung der zeitlichen Anordnung der Beziehungstypen]{Darstellung der zeitlichen Anordnung der Beziehungstypen}
 \end{figure} 
 
 
@@ -187,7 +187,7 @@ Das Visualisierungskonzept ist durch drei Ebenen gekennzeichnet. Jede Ebene lief
 	\label{fig:FrameGalerieObereEbene}
 \end{figure}
 
-Da das verteilte Rendering-System konzeptionell in der Lage sein soll, Frames aus Teilframes zusammenzustellen, ist es sinnvoll, den Generierungsprozess der fertiggestellten Frames nachvollziehen zu können. Dieser Visualisierungsansatz ist nur dann sinnvoll, sobald die Architektur mehrere Renderer und Aggregatoren umfasst. Aggregatoren wäre eine Systemkomponente, die Teilframes sammelt und zusammenführt. Da das aktuelle verteilte Rendering-System dieses Konzept noch nicht umgesetzt hat, ist würde die mittlere Ebene die Frames mit den Generierungszeiten eines Renderer abbilden. Diese Visualisierung ist in \cref{FrameGalerieMittlereEbene2} gezeigt. Das Konzept der mittlere Ebene, dargestellt in \cref{fig:FrameGalerieMittlereEbene}, entfaltet sein Potenzial, sobald mehrere Systemkomponenten miteinander agieren. Die mittlere Ebene mit Aggregator und mehreren Renderern veranschaulicht den Ursprung eines Frames durch ein Stammbaum. Es müssen nicht alle Teilframes, aufgrund ihres zeitlichen Auftretens in der Generierungsphase, bei der Zusammenstellung verwendet werden. Zusätzlich sind die Generierungszeiten aus den Tracingdaten hergeleitet und an die jeweiligen Frames geheftet. Bei einem Grenzwertübertritt werden diese farblich hervorgehoben.
+Da das verteilte Rendering-System konzeptionell in der Lage sein soll, Frames aus Teilframes zusammenzustellen, ist es sinnvoll, den Generierungsprozess der fertiggestellten Frames nachvollziehen zu können. Dieser Visualisierungsansatz ist nur dann sinnvoll, sobald die Architektur mehrere Renderer und Aggregatoren umfasst. Aggregatoren wäre eine Systemkomponente, die Teilframes sammelt und zusammenführt. Da das aktuelle verteilte Rendering-System dieses Konzept noch nicht umgesetzt hat, ist würde die mittlere Ebene die Frames mit den Generierungszeiten eines Renderer abbilden. Diese Visualisierung ist in \cref{fig:FrameGalerieMittlereEbene2} gezeigt. Das Konzept der mittlere Ebene, dargestellt in \cref{fig:FrameGalerieMittlereEbene}, entfaltet sein Potenzial, sobald mehrere Systemkomponenten miteinander agieren. Die mittlere Ebene mit Aggregator und mehreren Renderern veranschaulicht den Ursprung eines Frames durch ein Stammbaum. Es müssen nicht alle Teilframes, aufgrund ihres zeitlichen Auftretens in der Generierungsphase, bei der Zusammenstellung verwendet werden. Zusätzlich sind die Generierungszeiten aus den Tracingdaten hergeleitet und an die jeweiligen Frames geheftet. Bei einem Grenzwertübertritt werden diese farblich hervorgehoben.
 
 \begin{figure}[]
 	\centering

@@ -154,7 +154,7 @@ Das Systems, für das die Instrumentalisierungsbibliothek entwickelt wird, ist e
 
 Semantisch relevante Ereignisse sind zu definieren. Eine Funktionalität muss geschaffen werden, die es erlaubt, diese Ereignisse als ein Event abzubilden. Die Generierungsfunktionalität muss dafür sorgen, dass die Events einen spezifizierten Aufbau aufweisen, um weiterverarbeitet und ausgewertet werden zu können. Die Nutzung einer standardisierten und erprobten \gls{apiLabel} ist wünschenswert.
  
-\subsection{Funktionalitäten}
+\subsection{Funktionale Anforderungen}
 
 \subsubsection{Eventgenerierung}
 \label{subsubsection:Eventgenerierung}
@@ -176,8 +176,10 @@ Damit ein Kausalpfad erstellt werden kann, müssen die Events, die in einem ande
 \label{subsubsection:Eventkontext}
 Das erste generierte Event bildet den Startpunkt eines neuen Traces. Mehrere Anfragen können zur gleichen Zeit von dem in \cref{fig:distributed_system_application_minimal} beschriebenen System angenommen werden. Dadurch ist gegeben, dass mehrere Traces parallel existieren. Um diese eindeutig zu machen muss ein Tracekontext definiert werden, der es erlaubt, Traces eindeutig, über Prozessgrenzen hinaus, zu identifizieren und Events diesen zuzuordnen.
 
-\subsection{Rahmenbedingen}
-\label{subsection:Rahmenbedingen}
+
+\subsection{Nicht-Funktionale Anforderungen}
+\label{subsubsection:Nicht-Funktionale Anforderungen}
+
 \subsubsection{End-zu-End Latenz}
 \label{subsubsection:end-zu-end Latenz}
 Es sind Latenzgrenzwerte definiert. Die Zeitspannen, wie zum Beispiel die Generierungszeit eines Events oder der End-zu-End Antwortzeit, sind zu messen. Die Generierungszeit eines Frames soll 16ms nicht überschreiten, damit dem Anwender eine flüssige Darstellung geboten werden kann. Die Instrumentalisierung des Quellcodes fügt zusätzliche Programmlogik hinzu, weshalb eine erhöhte Verarbeitungszeit entsteht. Diese Verarbeitungszeit soll das verteilte rendering System möglichst geringfügig belasten. Vorallem die Generierungszeit der Frames muss unverändert sein.
@@ -185,6 +187,9 @@ Es sind Latenzgrenzwerte definiert. Die Zeitspannen, wie zum Beispiel die Generi
 \subsubsection{Generierungszeit eines Frames}
 \label{subsubsection:Generierungszeit eines Frames}
 Die Renderinggeschwindigkeit wird anhand der Zeit gemessen, also wieviele \emph{ms} gebraucht werden, um ein Bild zu generieren. Der Generierungsprozess eines \emph{Frames} umfasst vier Ebenen. Diese Ebenen sind die Applikationsebene, die Geometrieprozessierung, die Rasterung und die Pixelprozessierung. Die Verarbeitung wird, abhängig von der bearbeitet Ebene, von der \gls{cpuLabel} oder der \gls{gpuLabel} durchgeführt. Es ist wünschenswert \gls{gpuLabel} und \gls{cpuLabel} Aktivitäten überwachen zu können.
+
+\subsection{Rahmenbedingen}
+\label{subsection:Rahmenbedingen}
 
 \subsubsection{Nachrichtenmodifikation}
 \label{subsubsection:Nachrichtenmodifikation}
@@ -197,4 +202,7 @@ Bei dem Blackboxansatz, wird die Generierung angestoßen, sobald Schnittstellen 
 Der Whiteboxansatz nutzt Instrumentalisierung des Quellcodes, um die Eventgenerierung anzustoßen. Dabei wird vorausgesetzt, dass die Semantik der Anwendung, Informationen über den Aufbau von Nachrichten, den Aufbau des Systems und die Kommunikationswege zwischen Komponenten bekannt sind. Bei der Notwendigkeit einer Modifizierung von Nachrichten weist dieser Ansatz jedoch auch Schwächen auf. Im Anwendungsfall des verteilten Rendering-Systems fehlt die Möglichkeit Nachrichten innerhalb der Anwendung um Tracingdaten zu erweitern.
 
 
+\subsubsection{Native Implementierung}
+\label{subsubsection:Native Implementierung}
+Das verteilte Rendering-System beinhaltet ein natives Plugin. Dieses Plugin ist in C++ geschrieben. Das Plugin verwaltet die eingehende und ausgehende Kommunikation des verteilten Rendering-Systems. Es besteht keine Möglichkeit, in die Implementierung einzusehen oder sie zu instrumentalisieren. Dementsprechend muss die Instrumentalisierung nur in den C\# Scripts durchgeführt werden, die die Unity Engine ausführt.
 % ----------------------------------------------------------------------------
