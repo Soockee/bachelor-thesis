@@ -29,23 +29,20 @@
 \section{Foschungsstand}
 \label{section:Forschungsstand}
 
-Es gibt diverse Konzepte und Werkzeuge zur Erhebung von Tracingdaten. Darunter zählen \emph{state-of-the-art} Tracinginfrastrukturen, Instrumentalisierungsbibliotheken und Open-Soruce \gls{apiLabel} Spezifikationen wie z.B.:
-\begin{itemize}
-	\item Zipkin
-	\item Jaeger
-	\item Opentracing
-\end{itemize}
+Es gibt diverse Konzepte und Werkzeuge zur Erhebung von Tracingdaten. Darunter zählen \emph{state-of-the-art} Tracinginfrastrukturen, Instrumentalisierungsbibliotheken und Open-Soruce \gls{apiLabel} Spezifikationen. Die bekanntesten Open-Source Werkzeuge sind Zipkin\footpartcite{zipkin} und Jaeger\footpartcite{jaeger}. Jaeger implementiert die Opentracing API Spezifikation\footpartcite{opentracingspec}. Das OpenTelemetry Framework\footpartcite{opentelemetry} befindet sich zu dem Zeitpunkt der Arbeit noch in Entwicklung.
 
+\newpage
 Publikationen, auf die sich diese Werkzeuge beziehen, sind unter anderem: 
 
 \begin{itemize}
 	\item Dapper \footpartcite{Shanbhag2010}
 	\item Pivot Tracing \footpartcite{10.1145/2815400.2815415}
-	\item X-Trace \footpartcite{Stocia2007}
 	\item X-Ray \footpartcite{10.5555/2387880.2387910}
 	\item Canopy \footpartcite{Kaldor2017}
 \end{itemize}
-Das Paper \emph{End-to-End Tracing Models: Analysis and Unification}\footpartcite{Leavitt2014} beschreibt das spanbasierte Modell als eine Sammlung von \emph{spans}, welche jeweils eine Block von Rechenarbeit darstellen. die Pulibkation \emph{Dapper} ist von Google veröffentlicht und präsentiert ihr entwickletes Konzept zur Überwachung von Events in ihrer extremen Umgebung. Die Brown University präsentiert in ihrer Veröffentlichung \emph{Universal Context Propagation for Distributed System Instrumentation}\footpartcite{10.1145/3190508.3190526} eine Schichten-Architektur zur Übermittlung von Tracingdaten in einem spezifizierten \emph{Baggage Context}. Der Baggage Context wird als Metadatei mit gereicht und stellt somit eine Form des Piggybacking dar. Canopy ist die von Facebook entwickelte Tracinginfrastruktur, welches einen Fokus auf Echt-Zeit Analyse der Performancedaten legt.
+Das Paper \emph{End-to-End Tracing Models: Analysis and Unification}\footpartcite{Leavitt2014} beschreibt das spanbasierte Modell als eine Sammlung von \emph{spans}, welche jeweils eine Block von Rechenarbeit darstellen. die Pulibkation \emph{Dapper} ist von Google veröffentlicht und präsentiert ihr entwickletes Konzept zur Überwachung von Events in ihrer extremen Umgebung. Die Brown University präsentiert in ihrer Veröffentlichung \emph{Universal Context Propagation for Distributed System Instrumentation}\footpartcite{10.1145/3190508.3190526} eine Schichten-Architektur zur Übermittlung von Tracingdaten in einem spezifizierten \emph{Baggage Context}. Der Baggage Context wird als Metadatei mit gereicht und stellt somit eine Form des Piggybacking dar. Das Baggage Model ist in der Publikation \emph{General Baggage Model for End-to-End Tracing and Its Application on Critical Path Analysis}\footpartcite{Sun2016} zu Analyse von kritischen Pfaden in verteilten Systemen weitergehend untersucht worden. Frühe Erkenntnisse der Performanceanalyse von verteilten Systemen und somit die Grundlagenerfahrung für heutigen Tracinginfrastrukturen sind unter anderem in  \emph{Magpie: online modelling and performance-aware systems}\footpartcite{Narayanan2003} und in \emph{X-Trace: A Pervasive Network Tracing Framework}\footpartcite{Stocia2007} \emph{Canopy} ist die von Facebook entwickelte Tracinginfrastruktur, welches einen Fokus auf Echt-Zeit Analyse der erhobenen Performancedaten legt.
+
+\newpage
 
 \section{Thesisübersicht}
 \label{section:Thesisübersicht}

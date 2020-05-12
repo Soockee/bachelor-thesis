@@ -8,71 +8,71 @@
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Problemstellung}{1}{section.1.2}
 \contentsline {section}{\numberline {1.3}Foschungsstand}{2}{section.1.3}
-\contentsline {section}{\numberline {1.4}Thesis\IeC {\"u}bersicht}{3}{section.1.4}
-\contentsline {chapter}{\numberline {2}Themen\IeC {\"u}berblick}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Verteilte Systeme}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Eigenschaften eines verteilten Systems}{4}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Beobachtbarkeit von verteilten Systemen}{5}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Ordnung von Events}{7}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Distributed Tracing}{9}{section.2.2}
-\contentsline {section}{\numberline {2.3}Entwicklung einer Tracingbibliothek}{11}{section.2.3}
-\contentsline {chapter}{\numberline {3}Problembeschreibung}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Anwendungs\IeC {\"u}berwachung}{12}{section.3.1}
-\contentsline {section}{\numberline {3.2}Zusammenf\IeC {\"u}hrung von Events}{13}{section.3.2}
-\contentsline {section}{\numberline {3.3}Anforderungsanalyse}{17}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Funktionale Anforderungen}{17}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Eventgenerierung}{17}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Eventrelation}{18}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Synchronisation von Eventgeneratoren}{18}{subsubsection.3.3.1.3}
-\contentsline {subsubsection}{\numberline {3.3.1.4}Event\IeC {\"u}bermittlung}{18}{subsubsection.3.3.1.4}
-\contentsline {subsubsection}{\numberline {3.3.1.5}Eventkontext}{18}{subsubsection.3.3.1.5}
-\contentsline {subsection}{\numberline {3.3.2}Nicht-Funktionale Anforderungen}{18}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}End-zu-End Latenz}{18}{subsubsection.3.3.2.1}
-\contentsline {subsubsection}{\numberline {3.3.2.2}Generierungszeit eines Frames}{19}{subsubsection.3.3.2.2}
-\contentsline {subsection}{\numberline {3.3.3}Rahmenbedingen}{19}{subsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.3.1}Nachrichtenmodifikation}{19}{subsubsection.3.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.3.2}Native Implementierung}{20}{subsubsection.3.3.3.2}
-\contentsline {chapter}{\numberline {4}Design}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Designziele}{21}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Ziele}{21}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Nicht-Ziele}{22}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Datenmodell}{23}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Spans}{23}{subsection.4.2.1}
+\contentsline {section}{\numberline {1.4}Thesis\IeC {\"u}bersicht}{4}{section.1.4}
+\contentsline {chapter}{\numberline {2}Themen\IeC {\"u}berblick}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Verteilte Systeme}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Eigenschaften eines verteilten Systems}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Beobachtbarkeit von verteilten Systemen}{6}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Ordnung von Events}{8}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Distributed Tracing}{10}{section.2.2}
+\contentsline {section}{\numberline {2.3}Entwicklung einer Tracingbibliothek}{12}{section.2.3}
+\contentsline {chapter}{\numberline {3}Problembeschreibung}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Anwendungs\IeC {\"u}berwachung}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Zusammenf\IeC {\"u}hrung von Events}{14}{section.3.2}
+\contentsline {section}{\numberline {3.3}Anforderungsanalyse}{18}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Funktionale Anforderungen}{18}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Eventgenerierung}{18}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Eventrelation}{19}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Synchronisation von Eventgeneratoren}{19}{subsubsection.3.3.1.3}
+\contentsline {subsubsection}{\numberline {3.3.1.4}Event\IeC {\"u}bermittlung}{19}{subsubsection.3.3.1.4}
+\contentsline {subsubsection}{\numberline {3.3.1.5}Eventkontext}{19}{subsubsection.3.3.1.5}
+\contentsline {subsection}{\numberline {3.3.2}Nicht-Funktionale Anforderungen}{19}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}End-zu-End Latenz}{19}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Generierungszeit eines Frames}{20}{subsubsection.3.3.2.2}
+\contentsline {subsection}{\numberline {3.3.3}Rahmenbedingen}{20}{subsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.1}Nachrichtenmodifikation}{20}{subsubsection.3.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.3.2}Native Implementierung}{21}{subsubsection.3.3.3.2}
+\contentsline {chapter}{\numberline {4}Design}{22}{chapter.4}
+\contentsline {section}{\numberline {4.1}Designziele}{22}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Ziele}{22}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Nicht-Ziele}{23}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Datenmodell}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Spans}{24}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Tracingcontext innerhalb eines Systems}{26}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Tracingcontext \IeC {\"u}ber Prozessgrenzen}{27}{subsection.4.2.3}
-\contentsline {subsubsection}{\numberline {4.2.3.1}Registry}{27}{subsubsection.4.2.3.1}
+\contentsline {subsection}{\numberline {4.2.3}Tracingcontext \IeC {\"u}ber Prozessgrenzen}{28}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}Registry}{28}{subsubsection.4.2.3.1}
 \contentsline {subsubsection}{\numberline {4.2.3.2}Interceptor}{28}{subsubsection.4.2.3.2}
 \contentsline {section}{\numberline {4.3}Verarbeitungsmodell}{30}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Reporter}{30}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Kollektor}{30}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Visualisierung}{30}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Frame Galerie}{30}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Dreidimensionaler Flammengraph}{33}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Trakorentwicklungsumgebung}{35}{section.4.5}
-\contentsline {chapter}{\numberline {5}Implementierung}{36}{chapter.5}
-\contentsline {section}{\numberline {5.1}Instrumentalisierungsbibliothek: Traktor}{36}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Tracer}{36}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Span}{38}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}SpanBuilder}{39}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}SpanContext}{40}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Scope}{40}{subsection.5.1.5}
-\contentsline {subsection}{\numberline {5.1.6}ScopeManager}{40}{subsection.5.1.6}
-\contentsline {subsection}{\numberline {5.1.7}Reporter}{41}{subsection.5.1.7}
-\contentsline {subsection}{\numberline {5.1.8}UML-Klassendiagramm der Bibliothek}{41}{subsection.5.1.8}
-\contentsline {section}{\numberline {5.2}Traktor Agent}{43}{section.5.2}
-\contentsline {section}{\numberline {5.3}Traktor Registry}{43}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Websocketprotokoll}{43}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Klientenverwaltung}{46}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Traktor Interceptor}{47}{section.5.4}
-\contentsline {section}{\numberline {5.5}Unity Rendering-System}{47}{section.5.5}
-\contentsline {section}{\numberline {5.6} Webserver Entwicklungsumgebung }{48}{section.5.6}
-\contentsline {chapter}{\numberline {6}Evaluierung}{52}{chapter.6}
-\contentsline {section}{\numberline {6.1}Anforderungserf\IeC {\"u}llung}{52}{section.6.1}
-\contentsline {section}{\numberline {6.2}Umsetzung der Designziele}{53}{section.6.2}
-\contentsline {section}{\numberline {6.3}Bereitstellung der Traktorentwicklungsumgebung}{54}{section.6.3}
-\contentsline {section}{\numberline {6.4}Ergebnissvergleich}{56}{section.6.4}
-\contentsline {section}{\numberline {6.5}Visualisierungvergleich von Traktor und Jaeger}{58}{section.6.5}
-\contentsline {chapter}{\numberline {7}Fazit}{61}{chapter.7}
-\contentsline {section}{\numberline {7.1}Diskussion}{62}{section.7.1}
-\contentsline {section}{\numberline {7.2}Limitierungen und Ausblick}{63}{section.7.2}
-\contentsline {chapter}{\nonumberline Literatur}{64}{chapter*.38}
+\contentsline {subsection}{\numberline {4.3.2}Kollektor}{31}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Visualisierung}{31}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Frame Galerie}{31}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Dreidimensionaler Flammengraph}{34}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Trakorentwicklungsumgebung}{36}{section.4.5}
+\contentsline {chapter}{\numberline {5}Implementierung}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Instrumentalisierungsbibliothek: Traktor}{37}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Tracer}{38}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Span}{39}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}SpanBuilder}{40}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}SpanContext}{41}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Scope}{41}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}ScopeManager}{42}{subsection.5.1.6}
+\contentsline {subsection}{\numberline {5.1.7}Reporter}{42}{subsection.5.1.7}
+\contentsline {subsection}{\numberline {5.1.8}UML-Klassendiagramm der Bibliothek}{42}{subsection.5.1.8}
+\contentsline {section}{\numberline {5.2}Traktor Agent}{44}{section.5.2}
+\contentsline {section}{\numberline {5.3}Traktor Registry}{44}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Websocketprotokoll}{44}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Klientenverwaltung}{47}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Traktor Interceptor}{48}{section.5.4}
+\contentsline {section}{\numberline {5.5}Unity Rendering-System}{48}{section.5.5}
+\contentsline {section}{\numberline {5.6} Webserver Entwicklungsumgebung }{49}{section.5.6}
+\contentsline {chapter}{\numberline {6}Evaluierung}{53}{chapter.6}
+\contentsline {section}{\numberline {6.1}Anforderungserf\IeC {\"u}llung}{53}{section.6.1}
+\contentsline {section}{\numberline {6.2}Umsetzung der Designziele}{54}{section.6.2}
+\contentsline {section}{\numberline {6.3}Bereitstellung der Traktorentwicklungsumgebung}{55}{section.6.3}
+\contentsline {section}{\numberline {6.4}Ergebnissvergleich}{57}{section.6.4}
+\contentsline {section}{\numberline {6.5}Visualisierungvergleich von Traktor und Jaeger}{59}{section.6.5}
+\contentsline {chapter}{\numberline {7}Fazit}{62}{chapter.7}
+\contentsline {section}{\numberline {7.1}Diskussion}{63}{section.7.1}
+\contentsline {section}{\numberline {7.2}Limitierungen und Ausblick}{64}{section.7.2}
+\contentsline {chapter}{\nonumberline Literatur}{65}{chapter*.38}

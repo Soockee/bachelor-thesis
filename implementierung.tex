@@ -19,6 +19,7 @@ Traktor ist eine Instrumentalisierungsbibliothek, die sich die OpenTracing API a
 
 Die zwei zentralen Einheiten der Traktor Instrumentalisierungsbibliothek sind der in \cref{subsection:Tracer} gezeigte \textbf{Tracer} und die in \cref{subsection:Span} gezeigten \textbf{Spans}. Weitere Klassen, die den in \cref{subsection:Tracingcontext innerhalb eines Systems} beschriebenen Designansatz implementieren, sind der in \cref{subsection:Scope} vorgestellte \textbf{Scope} und der in \cref{subsection:ScopeManager} vorgestellte \textbf{ScopeManager}. Die Kontextpropagierung, die mit einer Websocketverbindung innerhalb des Tracer und der, in \cref{section:Traktor Registry} gezeigten,\textbf{ Traktor Registry}, umgesetzt ist, implementiert den in \cref{subsection:Tracingcontext über Systemgrenzen} erläuterten Designansatz. Ein Gesamtüberblick mit allen Relationen der Klassen, wird in \cref{subsection:UML-Klassendiagramm der Bibliothek} gegeben.
 
+\newpage 
 \subsection{Tracer}
 \label{subsection:Tracer}
 Der Tracer ist die zentrale Verwaltungseinheit der Instrumentalisierung. Dieser verwaltet die Verbindung der Anwendungsinstrumentalisierung zu dem Agenten und der Registry. Der Tracer kümmert sich um das Generieren von Spans und die Herstellung von Kausalzusammenhängen zwischen den Spans. Außerdem stellt der Tracer die Funktionalitäten zur Kontextpropagierung über die Registry bereit. Die Spans sind Darstellungen von ausgeführter Arbeit in einer instrumentalisierten Anwendung. 

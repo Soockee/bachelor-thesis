@@ -20,17 +20,23 @@
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
     \entry{mantime}{manual}{}
-      \list{location}{1}{%
-        {perf}%
-      }
-      \field{labelalpha}{20}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelalpha}{16}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labeltitlesource}{title}
-      \field{edition}{5.06}
-      \field{month}{9}
+      \field{edition}{4.15}
+      \field{month}{3}
+      \field{title}{{time(7) Linux User's Manual}}
+      \field{year}{2016}
+    \endentry
+    \entry{perf}{manual}{}
+      \field{labelalpha}{19}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
       \field{title}{{perf(1) Linux User's Manual}}
-      \field{year}{2020}
+      \field{year}{2019}
     \endentry
     \entry{10.5555/2387880.2387910}{inproceedings}{}
       \name{author}{3}{}{%
@@ -136,6 +142,47 @@
       \verb :home/socke/Downloads/blackboxes{\_}sosp03.pdf:pdf
       \endverb
       \keyw{Black box systems,Distributed systems,Performance analysis,Performance debugging}
+    \endentry
+    \entry{Narayanan2003}{article}{}
+      \name{author}{4}{}{%
+        {{hash=793be578dd2e09e228d097207d0b21cb}{%
+           family={Barham},
+           familyi={B\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0348591ed77aa956f1788356d4c87946}{%
+           family={Isaacs},
+           familyi={I\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1935b9a2457b9df352ceb5d7ca6c811a}{%
+           family={Moertier},
+           familyi={M\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2ec9abfe174e70eae82bd658784c6b03}{%
+           family={Narayanan},
+           familyi={N\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{fullhash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{bibnamehash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{authorbibnamehash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{authornamehash}{b58802df2f73a26b66b5abfb94e908be}
+      \strng{authorfullhash}{b58802df2f73a26b66b5abfb94e908be}
+      \field{labelalpha}{Bar+03}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of USENIX HotOS IX}
+      \field{title}{{Magpie: online modelling and performance-aware systems}}
+      \field{year}{2003}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Barham et al. - 2003 - Magpie online modelling and performance-aware systems.pdf:pdf
+      \endverb
     \endentry
     \entry{FlameGraphs}{misc}{}
       \name{author}{1}{}{%
@@ -388,6 +435,35 @@
       \field{isbn}{0321154916}
       \field{title}{{C{\#} Language Specification}}
       \field{year}{2003}
+    \endentry
+    \entry{jaeger}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a688eba372e5b7f4f1a3e15341e369c5}{%
+           family={Jaeger},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a688eba372e5b7f4f1a3e15341e369c5}
+      \strng{fullhash}{a688eba372e5b7f4f1a3e15341e369c5}
+      \strng{bibnamehash}{a688eba372e5b7f4f1a3e15341e369c5}
+      \strng{authorbibnamehash}{a688eba372e5b7f4f1a3e15341e369c5}
+      \strng{authornamehash}{a688eba372e5b7f4f1a3e15341e369c5}
+      \strng{authorfullhash}{a688eba372e5b7f4f1a3e15341e369c5}
+      \field{labelalpha}{Jae}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Jaeger: open source, end-to-end distributed tracing}}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.jaegertracing.io/
+      \endverb
+      \verb{url}
+      \verb https://www.jaegertracing.io/
+      \endverb
     \endentry
     \entry{Kaldor2017}{article}{}
       \name{author}{13}{}{%
@@ -708,6 +784,66 @@
       \verb https://doi.org/10.1145/2815400.2815415
       \endverb
     \endentry
+    \entry{opentelemetry}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9c17bef3be6c0feb9f7e5b99b097c6b7}{%
+           family={OpenTelemetry},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c17bef3be6c0feb9f7e5b99b097c6b7}
+      \strng{fullhash}{9c17bef3be6c0feb9f7e5b99b097c6b7}
+      \strng{bibnamehash}{9c17bef3be6c0feb9f7e5b99b097c6b7}
+      \strng{authorbibnamehash}{9c17bef3be6c0feb9f7e5b99b097c6b7}
+      \strng{authornamehash}{9c17bef3be6c0feb9f7e5b99b097c6b7}
+      \strng{authorfullhash}{9c17bef3be6c0feb9f7e5b99b097c6b7}
+      \field{labelalpha}{Ope}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{OpenTelemetry | Effective observability requires high-quality telemetry}}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://opentelemetry.io/
+      \endverb
+      \verb{url}
+      \verb https://opentelemetry.io/
+      \endverb
+    \endentry
+    \entry{opentracingspec}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=685386d2a990254ce0b6e8b676a1a06a}{%
+           family={OpenTracing},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{685386d2a990254ce0b6e8b676a1a06a}
+      \strng{fullhash}{685386d2a990254ce0b6e8b676a1a06a}
+      \strng{bibnamehash}{685386d2a990254ce0b6e8b676a1a06a}
+      \strng{authorbibnamehash}{685386d2a990254ce0b6e8b676a1a06a}
+      \strng{authornamehash}{685386d2a990254ce0b6e8b676a1a06a}
+      \strng{authorfullhash}{685386d2a990254ce0b6e8b676a1a06a}
+      \field{labelalpha}{Ope}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The OpenTracing project}}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://opentracing.io/
+      \endverb
+      \verb{url}
+      \verb https://opentracing.io/
+      \endverb
+    \endentry
     \entry{10.1145/2987550.2987568}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=4ad24c804ebf5277b37fdc1b9021ee85}{%
@@ -814,6 +950,36 @@
       \verb http://hdl.handle.net/10589/144741
       \endverb
       \keyw{distributed tracing,observability,stream processing,stream reasoning}
+    \endentry
+    \entry{Sun2016}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2ca017f1818177a3457f7854aa34968a}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Hongkai},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7ac67101266fa4441ee76cf3a31eb8bc}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cd7316d0c0a0fb2e4ec88f2218b500c}
+      \strng{fullhash}{5cd7316d0c0a0fb2e4ec88f2218b500c}
+      \strng{bibnamehash}{5cd7316d0c0a0fb2e4ec88f2218b500c}
+      \strng{authorbibnamehash}{5cd7316d0c0a0fb2e4ec88f2218b500c}
+      \strng{authornamehash}{5cd7316d0c0a0fb2e4ec88f2218b500c}
+      \strng{authorfullhash}{5cd7316d0c0a0fb2e4ec88f2218b500c}
+      \field{labelalpha}{SF16}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{General Baggage Model for End-to-End Tracing and Its Application on Critical Path Analysis}}
+      \field{year}{2016}
+      \verb{file}
+      \verb :home/socke/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Sun, Fonseca - 2016 - General Baggage Model for End-to-End Tracing and Its Application on Critical Path Analysis.pdf:pdf
+      \endverb
     \endentry
     \entry{Shanbhag2010}{article}{}
       \name{author}{8}{}{%
@@ -975,8 +1141,36 @@
       \verb https://stackify.com/application-performance-metrics/
       \endverb
     \endentry
+    \entry{zipkin}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1d2e8c5b8c0a18fff3dab948ce248b56}{%
+           family={Zipkin},
+           familyi={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d2e8c5b8c0a18fff3dab948ce248b56}
+      \strng{fullhash}{1d2e8c5b8c0a18fff3dab948ce248b56}
+      \strng{bibnamehash}{1d2e8c5b8c0a18fff3dab948ce248b56}
+      \strng{authorbibnamehash}{1d2e8c5b8c0a18fff3dab948ce248b56}
+      \strng{authornamehash}{1d2e8c5b8c0a18fff3dab948ce248b56}
+      \strng{authorfullhash}{1d2e8c5b8c0a18fff3dab948ce248b56}
+      \field{labelalpha}{Zip}
+      \field{sortinit}{Z}
+      \field{sortinithash}{156173bd08b075d7295bc3e0f4735a04}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Zipkin {·} A distributed tracing system}}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://zipkin.io/
+      \endverb
+      \verb{url}
+      \verb https://zipkin.io/
+      \endverb
+    \endentry
   \enddatalist
-  \missing{perf}
 \endrefsection
 \endinput
 

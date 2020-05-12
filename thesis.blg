@@ -1,22 +1,21 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [1] Config.pm:305> INFO - Logfile is 'thesis.blg'
-[37] biber:313> INFO - === Mo Mai 11, 2020, 14:45:00
-[58] Biber.pm:371> INFO - Reading 'thesis.bcf'
-[126] Biber.pm:857> INFO - Found 24 citekeys in bib section 0
-[142] Biber.pm:3981> INFO - Processing section 0
-[153] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/library.bib' for section 0
-[156] bibtex.pm:1468> INFO - LaTeX decoding ...
-[204] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/library.bib'
-[207] Utils.pm:169> WARN - Duplicate entry key: 'mantime' in file 'bib/library.bib', skipping ...
-[337] Utils.pm:169> WARN - month field 'jul' in entry 'lamport78' is not an integer - this will probably not sort properly.
-[345] Utils.pm:169> WARN - month field 'aug' in entry 'BrendanGregg2011' is not an integer - this will probably not sort properly.
-[364] Utils.pm:169> WARN - month field 'sep' in entry 'mantime' is not an integer - this will probably not sort properly.
-[381] Utils.pm:169> WARN - BibTeX subsystem: /tmp/oJKkM3YOvy/library.bib_14313.utf8, line 6, warning: 172 characters of junk seen at toplevel
-[385] Utils.pm:169> WARN - I didn't find a database entry for 'perf' (section 0)
-[427] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[427] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[427] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
-[427] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
-[460] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[470] bbl.pm:720> INFO - Output to thesis.bbl
-[470] Biber.pm:110> INFO - WARNINGS: 6
+[34] biber:313> INFO - === Di Mai 12, 2020, 14:02:32
+[56] Biber.pm:371> INFO - Reading 'thesis.bcf'
+[129] Biber.pm:857> INFO - Found 30 citekeys in bib section 0
+[146] Biber.pm:3981> INFO - Processing section 0
+[158] Biber.pm:4154> INFO - Looking for bibtex format file 'bib/library.bib' for section 0
+[161] bibtex.pm:1468> INFO - LaTeX decoding ...
+[220] bibtex.pm:1294> INFO - Found BibTeX data source 'bib/library.bib'
+[388] Utils.pm:169> WARN - month field 'jul' in entry 'lamport78' is not an integer - this will probably not sort properly.
+[393] Utils.pm:169> WARN - month field 'dec' in entry 'perf' is not an integer - this will probably not sort properly.
+[397] Utils.pm:169> WARN - month field 'aug' in entry 'BrendanGregg2011' is not an integer - this will probably not sort properly.
+[416] Utils.pm:169> WARN - month field 'mar' in entry 'mantime' is not an integer - this will probably not sort properly.
+[433] Utils.pm:169> WARN - BibTeX subsystem: /tmp/wCJAIumWPx/library.bib_17690.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[492] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[492] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[492] Biber.pm:3809> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'de-DE'
+[492] Biber.pm:3815> INFO - No sort tailoring available for locale 'de-DE'
+[534] bbl.pm:617> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[548] bbl.pm:720> INFO - Output to thesis.bbl
+[548] Biber.pm:110> INFO - WARNINGS: 5

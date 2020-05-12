@@ -2,37 +2,37 @@
 \babel@toc {ngerman}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Partielle Ordnung der Events dreier Prozesse}}{7}{figure.caption.8}
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Partielle Ordnung von nebenl\IeC {\"a}ufigen Events}}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Partielle Ordnung der Events dreier Prozesse}}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Partielle Ordnung von nebenl\IeC {\"a}ufigen Events}}{9}{figure.caption.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Kausaler Pfad einer Vorgangs in dem verteilten rendering System}}{12}{figure.caption.10}
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Minimale Struktur eines verteilten Systems}}{14}{figure.caption.11}
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Anwendungsinstrumentalisierung und Netzwerkkommunikation \IeC {\"u}ber TCP/IP in verteilten Systemen}}{14}{figure.caption.12}
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Visualisierung von CPU Performancedaten}}{14}{figure.caption.13}
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces 3D Flammengraph}}{16}{figure.caption.14}
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Flammengraph TCP schlie\IeC {\ss }ung}}{17}{figure.caption.15}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Kausaler Pfad einer Vorgangs in dem verteilten rendering System}}{13}{figure.caption.10}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Minimale Struktur eines verteilten Systems}}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Anwendungsinstrumentalisierung und Netzwerkkommunikation \IeC {\"u}ber TCP/IP in verteilten Systemen}}{15}{figure.caption.12}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Visualisierung von CPU Performancedaten}}{15}{figure.caption.13}
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces 3D Flammengraph}}{17}{figure.caption.14}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Flammengraph TCP schlie\IeC {\ss }ung}}{18}{figure.caption.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Zeitliche Darstellung eines Spans}}{24}{figure.caption.16}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Darstellung der zeitlichen Anordnung der Beziehungstypen}}{24}{figure.caption.17}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Zeitmessung von Spans eines Traces}}{25}{figure.caption.18}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Zeitliche Darstellung eines Spans}}{25}{figure.caption.16}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Darstellung der zeitlichen Anordnung der Beziehungstypen}}{25}{figure.caption.17}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Zeitmessung von Spans eines Traces}}{26}{figure.caption.18}
 \contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Tracingkontexts in einem Threads innerhalb einer Anwendung}}{26}{figure.caption.19}
 \contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Tracingkontexts \IeC {\"u}ber mehrere Threads innerhalb einer Anwendung}}{27}{figure.caption.20}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Aktivit\IeC {\"a}tendiagramm der Traktor Registry}}{28}{figure.caption.21}
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Design des Nachrichteninterceptor}}{29}{figure.caption.22}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Aktivit\IeC {\"a}tendiagramm der Traktor Registry}}{29}{figure.caption.21}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Design des Nachrichteninterceptor}}{30}{figure.caption.22}
 \contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Oberste Ebene der Frame Galerie}}{31}{figure.caption.23}
 \contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Mittlere Ebene der Frame Galerie ohne Aggregator}}{32}{figure.caption.24}
-\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Mittlere Ebene der Frame Galerie mit Aggregator und mehreren Renderen}}{32}{figure.caption.25}
+\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Mittlere Ebene der Frame Galerie mit Aggregator und mehreren Renderen}}{33}{figure.caption.25}
 \contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Untere Ebene der Frame Galerie: Beispiel 2}}{33}{figure.caption.26}
-\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Untere Ebene der Frame Galerie: Beispiel 1}}{33}{figure.caption.27}
-\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces Darstellungsbeispiel eines 3D-Flammengraph }}{34}{figure.caption.28}
+\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Untere Ebene der Frame Galerie: Beispiel 1}}{34}{figure.caption.27}
+\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces Darstellungsbeispiel eines 3D-Flammengraph }}{35}{figure.caption.28}
 \contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Darstellungsbeispiel eines Tracevergleich mit einem 3D Flammengraph}}{35}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Klassendiagramm der Traktor Instrumentalisierungsbibliothek}}{42}{figure.caption.30}
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Websocket Closing Frame}}{46}{figure.caption.31}
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces System\IeC {\"u}bersicht der Traktorentwicklungsumgebung}}{51}{figure.caption.32}
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Klassendiagramm der Traktor Instrumentalisierungsbibliothek}}{43}{figure.caption.30}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Websocket Closing Frame}}{47}{figure.caption.31}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces System\IeC {\"u}bersicht der Traktorentwicklungsumgebung}}{52}{figure.caption.32}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Visualisierung der Docker Infrastruktur}}{55}{figure.caption.33}
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Visualisierung eines Traktor-Trace}}{59}{figure.caption.36}
-\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Visualisierung eines Jaeger Trace durch Jaeger UI}}{60}{figure.caption.37}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Visualisierung der Docker Infrastruktur}}{56}{figure.caption.33}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Visualisierung eines Traktor-Trace}}{60}{figure.caption.36}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Visualisierung eines Jaeger Trace durch Jaeger UI}}{61}{figure.caption.37}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
